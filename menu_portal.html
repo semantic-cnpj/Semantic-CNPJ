@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:300,400" rel="stylesheet">
+    <!-- required -->
+    <link rel="stylesheet" type="text/css" media="all" href="menu/css/stellarnav.css">
+    <!-- required -->
+<style>
+/* styles for this sample only */
+*{ margin: 0; padding: 0; }
+body { font-size: 16px; font-family: 'Exo 2', sans-serif; color: #555; top: 0px; position: fixed }
+.header { text-align: center; }
+.header a { padding: 30px 0 0; display: block; font-size: 48px; text-decoration: none; color: #555; }
+.header p { margin: 10px 0 40px 0; font-size: 18px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.posfix {top: 0px; position: fixed; z-index: 100;}
+@media only screen and (max-width : 1000px) {
+    .stellarnav > ul > li > a { padding: 20px 23px; }
+}
+/* styles for this sample only */
+</style>
+
+
+</head>
+
+
+<body>
+    <div id='menu_custom_div_sticky' class="stellarnav">
+        <ul id="menu-main-menu" class="menu">
+                    <li>
+                       <a href="index.html"><span>Início</span></a>
+                       <!--<ul class="sub-menu">
+                            <li>
+                                <a href="index.html"><span>O que é o portal semântico da SEFAZ-MA?</span></a>
+                            </li>
+                            <li>
+                                <a href="grafo_conhecimento.html"><span>Grafo de Conhecimento</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="./grafo_conhecimento.html"><span><i></i>O que é o Grafo de Conhecimento SEFAZ-MA?</span></a>
+                                    </li>
+                                </ul>
+                           </li>
+                            <li>
+                            <a href="arquitetura_portal.html"><span>Arquitetura do Portal Semântico da SEFAZ-MA</span></a>
+                            </li>
+                            
+                        </ul>
+                    -->
+                    </li>
+                   <!-- <li>
+                        <a href="fontes.html"><span>Fontes de Dados</span></a>
+                            <ul class="sub-menu">
+                               <li>
+                                   <a href="rfb_fonte.html"><span>RFB</span></a>   
+                               </li>
+                               <li>
+                                   <a href="cadsefaz_fonte.html"><span>Cadastro SEFAZ</span></a>   
+                               </li>
+                               <li>
+                                   <a href="ibge_cnae_fonte.html"><span>IBGE CNAE</span></a>   
+                               </li>
+                               <li>
+                                   <a href="ibge_location_fonte.html"><span>IBGE Location</span></a>    
+                               </li>
+
+                               <li>
+                                   <a href="redesim_fonte.html"><span>REDESIM</span></a>    
+                               </li>
+
+                                <li>
+                                   <a href="correios_fonte.html"><span>Correios</span></a>    
+                               </li>
+
+                                <li>
+                                   <a href="c115_fonte.html"><span>Convênio 115</span></a>    
+                               </li>
+
+                                <li>
+                                   <a href="compras_fonte.html"><span>Compras Públicas</span></a>    
+                               </li>
+                               
+                               <li>
+                                   <a href="nfes_fonte.html"><span>NFEs</span></a>    
+                               </li>
+
+                               <li>
+                                   <a href="tcu_fonte.html"><span>TCU</span></a>    
+                               </li>
+
+                               <li>
+                                   <a href="ceis_fonte.html"><span>CEIS</span></a>    
+                               </li>
+
+                               <li>
+                                   <a href="cei_fonte.html"><span>CEI</span></a>    
+                               </li>
+
+                            </ul>
+                    </li>
+                -->
+                    <li>
+                        <a href="camada_relacional.html"><span>Camada Relacional</span></a>
+                        <ul class="sub-menu">
+                            <!--<li>
+                                 <a href="camada_relacional.html"><span>O que é a Camada Relacional?</span></a>
+                             </li>
+                             <li>-->
+                                 <!--<a href="visoes_relacionais.html"><span>Visões Relacionais</span></a>
+                                 <ul class="sub-menu">-->
+                                    <li>
+                                        <a href="rfb_relacional.html"><span>RFB</span></a>   
+                                        <ul>
+                                            <li>
+                                                <a href="rfb_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://app.diagrams.net/#G1Dsq7VOdaEZp_igDPRRYtmY4bh-d3TNop"><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/blob/master/repositorio/Manual%20de%20Implanta%C3%A7%C3%A3o%20-%202.0.0.pdf"><span>Processo de Criação e Povoamento</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="cadsefaz_relacional.html"><span>Cadastro SEFAZ</span></a>   
+                                        <ul>
+                                            <li>
+                                                <a href="cadsefaz_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://drive.google.com/file/d/1W5rdmJ31pFmM5zDlZF2oM5HPNCDPR6dU/view?usp=sharing" > <span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Cadastro%20SEFAZ/visoes%20normalizadas/script_views_Cadastro.sql" ><span>Script das Visões</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="ibge_cnae_relacional.html"><span>IBGE CNAE</span></a>   
+                                        <ul>
+                                            <li>
+                                                <a href="ibge_cnae_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://app.diagrams.net/#G1HOHYhf0NLjmEssMNVQIDyU5_v2C7E37F"><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/IBGE%20-%20CNAE/Scripts%20SQL/IBGE.sql"><span>Script de Criação e Povoamento</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="ibge_location_relacional.html"><span>IBGE Localização</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="ibge_location_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://app.diagrams.net/#G1xvHpiTpyxsQIFgzie0WbcwR1qJvkPZnG" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/IBGE%20-%20CNAE/Scripts%20SQL/IBGE.sql"><span>Script de Criação e Povoamento</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="redesim_relacional.html"><span>REDESIM</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="redesim_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://app.diagrams.net/#G1FAodOLp9QjM5jukw6PjrkbzaWz5N6FAs" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/REDESIM/visoes_normalizadas/script_views_REDESIM.sql"><span>Script das Visões</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="correios_relacional.html"><span>Correios</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="correios_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?page-id=G0tnEfEleIuyHS9V0T4-&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=G0tnEfEleIuyHS9V0T4-#G1OFsis1RiXpaU_OnGzwqBs7yxBkE4sEOI" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Correios_New/Camada%20Relacional/script_Correios.sql"><span>Script das Visões</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="c115_relacional.html"><span>Convênio 115</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="c115_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?page-id=P_HFZb9RMVR1EG9411xV&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1#G1PLMRW2Nv5-uh4n8LK-nXOCKG6hd6Njw0" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/C115/Script%20VIs%C3%B5es/scripts_c115.sql' href=""><span>Script das Visões</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="compras_relacional.html"><span>Compras Públicas</span></a>
+                                        
+                                            <ul>
+                                            <li>
+                                                <a href="compras_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?client=1&page-id=_w_EAAviahmya8z3-kHE&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=_w_EAAviahmya8z3-kHE#G1pkcs33lhSO0y07KthFhtFl9go4MJZY9Z" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Compras%20P%C3%BAblicas/Relacional/script_compras.sql"><span>Script das Visões</span></a>   
+                                            </li>
+                                            </ul>
+
+                                    </li>
+                                    <li>
+                                        <a href="nfes_relacional.html"><span>NFEs</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="nfes_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?page-id=MxOGT3Zs0EhHE7HSDxXX&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1#G1xc48wLuQ2s1VAg1LJKYnfOSxvVvWtzQY" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/NFE/Camada%20Relacional/script_nfe_dr.sql"><span>Script das Visões</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="tcu_relacional.html"><span>TCU</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="tcu_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?page-id=wlnwz1ghpxmbt1haj502&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=wlnwz1ghpxmbt1haj502#G1pkcs33lhSO0y07KthFhtFl9go4MJZY9Z" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/TCU/scripts_tcu.sql"><span>Script de Criação e Povoamento</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="ceis_relacional.html"><span>CEIS</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="ceis_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?page-id=wlnwz1ghpxmbt1haj502&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=wlnwz1ghpxmbt1haj502#G1pkcs33lhSO0y07KthFhtFl9go4MJZY9Z" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEIS/relacional/script_ceis.sql"><span>Script de Criação e Povoamento</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="cei_relacional.html"><span>CEI</span></a>    
+                                        <ul>
+                                            <li>
+                                                <a href="cei_fonte.html"><span>Fonte de Dados Original</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="https://viewer.diagrams.net/?page-id=wlnwz1ghpxmbt1haj502&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=wlnwz1ghpxmbt1haj502#G1pkcs33lhSO0y07KthFhtFl9go4MJZY9Z" ><span>Esquema Tabelas Normalizadas</span></a>   
+                                            </li>
+                                            <li>
+                                                <a target='_' href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEI/relacional/scripts_cei.sql"><span>Script das Visões</span></a>   
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <!--- </ul>
+                             </li>-->
+                         </ul>
+                     </li>
+
+                    <li>
+                        <a href="camada_semantica.html"><span>Camada Semântica</span></a>
+                        <ul class="sub-menu">
+                           <!--- <li>
+                                <a href="visao_semantica.html"><span>O que é a Camada Semântica</span></a>
+                            </li>-->
+                            <li>
+                                <a href="ontologia_dominio.html"><span>Ontologia de Domínio</span></a>
+                            </li>
+                           <!---- <li>
+                                                <a href="./vekg.html"><span><i></i>VEKG: Vocabulário do EKG da Sefaz </span></a>
+                            </li>-->
+                                    <!-- Removido por hora devido a ausencia dos links corretos
+                                    <li>
+                                                <a target="_" href="http://localhost:7400/graphs-visualizations?uri=http:%2F%2Fwww.sefaz.ma.gov.br%2FRFB%2Fresource%2FOrganization%2F03995515-MATEUS_SUPERMERCADOS_SA"><span><i></i>RFB</span></a>
+                                    </li>
+                                    <li>
+                                                <a target="_" href="http://localhost:7400/graphs-visualizations?uri=http:%2F%2Fxmlns.com%2Ffoaf%2F0.1%2FOrganization%2F039955150%2F"><span><i></i>Cadastro SEFAZ</span></a>
+                                    </li>
+                                    <li>
+                                                <a> <span>IBGE</span></a>
+                                                <ul class="sub-menu">
+                                                <li><a target="_" href="http://localhost:7400/graphs-visualizations?uri=http:%2F%2Fwww.sefaz.ma.gov.br%2FIBGE%2FCNAE%2Fresource%2FEconomic_Activity%2FCNAE_0.0_GRUPO-RECICLAGEM_DE_SUCATAS_METALICAS"><span>CNAE</span></a></li>
+                                                <li><a target="_" href="http://localhost:7400/graphs-visualizations?uri=http:%2F%2Fwww.sefaz.ma.gov.br%2FIBGE%2FCNAE%2Fresource%2FEconomic_Activity%2FCNAE_0.0_GRUPO-RECICLAGEM_DE_SUCATAS_METALICAS"><span>Location</span></a></li>
+                                                </ul>                     
+                                    </li>
+                                    <li>
+                                                <a target="_" href="http://localhost:7400/graphs-visualizations?uri=http:%2F%2Fwww.sefaz.ma.gov.br%2FREDESIM%2FMATEUS_SUPERMERCADOS"><span>REDESIM</span></a>
+                                    </li> -->
+      
+                            <li>
+                                <a href="visoes_semanticas_locais.html"><span>Visões Semânticas Locais</span></a>
+                                <ul class="sub-menu">
+                                    
+                                <!-- RFB-->
+                                <li>
+                                        <a href="rfb.html"><span>RFB</span></a>
+                                <ul class="sub-menu">
+                                <li>
+                                    <a href="./rfb_relacional.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="orfb.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://app.diagrams.net/#G1I4wJKtscR-7vwp9f5yNe6uEBB9gcqs2O"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/RFB/Ontologia/RFB_Ontology_PT-BR.ttl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/ontologias-parte-i/RFB/especifica%C3%A7%C3%A3o/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/RFB/Mapeamentos/mapeamentos_rfb.ttl"><span>Mapeamentos</span></a>
+                                </li>
+                               <!-- <li>
+                                    <a target="_" href="http://10.33.96.18:7200/graphs-visualizations?uri=http:%2F%2Fwww.arida.ufc.br%2FVEKG%23VSL_RFB"><span>Grafo - Visão Semântica (RFB)</span></a>
+                                </li>-->
+                            </ul>
+                            </li>
+
+                            <!-- Cadastro SEFAZ-->
+                            <li>
+                                <a href="cadsefaz.html"><span>Cadastro SEFAZ</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./cadsefaz_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="osefaz.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://app.diagrams.net/#G1qUAR0xaPMExG2UovnukffCpya1pA1Ilh"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Cadastro%20SEFAZ/ontologia/ontologia_cadastro_11_pt-br.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/ontologias-parte-i/Cadastro/especifica%C3%A7%C3%A3o/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Cadastro%20SEFAZ/mapeamentos/mapeamentos_cadastro.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+                               <!-- <li>
+                                    <a target="_" href="http://10.33.96.18:7200/graphs-visualizations?uri=http:%2F%2Fwww.arida.ufc.br%2FVEKG%23VSL-Cadastro_SEFAZ-MA"><span>Grafo - Visão Semântica (Cadastro SEFAZ)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+                        
+                            <!-- Cadastro IBGE-->
+                            <li>
+                                             <a href="ibge_cnae.html"><span>IBGE - CNAE</span></a>
+                                <ul class="sub-menu">
+                                <li>
+                                    <a href="./ibge_cnae_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="oibge_cnae.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://app.diagrams.net/#G1er-DF8HcnJspDTTW8FwWZa3sC8UJZWiS"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/IBGE%20-%20CNAE/Ontologias/CNAE_Ontology.ttl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/ontologias-parte-i/IBGE%20-%20CNAE/especifica%C3%A7%C3%A3o/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/IBGE%20-%20CNAE/Mapeamentos/mapeamentos_ibge_cnae.ttl"><span>Mapeamentos</span></a>
+                                </li>
+                               <!-- <li>
+                                    <a target="_" href="https://github.com/semantic-sefaz/ontologias-parte-i/tree/main/IBGE%20-%20CNAE/scripts"><span>Scripts de Instanciação</span></a>
+                                </li>
+                            -->
+                               <!-- <li>
+                                    <a target="_" href="http://10.33.96.18:7200/graphs-visualizations?uri=http:%2F%2Fwww.arida.ufc.br%2FVEKG%23VSL-IBGE_CNAE"><span>Grafo - Visão Semântica (IBGE-CNAE)</span></a>
+                                </li>-->
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="ibge_location.html"><span>IBGE - Localização</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./ibge_location_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                            
+                                <li>
+                                <a href="oibge_localizacao.html"><span>Ontologia</span></a>
+                                    <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=Qeuk4wUYD-QQ2MxsfYmf&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1BALx_Ib7A1Dx96lz0QvHVYxALzqhswDl"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/IBGE%20-%20Location/ontologia/Location_Ontology.ttl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/ontologias-parte-i/IBGE%20-%20Location/especifica%C3%A7%C3%A3o/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                </ul>
+                                <li>
+                                    <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/IBGE%20-%20Location/mapeamentos/mapeamentos_ibge_localizacao.ttl"><span>Mapeamentos</span></a>
+                                </li>
+                                </li>
+                                <!--<li>
+                                    <a target="_" href="https://github.com/semantic-sefaz/ontologias-parte-i/tree/main/IBGE%20-%20Location/scripts"><span>Scripts de Instanciação</span></a>
+                                </li>-->
+                               <!-- <li>
+                                    <a target="_" href="http://10.33.96.18:7200/graphs-visualizations?uri=http:%2F%2Fwww.arida.ufc.br%2FVEKG%23VSL-IBGE_Location"><span>Grafo - Visão Semântica (IBGE-Localização)</span></a>
+                                </li>-->
+                            </ul>
+                        </li>
+
+                            <!-- REDESIM-->
+                        <li>
+                                    <a href="redesim.html"><span>REDESIM</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./redesim_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="oredesim.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=02jcXYG87qJVJ1DamCUi&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1oMS4fSXDqPSy-Mj2EqFDwy2IDkzJsknr"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/REDESIM/ontologia/last_redesim.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/ontologias-parte-i/REDESIM/especifica%C3%A7%C3%A3o/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/REDESIM/mapeamentos/maps_redesim.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+                               <!-- <li>
+                                    <a target="_" href="http://10.33.96.18:7200/graphs-visualizations?uri=http:%2F%2Fwww.arida.ufc.br%2FVEKG%23VSL-REDESIM"><span>Grafo - Visão Semântica (REDESIM)</span></a>
+                                </li>-->
+                                </ul>
+                        </li>
+
+                            <li>
+                                    <a href="correios.html"><span>Correios</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./correios_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="ocorreios.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=sltHhFzHN4Bs35qX_ndl&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1#G1OFsis1RiXpaU_OnGzwqBs7yxBkE4sEOI"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Correios_New/Ontologia/ontologia_correios.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/sefazma-repository-main/ontologias-parte-ii/Correios/Especifica%C3%A7%C3%A3o/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Correios_New/Mapeamentos/mapeamentos_correios.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+                                
+                              <!--  <li>
+                                    <a target="_" href=""><span>Grafo - Visão Semântica (Correios)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                    <a href="c115.html"><span>Convênio 115</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./c115_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="oC115.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=nxyWVrSeQLK6CJbTNBSA&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&hide-pages=1#G1Myh-axSgXG5ZRBKEvg_O9hFdBW15Saac"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/C115/Ontologia/ontologia_c115_v1.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://semantic-sefaz.github.io/sefazma-repository-main/ontologias-parte-ii/C115/Especifica%C3%A7%C3%A3o%20Ontologia%20C115/index-pt.html"><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/C115/Mapeamentos/mapeamentos_c115.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+
+                             <!--   <li>
+                                    <a target="_" href=".html"><span>Grafo - Visão Semântica (C115)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+
+                            <li>
+                                    <a href="compras.html"><span>Compras Públicas</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./compras_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="ocompras_sefaz.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=2G-_fv6IkT_RMIbVH7T1&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=2G-_fv6IkT_RMIbVH7T1#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Compras%20P%C3%BAblicas/Ontologia/Compras_mun_gov_tcu.ttl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href=""><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/Compras%20P%C3%BAblicas/Mapeamentos/mapeamentos_diretos_compras_sefaz.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+                                <!--<li>
+                                    <a target="_" href="redesim.html"><span>Grafo - Visão Semântica (Compras)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+
+                            <li>
+                                    <a href="nfes.html"><span>Notas Fiscais (NFEs)</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./nfes_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="onfes.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://drive.google.com/file/d/1xc48wLuQ2s1VAg1LJKYnfOSxvVvWtzQY/view"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/NFE/Ontologia/Ontologia_NFEs.ttl" href=""><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href=""><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href=""><span>Mapeamentos</span></a>
+                                    </li>
+
+                              <!--  <li>
+                                    <a target="_" href=".html"><span>Grafo - Visão Semântica (NFEs)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+
+                            <li>
+                                    <a href="tcu.html"><span>TCU</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./tcu_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="otcu.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=Zhmr70E7Mxgs1-aFP05Y&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=Zhmr70E7Mxgs1-aFP05Y#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/TCU/ontologia/ontologia_tcu.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href=""><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/TCU/mapeamentos/mapeamentos_diretos_tcu.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+
+                              <!--  <li>
+                                    <a target="_" href=".html"><span>Grafo - Visão Semântica (TCU)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+
+                            <li>
+                                    <a href="ceis.html"><span>CEIS</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./ceis_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="oceis.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=7e4zU7p8LHp3Y7D_DTow&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=7e4zU7p8LHp3Y7D_DTow#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEIS/ontologia/ontologia_ceis.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href=""><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEIS/mapeamentos/mapeamentos_diretos_ceis.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+
+                              <!--  <li>
+                                    <a target="_" href=".html"><span>Grafo - Visão Semântica (CEIS)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+
+                            <li>
+                                    <a href="cei.html"><span>CEI</span></a>
+                                    <ul class="sub-menu">
+                                <li>
+                                <li>
+                                    <a href="./cei_fonte.html"><span>Fonte de Dados Original</span></a>    
+                                </li>
+                                <li>
+                                <a href="ocei.html"><span>Ontologia</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://viewer.diagrams.net/?page-id=nNylaChzyZpD_MNoYoE1&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=nNylaChzyZpD_MNoYoE1#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD"><span>Diagrama de Classes</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEI/ontologia/CEI.owl"><span>Implementação OWL</span></a>    
+                                    </li>
+                                    <li>
+                                        <a target="_" href=""><span>Especificação</span></a>    
+                                    </li>
+                                    </ul>
+                                </li>
+                                    <li>
+                                    <a href="http://gitconsult.sefaz.ma.gov.br/ufc/portal-semantico/raw/master/repositorio/CEI/mapeamentos/mapeamentos_diretos_cei.ttl"><span>Mapeamentos</span></a>
+                                    </li>
+
+                              <!--  <li>
+                                    <a target="_" href=".html"><span>Grafo - Visão Semântica (CEI)</span></a>
+                                </li>-->
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+  
+                            <li>
+                                <a href="./visoes_ligacoes_semanticas.html"><span>Visões de Ligações Semânticas</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="./links_rfb.html" ><span>RFB</span></a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="./links_rfb_rfb.html"><span>RFB - RFB</span></a> 
+                                            </li>
+                                            <li>
+                                                <a href="./links_rfb_cadastro.html"><span>RFB - Cadastro Sefaz</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="./links_rfb_cnae.html"><span>RFB - IBGE CNAE</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="./links_rfb_location.html"><span>RFB - IBGE Localização</span></a>  
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./links_cadastro.html" ><span>Cadastro SEFAZ</span></a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="./links_cadastro_db.html"><span>Cadastro SEFAZ - DBPedia</span></a> 
+                                            </li>
+                                            <li>
+                                                <a href="./links_cadastro_rfb.html"><span>Cadastro SEFAZ - RFB</span></a> 
+                                            </li>
+                                            <li>
+                                                <a href="./links_cadastro_cnae.html"><span>Cadastro SEFAZ - IBGE CNAE</span></a> 
+                                            </li>
+                                            <li>
+                                                <a href="./links_cadastro_redesim.html"><span>Cadastro SEFAZ - REDESIM</span></a> 
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./links_ibge.html" ><span>IBGE</span></a>
+                                        <ul class="sub-menu">
+                                            <!--
+                                            <li>
+                                                <a><span>CNAE</span></a>
+                                                <ul class="sub-menu">
+                                                    
+                                                </ul>
+                                            </li>-->
+                                            <li>
+                                                <a ><span>Localização</span></a>
+                                                <ul class="sub-menu">                
+                                                    <li>
+                                                        <a href="./links_location_db.html"><span>Localização - DBPedia</span></a> 
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="relatorios.html"><span>Relatórios</span></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a target="_" href="https://drive.google.com/file/d/1lN-qUYkQN0Fio8eD3rxCM5ITTQSu5OUQ/view?usp=sharing"><span>Treinamento em Engenharia de Ontologias</span></a> 
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://drive.google.com/file/d/194DCrKI1F96tRAmlYQxj7id7aQeMuxc7/view?usp=sharing"><span>Treinamento em Tecnologias da Web Semântica e Integração de Dados</span></a>
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://drive.google.com/file/d/1K1RteSX0UcnVT7bM2Wj59PE0ynV3LiXA/view?usp=sharing"><span>Treinamento em Big Data</span></a>
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://drive.google.com/file/d/12Fp8TPyEQ2TLDQun3c-WDsJhf_7ux9hS/view?usp=sharing"><span>Ontologias Parte I</span></a>  
+                                    </li>
+                                    <li>
+                                        <a target="_" href="https://drive.google.com/file/d/18xi7rysJNWuD2pG7p8IbwGFaSQ1lAmgo/view?usp=sharing"><span>Ontologias Parte II</span></a>  
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a target="_" href="http://10.33.96.18:1234"><span>Consulta</span></a>
+                    </li>
+
+                    <li>
+                        <a  href="#"><span>Endpoint</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a target="_" href="http://10.33.96.18:8080/orardf-21.3.1/?root=data"><span>Oracle</span></a>
+                            </li>
+                            <li>
+                                <a target="_" href="http://10.33.96.18:7200/sparql"><span>GraphDB</span></a>
+                            </li>
+                       
+                        </ul>
+                    </li>
+
+
+                    <!--<li>-->
+                    <!--    <a href="camada_acesso_integracao.html"><span>Camada de Acesso e Integração</span></a>
+                    </li>-->
+
+                    <li>
+                        <a target="_" ><span>Aplicações</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a target="_" href="http://10.33.96.18:5000/"><span>Endereços</span></a>
+                            </li>
+                            <li>
+                                <a target="_" href="http://10.33.96.18:1111/"><span>Consulta ao Grafo</span></a>
+                            </li>
+                            <li>
+                                        <a target="_" href="aplicacoes_higienizacao.html"><span>Higienização do Cadastro</span></a>
+                                        <!--<ul class="sub-menu">
+                                       
+                            <li>
+                                        <a href="consultas_sparql.html"><span>Cadastro X correios</span></a>
+                            </li>
+                             <li>
+                                        <a href="consultas_sparql.html"><span>RFB X Cadastro</span></a>
+                            </li>
+                             <li>
+                                        <a href="consultas_sparql.html"><span>Cadastro X Conv 115</span></a>
+                            </li>
+                             <li>
+                                        <a href="consultas_sparql.html"><span>Cadastro X NFe</span></a>
+                            </li>
+                                        </ul>-->
+                            </li>
+                            
+                           <!---- <li>
+                                <a href="grafo_enderecos.html"><span>Grafo de Conhecimento de Endereços de Estabelecimentos</span></a>
+             
+                                <ul class="sub-menu">
+                                    <li>
+                                    <a href="https://semantic-sefaz.github.io/semantic-sefaz/grafo_enderecos_camada_relacional.html"><span>Camada Relacional</span></a>
+                                    </li>
+                                    <li>
+                                    <a href="https://semantic-sefaz.github.io/semantic-sefaz/grafo_enderecos_camada_semantica.html"><span>Camada Semântica</span></a>
+                                    </li>-
+                                    <li>
+                                    <a href="http://10.33.96.18:7200/sparql"><span>Endpoint SPARQL</span></a>
+                                    </li>
+                                    </ul>
+                            </li>-->
+
+                            <li>
+                                <a target="_" href="http://dashboard.apps.ocp.sefaz.ma.gov.br/#/monitor"><span>Big Data</span></a>
+                            </li>
+
+                           
+                            
+
+                           <!---- <li>
+                                <a href="aplicacoes_visualizacao.html"><span>Aplicações de Visualização</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                <a href="https://observablehq.com/@caioviktor/experimento-de-consumo"><span>Unidades Consumidoras - Maranhão</span></a>
+                                </li>
+                                <li>
+                                <a href="https://caioviktor.github.io/VizRFB-MA/"><span>CNPJ - RFB</span></a>
+                                </li>
+                                <li>
+                                <a href="https://caioviktor.github.io/App_address/"><span>Endereços</span></a>
+                                </li>
+                            </ul>-->
+                    </li>
+               
+                        <li>
+                                        <a target="_" href="catalogo.html"><span>Catálogo de Questões de Competência</span></a>
+                        </li>
+                         
+                           
+                    </ul>
+                    </li>
+
+                    <!--<li>
+                        <a href="consultas.html"><span>Consulta Semântica</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                        <a href="consultas_sparql.html"><span>Consultas SPARQL</span></a>
+                            </li>
+                            <li>
+                                        <a href="consultas_facetadas.html"><span>Consultas Facetadas</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                -->
+                    
+                   <!-- <li>
+                        <a href="mediador.html"><span>Aplicações Inteligentes</span></a>
+                    </li>-->
+                </ul>
+</div><!-- .stellarnav -->
+
+    <script type='text/javascript'>
+        document.addEventListener("DOMContentLoaded", function(){
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 205) {
+                    document.getElementById('menu_custom_div_sticky').classList.add('posfix');
+                } else {
+                    document.getElementById('menu_custom_div_sticky').classList.remove('posfix');
+                } 
+            });
+        }); 
+    </script>
+    <!-- required -->
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type="text/javascript" src="menu/js/stellarnav.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            jQuery('.stellarnav').stellarNav({
+                theme: 'dark',
+                breakpoint: 960,
+                position: 'right',
+                phoneBtn: '18009997788',
+                locationBtn: 'https://www.google.com/maps'
+            });
+        });
+
+    </script>
+    <!-- required -->
+
+    
+
+    <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+</body>
+</html>

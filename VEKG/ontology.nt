@@ -1,0 +1,1344 @@
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/datanode/ns/> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://vocab.data.gov/def/drm> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://vocab.deri.ie/void> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://www.isibang.ac.in/ns/mod/1.4/mod-v1.4_ontology.owl> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/csvw#> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ldp#> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/r2rml#> .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> .
+<http://www.arida.ufc.br/VEKG#> <http://purl.org/dc/elements/1.1/creator> "Tulio Vidal; João Batista; Vânia Maria Ponte Vidal"@pt .
+<http://www.arida.ufc.br/VEKG#> <http://purl.org/dc/elements/1.1/title> "VEKG - Vocabulário para descrição de Enterprise Knowledge Graphs"@pt .
+<http://www.arida.ufc.br/VEKG#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "void" .
+<http://www.arida.ufc.br/VEKG#> <http://www.w3.org/2000/01/rdf-schema#comment> "VEKG: Vocabulário para Descrição e Representação de Enterprise Knowledge Graphs - Conceituado a partir de Termos e Conceitos que constituem a definição de um EKG."@pt .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/linked-data/api/vocab#definition
+<http://purl.org/linked-data/api/vocab#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rdfs.org/ns/void#rootResource
+<http://rdfs.org/ns/void#rootResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps." .
+<http://rdfs.org/ns/void#rootResource> <http://www.w3.org/2000/01/rdf-schema#label> "root resource" .
+<http://rdfs.org/ns/void#rootResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+# 
+# http://rdfs.org/ns/void#sparqlEndpoint
+<http://rdfs.org/ns/void#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has a SPARQL endpoint at" .
+<http://rdfs.org/ns/void#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+# 
+# http://rdfs.org/ns/void#uriLookupEndpoint
+<http://rdfs.org/ns/void#uriLookupEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a simple URI look-up protocol for accessing a dataset." .
+<http://rdfs.org/ns/void#uriLookupEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has an URI look-up endpoint at" .
+<http://rdfs.org/ns/void#uriLookupEndpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+# 
+# http://rdfs.org/ns/void#uriRegexPattern
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a regular expression pattern matching URIs in the dataset." .
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/2000/01/rdf-schema#label> "has URI regular expression pattern" .
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+# 
+# http://rdfs.org/ns/void#vocabulary
+<http://rdfs.org/ns/void#vocabulary> <http://www.w3.org/2000/01/rdf-schema#comment> "A vocabulary that is used in the dataset." .
+<http://rdfs.org/ns/void#vocabulary> <http://www.w3.org/2000/01/rdf-schema#label> "vocabulary" .
+<http://rdfs.org/ns/void#vocabulary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23LocalOntology> .
+<http://rdfs.org/ns/void#vocabulary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#vocabulary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.data.gov/def/drm#DataAsset> .
+# 
+# http://vocab.data.gov/def/drm#destination
+<http://vocab.data.gov/def/drm#destination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://vocab.data.gov/def/drm#origin
+<http://vocab.data.gov/def/drm#origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/datanode/ns/referencedBy
+<http://purl.org/datanode/ns/referencedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.data.gov/def/drm#DataAsset> .
+<http://purl.org/datanode/ns/referencedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+# 
+# http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://rdfs.org/ns/void#class
+<http://rdfs.org/ns/void#class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://rdfs.org/ns/void#class> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#class> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://rdfs.org/ns/void#class> <http://www.w3.org/2000/01/rdf-schema#comment> "The rdfs:Class that is the rdf:type of all entities in a class-based partition." .
+<http://rdfs.org/ns/void#class> <http://www.w3.org/2000/01/rdf-schema#label> "class" .
+# 
+# http://rdfs.org/ns/void#classPartition
+<http://rdfs.org/ns/void#classPartition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#subset> .
+<http://rdfs.org/ns/void#classPartition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#classPartition> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#classPartition> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class." .
+<http://rdfs.org/ns/void#classPartition> <http://www.w3.org/2000/01/rdf-schema#label> "class partition" .
+# 
+# http://rdfs.org/ns/void#dataDump
+<http://rdfs.org/ns/void#dataDump> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#dataDump> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://rdfs.org/ns/void#dataDump> <http://www.w3.org/2000/01/rdf-schema#comment> "An RDF dump, partial or complete, of a void:Dataset." .
+<http://rdfs.org/ns/void#dataDump> <http://www.w3.org/2000/01/rdf-schema#label> "Data Dump" .
+# 
+# http://rdfs.org/ns/void#exampleResource
+<http://rdfs.org/ns/void#exampleResource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#exampleResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://rdfs.org/ns/void#exampleResource> <http://www.w3.org/2000/01/rdf-schema#label> "example resource of dataset" .
+# 
+# http://rdfs.org/ns/void#feature
+<http://rdfs.org/ns/void#feature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#feature> <http://www.w3.org/2000/01/rdf-schema#label> "feature" .
+# 
+# http://rdfs.org/ns/void#inDataset
+<http://rdfs.org/ns/void#inDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Document> .
+<http://rdfs.org/ns/void#inDataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#inDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the void:Dataset that a document is a part of." .
+<http://rdfs.org/ns/void#inDataset> <http://www.w3.org/2000/01/rdf-schema#label> "in dataset" .
+# 
+# http://rdfs.org/ns/void#linkPredicate
+<http://rdfs.org/ns/void#linkPredicate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#LinkSet> .
+<http://rdfs.org/ns/void#linkPredicate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdfs.org/ns/void#linkPredicate> <http://www.w3.org/2000/01/rdf-schema#label> "a link predicate" .
+# 
+# http://rdfs.org/ns/void#objectsTarget
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#target> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#LinkSet> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "The dataset describing the objects of the triples contained in the Linkset." .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#label> "Objects Target" .
+# 
+# http://rdfs.org/ns/void#openSearchDescription
+<http://rdfs.org/ns/void#openSearchDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#openSearchDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> .
+<http://rdfs.org/ns/void#openSearchDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "An OpenSearch description document for a free-text search service over a void:Dataset." .
+<http://rdfs.org/ns/void#openSearchDescription> <http://www.w3.org/2000/01/rdf-schema#label> "open search description" .
+# 
+# http://rdfs.org/ns/void#property
+<http://rdfs.org/ns/void#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#comment> "The rdf:Property that is the predicate of all triples in a property-based partition." .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#label> "property" .
+# 
+# http://rdfs.org/ns/void#propertyPartition
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#subset> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of a void:Dataset that contains only the triples of a certain rdf:Property." .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#label> "property partition" .
+# 
+# http://rdfs.org/ns/void#subjectsTarget
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#target> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#LinkSet> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "The dataset describing the subjects of triples contained in the Linkset." .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#label> "Subjects Target" .
+# 
+# http://rdfs.org/ns/void#subset
+<http://rdfs.org/ns/void#subset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#subset> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#subset> <http://www.w3.org/2000/01/rdf-schema#label> "has subset" .
+# 
+# http://rdfs.org/ns/void#target
+<http://rdfs.org/ns/void#target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#LinkSet> .
+<http://rdfs.org/ns/void#target> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#target> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the two datasets linked by the Linkset." .
+<http://rdfs.org/ns/void#target> <http://www.w3.org/2000/01/rdf-schema#label> "Target" .
+# 
+# http://www.arida.ufc.br/VEKG#hasDataSource
+<http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.data.gov/def/drm#DataAsset> .
+<http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#label> "has data source"@en .
+<http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.w3.org/2000/01/rdf-schema#label> "tem fonte de dados"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#hasLinkSet
+<http://www.arida.ufc.br/VEKG#hasLinkSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#hasLinkSet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LinksetView> .
+<http://www.arida.ufc.br/VEKG#hasLinkSet> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#LinkSet> .
+<http://www.arida.ufc.br/VEKG#hasLinkSet> <http://www.w3.org/2000/01/rdf-schema#label> "has linkset"@en .
+<http://www.arida.ufc.br/VEKG#hasLinkSet> <http://www.w3.org/2000/01/rdf-schema#label> "tem linkset"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#hasMapping
+<http://www.arida.ufc.br/VEKG#hasMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#hasMapping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#hasMapping> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+<http://www.arida.ufc.br/VEKG#hasMapping> <http://www.w3.org/2000/01/rdf-schema#label> "has mapping"@en .
+<http://www.arida.ufc.br/VEKG#hasMapping> <http://www.w3.org/2000/01/rdf-schema#label> "tem mapeamento"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#has_local_semantic_view
+<http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> .
+<http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.w3.org/2000/01/rdf-schema#label> "has local semantic view"@en .
+<http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.w3.org/2000/01/rdf-schema#label> "tem visão semântica local"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#link_rule_predicate
+<http://www.arida.ufc.br/VEKG#link_rule_predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#link_rule_predicate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#linkPredicate> .
+<http://www.arida.ufc.br/VEKG#link_rule_predicate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#link_rule_predicate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+# 
+# http://www.arida.ufc.br/VEKG#%23class
+<http://www.arida.ufc.br/VEKG#%23class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23class> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+<http://www.arida.ufc.br/VEKG#%23class> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+# 
+# http://www.arida.ufc.br/VEKG#%23domainCM
+<http://www.arida.ufc.br/VEKG#%23domainCM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23domainCM> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#%23domainCM> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#%23domainCM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasDomainOntology
+<http://www.arida.ufc.br/VEKG#%23hasDomainOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasDomainOntology> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> .
+<http://www.arida.ufc.br/VEKG#%23hasDomainOntology> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#DomainOntology> .
+<http://www.arida.ufc.br/VEKG#%23hasDomainOntology> <http://www.w3.org/2000/01/rdf-schema#label> "has domain ontology"@en .
+<http://www.arida.ufc.br/VEKG#%23hasDomainOntology> <http://www.w3.org/2000/01/rdf-schema#label> "tem ontologia de domínio"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasLinkrule
+<http://www.arida.ufc.br/VEKG#%23hasLinkrule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasLinkrule> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LinksetView> .
+<http://www.arida.ufc.br/VEKG#%23hasLinkrule> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#%23hasLinkrule> <http://www.w3.org/2000/01/rdf-schema#label> "has link rule"@en .
+<http://www.arida.ufc.br/VEKG#%23hasLinkrule> <http://www.w3.org/2000/01/rdf-schema#label> "tem regra de linkage"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasLinksetView
+<http://www.arida.ufc.br/VEKG#%23hasLinksetView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasLinksetView> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> .
+<http://www.arida.ufc.br/VEKG#%23hasLinksetView> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23LinksetView> .
+<http://www.arida.ufc.br/VEKG#%23hasLinksetView> <http://www.w3.org/2000/01/rdf-schema#label> "has linkset view"@en .
+<http://www.arida.ufc.br/VEKG#%23hasLinksetView> <http://www.w3.org/2000/01/rdf-schema#label> "tem visão de linkset"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasLocalOntology
+<http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23LocalOntology> .
+<http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.w3.org/2000/01/rdf-schema#label> "has local ontology"@en .
+<http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.w3.org/2000/01/rdf-schema#label> "tem ontologia local"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasMetric
+<http://www.arida.ufc.br/VEKG#%23hasMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#%23hasMetric> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23Metric> .
+<http://www.arida.ufc.br/VEKG#%23hasMetric> <http://www.w3.org/2000/01/rdf-schema#label> "has metric"@en .
+<http://www.arida.ufc.br/VEKG#%23hasMetric> <http://www.w3.org/2000/01/rdf-schema#label> "tem métrica"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasProvenance
+<http://www.arida.ufc.br/VEKG#%23hasProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasProvenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> .
+<http://www.arida.ufc.br/VEKG#%23hasProvenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#%23hasProvenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23Provenance> .
+<http://www.arida.ufc.br/VEKG#%23hasProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "has provenance"@en .
+<http://www.arida.ufc.br/VEKG#%23hasProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "tem proveniência"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23hasTriplesMap
+<http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+<http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/r2rml#TriplesMap> .
+<http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "has triples map"@en .
+<http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "tem mapeamento de triplas"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23property
+<http://www.arida.ufc.br/VEKG#%23property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23property> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#%23property> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23rangeCM
+<http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23source
+<http://www.arida.ufc.br/VEKG#%23source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+# 
+# http://www.arida.ufc.br/VEKG#%23target
+<http://www.arida.ufc.br/VEKG#%23target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.arida.ufc.br/VEKG#%23target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+# 
+# http://www.w3.org/2004/03/trix/rdfg-1/equivalentGraph
+<http://www.w3.org/2004/03/trix/rdfg-1/equivalentGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/03/trix/rdfg-1/equivalentGraph> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.w3.org/2004/03/trix/rdfg-1/equivalentGraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.w3.org/2004/03/trix/rdfg-1/equivalentGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "\nThe graphs associated with the subject and object are equivalent.\n      " .
+<http://www.w3.org/2004/03/trix/rdfg-1/equivalentGraph> <http://www.w3.org/2000/01/rdf-schema#label> "equivalent graph" .
+# 
+# http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf
+<http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf> <http://www.w3.org/2000/01/rdf-schema#comment> "\nThe graph associated with the subject is a subgraph of a graph equivalent\nto that associated with the object.\n      " .
+<http://www.w3.org/2004/03/trix/rdfg-1/subGraphOf> <http://www.w3.org/2000/01/rdf-schema#label> "subgraph of" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://rdfs.org/ns/void#classes
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset." .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#label> "classes" .
+# 
+# http://rdfs.org/ns/void#distinctObjects
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count." .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#label> "distinct objects" .
+# 
+# http://rdfs.org/ns/void#distinctSubjects
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset." .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#label> "distinct subjects" .
+# 
+# http://rdfs.org/ns/void#documents
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical." .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#label> "number of documents" .
+# 
+# http://rdfs.org/ns/void#entities
+<http://rdfs.org/ns/void#entities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#entities> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#entities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#entities> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of entities that are described in a void:Dataset." .
+<http://rdfs.org/ns/void#entities> <http://www.w3.org/2000/01/rdf-schema#label> "number of entities" .
+# 
+# http://rdfs.org/ns/void#properties
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset." .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#label> "number of properties" .
+# 
+# http://rdfs.org/ns/void#triples
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of triples contained in a void:Dataset." .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#label> "number of triples" .
+# 
+# http://rdfs.org/ns/void#uriSpace
+<http://rdfs.org/ns/void#uriSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://rdfs.org/ns/void#uriSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#uriSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://rdfs.org/ns/void#uriSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A URI that is a common string prefix of all the entity URIs in a void:Dataset." .
+<http://rdfs.org/ns/void#uriSpace> <http://www.w3.org/2000/01/rdf-schema#label> "URI space" .
+# 
+# http://www.arida.ufc.br/VEKG#cnpj
+<http://www.arida.ufc.br/VEKG#cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.arida.ufc.br/VEKG#%23atributes
+<http://www.arida.ufc.br/VEKG#%23atributes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23atributes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23correspondenceAssertion
+<http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23primaryKey
+<http://www.arida.ufc.br/VEKG#%23primaryKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23primaryKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23rangeRDB
+<http://www.arida.ufc.br/VEKG#%23rangeRDB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23rangeRDB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23rmlTable
+<http://www.arida.ufc.br/VEKG#%23rmlTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23rmlTable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23rmlVision
+<http://www.arida.ufc.br/VEKG#%23rmlVision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23rmlVision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23transformationFunction
+<http://www.arida.ufc.br/VEKG#%23transformationFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.arida.ufc.br/VEKG#%23transformationFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://rdbs-o#Relational_Database
+<http://rdbs-o#Relational_Database> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdbs-o#Relational_Database> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ldp#NonRDFSource> .
+<http://rdbs-o#Relational_Database> <http://www.w3.org/2000/01/rdf-schema#label> "Banco de Dados Relacional"@pt .
+<http://rdbs-o#Relational_Database> <http://www.w3.org/2000/01/rdf-schema#label> "Relational Database"@en .
+# 
+# http://rdfs.org/ns/void#Dataset
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of RDF triples that are published, maintained or aggregated by a single provider." .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# 
+# http://rdfs.org/ns/void#DatasetDescription
+<http://rdfs.org/ns/void#DatasetDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdfs.org/ns/void#DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> .
+<http://rdfs.org/ns/void#DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Description" .
+# 
+# http://rdfs.org/ns/void#LinkSet
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#linkPredicate> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23target> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23target> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://rdfs.org/ns/void#Dataset> .
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://rdfs.org/ns/void#linkPredicate> .
+_:genid4 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of RDF links between two void:Datasets." .
+<http://rdfs.org/ns/void#LinkSet> <http://www.w3.org/2000/01/rdf-schema#label> "Linkset"@en .
+# 
+# http://vocab.data.gov/def/drm#DataAsset
+<http://vocab.data.gov/def/drm#DataAsset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.data.gov/def/drm#DataAsset> <http://www.w3.org/2000/01/rdf-schema#comment> "The term “data asset” is synonymous with “data source”" .
+<http://vocab.data.gov/def/drm#DataAsset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#DataAsset> <http://www.w3.org/2000/01/rdf-schema#label> "Data asset" .
+# 
+# http://www.arida.ufc.br/VEKG#DomainOntology
+<http://www.arida.ufc.br/VEKG#DomainOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#DomainOntology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.isibang.ac.in/ns/mod#Ontology> .
+<http://www.arida.ufc.br/VEKG#DomainOntology> <http://www.w3.org/2000/01/rdf-schema#label> "Domain Ontology"@en .
+<http://www.arida.ufc.br/VEKG#DomainOntology> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia de Domínio"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23ClassMapping
+<http://www.arida.ufc.br/VEKG#%23ClassMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23ClassMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping
+<http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23GlobalSemanticView
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasDomainOntology> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#DomainOntology> .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasLinksetView> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23LinksetView> .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://purl.org/dc/elements/1.1/title> "Global Semantic View of Graph"@en .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#comment> "Uma Visão Semântica Global é um conceito genérico para representação de um Grafo Semântico. Uma Visão Semântica Global G é constituída por uma Tripla = {OD, V, L}.\n\nOnde:\n\n  - OD = Ontologia de Domínio;\n  - Vg  = Visão Semântica Global;\n  - L = Visão de Linksets."@pt .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#label> "Global Semantic View"@en .
+<http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> <http://www.w3.org/2000/01/rdf-schema#label> "Visão Semântica Global"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23LinkRule
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasMetric> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23Metric> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23source> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23target> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasMetric> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://www.arida.ufc.br/VEKG#%23Metric> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23source> .
+_:genid12 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23target> .
+_:genid13 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://purl.org/linked-data/api/vocab#definition> "Uma LinkRule é uma propriedade (rdf:Property) que é utilizada para descoberta de uma ligação (Link) entre dois recursos (rdfs:Resource) - source e target."@pt .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://vocab.data.gov/def/drm#destination> "Um Objeto rdfs:Resource (Target) relacionado por uma LinkRule."@pt .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://vocab.data.gov/def/drm#origin> "Um Sujeito rdfs:Resource (Source) relacionado por uma LinkRule."@pt .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Uma LinkRule é uma propriedade (rdf:Property) que é utilizada para descoberta de uma ligação (Link) entre dois recursos (rdfs:Resource) - source e target."@pt .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#label> "Link Rule"@en .
+<http://www.arida.ufc.br/VEKG#%23LinkRule> <http://www.w3.org/2000/01/rdf-schema#label> "Regra de Link"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23LinksetView
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#hasLinkSet> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://rdfs.org/ns/void#LinkSet> .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasLinkrule> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#hasLinkSet> .
+_:genid16 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://rdfs.org/ns/void#LinkSet> .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasLinkrule> .
+_:genid17 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#comment> "Uma Visão de Linkset é uma representação de uma Ligação (Link) entre Linksets e LinkRules."@pt .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#comment> "Visão de Linkset"@pt .
+<http://www.arida.ufc.br/VEKG#%23LinksetView> <http://www.w3.org/2000/01/rdf-schema#label> "Linkset View"@en .
+# 
+# http://www.arida.ufc.br/VEKG#%23LocalOntology
+<http://www.arida.ufc.br/VEKG#%23LocalOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23LocalOntology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.isibang.ac.in/ns/mod#Ontology> .
+<http://www.arida.ufc.br/VEKG#%23LocalOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "Uma Ontologia Local é por definição um vocabulário formal e explícito contendo os termos e conceitos que descrevem uma fonte de dados específica."@pt .
+<http://www.arida.ufc.br/VEKG#%23LocalOntology> <http://www.w3.org/2000/01/rdf-schema#label> "Local Ontology"@en .
+<http://www.arida.ufc.br/VEKG#%23LocalOntology> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia Local"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23LocalSemanticView
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#hasDataSource> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://vocab.data.gov/def/drm#DataAsset> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#hasMapping> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasLocalOntology> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23LocalOntology> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#hasDataSource> .
+_:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://vocab.data.gov/def/drm#DataAsset> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.arida.ufc.br/VEKG#%23hasLocalOntology> .
+_:genid22 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://www.arida.ufc.br/VEKG#%23LocalOntology> .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#label> "Local Semantic View"@en .
+<http://www.arida.ufc.br/VEKG#%23LocalSemanticView> <http://www.w3.org/2000/01/rdf-schema#label> "Visão Semântica Local"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23Mapping
+<http://www.arida.ufc.br/VEKG#%23Mapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.arida.ufc.br/VEKG#%23Metric
+<http://www.arida.ufc.br/VEKG#%23Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.arida.ufc.br/VEKG#%23Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/datanode/ns/isPartOf> .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#%23Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Propriedade utilizada para comparação com base em uma Link Rule (Regra de Ligação)."@pt .
+<http://www.arida.ufc.br/VEKG#%23Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
+<http://www.arida.ufc.br/VEKG#%23Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Métrica"@pt .
+# 
+# http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping
+<http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+# 
+# http://www.arida.ufc.br/VEKG#%23Provenance
+<http://www.arida.ufc.br/VEKG#%23Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Establishment
+<http://www.arida.ufc.br/VEKG#sefaz:Establishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature
+<http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Option_SIMPLES
+<http://www.arida.ufc.br/VEKG#sefaz:Option_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Qualification
+<http://www.arida.ufc.br/VEKG#sefaz:Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.isibang.ac.in/ns/mod#Ontology
+<http://www.isibang.ac.in/ns/mod#Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/03/trix/rdfg-1/Graph
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://www.w3.org/2000/01/rdf-schema#comment> "\nAn RDF graph (with intensional semantics).\n      " .
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://www.w3.org/2000/01/rdf-schema#label> "Grafo"@pt .
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://www.w3.org/2000/01/rdf-schema#label> "Graph"@en .
+<http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://www.w3.org/2000/01/rdf-schema#label> "Um Grafo RDF (com propósitos semânticos)"@pt .
+# 
+# http://www.w3.org/ns/ldp#NonRDFSource
+<http://www.w3.org/ns/ldp#NonRDFSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ldp#NonRDFSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.data.gov/def/drm#DataAsset> .
+<http://www.w3.org/ns/ldp#NonRDFSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ldp#> .
+# 
+# http://www.w3.org/ns/ldp#RDFSource
+<http://www.w3.org/ns/ldp#RDFSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/ldp#RDFSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.data.gov/def/drm#DataAsset> .
+<http://www.w3.org/ns/ldp#RDFSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A Linked Data Platform Resource (LDPR) whose state is represented as RDF." .
+<http://www.w3.org/ns/ldp#RDFSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#RDFSource> <http://www.w3.org/2000/01/rdf-schema#label> "RDFSource" .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://www.ntnu.no/ub/ontologies/csv#CsvDocument
+<https://www.ntnu.no/ub/ontologies/csv#CsvDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.ntnu.no/ub/ontologies/csv#CsvDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ldp#NonRDFSource> .
+<https://www.ntnu.no/ub/ontologies/csv#CsvDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A CSV document broadly conforming to IETF's RFC4180 (http://tools.ietf.org/html/rfc4180); csv:hasEscapeSymbol and csv:hasColumnDelimiter are both set for this class (\\ and , respectively)" .
+<https://www.ntnu.no/ub/ontologies/csv#CsvDocument> <http://www.w3.org/2000/01/rdf-schema#label> "CSV Document"@en .
+<https://www.ntnu.no/ub/ontologies/csv#CsvDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Documento CSV"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://vocab.deri.ie/void#LiDRC
+<http://vocab.deri.ie/void#LiDRC> <http://xmlns.com/foaf/0.1/homepage> <http://linkeddata.deri.ie/> .
+<http://vocab.deri.ie/void#LiDRC> <http://xmlns.com/foaf/0.1/member> <http://vocab.deri.ie/void#Michael%20Hausenblas> .
+<http://vocab.deri.ie/void#LiDRC> <http://xmlns.com/foaf/0.1/name> "LiDRC" .
+# 
+# http://vocab.deri.ie/void#Talis
+<http://vocab.deri.ie/void#Talis> <http://xmlns.com/foaf/0.1/homepage> <http://www.talis.com/> .
+<http://vocab.deri.ie/void#Talis> <http://xmlns.com/foaf/0.1/member> <http://vocab.deri.ie/void#keiale> .
+<http://vocab.deri.ie/void#Talis> <http://xmlns.com/foaf/0.1/name> "Talis" .
+# 
+# http://vocab.deri.ie/void#cygri
+<http://vocab.deri.ie/void#cygri> <http://xmlns.com/foaf/0.1/homepage> <http://richard.cyganiak.de/> .
+<http://vocab.deri.ie/void#cygri> <http://xmlns.com/foaf/0.1/mbox> <mailto:richard.cyganiak@deri.org> .
+<http://vocab.deri.ie/void#cygri> <http://xmlns.com/foaf/0.1/name> "Richard Cyganiak" .
+# 
+# http://vocab.deri.ie/void#junzha
+<http://vocab.deri.ie/void#junzha> <http://xmlns.com/foaf/0.1/homepage> <http://users.ox.ac.uk/~zool0770/> .
+<http://vocab.deri.ie/void#junzha> <http://xmlns.com/foaf/0.1/mbox> <mailto:jun.zhao@zoo.ox.ac.uk> .
+<http://vocab.deri.ie/void#junzha> <http://xmlns.com/foaf/0.1/name> "Jun Zhao" .
+# 
+# http://vocab.deri.ie/void#keiale
+<http://vocab.deri.ie/void#keiale> <http://xmlns.com/foaf/0.1/homepage> <http://kwijibo.talis.com/> .
+<http://vocab.deri.ie/void#keiale> <http://xmlns.com/foaf/0.1/mbox> <mailto:Keith.Alexander@talis.com> .
+<http://vocab.deri.ie/void#keiale> <http://xmlns.com/foaf/0.1/name> "Keith Alexander" .
+# 
+# http://vocab.deri.ie/void#Department%20of%20Zoology%2C%20University%20of%20Oxford
+<http://vocab.deri.ie/void#Department%20of%20Zoology%2C%20University%20of%20Oxford> <http://xmlns.com/foaf/0.1/homepage> <http://www.zoo.ox.ac.uk/> .
+<http://vocab.deri.ie/void#Department%20of%20Zoology%2C%20University%20of%20Oxford> <http://xmlns.com/foaf/0.1/member> <http://vocab.deri.ie/void#junzha> .
+<http://vocab.deri.ie/void#Department%20of%20Zoology%2C%20University%20of%20Oxford> <http://xmlns.com/foaf/0.1/name> "Department of Zoology, University of Oxford" .
+# 
+# http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway
+<http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway> <http://xmlns.com/foaf/0.1/homepage> <http://www.deri.ie/> .
+<http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway> <http://xmlns.com/foaf/0.1/member> <http://vocab.deri.ie/void#cygri> .
+<http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway> <http://xmlns.com/foaf/0.1/name> "Digital Enterprise Research Institute, NUI Galway" .
+# 
+# http://vocab.deri.ie/void#Michael%20Hausenblas
+<http://vocab.deri.ie/void#Michael%20Hausenblas> <http://xmlns.com/foaf/0.1/homepage> <http://sw-app.org/about.html> .
+<http://vocab.deri.ie/void#Michael%20Hausenblas> <http://xmlns.com/foaf/0.1/mbox> <mailto:michael.hausenblas@deri.org> .
+<http://vocab.deri.ie/void#Michael%20Hausenblas> <http://xmlns.com/foaf/0.1/name> "Michael Hausenblas" .
+# 
+# http://www.arida.ufc.br/VEKG#Cadastro
+<http://www.arida.ufc.br/VEKG#Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdbs-o#Relational_Database> .
+# 
+# http://www.arida.ufc.br/VEKG#ClassMapping
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.arida.ufc.br/VEKG#%23class> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.arida.ufc.br/VEKG#%23class> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "foaf : Organization / Agent ≡ view[root_cnpj-razao_uri]" .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.arida.ufc.br/VEKG#%23primaryKey> "root_cnpj, razao_uri" .
+<http://www.arida.ufc.br/VEKG#ClassMapping> <http://www.arida.ufc.br/VEKG#%23rmlVision> "SELECT SUBSTRING(cnpj,0,9) as root_cnpj,cnpj , REPLACE(regexp_replace(nome_fantasia, '[^a-zA-Z ]', '', 'g'),' ','_') as nome_uri, REPLACE(regexp_replace(razao_social, '[^a-zA-Z ]', '', 'g'),' ','_') as razao_uri,razao_social, CASE WHEN opc_simples = '' OR opc_simples = '0' THEN 'NAO_OPTANTE'\n\t\t\t\t\tWHEN opc_simples = '5' OR opc_simples = '7' THEN 'OPTANTE'\n\t\t\t\t\tWHEN opc_simples = '6' OR opc_simples = '8' THEN 'EXCLUIDO'\n\t\t\t\tEND as opc_simples, \n\t\t\t\tCASE opc_mei WHEN 'S' THEN 'true'\n\t\t\t\t\tWHEN 'N' THEN 'false'\n\t\t\t\t\tELSE NULL\n\t\t\t\tEND as opc_mei, q.id_uri as id_qualif, n.id_uri as id_nat\n\t\t\tFROM public.empresas INNER JOIN qualificacao_socio q ON qualif_resp::int = q.\"CÓDIGO\" INNER JOIN natureza_juridica n ON cod_nat_juridica::int = n.id WHERE empresas.matriz_filial = '1' AND SUBSTRING(cnpj,0,9) = '03995515'" .
+# 
+# http://www.arida.ufc.br/VEKG#ClassMappingRFB
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.arida.ufc.br/VEKG#%23class> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "foaf : Organization ≡ RML_view[CPNJ]" .
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.arida.ufc.br/VEKG#%23primaryKey> "CNPJ" .
+<http://www.arida.ufc.br/VEKG#ClassMappingRFB> <http://www.arida.ufc.br/VEKG#%23rmlVision> "SELECT org.RJU_RUC_JURIDICO, org.RJU_RAZON_SOCIAL, org.RJU_SIGLAS, org.RJU_FEC_INCORPORACION, RJU_FEC_ACTUALIZACION, org.RJU_TAB_COD_UNIDAD, org.RJU_TUS_COD_USUARIO, RJU_TIP_SOCIEDAD, org.RJU_DATA_ULT_ALT, \n    CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8)) CNPJ \n    FROM TULIOSEMANTIC.RUC_JURIDICOS org, TULIOSEMANTIC.RUC_GENERAL geral\n    WHERE org.RJU_RUC_JURIDICO = geral.RGE_RUC AND geral.RGE_TIP_PERSONA = 2 AND (org.RJU_RUC_JURIDICO, CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8))) = ANY\n    (\n        SELECT MIN(RGE_RUC),CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8)) FROM TULIOSEMANTIC.RUC_GENERAL\n        GROUP BY(CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8)))\n        HAVING (COUNT(*) > 1)\n    )" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:acronyms> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.arida.ufc.br/VEKG#%23atributes> "RJU_SIGLAS" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADAcronyms> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefazma:acronyms  ≡ view /{RJU_SIGLAS}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:company_name> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.arida.ufc.br/VEKG#%23property> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.arida.ufc.br/VEKG#%23atributes> "RJU_RAZON_SOCIAL" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADCompanyName> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefazma:company_name,rdfs:label  ≡ view /{RJU_RAZON_SOCIAL}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:fiscal_unit_code> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.arida.ufc.br/VEKG#%23atributes> "RJU_TAB_COD_UNIDAD" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADFiscalUnitCode> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefazma:fiscal_unit_code  ≡ view /{RJU_TAB_COD_UNIDAD}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:cnpj> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:root_cnpj> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.arida.ufc.br/VEKG#%23atributes> "CNPJ" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADRootCNPJ> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefazma:root_cnpj, sefazma:cnpj  ≡ view /{CNPJ}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:state_registration> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.arida.ufc.br/VEKG#%23atributes> "RJU_RUC_JURIDICO" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADStateRegistration> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefazma:state_registration  ≡ view /{RJU_RUC_JURIDICO}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:update_date> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.arida.ufc.br/VEKG#%23atributes> "RJU_FEC_ACTUALIZACION" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCADUpdateDate> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefazma:update_date  ≡ view /{RJU_FEC_ACTUALIZACION}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:company_name> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.arida.ufc.br/VEKG#%23atributes> "razao_social" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationCompanyName> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:company_name ≡ view /{razao_social}" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:is_MEI> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23atributes> "opc_mei" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:company_name ≡ view /{opc_mei}" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationIsMEI> <http://www.arida.ufc.br/VEKG#%23transformationFunction> "if(S) then true when (N) then false" .
+# 
+# http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:root_cnpj> .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.arida.ufc.br/VEKG#%23atributes> "root_cnpj" .
+<http://www.arida.ufc.br/VEKG#DPMOrganizationRootCPNJ> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:root_cnpj ≡ view /{root_cnpj}" .
+# 
+# http://www.arida.ufc.br/VEKG#Dataset_Cadastro
+<http://www.arida.ufc.br/VEKG#Dataset_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Dataset_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> .
+<http://www.arida.ufc.br/VEKG#Dataset_Cadastro> <http://rdfs.org/ns/void#subset> <http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> .
+<http://www.arida.ufc.br/VEKG#Dataset_Cadastro> <http://rdfs.org/ns/void#vocabulary> "Ontologia_Cadastro" .
+# 
+# http://www.arida.ufc.br/VEKG#Dataset_RFB
+<http://www.arida.ufc.br/VEKG#Dataset_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Dataset_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> .
+<http://www.arida.ufc.br/VEKG#Dataset_RFB> <http://rdfs.org/ns/void#vocabulary> "Ontologia_RFB" .
+# 
+# http://www.arida.ufc.br/VEKG#EmpresaA
+<http://www.arida.ufc.br/VEKG#EmpresaA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#EmpresaA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#EmpresaA> <http://www.arida.ufc.br/VEKG#cnpj> "03115379"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.arida.ufc.br/VEKG#EmpresaB
+<http://www.arida.ufc.br/VEKG#EmpresaB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#EmpresaB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#EmpresaB> <http://www.arida.ufc.br/VEKG#cnpj> "03115379"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.arida.ufc.br/VEKG#Grafo_SEFAZMA
+<http://www.arida.ufc.br/VEKG#Grafo_SEFAZMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Grafo_SEFAZMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> .
+# 
+# http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB
+<http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23LinkRule> .
+<http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB> <http://www.arida.ufc.br/VEKG#link_rule_predicate> <http://www.arida.ufc.br/VEKG#cnpj> .
+<http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB> <http://www.arida.ufc.br/VEKG#%23hasMetric> <http://www.arida.ufc.br/VEKG#equality> .
+<http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB> <http://www.arida.ufc.br/VEKG#%23source> <http://www.arida.ufc.br/VEKG#EmpresaA> .
+<http://www.arida.ufc.br/VEKG#Link_Rule_Cadastro-RFB> <http://www.arida.ufc.br/VEKG#%23target> <http://www.arida.ufc.br/VEKG#EmpresaB> .
+# 
+# http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro
+<http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#LinkSet> .
+<http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> <http://rdfs.org/ns/void#linkPredicate> <http://www.arida.ufc.br/VEKG#sameAs> .
+<http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> <http://rdfs.org/ns/void#target> <http://www.arida.ufc.br/VEKG#Dataset_Cadastro> .
+<http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> <http://rdfs.org/ns/void#target> <http://www.arida.ufc.br/VEKG#Dataset_RFB> .
+# 
+# http://www.arida.ufc.br/VEKG#LogicalTableOrganization
+<http://www.arida.ufc.br/VEKG#LogicalTableOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#LogicalTableOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#LogicalTable> .
+<http://www.arida.ufc.br/VEKG#LogicalTableOrganization> <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT SUBSTRING(cnpj,0,9) as root_cnpj,cnpj , REPLACE(regexp_replace(nome_fantasia, '[^a-zA-Z ]', '', 'g'),' ','_') as nome_uri, REPLACE(regexp_replace(razao_social, '[^a-zA-Z ]', '', 'g'),' ','_') as razao_uri,razao_social, CASE WHEN opc_simples = '' OR opc_simples = '0' THEN 'NAO_OPTANTE'\n\t\t\t\t\tWHEN opc_simples = '5' OR opc_simples = '7' THEN 'OPTANTE'\n\t\t\t\t\tWHEN opc_simples = '6' OR opc_simples = '8' THEN 'EXCLUIDO'\n\t\t\t\tEND as opc_simples, \n\t\t\t\tCASE opc_mei WHEN 'S' THEN 'true'\n\t\t\t\t\tWHEN 'N' THEN 'false'\n\t\t\t\t\tELSE NULL\n\t\t\t\tEND as opc_mei, q.id_uri as id_qualif, n.id_uri as id_nat\n\t\t\tFROM public.empresas INNER JOIN qualificacao_socio q ON qualif_resp::int = q.\"CÓDIGO\" INNER JOIN natureza_juridica n ON cod_nat_juridica::int = n.id WHERE empresas.matriz_filial = '1' AND SUBSTRING(cnpj,0,9) = '03995515'" .
+# 
+# http://www.arida.ufc.br/VEKG#LogicalTableOrganizationCAD
+<http://www.arida.ufc.br/VEKG#LogicalTableOrganizationCAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#LogicalTableOrganizationCAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#LogicalTable> .
+<http://www.arida.ufc.br/VEKG#LogicalTableOrganizationCAD> <http://www.w3.org/ns/r2rml#sqlQuery> "SELECT org.RJU_RUC_JURIDICO, org.RJU_RAZON_SOCIAL, org.RJU_SIGLAS, org.RJU_FEC_INCORPORACION, RJU_FEC_ACTUALIZACION, org.RJU_TAB_COD_UNIDAD, org.RJU_TUS_COD_USUARIO, RJU_TIP_SOCIEDAD, org.RJU_DATA_ULT_ALT, \n    CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8)) CNPJ \n    FROM TULIOSEMANTIC.RUC_JURIDICOS org, TULIOSEMANTIC.RUC_GENERAL geral\n    WHERE org.RJU_RUC_JURIDICO = geral.RGE_RUC AND geral.RGE_TIP_PERSONA = 2 AND (org.RJU_RUC_JURIDICO, CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8))) = ANY\n    (\n        SELECT MIN(RGE_RUC),CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8)) FROM TULIOSEMANTIC.RUC_GENERAL\n        GROUP BY(CONCAT('0',SUBSTR(RGE_CGC_CPF,0,8)))\n        HAVING (COUNT(*) > 1)\n    )" .
+# 
+# http://www.arida.ufc.br/VEKG#Mapeamento_Cadastro
+<http://www.arida.ufc.br/VEKG#Mapeamento_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Mapeamento_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+# 
+# http://www.arida.ufc.br/VEKG#Mapeamento_RFB
+<http://www.arida.ufc.br/VEKG#Mapeamento_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Mapeamento_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23Mapping> .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:has_change> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:has_change ≡ motivos_situacao /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasChange> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "motivos_situacao" .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:has_legal_nature> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:has_legal_nature ≡ natureza_juridica /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasLegalNature> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "natureza_juridica" .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:has_user> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:has_user ≡ motivos_situacao /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationCADHasUser> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "motivos_situacao" .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:has_legal_nature> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:has_legal_nature ≡ natureza_juridica /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHasLegalNature> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "natureza_juridica" .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:has_establishment> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:has_headquarters> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Establishment> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:has_headquarters ≡ empresas /, sefaz:has_establishment ≡ empresas /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationHeadquarters> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "empresas" .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:option_simples> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Option_SIMPLES> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:option_simples ≡ empresas /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationOptionSimples> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "empresas" .
+# 
+# http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23domainCM> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23hasTriplesMap> <http://www.arida.ufc.br/VEKG#TriplesMapOrganization> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23property> <http://www.arida.ufc.br/VEKG#sefaz:representant_qualification> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23rangeCM> <http://www.arida.ufc.br/VEKG#sefaz:Qualification> .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23correspondenceAssertion> "sefaz:representant_qualification ≡ qualificacao_socio /" .
+<http://www.arida.ufc.br/VEKG#OPMOrganizationRepresentantQualification> <http://www.arida.ufc.br/VEKG#%23rangeRDB> "qualificacao_socio" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADAcronyms
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADAcronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADAcronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADAcronyms> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADAcronyms> <http://www.w3.org/ns/r2rml#column> "RJU_SIGLAS" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCNPJ
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCNPJ> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCNPJ> <http://www.w3.org/ns/r2rml#column> "CNPJ" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCompanyName
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCompanyName> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCompanyName> <http://www.w3.org/ns/r2rml#column> "RJU_RAZON_SOCIAL" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADFiscalUnitCode
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/ns/r2rml#column> "RJU_TAB_COD_UNIDAD" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasChange
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasChange> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/Cadastral_Situation/resource/Change/{RJU_FEC_ACTUALIZACION}/" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasLegalNature
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/Cadastral_Situation/resource/Legal_Nature/{RJU_TIP_SOCIEDAD}/" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasUser
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasUser> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/Cadastral_Situation/resource/User/{RJU_RUC_JURIDICO}-{RJU_TUS_COD_USUARIO}/" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADStateRegistration
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADStateRegistration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADStateRegistration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADStateRegistration> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADStateRegistration> <http://www.w3.org/ns/r2rml#column> "RJU_RUC_JURIDICO" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADUpdateDate
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADUpdateDate> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADUpdateDate> <http://www.w3.org/ns/r2rml#column> "RJU_FEC_ACTUALIZACION" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHasLegalNature
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHasLegalNature> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/RFB/resource/Legal_Nature/{id_nat}" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHeadquarters
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHeadquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHeadquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHeadquarters> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/RFB/resource/Establishment/{cnpj}-{nome_uri}" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOpcMei
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOpcMei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOpcMei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOpcMei> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOpcMei> <http://www.w3.org/ns/r2rml#column> "opc_mei" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOptionSimples
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOptionSimples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOptionSimples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOptionSimples> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/{opc_simples}-{root_cnpj}" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRazaoSocial
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRazaoSocial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRazaoSocial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRazaoSocial> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRazaoSocial> <http://www.w3.org/ns/r2rml#column> "razao_social" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRepresentantQualification
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRepresentantQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRepresentantQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRepresentantQualification> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/RFB/resource/Qualification/{id_qualif}" .
+# 
+# http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRootCNPJ
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRootCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRootCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#ObjectMap> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRootCNPJ> <http://www.w3.org/ns/r2rml#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRootCNPJ> <http://www.w3.org/ns/r2rml#column> "root_cnpj" .
+# 
+# http://www.arida.ufc.br/VEKG#Ontologia_Cadastro
+<http://www.arida.ufc.br/VEKG#Ontologia_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Ontologia_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23LocalOntology> .
+# 
+# http://www.arida.ufc.br/VEKG#Ontologia_RFB
+<http://www.arida.ufc.br/VEKG#Ontologia_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Ontologia_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23LocalOntology> .
+# 
+# http://www.arida.ufc.br/VEKG#Ontologia_de_Domínio_RFB-Cadastro
+<http://www.arida.ufc.br/VEKG#Ontologia_de_Dom\u00EDnio_RFB-Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Ontologia_de_Dom\u00EDnio_RFB-Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#DomainOntology> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADAcronyms
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADAcronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADAcronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADAcronyms> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADAcronyms> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADAcronyms> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:acronyms> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCNPJ> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:cnpj> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:root_cnpj> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCompanyName
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCompanyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCompanyName> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADCompanyName> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCompanyName> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:company_name> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADFiscalUnitCode
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADFiscalUnitCode> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADFiscalUnitCode> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:fiscal_unit_code> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasChange
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasChange> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasChange> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasChange> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:has_change> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasLegalNature
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasLegalNature> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasLegalNature> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:has_legal_nature> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasUser
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasUser> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADHasUser> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasUser> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:has_user> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADStateRegistration
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADStateRegistration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADStateRegistration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADStateRegistration> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADStateRegistration> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADStateRegistration> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:state_registration> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADUpdateDate
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADUpdateDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADUpdateDate> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationCADUpdateDate> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADUpdateDate> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:update_date> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHasLegalNature
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHasLegalNature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHasLegalNature> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHasLegalNature> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHasLegalNature> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:has_legal_nature> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationHeadquarters> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:has_establishment> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:has_headquarters> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOpcMei
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOpcMei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOpcMei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOpcMei> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOpcMei> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOpcMei> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:is_MEI> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOptionSimples
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOptionSimples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOptionSimples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOptionSimples> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationOptionSimples> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOptionSimples> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:option_simples> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRazaoSocial> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:company_name> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial> <http://www.w3.org/ns/r2rml#predicate> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRepresentantQualification
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRepresentantQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRepresentantQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRepresentantQualification> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRepresentantQualification> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRepresentantQualification> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:representant_qualification> .
+# 
+# http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> <http://www.w3.org/ns/r2rml#objectMap> <http://www.arida.ufc.br/VEKG#ObjectMapOrganizationRootCNPJ> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:cnpj> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:person_identifier> .
+<http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> <http://www.w3.org/ns/r2rml#predicate> <http://www.arida.ufc.br/VEKG#sefaz:root_cnpj> .
+# 
+# http://www.arida.ufc.br/VEKG#RFB
+<http://www.arida.ufc.br/VEKG#RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdbs-o#Relational_Database> .
+# 
+# http://www.arida.ufc.br/VEKG#SubjectMapOrganization
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#SubjectMap> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganization> <http://www.w3.org/ns/r2rml#class> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganization> <http://www.w3.org/ns/r2rml#class> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganization> <http://www.w3.org/ns/r2rml#template> "http://www.sefaz.ma.gov.br/RFB/resource/Organization/{root_cnpj}-{razao_uri}" .
+# 
+# http://www.arida.ufc.br/VEKG#SubjectMapOrganizationCAD
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganizationCAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganizationCAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#SubjectMap> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganizationCAD> <http://www.w3.org/ns/r2rml#class> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.arida.ufc.br/VEKG#SubjectMapOrganizationCAD> <http://www.w3.org/ns/r2rml#template> "http://xmlns.com/foaf/0.1/Organization/{CNPJ}/" .
+# 
+# http://www.arida.ufc.br/VEKG#TriplesMapOrganization
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#TriplesMap> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#logicalTable> <http://www.arida.ufc.br/VEKG#LogicalTableOrganization> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHasLegalNature> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationHeadquarters> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOpcMei> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationOptionSimples> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRazaoSocial> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRepresentantQualification> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationRootCNPJ> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganization> <http://www.w3.org/ns/r2rml#subjectMap> <http://www.arida.ufc.br/VEKG#SubjectMapOrganization> .
+# 
+# http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/r2rml#TriplesMap> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#logicalTable> <http://www.arida.ufc.br/VEKG#LogicalTableOrganizationCAD> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADAcronyms> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCNPJ> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADCompanyName> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADFiscalUnitCode> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasChange> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasLegalNature> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#predicateObjectMap> <http://www.arida.ufc.br/VEKG#PredicateObjectMapOrganizationCADHasUser> .
+<http://www.arida.ufc.br/VEKG#TriplesMapOrganizationCAD> <http://www.w3.org/ns/r2rml#subjectMap> <http://www.arida.ufc.br/VEKG#SubjectMapOrganizationCAD> .
+# 
+# http://www.arida.ufc.br/VEKG#Visão_Local_Cadastro
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_Cadastro> <http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.arida.ufc.br/VEKG#Cadastro> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_Cadastro> <http://www.arida.ufc.br/VEKG#hasMapping> <http://www.arida.ufc.br/VEKG#Mapeamento_Cadastro> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_Cadastro> <http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.arida.ufc.br/VEKG#Ontologia_Cadastro> .
+# 
+# http://www.arida.ufc.br/VEKG#Visão_Local_RFB
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23LocalSemanticView> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_RFB> <http://www.arida.ufc.br/VEKG#hasDataSource> <http://www.arida.ufc.br/VEKG#RFB> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_RFB> <http://www.arida.ufc.br/VEKG#hasMapping> <http://www.arida.ufc.br/VEKG#Mapeamento_RFB> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_RFB> <http://www.arida.ufc.br/VEKG#%23hasLocalOntology> <http://www.arida.ufc.br/VEKG#Ontologia_RFB> .
+# 
+# http://www.arida.ufc.br/VEKG#Visão_Semântica_Global_RFB-Cadastro
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Sem\u00E2ntica_Global_RFB-Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Sem\u00E2ntica_Global_RFB-Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23GlobalSemanticView> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Sem\u00E2ntica_Global_RFB-Cadastro> <http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_Cadastro> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Sem\u00E2ntica_Global_RFB-Cadastro> <http://www.arida.ufc.br/VEKG#has_local_semantic_view> <http://www.arida.ufc.br/VEKG#Vis\u00E3o_Local_RFB> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Sem\u00E2ntica_Global_RFB-Cadastro> <http://www.arida.ufc.br/VEKG#%23hasDomainOntology> <http://www.arida.ufc.br/VEKG#Ontologia_de_Dom\u00EDnio_RFB-Cadastro> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_Sem\u00E2ntica_Global_RFB-Cadastro> <http://www.arida.ufc.br/VEKG#%23hasLinksetView> <http://www.arida.ufc.br/VEKG#Vis\u00E3o_de_Linkset_RFB-Cadastro> .
+# 
+# http://www.arida.ufc.br/VEKG#Visão_de_Linkset_RFB-Cadastro
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_de_Linkset_RFB-Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_de_Linkset_RFB-Cadastro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23LinksetView> .
+<http://www.arida.ufc.br/VEKG#Vis\u00E3o_de_Linkset_RFB-Cadastro> <http://www.arida.ufc.br/VEKG#hasLinkSet> <http://www.arida.ufc.br/VEKG#Linkset_RFB_Cadastro> .
+# 
+# http://www.arida.ufc.br/VEKG#cnpj
+<http://www.arida.ufc.br/VEKG#cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#equality
+<http://www.arida.ufc.br/VEKG#equality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.arida.ufc.br/VEKG#equality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.arida.ufc.br/VEKG#%23Metric> .
+# 
+# http://www.arida.ufc.br/VEKG#sameAs
+<http://www.arida.ufc.br/VEKG#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Establishment
+<http://www.arida.ufc.br/VEKG#sefaz:Establishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature
+<http://www.arida.ufc.br/VEKG#sefaz:Legal_Nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Option_SIMPLES
+<http://www.arida.ufc.br/VEKG#sefaz:Option_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:Qualification
+<http://www.arida.ufc.br/VEKG#sefaz:Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:acronyms
+<http://www.arida.ufc.br/VEKG#sefaz:acronyms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:cnpj
+<http://www.arida.ufc.br/VEKG#sefaz:cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:company_name
+<http://www.arida.ufc.br/VEKG#sefaz:company_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:fiscal_unit_code
+<http://www.arida.ufc.br/VEKG#sefaz:fiscal_unit_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:has_change
+<http://www.arida.ufc.br/VEKG#sefaz:has_change> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:has_establishment
+<http://www.arida.ufc.br/VEKG#sefaz:has_establishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:has_headquarters
+<http://www.arida.ufc.br/VEKG#sefaz:has_headquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:has_legal_nature
+<http://www.arida.ufc.br/VEKG#sefaz:has_legal_nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:has_user
+<http://www.arida.ufc.br/VEKG#sefaz:has_user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:is_MEI
+<http://www.arida.ufc.br/VEKG#sefaz:is_MEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:option_simples
+<http://www.arida.ufc.br/VEKG#sefaz:option_simples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:person_identifier
+<http://www.arida.ufc.br/VEKG#sefaz:person_identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:representant_qualification
+<http://www.arida.ufc.br/VEKG#sefaz:representant_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:root_cnpj
+<http://www.arida.ufc.br/VEKG#sefaz:root_cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:state_registration
+<http://www.arida.ufc.br/VEKG#sefaz:state_registration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.arida.ufc.br/VEKG#sefaz:update_date
+<http://www.arida.ufc.br/VEKG#sefaz:update_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2001/XMLSchema#boolean
+<http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2001/XMLSchema#decimal
+<http://www.w3.org/2001/XMLSchema#decimal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2001/XMLSchema#integer
+<http://www.w3.org/2001/XMLSchema#integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2001/XMLSchema#string
+<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://vocab.deri.ie/void#rdf> <http://purl.org/dc/terms/FileFormat> <http://vocab.deri.ie/void> .
+<http://vocab.deri.ie/void#rdf> <http://www.w3.org/ns/adms#accessURL> "http://vocab.deri.ie/void.rdf" .
+<http://vocab.deri.ie/void#rdf> <http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> .
+# 
+<http://vocab.deri.ie/void#ttl> <http://purl.org/dc/terms/FileFormat> <http://vocab.deri.ie/void> .
+<http://vocab.deri.ie/void#ttl> <http://www.w3.org/ns/adms#accessURL> "http://vocab.deri.ie/void.ttl" .
+<http://vocab.deri.ie/void#ttl> <http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/Completed> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid24 <http://www.w3.org/2002/07/owl#members> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.arida.ufc.br/VEKG#%23ClassMapping> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.arida.ufc.br/VEKG#%23DatatypePropertyMapping> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.arida.ufc.br/VEKG#%23ObjectPropertyMapping> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
