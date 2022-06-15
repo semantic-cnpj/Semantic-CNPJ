@@ -1,0 +1,14 @@
+map:PessoaCADSameASRFB a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+            SELECT * FROM "UFC_SEM"."SAMEAS_CAD_RFB_PESSOA"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/Cadastro_SEFAZ-MA/Pessoa/{CAD_ID}";
+	];
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Pessoa/{RFB_ID}" ];
+    ].

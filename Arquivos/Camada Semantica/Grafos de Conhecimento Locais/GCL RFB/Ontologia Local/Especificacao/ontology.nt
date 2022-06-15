@@ -1,0 +1,1623 @@
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Cadastral Ontology of open data of companies registred with the Federal Revenue of Brazil"@en .
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nValeria Priscilla Monteiro Fernandes\nvaleria.fernandes@sefaz.ma.gov.br\n\nAdriano Dos Santos Rego\nadriano.rego@sefaz.ma.gov.br\n\n\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n\n-----------------------------------------------------------------------------------------------\nFinanciador: Banco Interamericano de Desenvolvimento\n\nContrato 4458/OC-BR. \nP1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."@pt .
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologia Cadastral dos Dados Abertos de Empresas da Receita Federal do Brasil - RFB"@pt .
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/2000/01/rdf-schema#label> "RFB Cadastro"@pt .
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj> .
+<http://www.sefaz.ma.gov.br/RFB/ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@pt .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/company_name
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/situation_code
+<http://www.sefaz.ma.gov.br/ontology/situation_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/special_situation_description
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Special_Situation> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/trade_name
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_address
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Address> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_city
+<http://www.sefaz.ma.gov.br/ontology/has_city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_city> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/has_city> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/City> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_country
+<http://www.sefaz.ma.gov.br/ontology/has_country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/has_country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Country> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_district
+<http://www.sefaz.ma.gov.br/ontology/has_district> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_district> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/has_district> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/District> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_establishment
+<http://www.sefaz.ma.gov.br/ontology/has_establishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment> <http://www.w3.org/2000/01/rdf-schema#label> "tem estabelecimento"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_establishment_type
+<http://www.sefaz.ma.gov.br/ontology/has_establishment_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Establishment_Type> .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment_type> <http://www.w3.org/2000/01/rdf-schema#label> "estabelecimento tem o tipo"@pt .
+<http://www.sefaz.ma.gov.br/ontology/has_establishment_type> <http://www.w3.org/2000/01/rdf-schema#label> "has establishment type"@en .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_federative_unit
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_headquarters
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/has_establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_legal_nature
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Legal_Nature> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_locality
+<http://www.sefaz.ma.gov.br/ontology/has_locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_locality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/has_locality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Locality> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/has_economic_activity> .
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_partner
+<http://www.sefaz.ma.gov.br/ontology/has_partner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_partner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_partner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Partnership> .
+<http://www.sefaz.ma.gov.br/ontology/has_partner> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.sefaz.ma.gov.br/ontology/has_partner> <http://www.w3.org/2000/01/rdf-schema#comment> "tem sócio"@pt .
+<http://www.sefaz.ma.gov.br/ontology/has_partner> <http://www.w3.org/2000/01/rdf-schema#label> "has partner"@en .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_partnership
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Partnership> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_reason_situation
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_representant
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_size
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_special_situation
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Special_Situation> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_subsidiary
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/has_establishment> .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_part_of_group
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/2002/07/owl#inverseOf> <http://xmlns.com/foaf/0.1/member> .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Group> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/option_simples
+<http://www.sefaz.ma.gov.br/ontology/option_simples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/option_simples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/option_simples> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/option_simples> <http://www.w3.org/2000/01/rdf-schema#comment> "tem opção pelo SIMPLES"@pt .
+<http://www.sefaz.ma.gov.br/ontology/option_simples> <http://www.w3.org/2000/01/rdf-schema#label> "has option for SIMPLES"@en .
+# 
+# http://www.sefaz.ma.gov.br/ontology/partner_qualification
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Partnership> .
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.sefaz.ma.gov.br/ontology/representant_qualification> .
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/2000/01/rdf-schema#label> "partner qualification"@en .
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> <http://www.w3.org/2000/01/rdf-schema#label> "qualificação do sócio"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/representant_qualification
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+# 
+# http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Group> .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/activity_start_date
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/2000/01/rdf-schema#label> "data de início das atividades do estabelecimento"@pt .
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> <http://www.w3.org/2000/01/rdf-schema#label> "establishment activity start date"@en .
+# 
+# http://www.sefaz.ma.gov.br/ontology/address_complement
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/address_number
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Address> .
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/city_code
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/City> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/city_code_RFB
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/city_code> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/City> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/2000/01/rdf-schema#label> "city code RFB"@en .
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> <http://www.w3.org/2000/01/rdf-schema#label> "código da cidade pela RFB"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cnae
+<http://www.sefaz.ma.gov.br/ontology/cnae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cnae> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#notation> .
+<http://www.sefaz.ma.gov.br/ontology/cnae> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+<http://www.sefaz.ma.gov.br/ontology/cnae> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/cnae> <http://www.w3.org/2000/01/rdf-schema#label> "CNAE"@pt .
+<http://www.sefaz.ma.gov.br/ontology/cnae> <http://www.w3.org/2000/01/rdf-schema#label> "Classificação Nacional de Atividades Econômicas"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cnpj
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/person_identifier> .
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.sefaz.ma.gov.br/ontology/cpf> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code_qualification
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code_size_company
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/company_name
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.sefaz.ma.gov.br/ontology/trade_name> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/contact_number
+<http://www.sefaz.ma.gov.br/ontology/contact_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/contact_number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/contact_number> <http://www.w3.org/2000/01/rdf-schema#label> "número de contato"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/country_code
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/country_code_RFB
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/country_code> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/2000/01/rdf-schema#label> "country code RFB"@en .
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> <http://www.w3.org/2000/01/rdf-schema#label> "código de país da RFB"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cpf
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/person_identifier> .
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/fax_number
+<http://www.sefaz.ma.gov.br/ontology/fax_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/fax_number> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/contact_number> .
+<http://www.sefaz.ma.gov.br/ontology/fax_number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/fax_number> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://www.sefaz.ma.gov.br/ontology/phone_number> .
+<http://www.sefaz.ma.gov.br/ontology/fax_number> <http://www.w3.org/2000/01/rdf-schema#label> "número de fax"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/formated_cnae
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/cnae> .
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/2000/01/rdf-schema#label> "CNAE formatado"@pt .
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> <http://www.w3.org/2000/01/rdf-schema#label> "formated CNAE"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/full_cnpj
+<http://www.sefaz.ma.gov.br/ontology/full_cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/full_cnpj> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/cnpj> .
+<http://www.sefaz.ma.gov.br/ontology/full_cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/full_cnpj> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/full_cnpj> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_MEI
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#comment> "O microempreendedor individual (MEI), que é o empresário individual que atende aos seguintes requisitos, cumulativamente:\n• ser optante pelo Simples Nacional e cumprir seus requisitos;\n\n• exercer profissionalmente atividade econômica organizada para a produção\nou a circulação de bens ou de serviços (art. 966 do Código Civil);\n\n• auferir receita bruta acumulada nos anos-calendário anterior e em curso de\naté R$ 81.000,00 (oitenta e um mil reais) – no caso de início de atividade, o\nlimite deve ser de R$ 6.750,00 (seis mil setecentos e cinquenta reais)\nmultiplicados pelo número de meses compreendidos entre o mês de início\nde atividade e o final do respectivo ano-calendário, consideradas as frações\nde meses como um mês inteiro;\n\n• exercer tão-somente as ocupações constantes do Anexo XI da Resolução\nCGSN nº 140, de 2018;\n\n• possuir um único estabelecimento;\n\n• não participar de outra empresa como titular, sócio ou administrador;\n\n• não contratar mais de um empregado, que só poderá receber 1 (um) salário\nmínimo previsto em lei federal ou estadual ou o piso salarial da categoria\nprofissional, definido em lei federal ou por convenção coletiva da categoria\n(art. 18-C da Lei Complementar nº 123, de 2006);\n\n• não guardar, cumulativamente, com o contratante do serviço, relação de\npessoalidade, subordinação e habitualidade;\n\n• não realizar suas atividades mediante cessão ou locação de mão de obra\n(art. 112, \"caput\", da Resolução CGSN nº 140, de 2018).\n\n(Base legal: art. 18-A da Lei Complementar nº 123, de 2006.)\n\nNotas:\n1. Só pode ser MEI o empresário individual. Nenhum tipo de sociedade pode\nser MEI.\n\n2. A “Empresa Individual de Responsabilidade Limitada” (Eireli) não é um\n“empresário individual” do art. 966 do Código Civil. Por isso, não pode ser\nMEI nem pode optar pelo Simei (art. 18-A, § 1º, da Lei Complementar nº\n123, de 2006).\n\n3. Não pode ser MEI o salão-parceiro de que trata a Lei nº 12.592, de 2012\n(art. 100, § 7º, da Resolução CGSN nº 140, de 2018).\n\n4. O limite anual de R$ 81.000,00 é um só, somando receitas de mercado\ninterno e externo. O MEI não tem limite estendido para exportação."@pt .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#comment> "The individual microentrepreneur (MEI), who is the individual entrepreneur who meets the following requirements, cumulatively:\n• opting for Simples Nacional and fulfilling its requirements;\n\n• professionally carry out organized economic activity for the production\nor the circulation of goods or services (art. 966 of the Civil Code);\n\n• to obtain gross revenue accumulated in the previous and ongoing calendar years\nup to R $ 81,000.00 (eighty-one thousand reais) - in the case of start of activity, the\nlimit should be six thousand seven hundred and fifty reais (R $ 6,750.00)\nmultiplied by the number of months between the start month\nactivity and the end of the respective calendar year, considering the fractions\nmonths as a whole month;\n\n• exercise only the occupations listed in Annex XI of the Resolution\nCGSN No. 140, 2018;\n\n• have a single establishment;\n\n• not participating in another company as a holder, partner or administrator;\n\n• not hiring more than one employee, who can only receive 1 (one) salary\nminimum provided by federal or state law or the salary floor of the category\ndefined by federal law or by collective agreement of the category\n(Article 18-C of Complementary Law No. 123, 2006);\n\n• not to keep, cumulatively, with the service contractor, a relationship of\npersonality, subordination and habituality;\n\n• not carrying out its activities by assigning or hiring labor\n(art. 112, \"caput\", of Resolution CGSN nº 140, of 2018).\n\n(Legal basis: Article 18-A of Complementary Law No. 123, 2006.)\n\nGrades:\n1. Only the individual entrepreneur can be MEI. No type of society can\nbe MEI.\n\n2. The “Individual Limited Liability Company” (Eireli) is not a\n“Individual entrepreneur” of art. 966 of the Civil Code. So it cannot be\nMEI cannot even opt for Simei (art. 18-A, § 1, of Complementary Law nº\n123, of 2006).\n\n3. The partner salon referred to in Law No. 12,592, of 2012, cannot be MEI\n(art. 100, § 7, of Resolution CGSN nº 140, of 2018).\n\n4. The annual limit of R $ 81,000.00 is one, adding up market revenues\ninternal and external. The MEI has no extended export limit."@en .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#label> "company is an Individual Microentrepreneur (MEI)?"@en .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#label> "empresa é um Microempreendedor Individual (MEI)?"@pt .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#label> "is MEI?"@en .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#label> "é MEI?"@pt .
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoMEI.pdf> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_foreign
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/legal_nature_code
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Legal_Nature> .
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/locality_type
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Locality> .
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/partnership_start_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Partnership> .
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/person_identifier
+<http://www.sefaz.ma.gov.br/ontology/person_identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/person_identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identificador de uma pessoa"@pt .
+<http://www.sefaz.ma.gov.br/ontology/person_identifier> <http://www.w3.org/2000/01/rdf-schema#label> "person identifier"@en .
+# 
+# http://www.sefaz.ma.gov.br/ontology/phone_number
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/contact_number> .
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/raw_cnae
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/cnae> .
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> <http://www.w3.org/2000/01/rdf-schema#label> "CNAE"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/reason_situation_code
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/root_cnpj
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/cnpj> .
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/share_capital
+<http://www.sefaz.ma.gov.br/ontology/share_capital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/share_capital> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://www.sefaz.ma.gov.br/ontology/share_capital> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/special_situation_description
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/special_situation_start_date
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Special_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/trade_name
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option
+<http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option> <http://www.w3.org/2000/01/rdf-schema#label> "tipo da opção pelo simples"@pt .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2006/vcard/ns#country-name
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#label> "country name"@en .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#label> "nome do país"@pt .
+# 
+# http://www.w3.org/2006/vcard/ns#email
+<http://www.w3.org/2006/vcard/ns#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.w3.org/2006/vcard/ns#email> <http://www.w3.org/2000/01/rdf-schema#label> "e-mail" .
+# 
+# http://www.w3.org/2006/vcard/ns#postal-code
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#label> "CEP"@pt .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#label> "código postal"@pt .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "nome"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/Address
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/address_number> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/vcard/ns#postal-code> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/address_number> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/has_reason_situation> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/city_code> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/country_code> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Economic_Activity
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/cnae> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.\nEsta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "Economic activity carried out by the company. A company has a primary activity and can (optionally) have N secondary activities.\nThis activity is represented by the Classificação Nacional de Atividades Econômicas (CNAE) code."@en .
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Atividade econômica"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Economic activity"@en .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Establishment
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/company_name> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/contact_number> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/full_cnpj> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/phone_number> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/trade_name> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/fax_number> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/vcard/ns#email> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#comment> "Art. 3º  Todas as entidades domiciliadas no Brasil, inclusive as pessoas jurídicas equiparadas pela legislação do Imposto sobre a Renda, estão obrigadas a se inscrever no CNPJ e a cada um de seus estabelecimentos localizados no Brasil ou no exterior, antes do início de suas atividades.\n\n§ 1º  Os estados, o Distrito Federal e os municípios devem ter uma inscrição no CNPJ, na condição de estabelecimento matriz, que os identifique como pessoa jurídica de direito público, sem prejuízo das inscrições de seus órgãos públicos, conforme disposto no inciso I do caput do art. 4º.\n§ 2º  Para fins inscrição do CNPJ, estabelecimento é o local privado ou público, edificado ou não, móvel ou imóvel, próprio ou de terceiro, onde a entidade exerce suas atividades em caráter temporário ou permanente ou onde se encontram armazenadas mercadorias, incluindo as unidades auxiliares constantes do Anexo VII desta Instrução Normativa.\n§ 3º  Considera-se estabelecimento, para fins do disposto no § 2º, a plataforma de produção e armazenamento de petróleo e gás natural, ainda que esteja em construção.\n§ 4º  No caso previsto no § 3º, o endereço a ser informado no CNPJ deve ser o do estabelecimento da entidade proprietária ou arrendatária da plataforma, em terra firme, cuja localização seja a mais próxima."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#label> "Estabelecimento"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#label> "Establishment"@en .
+<http://www.sefaz.ma.gov.br/ontology/Establishment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=97729&visao=original> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Establishment_Type
+<http://www.sefaz.ma.gov.br/ontology/Establishment_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment_Type> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/2002/07/owl#oneOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/ontology/Establishment_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica se um um estabelecimento é uma matriz ou uma filial"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Establishment_Type> <http://www.w3.org/2000/01/rdf-schema#label> "Establishment type"@en .
+<http://www.sefaz.ma.gov.br/ontology/Establishment_Type> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo do estabelecimento"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Legal_Nature
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/legal_nature_code> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/locality_type> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica se a empresa é optante pelo regime tributário SIMPLES Nacional"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#label> "Option for SIMPLES"@en .
+<http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#label> "Opção pelo regime SIMPLES"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Partnership
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/partner_qualification> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/has_representant> .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/representant_qualification> .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/partnership_start_date> .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Qualification
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/code_qualification> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/reason_situation_code> .
+_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/reason_situation_code> .
+_:genid37 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded> <http://www.w3.org/2000/01/rdf-schema#label> "Excluded from SIMPLES"@en .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded> <http://www.w3.org/2000/01/rdf-schema#label> "Removido do SIMPLES"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant> <http://www.w3.org/2000/01/rdf-schema#label> "Not optant for SIMPLES"@en .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant> <http://www.w3.org/2000/01/rdf-schema#label> "Não optante pelo SIMPLES"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta classe compreende os dados do evento da opção pelo regime Simples Nacional por uma empresa.\n\nO Simples Nacional é o nome abreviado do “Regime Especial Unificado de\nArrecadação de Tributos e Contribuições devidos pelas Microempresas e\nEmpresas de Pequeno Porte”.\nTrata-se de um regime tributário diferenciado, simplificado e favorecido previsto\npela Lei Complementar nº 123, de 2006, aplicável às Microempresas e às\nEmpresas de Pequeno Porte, a partir de 01/07/2007."@pt .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises the event data of the option for the Simple National regime for a company.\n\nSimples Nacional is the abbreviated name of the “Special Unified Regime of\nCollection of Taxes and Contributions due by Microenterprises and\nSmall Companies ”.\nIt is a differentiated, simplified and favored tax regime foreseen\nby Complementary Law No. 123, 2006, applicable to Microenterprises and\nSmall Companies, as of 01/07/2007."@en .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/2000/01/rdf-schema#label> "Optant for SIMPLES"@en .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/2000/01/rdf-schema#label> "Optante pelo SIMPLES"@pt .
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Size_Company
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#oneOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/code_size_company> .
+_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Special_Situation
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/special_situation_description> .
+_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> .
+_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> <http://www.sefaz.ma.gov.br/ontology/situation_code> "02"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> <http://www.w3.org/2000/01/rdf-schema#comment> <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> <http://www.w3.org/2000/01/rdf-schema#comment> "CAPÍTULO II\nDA SITUAÇÃO CADASTRAL ATIVA\n\nArt. 35. A inscrição no CNPJ é enquadrada na situação cadastral ativa quando a entidade ou o estabelecimento filial, conforme o caso, não se enquadrar em nenhuma das situações cadastrais citadas nos incisos II a V do art. 34."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> <http://www.w3.org/2000/01/rdf-schema#label> "Ativa"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> <http://www.sefaz.ma.gov.br/ontology/situation_code> "08"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> <http://www.w3.org/2000/01/rdf-schema#comment> "CAPÍTULO V\nDA SITUAÇÃO CADASTRAL BAIXADA\n\nArt. 46. A inscrição no CNPJ é enquadrada na situação cadastral baixada quando a entidade ou o estabelecimento filial, conforme o caso, tiver sua solicitação de baixa deferida, na forma prevista no art. 25, ou tiver sua inscrição baixada de ofício, conforme o art. 27."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> <http://www.w3.org/2000/01/rdf-schema#label> "Baixada"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> <http://www.sefaz.ma.gov.br/ontology/situation_code> "01"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> <http://www.w3.org/2000/01/rdf-schema#comment> "CAPÍTULO VI\nDA SITUAÇÃO CADASTRAL NULA\n\nArt. 47. A inscrição no CNPJ é enquadrada na situação cadastral nula quando for declarada a nulidade do ato de inscrição da entidade ou do estabelecimento filial, na forma prevista no art. 33."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> <http://www.w3.org/2000/01/rdf-schema#label> "Nula"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> <http://www.sefaz.ma.gov.br/ontology/situation_code> "03"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> <http://www.w3.org/2000/01/rdf-schema#comment> "CAPÍTULO III\nDA SITUAÇÃO CADASTRAL SUSPENSA\n\nArt. 36. A inscrição no CNPJ é enquadrada na situação cadastral suspensa quando, conforme o caso, a entidade ou o estabelecimento filial:\n\nI - domiciliada no exterior, encontrando-se na situação cadastral ativa, deixar de ser alcançada, temporariamente, pelas situações previstas no inciso XV do art. 4º;\n\nII - solicitar baixa de sua inscrição no CNPJ, enquanto a solicitação estiver em análise ou caso seja indeferida;\n\nIII - for intimada na forma prevista no § 1º do art. 29;\n\nIV - for intimada na forma prevista no § 1º do art. 40;\n\nV - apresentar indício de interposição fraudulenta de sócio ou titular, na situação prevista no § 2º do art. 3º do Decreto nº 3.724, de 10 de janeiro de 2001, enquanto o respectivo processo estiver em análise;\n\nVI - interromper temporariamente suas atividades;\n\nVII - não reconstituir, no prazo de 210 (duzentos e dez) dias, a pluralidade de sócios do seu QSA;\n\nVIII - tiver sua suspensão determinada por ordem judicial; ou\n\nIX - possuir inconsistência(s) em seus dados cadastrais.\n\n§ 1º A suspensão da inscrição no CNPJ nas hipóteses previstas nos incisos I e VI do caput ocorre por solicitação da entidade ou do estabelecimento filial, conforme o caso, mediante comunicação da interrupção temporária de suas atividades, na forma prevista nos arts. 12 a 14.\n\n§ 2º A inconsistência cadastral a que se refere o inciso IX do caput caracteriza-se, conforme o caso, pela:\n\nI - ausência do representante a que se refere o art. 7º ou quando sua inscrição no CPF for inexistente ou estiver cancelada ou nula;\n\nII - ausência do QSA, no caso das entidades relacionadas no Anexo VI desta Instrução Normativa;\n\nIII - ausência do ente federativo responsável, no caso de entidades da Administração Pública;\n\nIV - ausência da atividade econômica;\n\nV - ausência ou invalidade do Código de Endereçamento Postal (CEP);\n\nVI - ausência do valor do capital social, para as entidades cuja informação é obrigatória; ou\n\nVII - incompatibilidade entre o Número de Inscrição no Registro de Empresa (Nire) e a natureza jurídica da entidade."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> <http://www.w3.org/2000/01/rdf-schema#label> "Suspensa"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> <http://www.sefaz.ma.gov.br/ontology/situation_code> "04"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> <http://www.w3.org/2000/01/rdf-schema#comment> "CAPÍTULO IV\nDA SITUAÇÃO CADASTRAL INAPTA\n\nArt. 37. Pode ser declarada inapta a inscrição no CNPJ da pessoa jurídica:\n\nI - omissa de declarações e demonstrativos: a que, estando obrigada, deixar de apresentar declarações e demonstrativos em 2 (dois) exercícios consecutivos;\n\nII - não localizada: a que não for localizada no endereço constante do CNPJ; ou\n\nIII - com irregularidade em operações de comércio exterior: a que não comprovar a origem, a disponibilidade e a efetiva transferência, se for o caso, dos recursos empregados em operações de comércio exterior, na forma prevista em lei.\n\nParágrafo único. O disposto neste artigo não se aplica à entidade domiciliada no exterior.\n\nSeção I\nDa Pessoa Jurídica Omissa de Declarações e Demonstrativos\n\nArt. 38. No caso de pessoa jurídica omissa de declarações e demonstrativos, de que trata o inciso I do caput do art. 37, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.\n\n§ 1º A pessoa jurídica declarada inapta nos termos do caput pode regularizar sua situação mediante apresentação, por meio da Internet, das declarações e demonstrativos exigidos, ou comprovação de sua anterior apresentação na unidade da RFB que a jurisdiciona.\n\n§ 2º O disposto neste artigo não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas previstas no caput, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.\n\nSeção II\nDa Pessoa Jurídica não Localizada\n\nArt. 39. A pessoa jurídica não localizada, de que trata o inciso II do caput do art. 37, é assim considerada quando:\n\nI - não confirmar o recebimento de 2 (duas) ou mais correspondências enviadas pela RFB, comprovado pela devolução do Aviso de Recebimento (AR) dos Correios; ou\n\nII - não for localizada no endereço constante do CNPJ, comprovado mediante Termo de Diligência.\n\n§ 1º Na hipótese prevista no inciso I do caput, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.\n\n§ 2º Na hipótese prevista no inciso II do caput, a inscrição no CNPJ dever ser declarada inapta pelo Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\n§ 3º O disposto no § 1º não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas nele previstas, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.\n\n§ 4º A pessoa jurídica declarada inapta conforme este artigo pode regularizar sua situação mediante alteração do seu endereço no CNPJ, na forma prevista nos arts. 12 a 14, ou restabelecimento de sua inscrição, conforme previsto no inciso I do § 1º do art. 32, caso o seu endereço continue o mesmo constante do CNPJ.\n\nSeção III\nDa Pessoa Jurídica com Irregularidade em Operações de Comércio Exterior\n\nArt. 40. No caso de pessoa jurídica com irregularidade em operações de comércio exterior, de que trata o inciso III do caput do art. 37, o procedimento administrativo de declaração de inaptidão deve ser iniciado por representação consubstanciada com elementos que evidenciem o fato descrito no citado inciso.\n\n§ 1º O titular da unidade da RFB com jurisdição para fiscalização dos tributos sobre comércio exterior que constatar o fato, acatando a representação citada no caput, deve intimar a pessoa jurídica, por meio de edital, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, a regularizar, no prazo de 30 (trinta) dias, sua situação ou contrapor as razões da representação, suspendendo sua inscrição no CNPJ a partir da publicação do edital.\n\n§ 2º Na falta de atendimento à intimação referida no § 1º, ou quando não acatadas as contraposições apresentadas, a inscrição no CNPJ deve ser declarada inapta pelo titular da unidade da RFB citado no § 1º, por meio de ADE publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\n§ 3º A pessoa jurídica declarada inapta na forma prevista no § 2º pode regularizar sua situação mediante comprovação da origem, da disponibilidade e da efetiva transferência, se for o caso, dos recursos empregados em operações do comércio exterior, na forma prevista em lei, e deve ser realizada pelo titular da unidade da RFB citado no § 1º, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\nArt. 41. Para fins do disposto no inciso III do art. 37 e no § 3º do art. 40, a comprovação da origem de recursos provenientes do exterior dá-se mediante, cumulativamente:\n\nI - prova do regular fechamento da operação de câmbio, inclusive com a identificação da instituição financeira no exterior encarregada da remessa dos recursos para o País; e\n\nII - identificação do remetente dos recursos, assim entendido como a pessoa física ou jurídica titular dos recursos remetidos.\n\n§ 1º No caso de o remetente referido no inciso II do caput ser pessoa jurídica, devem ser também identificados os integrantes do seu QSA.\n\n§ 2º O disposto neste artigo aplica-se também na hipótese de que trata o § 2º do art. 23 do Decreto-Lei nº 1.455, de 7 de abril de 1976.\n\nSeção IV\nDos Efeitos da Inscrição Inapta\n\nArt. 42. Sem prejuízo das sanções previstas na legislação, a pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta é:\n\nI - incluída no Cadastro Informativo de Créditos Não Quitados do Setor Público Federal (Cadin);\n\nII - impedida de:\n\na) participar de concorrência pública;\n\nb) celebrar convênios, acordos, ajustes ou contratos que envolvam desembolso, a qualquer título, de recursos públicos, e respectivos aditamentos;\n\nc) obter incentivos fiscais e financeiros;\n\nd) realizar operações de crédito que envolvam a utilização de recursos públicos; e\n\ne) transacionar com estabelecimentos bancários, inclusive quanto à movimentação de contas-correntes, à realização de aplicações financeiras e à obtenção de empréstimos.\n\nParágrafo único. O impedimento de transacionar com estabelecimentos bancários a que se refere a alínea \"e\" do inciso II não se aplica a saques de importâncias anteriormente depositadas ou aplicadas.\n\nArt. 43. É considerado inidôneo, não produzindo efeitos tributários em favor de terceiro interessado, o documento emitido por pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta.\n\n§ 1º Os valores constantes do documento de que trata o caput não podem ser:\n\nI - deduzidos como custo ou despesa, na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL);\n\nII - deduzidos na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Físicas (IRPF);\n\nIII - utilizados como crédito do Imposto sobre Produtos Industrializados (IPI), e da Contribuição para o PIS/Pasep e da Contribuição para o Financiamento da Seguridade Social (Cofins) não cumulativos;\n\nIV - utilizados para justificar qualquer outra dedução, abatimento, redução, compensação ou exclusão relativa aos tributos administrados pela RFB.\n\n§ 2º Considera-se terceiro interessado, para fins do disposto neste artigo, a pessoa física ou a entidade beneficiária do documento.\n\n§ 3º O disposto neste artigo aplica-se em relação aos documentos emitidos:\n\nI - a partir da data de publicação do ADE a que se refere:\n\na) o art. 38, no caso de pessoa jurídica omissa de declarações e demonstrativos; e\n\nb) o art. 39, no caso de pessoa jurídica não localizada;\n\nII - desde a data de ocorrência do fato, no caso de pessoa jurídica com irregularidade em operações de comércio exterior, a que se refere o art. 40.\n\n§ 4º A inidoneidade de documentos em virtude de inscrição declarada inapta não exclui as demais formas de inidoneidade de documentos previstas na legislação, nem legitima os emitidos anteriormente às datas referidas no § 3º.\n\n§ 5º O disposto no § 1º não se aplica aos casos em que o terceiro interessado, adquirente de bens, direitos e mercadorias, ou o tomador de serviços, comprovar o pagamento do preço respectivo e o recebimento dos bens, direitos ou mercadorias ou a utilização dos serviços.\n\n§ 6º A entidade que não efetuar a comprovação de que trata o § 5º sujeita-se ao pagamento do Imposto sobre a Renda Retido na Fonte (IRRF), na forma do art. 61 da Lei nº8.981, de 20 de janeiro de 1995, calculado sobre o valor pago constante dos documentos.\n\nArt. 44. A pessoa jurídica com inscrição declarada inapta tem sua inscrição enquadrada na situação cadastral ativa após regularizar todas as situações que motivaram a inaptidão.\n\nSeção V\nDos Créditos Tributários da Pessoa Jurídica Inapta\n\nArt. 45. O encaminhamento, para fins de inscrição e execução, de créditos tributários relativos à pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta, nas hipóteses previstas nos incisos I, II e III do caput do art. 37, deve ser efetuado com a indicação dessa circunstância e da identificação dos responsáveis tributários correspondentes."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> <http://www.w3.org/2000/01/rdf-schema#label> "Inapta"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/vcard/ns#email> .
+_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://xmlns.com/foaf/0.1/Group
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/member> .
+_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/member> .
+_:genid56 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid56 <http://www.w3.org/2002/07/owl#onClass> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/has_headquarters> .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/representant_qualification> .
+_:genid60 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/representant_qualification> .
+_:genid61 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/company_name> .
+_:genid62 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/root_cnpj> .
+_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2002/07/owl#disjointWith> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/name> .
+_:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Alagoas
+<http://dbpedia.org/resource/Alagoas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Amapá
+<http://dbpedia.org/resource/Amap\u00E1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Bahia
+<http://dbpedia.org/resource/Bahia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Ceará
+<http://dbpedia.org/resource/Cear\u00E1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Espírito_Santo
+<http://dbpedia.org/resource/Esp\u00EDrito_Santo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Goiás
+<http://dbpedia.org/resource/Goi\u00E1s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Maranhão
+<http://dbpedia.org/resource/Maranh\u00E3o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Mato_Grosso
+<http://dbpedia.org/resource/Mato_Grosso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Mato_Grosso_do_Sul
+<http://dbpedia.org/resource/Mato_Grosso_do_Sul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Minas_Gerais
+<http://dbpedia.org/resource/Minas_Gerais> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Paraíba
+<http://dbpedia.org/resource/Para\u00EDba> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Pará
+<http://dbpedia.org/resource/Par\u00E1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Pernambuco
+<http://dbpedia.org/resource/Pernambuco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Piauí
+<http://dbpedia.org/resource/Piau\u00ED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Rio_Grande_do_Norte
+<http://dbpedia.org/resource/Rio_Grande_do_Norte> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Rio_Grande_do_Sul
+<http://dbpedia.org/resource/Rio_Grande_do_Sul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Rondônia
+<http://dbpedia.org/resource/Rond\u00F4nia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Roraima
+<http://dbpedia.org/resource/Roraima> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Sergipe
+<http://dbpedia.org/resource/Sergipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Tocantins
+<http://dbpedia.org/resource/Tocantins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Acre_(state)
+<http://dbpedia.org/resource/Acre_(state)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Amazonas_(Brazilian_state)
+<http://dbpedia.org/resource/Amazonas_(Brazilian_state)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Federal_District_(Brazil)
+<http://dbpedia.org/resource/Federal_District_(Brazil)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Paraná_(state)
+<http://dbpedia.org/resource/Paran\u00E1_(state)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Rio_de_Janeiro_(state)
+<http://dbpedia.org/resource/Rio_de_Janeiro_(state)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/Santa_Catarina_(state)
+<http://dbpedia.org/resource/Santa_Catarina_(state)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://dbpedia.org/resource/São_Paulo_(state)
+<http://dbpedia.org/resource/S\u00E3o_Paulo_(state)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sefaz.ma.gov.br/ontology/Establishment_Type> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> <http://www.w3.org/2000/01/rdf-schema#comment> "As a subsidiary, that establishment represents the management\nprincipal, however, without the power of deliberative and / or executive power. There is no need to talk about \"fiscal headquartes\" and \"filial scrictu sensu\" (a 'fiscal subsidiary', as opposed to a \"corporate subsidiary\"), nor is there any question that the RFB should do so, in view of articles 109 and 110 of CTN, which guide the operator of the law and the legislator itself. Therefore, the headquartes is that center of direction and administration of the company dealt with by civil legislation. The other establishments are subsidiaries (or branches or agencies)."@en .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> <http://www.w3.org/2000/01/rdf-schema#comment> "Como filial conceitua-se aquele estabelecimento que representa a direção principal, contudo, sem alçada de poder deliberativo e/ou executivo. Não há que se falar em \"matriz fiscal\" e \"filial scrictu sensu\" (uma 'filial fiscal', em contraponto a uma \"filial societária\"), nem se cogita que a RFB o faça, haja vista os artigos 109 e 110 do CTN, que balizam o operador do direito e o próprio legislador. Portanto, matriz é aquele centro de direção e administração da empresa de que trata a legislação civil. Os demais estabelecimentos são filiais (ou sucursais ou agências)."@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> <http://www.w3.org/2000/01/rdf-schema#label> "Filial"@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sefaz.ma.gov.br/ontology/Establishment_Type> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> <http://www.w3.org/2000/01/rdf-schema#comment> "Conceitua-se matriz aquele estabelecimento chamado sede ou principal que tem a primazia na direção e ao qual estão subordinados todos os demais, chamados de filiais, sucursais ou agências. Estabelecimento matriz é aquele no qual se exercem a direção e a administração da pessoa jurídica (Empresa).  A pessoa jurídica de direito privado pode ter vários domicílios, mas uma só sede."@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> <http://www.w3.org/2000/01/rdf-schema#comment> "Headquarter is defined as that establishment called headquarters or principal that has primacy in the direction and to which all others are subordinate,\ncalled subsidiaries, branches or agencies. Headquarters establishment is the one in which the direction and administration of the legal entity (Company) is exercised. The legal entity under private law may have several domiciles, but only one headquarters."@en .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> <http://www.w3.org/2000/01/rdf-schema#label> "Matriz"@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_6
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_8
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/NAO_OPTANTE
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/NAO_OPTANTE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_5
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_7
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> <http://www.sefaz.ma.gov.br/ontology/code_size_company> "05" .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> <http://www.w3.org/2000/01/rdf-schema#comment> "Para que a empresa seja enquadrada desta maneira o contrato social precisa ser assinado por um advogado e são para empresas que têm uma atividade que não permite a classificação em nenhum dos outros portes ou tem como sócio uma pessoa jurídica. Neste formato é possível ter mais de 100 funcionários."@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> <http://www.w3.org/2000/01/rdf-schema#label> "DEMAIS"@pt .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> <http://www.sefaz.ma.gov.br/ontology/code_size_company> "01" .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> <http://www.w3.org/2000/01/rdf-schema#comment> "Estes formatos são para as empresas que pretendem ter ou tenham um faturamento anual de até R$ 360 mil. Uma microempresa pode ter até 20 funcionários."@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> <http://www.w3.org/2000/01/rdf-schema#label> "MICRO EMPRESA"@pt .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO> <http://www.sefaz.ma.gov.br/ontology/code_size_company> "00" .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO> <http://www.w3.org/2000/01/rdf-schema#label> "NÃO INFORMADO"@pt .
+# 
+# http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> <http://www.sefaz.ma.gov.br/ontology/code_size_company> "03" .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicado para negócios que têm um faturamento anual no limite de R$ 4,8 milhões. Este formato pode ter até 100 funcionários."@pt .
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> <http://www.w3.org/2000/01/rdf-schema#label> "EMPRESA DE PEQUENO PORTE"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Address
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Contact
+<http://www.sefaz.ma.gov.br/ontology/Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Individual_Microentrepreneur
+<http://www.sefaz.ma.gov.br/ontology/Individual_Microentrepreneur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Legal_Nature
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Partnership
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Provenance
+<http://www.sefaz.ma.gov.br/ontology/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Qualification
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Size_Company
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Special_Situation
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Type_Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Type_Cadastral_Situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/address_complement
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/address_number
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/city_code
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cnpj
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code_qualification
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code_size_company
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/company_name
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/country_code
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/cpf
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_file_download
+<http://www.sefaz.ma.gov.br/ontology/date_file_download> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_file_record
+<http://www.sefaz.ma.gov.br/ontology/date_file_record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/date_triplification
+<http://www.sefaz.ma.gov.br/ontology/date_triplification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/ddd
+<http://www.sefaz.ma.gov.br/ontology/ddd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/ddd_phone_number
+<http://www.sefaz.ma.gov.br/ontology/ddd_phone_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_address
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_city
+<http://www.sefaz.ma.gov.br/ontology/has_city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_contact_number
+<http://www.sefaz.ma.gov.br/ontology/has_contact_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_country
+<http://www.sefaz.ma.gov.br/ontology/has_country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_district
+<http://www.sefaz.ma.gov.br/ontology/has_district> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_fax
+<http://www.sefaz.ma.gov.br/ontology/has_fax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_federative_unit
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_headquarters
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_legal_nature
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_locality
+<http://www.sefaz.ma.gov.br/ontology/has_locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_part
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_partnership
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_phone
+<http://www.sefaz.ma.gov.br/ontology/has_phone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_qualification
+<http://www.sefaz.ma.gov.br/ontology/has_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_reason_situation
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_representant
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_secondary_activity
+<http://www.sefaz.ma.gov.br/ontology/has_secondary_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_size
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_special_situation
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_subsidiary
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_type_situation
+<http://www.sefaz.ma.gov.br/ontology/has_type_situation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_foreign
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_part_of_group
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/legal_nature_code
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/locality_type
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/part_whole_relation
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/partnership_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/partnership_end_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_end_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/partnership_start_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/percentage_participation
+<http://www.sefaz.ma.gov.br/ontology/percentage_participation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/percentage_share_capital
+<http://www.sefaz.ma.gov.br/ontology/percentage_share_capital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/performed_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/performed_economic_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/performs_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/performs_economic_activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/phone_number
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/reason_situation_code
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/representant_qualification
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/root_cnpj
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/sending_number
+<http://www.sefaz.ma.gov.br/ontology/sending_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/share_capital
+<http://www.sefaz.ma.gov.br/ontology/share_capital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/situation_code
+<http://www.sefaz.ma.gov.br/ontology/situation_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/special_situation_description
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/special_situation_start_date
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/trade_name
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/Group
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta classe agrupa informações sobre o endereço declarado de uma Organização. Este endereço é composto por um número e complemento, relacionados as demais instâncias de Localização, tais como, Logradouro, Bairro, Municipio, UF e País.\n\nCada endereço deve ser único. Deste modo, caso duas empresas apotem para uma mesma instância de enderço, então este deve gerar uma inconsistência."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#comment> "This class groups information about a organization's declared address. This address consists of a number and complement, related to the other instances of Localization, such as, Street, District, City, Federative Unit and Country.\n\nEach address must be unique. Thus, if two companies provide for the same address, then this should generate an inconsistency."@en .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
+<http://www.sefaz.ma.gov.br/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#label> "Endereço"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#comment> "A situação cadastral de CNPJ é o registro da empresa junto à Receita Federal. A partir da análise, é possível saber qual é o status do negócio, se há processos judiciais ou dívidas tributárias."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#comment> "The CNPJ status is the company's registration with the Federal Revenue Service. From the analysis, it is possible to know what the status of the business is, whether there are lawsuits or tax debts."@en .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#label> "Cadastral situation"@en .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#label> "Situação Cadastral"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv> .
+# 
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Cidade"@pt .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio"@pt .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Município"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "País"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#label> "Bairro"@pt .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#label> "District"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Estado"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "State"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "UF"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unidade Federativa"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#comment> "A natureza jurídica de uma empresa é o  regime jurídico em que ela se enquadra,  isto é a relação da pessoa jurídica pública ou  privada com o exame que será feito pela FISCALIZAÇÃO no respectivo EMPREENDIMENTO, somado  ao  que consta dos dados da empresa nos cadastros da ADMINISTRAÇÃO PUBLICA. No momento de formalizar a empresa, informar a sua natureza jurídica tornou-se uma questão indispensável, já que cada natureza jurídica exige diferentes formas de aplicação das normas para as empresas.\n\nEm consonância com o código civil (Lei nº 10.406/02) existem várias espécies de natureza jurídica e entre elas estão os tipos jurídicos atribuídos à administração pública, entidades empresariais, entidades sem fins lucrativos e às pessoas físicas."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal nature of a company is the legal regime in which it fits, that is, the relationship of the public or private legal person with the examination that will be done by the ENGINEER in the respective ENTERPRISE, added to what appears in the company data in the ADMINISTRATION records. PUBLISH. When formalizing the company, informing its legal nature has become an indispensable issue, since each legal nature requires different ways of applying the rules for companies.\n\nIn line with the civil code (Law No. 10,406 / 02), there are several types of legal nature and among them are the legal types attributed to the public administration, business entities, non-profit entities and individuals."@en .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#label> "Legal nature"@en .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#label> "Natureza jurídica"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#label> "Natureza legal"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabelas-utilizadas-pelo-programa-cnpj/tabela-de-natureza-juridica-e-qualificacao-do-quadro-de-socios-e-administradores> .
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://suporte.agilize.com.br/hc/pt-br/articles/216342283-Naturezas-Jur%C3%ADdicas-de-uma-empresa> .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#comment> "A locality can be a street, avenue, court, etc."@en .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#comment> "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#label> "Locality"@en .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#label> "Logradouro"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents the concept of a geographical location."@en .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Classe que representa o conceito de uma localização geográfica."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Local"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Localização"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta classe representa a relação de sociedade ou representação entre uma empresa e seu sócio/representante. Esta representação possui datas de início e fim, além de poder possuir o percentual do capital social possuído pelo sócio e seu percentual de participação (em cenários em que isto é possível). Por fim, a representação possui uma qualificação aplicável ao sócio representante existente na classe Representant_Qualification."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the partnership or representation between a company and its partner / representative. This representation has start and end dates, in addition to having the percentage of share capital owned by the partner and its percentage of participation (in scenarios where this is possible). Finally, the representation has a qualification applicable to the representative partner existing in the Representant_Qualification class."@en .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#label> "Partnership"@en .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#label> "Representation"@en .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#label> "Representação"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#label> "Representação legal"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Partnership> <http://www.w3.org/2000/01/rdf-schema#label> "Sociedade"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta classe agrupa informações sobre a qualificação de um sócio ou representante de uma empresa."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#comment> "This class groups information about the qualification of a partner or representative of a company."@en .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#label> "Qualidificação do sócio ou representante"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#label> "Qualificação"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#label> "Representant qualification"@en .
+<http://www.sefaz.ma.gov.br/ontology/Qualification> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabela-de-qualificacao-do-socio-representante.ods> .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#comment> "Motivo da situação cadastral, quando diferente de ativa"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#label> "Motivo de situação cadastral"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#label> "Reason registration situation"@en .
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv> .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#comment> "A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;\n\nSelecionar o enquadramento de porte da empresa (ME, EPP, Demais) de acordo com a expectativa de Receita Bruta Anual.\n\nO porte informado deve estar compatível com a Receita Bruta auferida no anocalendário anterior. Assim, durante a prática do evento 222, caso seja solicitado reenquadramento como ME ou EPP, para período que já possua informação de porte atualizada pela RFB com resultado diferente do informado na aplicativo de coleta, a solicitação será indeferida.\n\nA data do evento é a data do registro da Declaração de Enquadramento / Reenquadramento / Desenquadramento no Órgão de Registro, conforme Tabela VIII;\n\nO evento 222 somente poderá ser praticado por estabelecimento matriz;\n\nSomente as naturezas jurídicas 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 e 231-3 exigem o enquadramento de Porte da Empresa. Para estas naturezas jurídicas, o porte pode ser “ME” ou “EPP”. Para o restante das naturezas jurídicas, o porte deve ser “Demais”.\n\nPara análise e deferimento do evento 222, será exigido que o contribuinte apresente a “Declaração de Enquadramento / Reenquadramento ou Desenquadramento”, registrada pelo Órgão de Registro. Caso a referida declaração não seja recente, também deverá ser exigida a Certidão Simplificada do Órgão de Registro, com o objetivo de comprovar o enquadramento atual da empresa naquele órgão.\n\n\nPossíveis portes:\n00 - NAO INFORMADO\n01 - MICRO EMPRESA\n03 - EMPRESA DE PEQUENO\nPORTE\n05 - DEMAIS"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#comment> "The new name for event 222 is “Framework / Reframing / Non-compliance of ME / EPP”;\n\nSelect the company's size framework (ME, EPP, Others) according to the expectation of Annual Gross Revenue.\n\nThe size informed must be compatible with the Gross Revenue earned in the previous anocalendar. Thus, during the practice of event 222, if it is requested to qualify as ME or EPP, for a period that already has size information updated by the RFB with a result different from that reported in the collection application, the request will be rejected.\n\nThe date of the event is the date of registration of the Declaration of Compliance / Reframing / Noncompliance with the Registry, as per Table VIII;\n\nEvent 222 can only be practiced by a parent establishment;\n\nOnly the legal nature 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 and 231-3 require the Company Scale . For these legal natures, the size can be “ME” or “EPP”. For the rest of the legal nature, the size must be \"Too much\".\n\nFor analysis and approval of event 222, the taxpayer will be required to submit the “Declaration of Compliance / Reframing or Noncompliance”, registered by the Registry. If the said statement is not recent, the Simplified Certificate of the Registration Body should also be required, in order to prove the current status of the company in that body.\n\nPossible sizes:\n00 - NAO INFORMADO\n01 - MICRO EMPRESA\n03 - EMPRESA DE PEQUENO\nPORTE\n05 - DEMAIS"@en .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#label> "Porte"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#label> "Porte da empresa"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#label> "Porte empresarial"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#label> "Size company"@en .
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www38.receita.fazenda.gov.br/cadsincnac/jsp/coleta/ajuda/topicos/Porte_da_Empresa.htm> .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#comment> "São os casos de: Extinção; Fusão; Incorporação/Incorporada; IncorporaçãoIncorporadora; Cisão total; Cisão parcial; Desenquadramento de Imune/Isenta; Inclusão no Simples nacional."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#label> "Situação especial"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#label> "Special situation"@en .
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=39909> .
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.contadores.cnt.br/noticias/artigos/2016/06/27/descomplicando-a-escrituracao-contabil-fiscal-ecf.html> .
+# 
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#label> "abbreviation of the UF"@en .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#label> "abreviação da UF"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/2000/01/rdf-schema#label> "address complement"@en .
+<http://www.sefaz.ma.gov.br/ontology/address_complement> <http://www.w3.org/2000/01/rdf-schema#label> "complemento do endereço"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/2000/01/rdf-schema#label> "address number"@en .
+<http://www.sefaz.ma.gov.br/ontology/address_number> <http://www.w3.org/2000/01/rdf-schema#label> "número do endereço"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/2000/01/rdf-schema#label> "data da situação cadastral"@pt .
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> <http://www.w3.org/2000/01/rdf-schema#label> "date of cadastral situation"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#label> "city code"@en .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#label> "código da cidade"@pt .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#label> "código do município"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/2000/01/rdf-schema#label> "CNPJ"@pt .
+<http://www.sefaz.ma.gov.br/ontology/cnpj> <http://www.w3.org/2000/01/rdf-schema#label> "Cadastro Nacional da Pessoa Jurídica"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/2000/01/rdf-schema#label> "code"@en .
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/2000/01/rdf-schema#label> "código"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/2000/01/rdf-schema#label> "código da qualificação"@pt .
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> <http://www.w3.org/2000/01/rdf-schema#label> "qualification code"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/2000/01/rdf-schema#label> "código do porte da empresa"@pt .
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> <http://www.w3.org/2000/01/rdf-schema#label> "size company code"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/2000/01/rdf-schema#label> "company name"@en .
+<http://www.sefaz.ma.gov.br/ontology/company_name> <http://www.w3.org/2000/01/rdf-schema#label> "razão social"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#label> "country code"@en .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#label> "código do país"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#label> "CPF"@pt .
+<http://www.sefaz.ma.gov.br/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#label> "Cadastro de Pessoa Física"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#label> "data de exclusão do regime SIMPLES"@pt .
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#label> "date of exclusion for SIMPLES regime"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#label> "data de opção pelo regime SIMPLES"@pt .
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> <http://www.w3.org/2000/01/rdf-schema#label> "date of option for SIMPLES regime"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/2000/01/rdf-schema#label> "has address"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_address> <http://www.w3.org/2000/01/rdf-schema#label> "tem endereço"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> <http://www.w3.org/2000/01/rdf-schema#label> "has cadastral situation"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> <http://www.w3.org/2000/01/rdf-schema#label> "tem situação cadastral"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_city> <http://www.w3.org/2000/01/rdf-schema#label> "has city"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_city> <http://www.w3.org/2000/01/rdf-schema#label> "tem cidade"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_country> <http://www.w3.org/2000/01/rdf-schema#label> "has country"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_country> <http://www.w3.org/2000/01/rdf-schema#label> "tem pais"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_district> <http://www.w3.org/2000/01/rdf-schema#label> "has district"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_district> <http://www.w3.org/2000/01/rdf-schema#label> "tem bairro"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> <http://www.w3.org/2000/01/rdf-schema#label> "has economic activity"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> <http://www.w3.org/2000/01/rdf-schema#label> "tem atividade econômica"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> <http://www.w3.org/2000/01/rdf-schema#label> "has federative unit"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> <http://www.w3.org/2000/01/rdf-schema#label> "tem unidade federativa"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/2000/01/rdf-schema#label> "has headquarters"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> <http://www.w3.org/2000/01/rdf-schema#label> "tem matriz"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> <http://www.w3.org/2000/01/rdf-schema#label> "has legal nature"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> <http://www.w3.org/2000/01/rdf-schema#label> "tem natureza jurídica"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_locality> <http://www.w3.org/2000/01/rdf-schema#label> "has locality"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_locality> <http://www.w3.org/2000/01/rdf-schema#label> "tem logradouro"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/2000/01/rdf-schema#label> "has main economic activity"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> <http://www.w3.org/2000/01/rdf-schema#label> "tem atividade econômica principal"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> <http://www.w3.org/2000/01/rdf-schema#label> "has partnership"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> <http://www.w3.org/2000/01/rdf-schema#label> "tem sociedade"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/2000/01/rdf-schema#label> "has reason of cadastral situation"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> <http://www.w3.org/2000/01/rdf-schema#label> "tem razão de situação cadastral"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/2000/01/rdf-schema#label> "has representant"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_representant> <http://www.w3.org/2000/01/rdf-schema#label> "tem representante"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/2000/01/rdf-schema#label> "has size"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/2000/01/rdf-schema#label> "tem porte"@pt .
+<http://www.sefaz.ma.gov.br/ontology/has_size> <http://www.w3.org/2000/01/rdf-schema#label> "tem porte empresarial"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> <http://www.w3.org/2000/01/rdf-schema#label> "has special situation"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> <http://www.w3.org/2000/01/rdf-schema#label> "tem situação especial"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/2000/01/rdf-schema#label> "has branch"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/2000/01/rdf-schema#label> "has subsidiary"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> <http://www.w3.org/2000/01/rdf-schema#label> "tem filial"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/2000/01/rdf-schema#label> "is foreign?"@en .
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> <http://www.w3.org/2000/01/rdf-schema#label> "É um estrangeiro?"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/2000/01/rdf-schema#label> "Faz parte do Grupo"@pt .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/2000/01/rdf-schema#label> "is parte of group"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/2000/01/rdf-schema#label> "código da natureza jurídica"@pt .
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> <http://www.w3.org/2000/01/rdf-schema#label> "legal nature code"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/2000/01/rdf-schema#label> "locality type"@en .
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/2000/01/rdf-schema#label> "tipo do logradouro"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/2000/01/rdf-schema#label> "data de início da sociedade"@pt .
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> <http://www.w3.org/2000/01/rdf-schema#label> "start date of partnership"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/2000/01/rdf-schema#label> "número de telefone"@pt .
+<http://www.sefaz.ma.gov.br/ontology/phone_number> <http://www.w3.org/2000/01/rdf-schema#label> "phone number"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/2000/01/rdf-schema#label> "código da razão da situação cadastral"@pt .
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> <http://www.w3.org/2000/01/rdf-schema#label> "reason cadastral situation code"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> <http://www.w3.org/2000/01/rdf-schema#label> "qualification of the responsible"@en .
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> <http://www.w3.org/2000/01/rdf-schema#label> "qualificação do responsável"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> <http://www.w3.org/2000/01/rdf-schema#label> "CNPJ raíz"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/share_capital> <http://www.w3.org/2000/01/rdf-schema#label> "Capital Social"@pt .
+<http://www.sefaz.ma.gov.br/ontology/share_capital> <http://www.w3.org/2000/01/rdf-schema#label> "share capital"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/2000/01/rdf-schema#label> "descrição da situação especial"@pt .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> <http://www.w3.org/2000/01/rdf-schema#label> "special situation description"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/2000/01/rdf-schema#label> "data de início da situação especial"@pt .
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> <http://www.w3.org/2000/01/rdf-schema#label> "start date of special situation"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/2000/01/rdf-schema#label> "nome fantasia"@pt .
+<http://www.sefaz.ma.gov.br/ontology/trade_name> <http://www.w3.org/2000/01/rdf-schema#label> "trade name"@en .
+# 
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta classe representa o conceito de agente, sendo este uma entidade que realiza alguma ação. Neste contexto um agente é considerado uma pessoa, onde esta pode ser ou pessoa física ou pessoa jurídica.\n\nCaso esta pessoa seja estrangeira, isto é representado pelo indicador is_foreigner."@pt .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the concept of agent, which is an entity that performs some action. In this context, an agent is considered a person, where this can be either an individual or a legal entity.\n\nIf this person is a foreigner, this is represented by the is_foreigner indicator."@en .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agente"@pt .
+# 
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta coleção representa um grupo de Organizações (Pessoas Jurídicas) reunidas. Isto pode decorrer por conta de um acordo comercial, compra, fusão, etc."@pt .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "This collection represents a group of Organizations (Legal Entities) brought together. This may be due to a commercial agreement, purchase, merger, etc."@en .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group"@en .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo"@pt .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo empresarial"@pt .
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Organizations group"@en .
+# 
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "In the legal conception, commercial law, business activity, or company, it is an economic activity exercised professionally by the entrepreneur through the articulation of the productive factors for the production or circulation of goods or services. The legal concept of company cannot be confused with that of a subject of law, that of a legal person, nor with the place where that economic activity is developed."@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Na concepção jurídica, do direito comercial, atividade empresarial, ou empresa, é uma atividade econômica exercida profissionalmente pelo empresário por meio da articulação dos fatores produtivos para a produção ou circulação de bens ou de serviços. O conceito jurídico de empresa não pode ser confundido com o de um sujeito de direito, o de uma pessoa jurídica, tampouco com o local onde aquela atividade econômica é desenvolvida."@pt .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Company"@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Empresa"@pt .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Legal entity"@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organização"@pt .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Pessoa Jurídica"@pt .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://pt.wikipedia.org/wiki/Empresa> .
+# 
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Natural Person is every human being as an individual, from birth to death. This designation is a legal concept and refers specifically to the individual as a subject with rights and duties.\n\nThe Cadastro de Pessoa Física (CPF) is the registration of citizens for tax purposes, made by the Federal Revenue Service. To be considered an individual, however, it is not necessary to have a CPF. For the law, the human being is an individual since he was born alive, since from then on he already has rights and duties. The birth certificate is, therefore, the first registration of the individual."@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Pessoa física é todo ser humano enquanto indivíduo, do seu nascimento até a morte. Essa designação é um conceito jurídico e se refere especificamente ao indivíduo enquanto sujeito detentor de direitos e de deveres.\n\nO Cadastro de Pessoas Físicas (CPF) é o registro dos cidadãos para fins fiscais, feito pela Receita Federal. Para ser considerado uma pessoa física, porém, não é preciso ter um CPF. Para o direito, o ser humano é uma pessoa física desde que nasce com vida, pois a partir daí já é detentor de direitos e deveres. A certidão de nascimento é, portanto, o primeiro registro da pessoa física."@pt .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Natural Person"@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Natural person"@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Pessoa"@pt .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Pessoa Física"@pt .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.dicionariofinanceiro.com/pessoa-fisica/> .
+# 
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#label> "membro"@pt .
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/2000/01/rdf-schema#label> "tem membro"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid65 <http://www.w3.org/2002/07/owl#members> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/City> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Country> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/District> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Locality> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid71 <http://www.w3.org/2002/07/owl#members> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid75 <http://www.w3.org/2002/07/owl#members> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -1,0 +1,670 @@
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/contributor> "Dave Beckett" .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/contributor> "Nikki Rogers" .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/contributor> "Participants in W3C's Semantic Web Deployment Working Group." .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/creator> "Alistair Miles" .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/creator> "Sean Bechhofer" .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/description> "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies."@en .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://purl.org/dc/terms/title> "SKOS Vocabulary"@en .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Cadastral Ontology of SEFAZ Taxpayers (SEFAZ-MA) and Open Data of Companies of the Federal Revenue of Brazil (RFB)"@en .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nValeria Priscilla Monteiro Fernandes\nvaleria.fernandes@sefaz.ma.gov.br\n\nAdriano Dos Santos Rego\nadriano.rego@sefaz.ma.gov.br\n\nTainan Khalil Leite Calixto\ntainan.calixto@sefaz.ma.gov.br\n\n\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n\n-----------------------------------------------------------------------------------------------\nFinanciador: Banco Interamericano de Desenvolvimento\n\nContrato 4458/OC-BR. \nP1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."@pt .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologia contendo dados sobre Municípios, Microregiões, Mesoregiões, Unidades Federativas e Paises disponibilizados pelo Instituto Brasileiro de Geografia e Estatística (IBGE)"@pt .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2000/01/rdf-schema#label> "IBGE - Location" .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/TR/skos-reference/> .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.ibge.gov.br/explica/codigos-dos-municipios.php> .
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rs.tdwg.org/ontology/voc/Person#birthdate
+<http://rs.tdwg.org/ontology/voc/Person#birthdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://rs.tdwg.org/ontology/voc/Person#birthdate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+# 
+# http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+<http://www.w3.org/2002/07/owl#maxQualifiedCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
+# 
+# http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#note> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#time
+<http://www.w3.org/2001/XMLSchema#time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/has_part
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/part_whole_relation> .
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
+<http://www.sefaz.ma.gov.br/ontology/has_part> <http://www.w3.org/2000/01/rdf-schema#label> "tem parte"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/part_whole_relation> .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/part_whole_relation
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/city_code
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/City> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#label> "city code"@en .
+<http://www.sefaz.ma.gov.br/ontology/city_code> <http://www.w3.org/2000/01/rdf-schema#label> "código da cidade"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/city_code_IBGE
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/city_code> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/City> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#label> "city code IBGE"@en .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#label> "código da cidade do IBGE"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/City> .
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/country_code
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#label> "country code"@en .
+<http://www.sefaz.ma.gov.br/ontology/country_code> <http://www.w3.org/2000/01/rdf-schema#label> "código do país"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/country_code_IBGE
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/country_code> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#label> "country code IBGE"@en .
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#label> "código do país do IBGE"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/mesoregion_code
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Mesoregion> .
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> <http://www.w3.org/2000/01/rdf-schema#label> "código da mesoregião"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/mircroregion_code
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Microregion> .
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/2000/01/rdf-schema#label> "código da microregião"@pt .
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> <http://www.w3.org/2000/01/rdf-schema#label> "microregion code"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/ontology/code> .
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> <http://www.w3.org/2000/01/rdf-schema#label> "código da unidade federativa do IBGE"@pt .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude"@pt .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "lattitude"@en .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@pt .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+# 
+# http://www.w3.org/2006/vcard/ns#country-name
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.w3.org/2006/vcard/ns#country-name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.w3.org/2006/vcard/ns#postal-code
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/ontology/Locality> .
+<http://www.w3.org/2006/vcard/ns#postal-code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Microregion> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#prefLabel> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/has_part> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Locality> .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/City> .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Country> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#hiddenLabel> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#prefLabel> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/District> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2006/vcard/ns#postal-code> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#long> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Mesoregion
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/mesoregion_code> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/2000/01/rdf-schema#label> "Mesoregion"@en .
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> <http://www.w3.org/2000/01/rdf-schema#label> "Mesoregião"@pt .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Microregion
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/ontology/Location> .
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/is_part_of> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/ontology/Mesoregion> .
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/ontology/mircroregion_code> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/2000/01/rdf-schema#label> "Microregion"@en .
+<http://www.sefaz.ma.gov.br/ontology/Microregion> <http://www.w3.org/2000/01/rdf-schema#label> "Microregião"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/composition_relation
+<http://www.sefaz.ma.gov.br/ontology/composition_relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/is_part_of_group
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/locality_type
+<http://www.sefaz.ma.gov.br/ontology/locality_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.sefaz.ma.gov.br/ontology/part_whole_relation
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#OrderedCollection
+<http://www.w3.org/2004/02/skos/core#OrderedCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#broadMatch
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#mappingRelation
+<http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#member
+<http://www.w3.org/2004/02/skos/core#member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#memberList
+<http://www.w3.org/2004/02/skos/core#memberList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrowMatch
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#relatedMatch
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#semanticRelation
+<http://www.w3.org/2004/02/skos/core#semanticRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+_:genid26 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Cidade"@pt .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio"@pt .
+<http://www.sefaz.ma.gov.br/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Município"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<http://www.sefaz.ma.gov.br/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "País"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#label> "Bairro"@pt .
+<http://www.sefaz.ma.gov.br/ontology/District> <http://www.w3.org/2000/01/rdf-schema#label> "District"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Estado"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "State"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "UF"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unidade Federativa"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#comment> "A locality can be a street, avenue, court, etc."@en .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#comment> "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#label> "Locality"@en .
+<http://www.sefaz.ma.gov.br/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#label> "Logradouro"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents the concept of a geographical location."@en .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Classe que representa o conceito de uma localização geográfica."@pt .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Local"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Localização"@pt .
+<http://www.sefaz.ma.gov.br/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/2000/01/rdf-schema#label> "code"@en .
+<http://www.sefaz.ma.gov.br/ontology/code> <http://www.w3.org/2000/01/rdf-schema#label> "código"@pt .
+# 
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/2000/01/rdf-schema#label> "faz parte de"@pt .
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
+# 
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> <http://www.w3.org/2000/01/rdf-schema#label> "part whole relation"@en .
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> <http://www.w3.org/2000/01/rdf-schema#label> "relação de parte todo"@pt .
+# 
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "The range of skos:altLabel is the class of RDF plain literals."@en .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#label> "alternative label"@en .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2004/02/skos/core#definition> "An alternative lexical label for a resource."@en .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2004/02/skos/core#example> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/2000/01/rdf-schema#label> "change note"@en .
+<http://www.w3.org/2004/02/skos/core#changeNote> <http://www.w3.org/2004/02/skos/core#definition> "A note about a modification to a concept."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2000/01/rdf-schema#label> "definition"@en .
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/2000/01/rdf-schema#label> "editorial note"@en .
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/2004/02/skos/core#definition> "A note for an editor, translator or maintainer of the vocabulary."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2000/01/rdf-schema#label> "example"@en .
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/2004/02/skos/core#definition> "An example of the use of a concept."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "The range of skos:hiddenLabel is the class of RDF plain literals."@en .
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en .
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/2000/01/rdf-schema#label> "hidden label"@en .
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/2004/02/skos/core#definition> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/2000/01/rdf-schema#label> "history note"@en .
+<http://www.w3.org/2004/02/skos/core#historyNote> <http://www.w3.org/2004/02/skos/core#definition> "A note about the past state/use/meaning of a concept."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#label> "notation"@en .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/2000/01/rdf-schema#label> "note"@en .
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en .
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/2004/02/skos/core#scopeNote> "This property may be used directly, or as a super-property for more specific note types."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "The range of skos:prefLabel is the class of RDF plain literals."@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise\n      disjoint properties."@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2000/01/rdf-schema#label> "preferred label"@en .
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/2004/02/skos/core#definition> "The preferred lexical label for a resource, in a given language."@en .
+# 
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2000/01/rdf-schema#label> "scope note"@en .
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core#definition> "A note that helps to clarify the meaning and/or the use of a concept."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid28 <http://www.w3.org/2002/07/owl#members> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/City> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Country> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/District> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/ontology/Locality> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

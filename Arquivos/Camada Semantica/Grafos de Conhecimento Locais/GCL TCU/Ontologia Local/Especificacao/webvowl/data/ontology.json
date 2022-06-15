@@ -1,0 +1,819 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "pt", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas", "http://xmlns.com/foaf/0.1" ],
+    "iri" : "http://www.sefaz.ma.gov.br/TCU/ontology/",
+    "version" : "1.0",
+    "labels" : {
+      "undefined" : "Ontologia TCU"
+    },
+    "comments" : {
+      "undefined" : "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nTainan Khalil Leite Calixto\ntainan.calixto@sefaz.ma.gov.br\nCoordenador Técnico - COTEC\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n-----------------------------------------------------------------------------------------------\nfinanciador: banco interamericano de desenvolvimento\n\ncontrato 4458/oc-br. \np1.3 planejamento e gestão da tecnologia da informação implantados. definição e implantação dos sistemas de busca semântica e recomendação à legislação tributária, com o uso das tecnologias da web semântica."
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "14",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "subClasses" : [ "1", "12" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Organization",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "pt" : "Empresa"
+    },
+    "subClasses" : [ "4", "30", "29" ],
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Fornecedor_Restrito",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fornecedor_Restrito",
+      "pt" : "Fornecedor Restrito"
+    },
+    "subClasses" : [ "25", "7" ],
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Acordao",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Acordao",
+      "undefined" : "Acordão"
+    },
+    "comment" : {
+      "pt" : "Decisão final proferida sobre um processo por tribunal superior, que funciona como paradigma para solucionar casos análogos"
+    },
+    "attributes" : [ "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Fornecedor",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fornecedor",
+      "pt" : "Fornecedor"
+    },
+    "subClasses" : [ "4", "37", "21" ],
+    "comment" : {
+      "pt" : "Prestadores de serviços e/ou fornecedores de material ao serviço público"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Ente_Publico",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Ente_Publico",
+      "pt" : "Ente Publico"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Fornecedor_Inidôneo",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fornecedor_Inidôneo",
+      "undefined" : "Fornecedor Inidôneo"
+    },
+    "comment" : {
+      "pt" : "Um Fornecedor Inidôneo é quem se encontra impedido de participar de licitações realizadas pela Administração, conforme determina o art. 46 da Lei n. 8443/92"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "14",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person",
+      "pt" : "Pessoa"
+    },
+    "subClasses" : [ "37" ],
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "25", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "51"
+  }, {
+    "instances" : 0,
+    "union" : [ "25", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "37", "12" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Fornecedor_Inabilitado",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fornecedor_Inabilitado",
+      "undefined" : "Fornecedor Inabilitado"
+    },
+    "comment" : {
+      "pt" : "Quando o fornecedor não cumprir com os requisitos de habilitação estabelecidos no edital ele deve ser inabilitado. A inabilitação deve ser marcada lote a lote, uma vez que em razão de documentos ou requisitos específicos o fornecedor poderá ser habilitado em determinado lote e inabilitado em outro."
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Process",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "pt" : "Processo"
+    },
+    "comment" : {
+      "pt" : "Processo de Cadastramento de Inabilitado ou Inidôneo."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Entity",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity",
+      "pt" : "Órgão"
+    },
+    "comment" : {
+      "pt" : "Órgão da Esfera Pública"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Fornecedor_PJ",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fornecedor_PJ",
+      "pt" : "Fornecedor PJ"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "5", "1" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Fornecedor_PF",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Fornecedor_PF",
+      "pt" : "Fornecedor PF"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "5", "12" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/Deliberacao",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Deliberacao"
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "56",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/cnpj_raiz",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "cnpj_raiz"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/has_process",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "has_process",
+      "pt" : "tem processo"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/origem_informacao",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "origem_informacao",
+      "undefined" : "origem informação"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/data_inicio",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "data_inicio",
+      "undefined" : "data inicio"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/numero",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "numero"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/publication_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "publication_date",
+      "pt" : "data publicação"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "18"
+  }, {
+    "range" : "21",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/data_transito_julgado",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "data_transito_julgado",
+      "undefined" : "data transito julgado"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "22"
+  }, {
+    "range" : "21",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "11",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "1",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "1",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "11",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/data_final",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "data_final",
+      "undefined" : "data final"
+    },
+    "domain" : "36",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/tem_deliberacao",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "tem_deliberacao",
+      "undefined" : "tem deliberacao"
+    },
+    "domain" : "41",
+    "attributes" : [ "object", "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "name",
+      "pt" : "nome",
+      "en" : "name"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/cnpj",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "cnpj"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/tem_acordao",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "tem_acordao",
+      "pt" : "tem acordao",
+      "undefined" : "tem acordao"
+    },
+    "domain" : "51",
+    "attributes" : [ "object", "external" ],
+    "id" : "50"
+  }, {
+    "range" : "12",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "name",
+      "pt" : "nome",
+      "en" : "name"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/cpf",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "cpf"
+    },
+    "domain" : "53",
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/person_identifier",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "person_identifier",
+      "pt" : "identificador de uma pessoa",
+      "en" : "person identifier"
+    },
+    "domain" : "11",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/description",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "description",
+      "pt" : "descricao"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/razao_social",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "razao_social",
+      "undefined" : "razao social"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "14",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/data_origem",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "data_origem",
+      "undefined" : "data origem"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "62"
+  }, {
+    "range" : "5",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "range" : "5",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas/data_acordao",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/ComprasPublicas",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "data_acordao",
+      "undefined" : "data acordao"
+    },
+    "domain" : "36",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "65"
+  }, {
+    "range" : "12",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  } ]
+}

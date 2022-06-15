@@ -1,0 +1,36 @@
+
+### Mapeamentos IBGE Location
+<#MapeamentoPaisIBGE> rr:logicalTable [ 
+  rr:sqlQuery """SELECT URI_PAIS, CODIGO_PAIS, NOME_PAIS from "UFC"."IBGE_PAIS" """ ; 
+] ;
+
+rr:subjectMap [ 
+  rr:class <http://www.sefaz.ma.gov.br/ontology/Pais> ; 
+  rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Pais/{URI_PAIS}" ; 
+  ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-Localizacao> ;
+] ; 
+
+rr:predicateObjectMap [ 
+  rr:predicate <http://www.sefaz.ma.gov.br/ontology/codigo_pais> ; 
+  rr:objectMap [ 
+    rr:column "CODIGO_PAIS" ;  rr:datatype xsd:string;
+  ] ; 
+];
+
+rr:predicateObjectMap [ 
+  rr:predicate <http://www.sefaz.ma.gov.br/ontology/nome_pais> ; 
+  rr:objectMap [ 
+    rr:column "NOME_PAIS" ; 
+    rr:datatype xsd:string 
+  ] ; 
+] ;
+
+rr:predicateObjectMap [ 
+    rr:predicate rdfs:label ; 
+  rr:objectMap [ 
+    rr:column "NOME_PAIS" ; 
+    rr:datatype xsd:string
+  ] ; 
+] .
+
+### Fim Mapeamentos IBGE Location

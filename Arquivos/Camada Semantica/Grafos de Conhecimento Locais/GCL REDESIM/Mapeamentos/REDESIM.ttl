@@ -1,0 +1,1507 @@
+
+# Mapeamento Empresa
+<#TriplesMapOrganizationREDESIM>
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_EMPRESA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID}";
+        rr:class foaf:Organization, sefazma:Empresa_REDESIM ;
+       #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:razao_social;
+        rr:objectMap [ rr:column "razao_social"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj_raiz;
+        rr:objectMap [ rr:column "cnpj_raiz"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nire;
+        rr:objectMap [ rr:column "nire"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_ultimo_arquivamento, sefazma:data_atualizacao;
+        rr:objectMap [ rr:column "data_ultimo_arquivamento"; rr:datatype xsd:date];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_assinatura;
+        rr:objectMap [ rr:column "data_assinatura"; rr:datatype xsd:date];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_constituicao;
+        rr:objectMap [ rr:column "data_constituicao"; rr:datatype xsd:date ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_capital_social;
+        rr:objectMap [ rr:column "capital_social"; rr:datatype xsd:double ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:homepage;
+        rr:objectMap [ rr:column "site"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_porte;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Porte/{ID_porte}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_natureza_legal;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Natureza_Legal/{ID_natureza_legal}"; ];
+    ].
+
+
+# Mapeamento Empresa tem_Sociedade
+<#TriplesMapOrganizationHasSociedadeREDESIM>
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_empresa,ID_sociedade FROM "UFC_SEM"."REDESIM_TEM_SOCIEDADE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_empresa}";
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_sociedade, sefazma:tem_sociedade_redesim;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Sociedade/{ID_sociedade}"; ];
+    ].
+
+# Mapeamento Empresa tem Estabelecimento
+<#OrganizationhasEstablishmentREDESIM>
+  rr:logicalTable [
+    rr:sqlQuery """SELECT ID_empresa,ID_estabelecimento FROM "UFC_SEM"."REDESIM_TEM_ESTABELECIMENTO" WHERE ID_EMPRESA IS NOT NULL """];
+
+    rr:subjectMap [
+      rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_empresa}";
+      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_estabelecimento, sefazma:tem_estabelecimento_redesim;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_estabelecimento}";
+        ]
+    ].
+
+# Mapeamento tem Matriz
+<#TriplesMapHeadquarterREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_TEM_MATRIZ" """ ];
+    
+    rr:subjectMap [
+      rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_empresa}";
+      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+     rr:predicateObjectMap [
+        rr:predicate sefazma:tem_matriz;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_estabelecimento}";
+        ]
+    ].
+
+
+# Mapeamento tem filial
+<#TriplesMapHasSubsidiaryREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_TEM_FILIAL" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_empresa}";
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_filial;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_estabelecimento}"; ];
+    ].
+
+
+# Estabelecimento tem atividade economica
+<#TriplesMapEstablishmenthasEconomicActivityREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_estabelecimento,ID_atividade_economica FROM "UFC_SEM"."REDESIM_TEM_ATIVIDADE_ECONOMICA" """; ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_estabelecimento}";
+
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_atividade_economica;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_atividade_economica}"; ];
+    ].
+
+# Estabelecimento tem realização atividade economica
+<#TriplesMapEstablishmenthasEconomicActivityReasonREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_estabelecimento,ID_realizacao_atividade_economica 
+    FROM "UFC_SEM"."REDESIM_TEM_REALIZACAO_ATIVIDADE_ECONOMICA" """; ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_estabelecimento}";
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_realizacao_atividade_economica;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Realizacao_Atividade_Economica/{ID_realizacao_atividade_economica}"; ];
+    ].
+
+# Mapeamento Estabelecimento
+<#TriplesMapEstablishmentREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_ESTABELECIMENTO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID}";
+        rr:class sefazma:Estabelecimento, sefazma:Estabelecimento_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "nome_fantasia"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj, sefazma:cnpj_completo;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nome_fantasia;
+        rr:objectMap [ rr:column "nome_fantasia"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_imobiliaria;
+        rr:objectMap [ rr:column "inscricao_imobiliaria"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:area;
+        rr:objectMap [ rr:column "area"; rr:datatype xsd:double ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nirf;
+        rr:objectMap [ rr:column "nirf"; rr:datatype xsd:string  ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:incra;
+        rr:objectMap [ rr:column "incra"; rr:datatype xsd:string  ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:telefone;
+        rr:objectMap [ rr:column "telefone_completo"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:fax;
+        rr:objectMap [ rr:column "fax_completo"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate vcard:email;
+        rr:objectMap [ rr:column "email"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:metragem;
+        rr:objectMap [ rr:column "metragem"; rr:datatype xsd:double ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_estadual;
+        rr:objectMap [ rr:column "inscricao_estadual";  ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_municipal;
+        rr:objectMap [ rr:column "inscricao_municipal"; rr:datatype xsd:integer ];
+    ];
+
+   # rr:predicateObjectMap [
+   #     rr:predicate sefazma:forma_atuacao;
+   #     rr:objectMap [ rr:column "FORMA_ATUACAO"; ];
+   # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_tipo_estabelecimento;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Tipo_Estabelecimento/{ID_tipo_estabelecimento}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_tipo_propriedade;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Tipo_Propriedade/{ID_tipo_propriedade}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_tipo_contribuicao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Tipo_Contribuicao/{ID_tipo_contribuicao}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Endereco/{ID}"
+        ];
+    ].
+
+# Mapeamento Propriedade
+<#PropertyTypeREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID,codigo_tipo_imovel FROM "UFC_SEM"."REDESIM_TIPO_PROPRIEDADE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Tipo_Propriedade/{ID}";
+        rr:class sefazma:Tipo_Propriedade;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_tipo_propriedade;
+        rr:objectMap [ rr:column "codigo_tipo_imovel"; rr:datatype xsd:integer ]
+    ].
+
+# Mapeamento Porte
+<#SizesCompaniesREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID FROM "UFC_SEM"."REDESIM_PORTE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Porte/{ID}";
+        rr:class sefazma:Porte;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ]
+    ].
+
+# Mapeamento FormaAtuacao
+<#FormaAtuacaoREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID, forma_atuacao FROM "UFC_SEM"."REDESIM_FORMA_ATUACAO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Forma_Atuacao/{ID}";
+        rr:class sefazma:Forma_Atuacao;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:descricao_forma_atuacao;
+        rr:objectMap [ rr:column "forma_atuacao"; rr:datatype xsd:string ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_forma_atuacao;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ]
+    ].
+
+# Mapeamento Tipo Estabelecimento
+#<#EstablishmentTypeREDESIM>
+#    rr:logicalTable [ rr:sqlQuery """SELECT ID, tipo_unidade, codigo_tipo_estabelecimento FROM "UFC_SEM"."REDESIM_TIPO_ESTABELECIMENTO" """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Tipo_Estabelecimento/{ID}";
+#        rr:class sefazma:Tipo_Estabelecimento;
+#        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:tipo_unidade;
+#        rr:objectMap [ rr:column "tipo_unidade"; rr:datatype xsd:string ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:codigo_tipo_estabelecimento;
+#        rr:objectMap [ rr:column "codigo_tipo_estabelecimento"; rr:datatype xsd:string ]
+#    ].
+
+
+
+# Mapeamento tem Depósito
+<#TriplesMapDepotREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_EMPRESA,ID_ESTABELECIMENTO  FROM "UFC_SEM"."REDESIM_TEM_DEPOSITO" WHERE ID_EMPRESA IS NOT NULL """ ];
+    rr:subjectMap [
+      rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_EMPRESA}";
+      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+     rr:predicateObjectMap [
+        rr:predicate sefazma:tem_deposito;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_ESTABELECIMENTO}";
+        ]
+    ].
+
+# Mapeamento Empresa tem Requisição
+<#TriplesEmpresaTemSolicitacaoREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_empresa,ID_solicitacao FROM "UFC_SEM"."REDESIM_TEM_SOLICITACAO" WHERE ID_EMPRESA IS NOT NULL """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_empresa}";
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_solicitacao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Solicitacao/{ID_solicitacao}" ];
+    ].
+
+# Mapeamento tem Representante Legal PF
+<#SociedadetemRepresentanteLegalPFREDESIM> a rr:TriplesMap;
+  rr:logicalTable [
+    rr:sqlQuery """SELECT ID_sociedade,ID_representante FROM "UFC_SEM"."REDESIM_TEM_REPRESENTANTE_FISICO" """];
+    rr:subjectMap [
+      rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Sociedade/{ID_sociedade}";
+      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_representante_legal;
+        rr:objectMap [
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Pessoa/{ID_representante}"
+        ];
+    ].
+
+# Mapeamento tem Representante Legal PJ
+<#SociedadetemRepresentanteLegalPJREDESIM> a rr:TriplesMap;
+  rr:logicalTable [
+    rr:sqlQuery """SELECT ID_sociedade,ID_representante FROM "UFC_SEM"."REDESIM_TEM_REPRESENTANTE_JURIDICO" """];
+    rr:subjectMap [
+      rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Sociedade/{ID_sociedade}";
+      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_representante_legal;
+        rr:objectMap [
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_representante}"
+        ];
+    ].
+
+# Mapeamento Endereco
+<#EnderecoREDESIM> a rr:TriplesMap;
+  rr:logicalTable [
+    rr:sqlQuery """SELECT ID,nome_endereco,numero,complemento,cep_caixa_postal,ESTADO,CIDADE,BAIRRO,LOGRADOURO,
+    ID_cidade, ID_bairro, CEP
+    FROM "UFC_SEM"."REDESIM_ENDERECO" """ ];
+    rr:subjectMap [
+      rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Endereco/{ID}";
+      rr:class sefazma:Endereco, sefazma:Localizacao, sefazma:Endereco_REDESIM;
+      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "nome_endereco"; rr:datatype xsd:string ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero;
+        rr:objectMap [ rr:column "numero"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:complemento;
+        rr:objectMap [ rr:column "complemento"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cep_caixa_postal;
+        rr:objectMap [ rr:column "cep_caixa_postal"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate vcard:postal-code;
+        rr:objectMap [ rr:column "cep"; rr:datatype xsd:string ];
+    ];
+
+   # rr:predicateObjectMap [
+   #     rr:predicate sefazma:estado;
+   #     rr:objectMap [ rr:column "ESTADO"; rr:datatype xsd:integer ];
+   # ];
+    
+   # rr:predicateObjectMap [
+   #     rr:predicate sefazma:cidade;
+   #     rr:objectMap [ rr:column "CIDADE"; rr:datatype xsd:integer ];
+   # ];
+    
+   # rr:predicateObjectMap [
+   #     rr:predicate sefazma:bairro;
+   #     rr:objectMap [ rr:column "BAIRRO"; rr:datatype xsd:integer ];
+   # ];
+
+   # rr:predicateObjectMap [
+   #     rr:predicate sefazma:logradouro;
+   #     rr:objectMap [ rr:column "LOGRADOURO"; rr:datatype xsd:integer ];
+   # ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_unidade_federativa;
+        rr:objectMap [
+            rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{ESTADO}"
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_cidade;
+        rr:objectMap [
+            rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{ID_cidade}-{ESTADO}"
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_bairro;
+        rr:objectMap [
+            rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Bairro/{ID_bairro}-{ID_cidade}"
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_logradouro;
+        rr:objectMap [
+            rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Logradouro/{CEP}"
+        ];
+    ].
+   
+# Mapeamento Cidade
+#<#CidadeREDESIM>
+#  rr:logicalTable [
+#    rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_CIDADE" """
+#    ];
+#    rr:subjectMap [
+#      rr:template "http://www.sefaz.ma.gov.br/resource/Cidade/{ID}";
+#      rr:class sefazma:Municipio;
+#      #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label, sefazma:codigo_cidade;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string];
+#    ].
+
+# Mapeamento Bairro
+#<#BairroEstablishmentREDESIM>
+#    rr:logicalTable [
+#        rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_BAIRRO" """;
+#    ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Bairro/{ID}";
+#        rr:class sefazma:Bairro;
+#        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [
+#            rr:column "bairro";
+#            rr:datatype xsd:string
+#        ];
+#    ].
+
+# Mapeamento Logradouro
+#<#LogradouroEstablishmentREDESIM>
+#    rr:logicalTable [
+#        rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_LOGRADOURO" """;
+#    ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Logradouro/{ID}";
+#        rr:class sefazma:Logradouro;
+#        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label, sefazma:street_name;
+#        rr:objectMap [
+#            rr:column "logradouro";
+#            rr:datatype xsd:string
+#        ];
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:tipo_Logradouro;
+#        rr:objectMap [
+#            rr:column "tipo_logradouro";
+#            rr:datatype xsd:string
+#        ];
+#    ].
+
+
+# Mapeamento tem situacao cadastral
+<#TriplesMapEstablishmentCadastralSituationREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_estabelecimento,ID_situacao FROM "UFC_SEM"."REDESIM_TEM_SITUACAO_CADASTRAL" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Estabelecimento/{ID_estabelecimento}";
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_situacao_cadastral;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Situacao_Cadastral/{ID_situacao}"; ];
+    ].
+
+# Mapeamento Situacao Cadastral
+<#TriplesMapSituacao_CadastralREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_SITUACAO_CADASTRAL" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Situacao_Cadastral/{ID}";
+        rr:class sefazma:Situacao_Cadastral, sefazma:Situacao_Cadastral_REDESIM;
+       # #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:situacao_cadastral;
+        rr:objectMap [ rr:column "id" ];
+    ];
+
+  #  rr:predicateObjectMap [
+  #      rr:predicate rdf:type;
+  #      rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/{SITUACAO}" ];
+  # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_situacao;
+        rr:objectMap [ rr:column "SITUACAO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_situacao_cadastral;
+        rr:objectMap [ rr:column "codigo_situacao" ];
+    ].
+
+# Mapeamento Situacao Cadastral Ativa REDESIM
+<#TriplesMapSituacao_CadastralREDESIMAtiva> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_SITUACAO_CADASTRAL" WHERE SITUACAO = 'ATIVA'""" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Situacao_Cadastral/{ID}";
+        rr:class sefazma:Situacao_Cadastral, sefazma:Situacao_Cadastral_REDESIM, sefazma:Ativa;
+       # #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:situacao_cadastral;
+        rr:objectMap [ rr:column "id" ];
+    ];
+
+  #  rr:predicateObjectMap [
+  #      rr:predicate rdf:type;
+  #      rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/{SITUACAO}" ];
+  # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_situacao;
+        rr:objectMap [ rr:column "SITUACAO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_situacao_cadastral;
+        rr:objectMap [ rr:column "codigo_situacao" ];
+    ].
+
+
+# Mapeamento Situacao Cadastral Cancelada REDESIM
+<#TriplesMapSituacao_CadastralREDESIMCancelada> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_SITUACAO_CADASTRAL" 
+    WHERE SITUACAO = 'CANCELADA' 
+    OR SITUACAO = 'CANCELADA_ART_60_LEI_8934'
+    """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Situacao_Cadastral/{ID}";
+        rr:class sefazma:Situacao_Cadastral, sefazma:Situacao_Cadastral_REDESIM, sefazma:Cancelada, sefazma:Baixada;
+       # #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:situacao_cadastral;
+        rr:objectMap [ rr:column "id" ];
+    ];
+
+  #  rr:predicateObjectMap [
+  #      rr:predicate rdf:type;
+  #      rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/{SITUACAO}" ];
+  # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_situacao;
+        rr:objectMap [ rr:column "SITUACAO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_situacao_cadastral;
+        rr:objectMap [ rr:column "codigo_situacao" ];
+    ].
+
+
+# Mapeamento Situacao Cadastral Extinta REDESIM
+<#TriplesMapSituacao_CadastralREDESIMExtinta> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_SITUACAO_CADASTRAL" WHERE SITUACAO = 'EXTINTA'""" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Situacao_Cadastral/{ID}";
+        rr:class sefazma:Situacao_Cadastral, sefazma:Situacao_Cadastral_REDESIM, sefazma:Extinta;
+       # #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:situacao_cadastral;
+        rr:objectMap [ rr:column "id" ];
+    ];
+
+  #  rr:predicateObjectMap [
+  #      rr:predicate rdf:type;
+  #      rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/{SITUACAO}" ];
+  # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_situacao;
+        rr:objectMap [ rr:column "SITUACAO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_situacao_cadastral;
+        rr:objectMap [ rr:column "codigo_situacao" ];
+    ].
+
+
+# Mapeamento Situacao Cadastral Transferida REDESIM
+<#TriplesMapSituacao_CadastralREDESIMTransferida> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_SITUACAO_CADASTRAL" WHERE SITUACAO = 'TRANSFERIDA_PARA_OUTRA_UF'""" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Situacao_Cadastral/{ID}";
+        rr:class sefazma:Situacao_Cadastral, sefazma:Situacao_Cadastral_REDESIM, sefazma:Transferida;
+       # #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:situacao_cadastral;
+        rr:objectMap [ rr:column "id" ];
+    ];
+
+  #  rr:predicateObjectMap [
+  #      rr:predicate rdf:type;
+  #      rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/{SITUACAO}" ];
+  # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_situacao;
+        rr:objectMap [ rr:column "SITUACAO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_situacao_cadastral;
+        rr:objectMap [ rr:column "codigo_situacao" ];
+    ].
+
+
+# Mapeamento Evento
+<#TriplesEventREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID,identificacao_evento,descricao_evento,ID_SOLICITACAO 
+    FROM "UFC_SEM"."REDESIM_EVENTO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Evento/{ID}";
+        rr:class event:Event, sefazma:Evento;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "identificacao_evento"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_evento;
+        rr:objectMap [ rr:column "descricao_evento"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_evento;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_solicitacao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Solicitacao/{ID_SOLICITACAO}" ];
+    ].
+
+# Mapeamento Tipo de Contribuinte
+#<#TriplesMapTaxpayerTypeREDESIM> a rr:TriplesMap;
+#    rr:logicalTable [ 
+#    rr:sqlQuery """SELECT ID,CODIGO_TIPO_CONTRIBUINTE FROM "UFC_SEM"."REDESIM_TIPO_CONTRIBUICAO" """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Tipo_Contribuicao/{ID}";
+#        rr:class sefazma:Tipo_Contribuicao;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [ rr:column "id" ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:codigo_tipo_contribuinte;
+#        rr:objectMap [ rr:column "CODIGO_TIPO_CONTRIBUINTE" ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate rdf:type;
+#        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/{ID}"; ];
+#    ].
+
+# Mapeamento Sociedade Pessoa Fisica
+<#TriplesMapSociedadePersonREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_SOCIEDADE_COM_PESSOA_FISICA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Sociedade/{ID}";
+        rr:class sefazma:Sociedade, sefazma:Sociedade_PF, sefazma:Sociedade_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+     rr:predicateObjectMap [
+        rr:predicate sefazma:valor_participacao;
+        rr:objectMap [ rr:column "valor_participacao"; rr:datatype xsd:decimal ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:percentual_participacao;
+        rr:objectMap [ rr:column "percentual_participacao"; rr:datatype xsd:decimal ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_entrada_participacao;
+        rr:objectMap [ rr:column "data_entrada_participacao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_saida_participacao;
+        rr:objectMap [ rr:column "data_saida_participacao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_socio;
+        rr:objectMap [  rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Pessoa/{ID_socio}"; ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:qualificacao_socio;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_qualificacao}" ];
+    ].
+
+
+# Mapeamento Sociedade Com Holding
+<#TriplesMapSociedadeHoldingREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID, valor_participacao, percentual_participacao, data_entrada_participacao, data_saida_participacao, 
+    ID_qualificacao,
+    ID_socio
+    FROM "UFC_SEM"."REDESIM_SOCIEDADE_COM_HOLDING" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Sociedade/{ID}";
+        rr:class sefazma:Sociedade, sefazma:Sociedade_PJ, sefazma:Sociedade_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_participacao;
+        rr:objectMap [ rr:column "valor_participacao"; rr:datatype xsd:decimal ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:percentual_participacao;
+        rr:objectMap [ rr:column "percentual_participacao"; rr:datatype xsd:decimal ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_entrada_participacao;
+        rr:objectMap [ rr:column "data_entrada_participacao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_saida_participacao;
+        rr:objectMap [ rr:column "data_saida_participacao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_socio;
+        rr:objectMap [  rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_socio}"; ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_qualificacao_socio;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_qualificacao}" ];
+    ].
+ 
+<#TriplesMapPersonREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_PESSOA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Pessoa/{ID}";
+        rr:class foaf:Person, foaf:Agent, sefazma:Pessoa_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cpf;
+        rr:objectMap [ rr:column "cpf"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:name, rdfs:label;
+        rr:objectMap [ rr:column "nome"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate vcard:email;
+        rr:objectMap [ rr:column "email"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:telefone;
+        rr:objectMap [ rr:column "telefone"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:fax;
+        rr:objectMap [ rr:column "fax"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:identidade;
+        rr:objectMap [ rr:column "identidade"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:estado_civil;
+        rr:objectMap [ rr:column "estado_civil"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate vcard:bday,sefazma:data_nascimento;
+        rr:objectMap [ rr:column "data_nascimento"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:gender,sefazma:sexo;
+        rr:objectMap [ rr:column "sexo"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:regime_bens;
+        rr:objectMap [ rr:column "regime_bens"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:prazo_indeterminado;
+        rr:objectMap [ rr:column "prazo_indeterminado"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_mae;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Mae/{ID_mae}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_pai;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Pai/{ID_pai}"
+        ];
+    ];
+
+   # rr:predicateObjectMap [
+   #     rr:predicate sefazma:tem_registro_cartorio;
+   #     rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Registro_Cartorio/{ID_registro_cartorio}-{nome_comarca}"; ];
+   # ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_documento;
+        rr:objectMap [ 
+            rr:template "http://xmlns.com/foaf/0.1/Document/{ID_documento}"
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Endereco/{ID_endereco}"
+        ];
+    ];
+
+ #   rr:predicateObjectMap [
+ #       rr:predicate sefazma:tem_cidade_naturalidade;
+ #       rr:objectMap [ 
+ #           rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{ID_cidade_naturalidade}-{ID_uf_naturalidade}"
+ #       ];
+ #   ];
+
+ #   rr:predicateObjectMap [
+ #       rr:predicate sefazma:tem_uf_naturalidade;
+ #       rr:objectMap [ 
+ #           rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{ID_uf_naturalidade}"
+ #       ];
+ #   ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_nacionalidade;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Nacionalidade/{ID_nacionalidade}"
+        ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:e_emancipado;
+        rr:objectMap [ 
+            rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Emancipado/{ID_emancipado}"
+        ];
+    ].
+
+# Mapeamento Documento
+<#TriplesDocumentoREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID, CODIGO_DOCUMENTO, IDENTIDADE, DOC_ORGAO_EMISSOR, ORGAO_EMISSOR 
+    FROM "UFC_SEM"."REDESIM_DOCUMENTO" """ ];
+    rr:subjectMap [
+        rr:template "http://xmlns.com/foaf/0.1/Document/{ID}";
+        rr:class foaf:Document;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:identidade;
+        rr:objectMap [ rr:column "identidade"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_documento;
+        rr:objectMap [ rr:column "codigo_documento"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:documento_orgao_emissor;
+        rr:objectMap [ rr:column "DOC_ORGAO_EMISSOR"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:orgao_emissor;
+        rr:objectMap [ rr:column "ORGAO_EMISSOR"; ];
+    ].
+
+
+# Mapeamento Documento Complementar
+<#TriplesComplementaryDocummentREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_DOCUMENTO_COMPLEMENTAR" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Documento_Suplementar/{ID}";
+        rr:class sefazma:Documento_Suplementar;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:codigo_documento;                                        
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_validade;                                        
+        rr:objectMap [ rr:column "data_validade"; rr:datatype xsd:date];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:modelo;
+        rr:objectMap [ rr:column "modelo"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_documento;
+        rr:objectMap [ rr:column "numero_documento"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:page;
+        rr:objectMap [ rr:column "url"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao;
+        rr:objectMap [ rr:column "descricao"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate skos:note,sefazma:observacao;
+        rr:objectMap [ rr:column "observacao"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_suframa;
+        rr:objectMap [ rr:column "codigo_suframa"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_protocolo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Protocolo/{ID_protocolo}"; ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_arquivo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Arquivo/{ID_arquivo}"; ]
+    ].
+
+# Mapeamento Exigência
+#<#TriplesExigenciaREDESIM> a rr:TriplesMap;
+#    rr:logicalTable [ rr:sqlQuery """SELECT ID,rotulo,descricao_exigencia,ID_documentos_complementares
+#     FROM "UFC_SEM"."REDESIM_EXIGENCIA" """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Exigencia/{ID}";
+#        rr:class sefazma:Exigencia;
+#        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [ rr:column "rotulo"; rr:datatype xsd:string ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:codigo_exigencia;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+#    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:descricao_exigencia;
+#        rr:objectMap [ rr:column "descricao_exigencia"; rr:datatype xsd:date ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:tem_documento_suplementar;
+#        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Documento_Suplementar/{ID_documentos_complementares}"; ];
+#    ].
+
+# Mapeamento Registro de Cartório
+#<#TriplesRegistryOfficeRegisterREDESIM> a rr:TriplesMap;
+#    rr:logicalTable [ rr:sqlQuery """SELECT ID,ano_registro, ID_cartorio 
+#    FROM "UFC_SEM"."REDESIM_REGISTRO_CARTORIO" WHERE ID IS NOT NULL """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Registro_Cartorio/{ID}";
+#        rr:class sefazma:Registro_Cartorio;
+#        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label, sefazma:registro_cartorio;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:ano_registro;
+#        rr:objectMap [ rr:column "ano_registro"; rr:datatype xsd:date ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:tem_cartorio;
+#        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Cartorio/{ID_cartorio}"; ];
+#    ].
+
+
+# Mapeamento Cartório
+#<#TriplesRegistryOfficeREDESIM> a rr:TriplesMap;
+#    rr:logicalTable [ rr:sqlQuery """SELECT ID,numero_cartorio,comarca 
+#    FROM "UFC_SEM"."REDESIM_CARTORIO" """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Cartorio/{ID}";
+#        rr:class sefazma:Cartorio;
+#        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:numero_cartorio;
+#        rr:objectMap [ rr:column "numero_cartorio"; rr:datatype xsd:integer];
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:comarca;
+#        rr:objectMap [ rr:column "comarca"; rr:datatype xsd:string ];
+#    ].
+
+# Mapeamento Representante Legal PF
+<#TriplesMapLegalRepresentantPFREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID,nome,email,telefone 
+    FROM "UFC_SEM"."REDESIM_REPRESENTANTE_PF" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Pessoa/{ID}";
+        rr:class foaf:Person, foaf:Agent, sefazma:Representante_Legal, sefazma:Representante_Legal_Fisico, sefazma:Pessoa, sefazma:Pessoa_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cpf;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:name, rdfs:label;
+        rr:objectMap [ rr:column "nome"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate vcard:email;
+        rr:objectMap [ rr:column "email"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:telefone;
+        rr:objectMap [ rr:column "telefone"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Representante Legal PJ
+<#TriplesMapLegalRepresentantPJREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_REPRESENTANTE_PJ" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID}";
+        rr:class foaf:Organization, foaf:Agent, sefazma:Representante_Legal, sefazma:Representante_Legal_Juridico;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:name, rdfs:label, sefazma:razao_social;
+        rr:objectMap [ rr:column "RAZAO_SOCIAL"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate vcard:email;
+        rr:objectMap [ rr:column "email"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:telefone;
+        rr:objectMap [ rr:column "telefone"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Solicitação
+<#TriplesSolicitacaoREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID, IDENTIDADE, DEFERIMENTO, INSCRICAO_TRAUF, ID_TIPO_ATO, GERA_RUC, ID_STATUS_ENVIO, ENVOLVE_SEFAZ, 
+    ID_PROTOCOLO, PROTOCOLO_DBE, ID_ENTIDADE_INTEGRADA_EMISSOR, DATA_SINCRONIZACAO, DATA_SOLICITACAO, DATA_AUTENTICACAO, ID_EMPRESA 
+    FROM "UFC_SEM"."REDESIM_SOLICITACAO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Solicitacao/{ID}";
+        rr:class sefazma:Solicitacao;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:deferimento;
+        rr:objectMap [ rr:column "deferimento"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_trauf;
+        rr:objectMap [ rr:column "inscricao_trauf"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:protocolo_dbe;
+        rr:objectMap [ rr:column "protocolo_dbe"; rr:datatype xsd:string; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_sincronizacao;
+        rr:objectMap [ rr:column "data_sincronizacao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_autenticacao;
+        rr:objectMap [ rr:column "data_autenticacao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_solicitacao;
+        rr:objectMap [ rr:column "data_solicitacao"; rr:datatype xsd:date ];
+    ];
+
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:gera_ruc;
+        rr:objectMap [ rr:column "gera_ruc"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_tipo_ato;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Tipo_Ato/{ID_tipo_ato}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_status_envio;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Status_Envio/{ID_status_envio}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:envolve_sefaz;
+        rr:objectMap [ rr:column "envolve_sefaz"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_protocolo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Protocolo/{ID_protocolo}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_empresa;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Empresa/{ID_empresa}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_entidade_integrada;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Entidade_Integrada/{ID_ENTIDADE_INTEGRADA_EMISSOR}"; ];
+    ].
+
+# Mapeamento Arquivo
+<#TriplesArquivoREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID, HASH, DATA_ARQUIVO, DATA_RECEPCAO, DATA_DESMEMBRAMENTO, DATA_PROCESSAMENTO, VERSAO, CATEGORIA, 
+    IDENTIDADE, PROTOCOLO_DBE, ID_PROTOCOLO, 
+    INSCRICAO, ID_EMPRESA 
+    FROM "UFC_SEM"."REDESIM_ARQUIVO"  """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Arquivo/{ID}";
+        rr:class sefazma:Arquivo, foaf:Document;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "identidade"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:hash;
+        rr:objectMap [ rr:column "hash"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_arquivo;
+        rr:objectMap [ rr:column "data_arquivo"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_recepcao;
+        rr:objectMap [ rr:column "data_recepcao"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_desmembramento;
+        rr:objectMap [ rr:column "data_desmembramento"; rr:datatype xsd:date ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_processamento;
+        rr:objectMap [ rr:column "data_processamento"; rr:datatype xsd:date];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:versao;
+        rr:objectMap [ rr:column "versao"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:categoria;
+        rr:objectMap [ rr:column "categoria"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:protocolo_dbe;
+        rr:objectMap [ rr:column "protocolo_dbe"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao;
+        rr:objectMap [ rr:column "inscricao"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_protocolo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Protocolo/{ID_protocolo}"; ]
+    ].
+
+# Mapeamento Protocolo
+<#TriplesProtocolREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID, IDENTIDADE, PROTOCOLO_DBE FROM "UFC_SEM"."REDESIM_PROTOCOLO" WHERE ID IS NOT NULL """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Protocolo/{ID}";
+        rr:class sefazma:Protocolo;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "identidade"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:protocolo;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:protocolo_dbe;
+        rr:objectMap [ rr:column "protocolo_dbe"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Entidade Integrada
+<#TriplesIntegratedEntityREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID,identidade FROM "UFC_SEM"."REDESIM_ENTIDADE_INTEGRADA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Entidade_Integrada/{ID}";
+        rr:class sefazma:Entidade_Integrada;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "identidade"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_entidade_integrada;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Status Envio
+<#TriplesSendingStatusREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID,codigo_status_envio FROM "UFC_SEM"."REDESIM_STATUS_ENVIO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Status_Envio/{ID}";
+        rr:class sefazma:Status_Envio;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_status_envio;
+        rr:objectMap [ rr:column "codigo_status_envio"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Tipo Ato
+<#TriplesActionTypeREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID , codigo_tipo_ato FROM "UFC_SEM"."REDESIM_TIPO_ATO" WHERE ID IS NOT NULL """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Tipo_Ato/{ID}";
+        rr:class sefazma:Tipo_Ato;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_tipo_ato;
+        rr:objectMap [ rr:column "codigo_tipo_ato"; rr:datatype xsd:integer ];
+    ].
+
+# Mapeamento Comarca
+#<#TriplesCounty> a rr:TriplesMap;
+#    rr:logicalTable [ rr:sqlQuery """SELECT * FROM SELECT DISTINCT CASE WHEN TSO_NOMECOMARCA IS NULL THEN '' ELSE TSO_NOMECOMARCA END as uri
+#    FROM APL_REDESIM.TAB_SOCIOS" """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/County/{ID}";
+#        rr:class sefazma:County;
+#    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+#    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:nome_comarca;
+#        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+#    ];
+
+# Mapeamento Pessoa Emancipada
+<#TriplesPersonIsEmancipedREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."REDESIM_PESSOA_EMANCIPADA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Emancipado/{ID}";
+        rr:class sefazma:Emancipado, foaf:Person, sefazma:Papel, sefazma:Pessoa, sefazma:Pessoa_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate foaf:name, rdfs:label;
+        rr:objectMap [ rr:column "nome"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:motivo_emancipado;
+        rr:objectMap [ rr:column "motivo_emancipada"; rr:datatype xsd:integer ];
+    ].
+
+# Mapeamento Nacionalidade
+<#TriplesNacionalidadeREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID FROM "UFC_SEM"."REDESIM_NACIONALIDADE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Nacionalidade/{ID}";
+        rr:class sefazma:Nacionalidade;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "id"; ];
+    ].
+
+# Mapeamento Socio
+<#TriplesSocioREDESIM> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID,NOME,CNPJ_CPF,ID_QUALIFICACAO FROM "UFC_SEM"."REDESIM_SOCIOS" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/REDESIM/Socio/{ID}";
+        rr:class sefazma:Socio, foaf:Agent, sefazma:Papel, sefazma:Socio_REDESIM;
+        #rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/REDESIM> ; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "NOME"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj_cpf;
+        rr:objectMap [ rr:column "CNPJ_CPF"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_qualificacao_socio, sefazma:tem_qualificacao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO}"; ];
+    ].

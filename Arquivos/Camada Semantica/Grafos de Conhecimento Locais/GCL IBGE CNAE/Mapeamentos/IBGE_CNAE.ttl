@@ -1,0 +1,190 @@
+### Mapeamentos IBGE CNAE
+
+# Atividade Economica / Subclasse
+<#TriplesMapIBGECNAE_Atividade_Economica_Subclasse> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT REGEXP_REPLACE(CODIGO_SUBCLASSE,'\\D','') AS CODIGO_SUBCLASSE, DENOMINACAO,ID_CLASSE_CNAE FROM "UFC_SEM"."IBGE_SUBCLASSE_CNAE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{CODIGO_SUBCLASSE}";
+        rr:class sefazma:Atividade_Economica, sefazma:CNAE_Subclasse;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "CODIGO_SUBCLASSE"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae_formatado;
+        rr:objectMap [ rr:column "CODIGO_SUBCLASSE"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_atividade_economica;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:broader;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_CLASSE_CNAE}"; ];
+    ].
+
+# Atividade Economica / Classe
+<#TriplesMapIBGECNAE_Atividade_Economica_Classe> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT REGEXP_REPLACE(CODIGO_CLASSE,'\\D','') AS CODIGO_CLASSE ,DENOMINACAO,ID_CLASSE_CNAE, ID_GRUPO_CNAE FROM "UFC_SEM"."IBGE_CLASSE_CNAE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_CLASSE_CNAE}";
+        rr:class sefazma:Atividade_Economica, sefazma:CNAE_Classe;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "CODIGO_CLASSE"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae_formatado;
+        rr:objectMap [ rr:column "CODIGO_CLASSE"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_atividade_economica;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:broader;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_GRUPO_CNAE}"; ];
+    ].
+
+
+# Atividade Economica / Grupo
+<#TriplesMapIBGECNAE_Atividade_Economica_Grupo> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_GRUPO_CNAE, REGEXP_REPLACE(CODIGO_GRUPO,'\\D','') AS CODIGO_GRUPO, DENOMINACAO, ID_DIVISAO_CNAE FROM "UFC_SEM"."IBGE_GRUPO_CNAE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_GRUPO_CNAE}";
+        rr:class sefazma:Atividade_Economica, sefazma:CNAE_Grupo;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "CODIGO_GRUPO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae_formatado;
+        rr:objectMap [ rr:column "CODIGO_GRUPO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_atividade_economica;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:broader;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_DIVISAO_CNAE}"; ];
+    ].
+
+# Atividade Economica / Divisao
+<#TriplesMapIBGECNAE_Atividade_Economica_Divisao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_DIVISAO_CNAE, REGEXP_REPLACE(CODIGO_DIVISAO,'\\D','') AS CODIGO_DIVISAO, DENOMINACAO, ID_SECAO_CNAE FROM "UFC_SEM"."IBGE_DIVISAO_CNAE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_DIVISAO_CNAE}";
+        rr:class sefazma:Atividade_Economica, sefazma:CNAE_Divisao;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "CODIGO_DIVISAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae_formatado;
+        rr:objectMap [ rr:column "CODIGO_DIVISAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_atividade_economica;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:broader;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_SECAO_CNAE}"; ];
+    ].
+
+# Atividade Economica / Secao
+<#TriplesMapIBGECNAE_Atividade_Economica_Secao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT ID_SECAO_CNAE, IDENTIFICADOR_SECAO, DENOMINACAO FROM "UFC_SEM"."IBGE_SECAO_CNAE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_SECAO_CNAE}";
+        rr:class sefazma:Atividade_Economica, sefazma:CNAE_Secao;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "IDENTIFICADOR_SECAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae_formatado;
+        rr:objectMap [ rr:column "IDENTIFICADOR_SECAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_atividade_economica;
+        rr:objectMap [ rr:column "DENOMINACAO"; rr:datatype xsd:string ];
+    ].
+
+
+# Atividade Economica Livre de ICMS
+<#TriplesMapIBGECNAE_Atividade_Livre_ICMS> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT REGEXP_REPLACE(CNAE,'\\D','') AS CNAE, ID FROM "UFC_SEM"."IBGE_ATIVIDADES_ISENTAS" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{CNAE}";
+        rr:class sefazma:Atividade_Economica, sefazma:Atividade_Livre_ICMS;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "ID"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate skos:member;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{CNAE}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "CNAE"; rr:datatype xsd:string ];
+    ].
+
+# Atividade Economica com ICMS
+<#TriplesMapIBGECNAE_Atividade_Incidencia_ICMS> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."DOM_ATIVIDADE_ICMS" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{CNAE}";
+        rr:class sefazma:Atividade_Economica, sefazma:Atividade_ICMS;
+        ##rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/IBGE-CNAE> ; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "id"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate skos:member;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{CNAE}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnae,sefazma:cnae_completo;
+        rr:objectMap [ rr:column "CNAE"; rr:datatype xsd:string ];
+    ].

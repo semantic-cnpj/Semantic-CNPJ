@@ -1,0 +1,26 @@
+--Das novas tabelas de extracao
+--extr_empresas - 3576MB
+CREATE TABLESPACE ts_extracao_empresa
+LOGGING DATAFILE 'ts_extracao_empresa.dbf'
+SIZE 4000m AUTOEXTEND ON NEXT 400m EXTENT MANAGEMENT LOCAL;
+
+--extr_estabelecimento - 8749MB
+CREATE TABLESPACE ts_extracao_estabelecimento
+LOGGING DATAFILE 'ts_extracao_estabelecimento.dbf'
+SIZE 9000m AUTOEXTEND ON NEXT 900m EXTENT MANAGEMENT LOCAL;
+
+--extr_socio - 2112MB
+CREATE TABLESPACE ts_extracao_socio
+LOGGING DATAFILE 'ts_extracao_socio.dbf'
+SIZE 3000m AUTOEXTEND ON NEXT 300m EXTENT MANAGEMENT LOCAL;
+
+--extr_simei - 1600MB
+CREATE TABLESPACE ts_extracao_simei
+LOGGING DATAFILE 'ts_extracao_simei.dbf'
+SIZE 2000m AUTOEXTEND ON NEXT 200m EXTENT MANAGEMENT LOCAL;
+
+--DOM_PAIS - 0.0625MB, DOM_MUNICIPIO - 0.1875MB, DOM_QUALIFICACAO_SOCIO - 0.0625, DOM_NATUREZA_JURIDICA - 0.0625, DOM_CNAES - 0.125MB, total - 0.5MB
+CREATE TABLESPACE ts_extracao_tb_dominios
+LOGGING DATAFILE 'ts_extracao_tb_dominios.dbf'
+SIZE 1m AUTOEXTEND ON NEXT 0.1m EXTENT MANAGEMENT LOCAL;
+

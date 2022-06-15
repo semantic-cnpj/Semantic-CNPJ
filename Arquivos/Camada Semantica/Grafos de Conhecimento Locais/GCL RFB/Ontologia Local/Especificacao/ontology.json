@@ -1,0 +1,2661 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/address_number"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cnae"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/company_name"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/contact_number"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/full_cnpj"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/phone_number"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/trade_name"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/fax_number"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2006/vcard/ns#email"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/abbreviation_UF"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/legal_nature_code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/locality_type"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/partner_qualification"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2006/vcard/ns#postal-code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/has_representant"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/partnership_start_date"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code_qualification"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid39"
+    }, {
+      "@id" : "_:genid37"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/reason_situation_code"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/reason_situation_code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/address_number"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid50"
+    }, {
+      "@id" : "_:genid48"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/has_reason_situation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code_size_company"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/special_situation_description"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/special_situation_start_date"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2006/vcard/ns#email"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid58"
+    }, {
+      "@id" : "_:genid56"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/member"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/member"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/has_headquarters"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/company_name"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/root_cnpj"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/name"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/City"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Country"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/District"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Federative_Unit"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Locality"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/city_code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/country_code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Acre_(state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Alagoas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Amapá",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Amazonas_(Brazilian_state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Bahia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Ceará",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Espírito_Santo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Federal_District_(Brazil)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Goiás",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Maranhão",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Mato_Grosso",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Mato_Grosso_do_Sul",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Minas_Gerais",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paraná_(state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Paraíba",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Pará",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Pernambuco",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Piauí",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Rio_Grande_do_Norte",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Rio_Grande_do_Sul",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Rio_de_Janeiro_(state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Rondônia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Roraima",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Santa_Catarina_(state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Sergipe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/São_Paulo_(state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Tocantins",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Cadastral Ontology of open data of companies registred with the Federal Revenue of Brazil"
+  }, {
+    "@language" : "pt",
+    "@value" : "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nValeria Priscilla Monteiro Fernandes\nvaleria.fernandes@sefaz.ma.gov.br\n\nAdriano Dos Santos Rego\nadriano.rego@sefaz.ma.gov.br\n\n\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n\n-----------------------------------------------------------------------------------------------\nFinanciador: Banco Interamericano de Desenvolvimento\n\nContrato 4458/OC-BR. \nP1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."
+  }, {
+    "@language" : "pt",
+    "@value" : "Ontologia Cadastral dos Dados Abertos de Empresas da Receita Federal do Brasil - RFB"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "RFB Cadastro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "pt",
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.sefaz.ma.gov.br/ontology/Establishment_Type" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "As a subsidiary, that establishment represents the management\nprincipal, however, without the power of deliberative and / or executive power. There is no need to talk about \"fiscal headquartes\" and \"filial scrictu sensu\" (a 'fiscal subsidiary', as opposed to a \"corporate subsidiary\"), nor is there any question that the RFB should do so, in view of articles 109 and 110 of CTN, which guide the operator of the law and the legislator itself. Therefore, the headquartes is that center of direction and administration of the company dealt with by civil legislation. The other establishments are subsidiaries (or branches or agencies)."
+  }, {
+    "@language" : "pt",
+    "@value" : "Como filial conceitua-se aquele estabelecimento que representa a direção principal, contudo, sem alçada de poder deliberativo e/ou executivo. Não há que se falar em \"matriz fiscal\" e \"filial scrictu sensu\" (uma 'filial fiscal', em contraponto a uma \"filial societária\"), nem se cogita que a RFB o faça, haja vista os artigos 109 e 110 do CTN, que balizam o operador do direito e o próprio legislador. Portanto, matriz é aquele centro de direção e administração da empresa de que trata a legislação civil. Os demais estabelecimentos são filiais (ou sucursais ou agências)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Filial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.sefaz.ma.gov.br/ontology/Establishment_Type" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Conceitua-se matriz aquele estabelecimento chamado sede ou principal que tem a primazia na direção e ao qual estão subordinados todos os demais, chamados de filiais, sucursais ou agências. Estabelecimento matriz é aquele no qual se exercem a direção e a administração da pessoa jurídica (Empresa).  A pessoa jurídica de direito privado pode ter vários domicílios, mas uma só sede."
+  }, {
+    "@language" : "en",
+    "@value" : "Headquarter is defined as that establishment called headquarters or principal that has primacy in the direction and to which all others are subordinate,\ncalled subsidiaries, branches or agencies. Headquarters establishment is the one in which the direction and administration of the legal entity (Company) is exercised. The legal entity under private law may have several domiciles, but only one headquarters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Matriz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/NAO_OPTANTE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.sefaz.ma.gov.br/ontology/Size_Company" ],
+  "http://www.sefaz.ma.gov.br/ontology/code_size_company" : [ {
+    "@value" : "05"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Para que a empresa seja enquadrada desta maneira o contrato social precisa ser assinado por um advogado e são para empresas que têm uma atividade que não permite a classificação em nenhum dos outros portes ou tem como sócio uma pessoa jurídica. Neste formato é possível ter mais de 100 funcionários."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "DEMAIS"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.sefaz.ma.gov.br/ontology/Size_Company" ],
+  "http://www.sefaz.ma.gov.br/ontology/code_size_company" : [ {
+    "@value" : "01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estes formatos são para as empresas que pretendem ter ou tenham um faturamento anual de até R$ 360 mil. Uma microempresa pode ter até 20 funcionários."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "MICRO EMPRESA"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.sefaz.ma.gov.br/ontology/Size_Company" ],
+  "http://www.sefaz.ma.gov.br/ontology/code_size_company" : [ {
+    "@value" : "00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "NÃO INFORMADO"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.sefaz.ma.gov.br/ontology/Size_Company" ],
+  "http://www.sefaz.ma.gov.br/ontology/code_size_company" : [ {
+    "@value" : "03"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Indicado para negócios que têm um faturamento anual no limite de R$ 4,8 milhões. Este formato pode ter até 100 funcionários."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "EMPRESA DE PEQUENO PORTE"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Esta classe agrupa informações sobre o endereço declarado de uma Organização. Este endereço é composto por um número e complemento, relacionados as demais instâncias de Localização, tais como, Logradouro, Bairro, Municipio, UF e País.\n\nCada endereço deve ser único. Deste modo, caso duas empresas apotem para uma mesma instância de enderço, então este deve gerar uma inconsistência."
+  }, {
+    "@language" : "en",
+    "@value" : "This class groups information about a organization's declared address. This address consists of a number and complement, related to the other instances of Localization, such as, Street, District, City, Federative Unit and Country.\n\nEach address must be unique. Thus, if two companies provide for the same address, then this should generate an inconsistency."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Address"
+  }, {
+    "@language" : "pt",
+    "@value" : "Endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "A situação cadastral de CNPJ é o registro da empresa junto à Receita Federal. A partir da análise, é possível saber qual é o status do negócio, se há processos judiciais ou dívidas tributárias."
+  }, {
+    "@language" : "en",
+    "@value" : "The CNPJ status is the company's registration with the Federal Revenue Service. From the analysis, it is possible to know what the status of the business is, whether there are lawsuits or tax debts."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cadastral situation"
+  }, {
+    "@language" : "pt",
+    "@value" : "Situação Cadastral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.sefaz.ma.gov.br/ontology/situation_code" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@id" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm"
+  }, {
+    "@language" : "pt",
+    "@value" : "CAPÍTULO II\nDA SITUAÇÃO CADASTRAL ATIVA\n\nArt. 35. A inscrição no CNPJ é enquadrada na situação cadastral ativa quando a entidade ou o estabelecimento filial, conforme o caso, não se enquadrar em nenhuma das situações cadastrais citadas nos incisos II a V do art. 34."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Ativa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.sefaz.ma.gov.br/ontology/situation_code" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "08"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "CAPÍTULO V\nDA SITUAÇÃO CADASTRAL BAIXADA\n\nArt. 46. A inscrição no CNPJ é enquadrada na situação cadastral baixada quando a entidade ou o estabelecimento filial, conforme o caso, tiver sua solicitação de baixa deferida, na forma prevista no art. 25, ou tiver sua inscrição baixada de ofício, conforme o art. 27."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Baixada"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.sefaz.ma.gov.br/ontology/situation_code" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "CAPÍTULO VI\nDA SITUAÇÃO CADASTRAL NULA\n\nArt. 47. A inscrição no CNPJ é enquadrada na situação cadastral nula quando for declarada a nulidade do ato de inscrição da entidade ou do estabelecimento filial, na forma prevista no art. 33."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Nula"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.sefaz.ma.gov.br/ontology/situation_code" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "03"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "CAPÍTULO III\nDA SITUAÇÃO CADASTRAL SUSPENSA\n\nArt. 36. A inscrição no CNPJ é enquadrada na situação cadastral suspensa quando, conforme o caso, a entidade ou o estabelecimento filial:\n\nI - domiciliada no exterior, encontrando-se na situação cadastral ativa, deixar de ser alcançada, temporariamente, pelas situações previstas no inciso XV do art. 4º;\n\nII - solicitar baixa de sua inscrição no CNPJ, enquanto a solicitação estiver em análise ou caso seja indeferida;\n\nIII - for intimada na forma prevista no § 1º do art. 29;\n\nIV - for intimada na forma prevista no § 1º do art. 40;\n\nV - apresentar indício de interposição fraudulenta de sócio ou titular, na situação prevista no § 2º do art. 3º do Decreto nº 3.724, de 10 de janeiro de 2001, enquanto o respectivo processo estiver em análise;\n\nVI - interromper temporariamente suas atividades;\n\nVII - não reconstituir, no prazo de 210 (duzentos e dez) dias, a pluralidade de sócios do seu QSA;\n\nVIII - tiver sua suspensão determinada por ordem judicial; ou\n\nIX - possuir inconsistência(s) em seus dados cadastrais.\n\n§ 1º A suspensão da inscrição no CNPJ nas hipóteses previstas nos incisos I e VI do caput ocorre por solicitação da entidade ou do estabelecimento filial, conforme o caso, mediante comunicação da interrupção temporária de suas atividades, na forma prevista nos arts. 12 a 14.\n\n§ 2º A inconsistência cadastral a que se refere o inciso IX do caput caracteriza-se, conforme o caso, pela:\n\nI - ausência do representante a que se refere o art. 7º ou quando sua inscrição no CPF for inexistente ou estiver cancelada ou nula;\n\nII - ausência do QSA, no caso das entidades relacionadas no Anexo VI desta Instrução Normativa;\n\nIII - ausência do ente federativo responsável, no caso de entidades da Administração Pública;\n\nIV - ausência da atividade econômica;\n\nV - ausência ou invalidade do Código de Endereçamento Postal (CEP);\n\nVI - ausência do valor do capital social, para as entidades cuja informação é obrigatória; ou\n\nVII - incompatibilidade entre o Número de Inscrição no Registro de Empresa (Nire) e a natureza jurídica da entidade."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Suspensa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.sefaz.ma.gov.br/ontology/situation_code" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "04"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "CAPÍTULO IV\nDA SITUAÇÃO CADASTRAL INAPTA\n\nArt. 37. Pode ser declarada inapta a inscrição no CNPJ da pessoa jurídica:\n\nI - omissa de declarações e demonstrativos: a que, estando obrigada, deixar de apresentar declarações e demonstrativos em 2 (dois) exercícios consecutivos;\n\nII - não localizada: a que não for localizada no endereço constante do CNPJ; ou\n\nIII - com irregularidade em operações de comércio exterior: a que não comprovar a origem, a disponibilidade e a efetiva transferência, se for o caso, dos recursos empregados em operações de comércio exterior, na forma prevista em lei.\n\nParágrafo único. O disposto neste artigo não se aplica à entidade domiciliada no exterior.\n\nSeção I\nDa Pessoa Jurídica Omissa de Declarações e Demonstrativos\n\nArt. 38. No caso de pessoa jurídica omissa de declarações e demonstrativos, de que trata o inciso I do caput do art. 37, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.\n\n§ 1º A pessoa jurídica declarada inapta nos termos do caput pode regularizar sua situação mediante apresentação, por meio da Internet, das declarações e demonstrativos exigidos, ou comprovação de sua anterior apresentação na unidade da RFB que a jurisdiciona.\n\n§ 2º O disposto neste artigo não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas previstas no caput, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.\n\nSeção II\nDa Pessoa Jurídica não Localizada\n\nArt. 39. A pessoa jurídica não localizada, de que trata o inciso II do caput do art. 37, é assim considerada quando:\n\nI - não confirmar o recebimento de 2 (duas) ou mais correspondências enviadas pela RFB, comprovado pela devolução do Aviso de Recebimento (AR) dos Correios; ou\n\nII - não for localizada no endereço constante do CNPJ, comprovado mediante Termo de Diligência.\n\n§ 1º Na hipótese prevista no inciso I do caput, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.\n\n§ 2º Na hipótese prevista no inciso II do caput, a inscrição no CNPJ dever ser declarada inapta pelo Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\n§ 3º O disposto no § 1º não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas nele previstas, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.\n\n§ 4º A pessoa jurídica declarada inapta conforme este artigo pode regularizar sua situação mediante alteração do seu endereço no CNPJ, na forma prevista nos arts. 12 a 14, ou restabelecimento de sua inscrição, conforme previsto no inciso I do § 1º do art. 32, caso o seu endereço continue o mesmo constante do CNPJ.\n\nSeção III\nDa Pessoa Jurídica com Irregularidade em Operações de Comércio Exterior\n\nArt. 40. No caso de pessoa jurídica com irregularidade em operações de comércio exterior, de que trata o inciso III do caput do art. 37, o procedimento administrativo de declaração de inaptidão deve ser iniciado por representação consubstanciada com elementos que evidenciem o fato descrito no citado inciso.\n\n§ 1º O titular da unidade da RFB com jurisdição para fiscalização dos tributos sobre comércio exterior que constatar o fato, acatando a representação citada no caput, deve intimar a pessoa jurídica, por meio de edital, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, a regularizar, no prazo de 30 (trinta) dias, sua situação ou contrapor as razões da representação, suspendendo sua inscrição no CNPJ a partir da publicação do edital.\n\n§ 2º Na falta de atendimento à intimação referida no § 1º, ou quando não acatadas as contraposições apresentadas, a inscrição no CNPJ deve ser declarada inapta pelo titular da unidade da RFB citado no § 1º, por meio de ADE publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\n§ 3º A pessoa jurídica declarada inapta na forma prevista no § 2º pode regularizar sua situação mediante comprovação da origem, da disponibilidade e da efetiva transferência, se for o caso, dos recursos empregados em operações do comércio exterior, na forma prevista em lei, e deve ser realizada pelo titular da unidade da RFB citado no § 1º, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\nArt. 41. Para fins do disposto no inciso III do art. 37 e no § 3º do art. 40, a comprovação da origem de recursos provenientes do exterior dá-se mediante, cumulativamente:\n\nI - prova do regular fechamento da operação de câmbio, inclusive com a identificação da instituição financeira no exterior encarregada da remessa dos recursos para o País; e\n\nII - identificação do remetente dos recursos, assim entendido como a pessoa física ou jurídica titular dos recursos remetidos.\n\n§ 1º No caso de o remetente referido no inciso II do caput ser pessoa jurídica, devem ser também identificados os integrantes do seu QSA.\n\n§ 2º O disposto neste artigo aplica-se também na hipótese de que trata o § 2º do art. 23 do Decreto-Lei nº 1.455, de 7 de abril de 1976.\n\nSeção IV\nDos Efeitos da Inscrição Inapta\n\nArt. 42. Sem prejuízo das sanções previstas na legislação, a pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta é:\n\nI - incluída no Cadastro Informativo de Créditos Não Quitados do Setor Público Federal (Cadin);\n\nII - impedida de:\n\na) participar de concorrência pública;\n\nb) celebrar convênios, acordos, ajustes ou contratos que envolvam desembolso, a qualquer título, de recursos públicos, e respectivos aditamentos;\n\nc) obter incentivos fiscais e financeiros;\n\nd) realizar operações de crédito que envolvam a utilização de recursos públicos; e\n\ne) transacionar com estabelecimentos bancários, inclusive quanto à movimentação de contas-correntes, à realização de aplicações financeiras e à obtenção de empréstimos.\n\nParágrafo único. O impedimento de transacionar com estabelecimentos bancários a que se refere a alínea \"e\" do inciso II não se aplica a saques de importâncias anteriormente depositadas ou aplicadas.\n\nArt. 43. É considerado inidôneo, não produzindo efeitos tributários em favor de terceiro interessado, o documento emitido por pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta.\n\n§ 1º Os valores constantes do documento de que trata o caput não podem ser:\n\nI - deduzidos como custo ou despesa, na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL);\n\nII - deduzidos na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Físicas (IRPF);\n\nIII - utilizados como crédito do Imposto sobre Produtos Industrializados (IPI), e da Contribuição para o PIS/Pasep e da Contribuição para o Financiamento da Seguridade Social (Cofins) não cumulativos;\n\nIV - utilizados para justificar qualquer outra dedução, abatimento, redução, compensação ou exclusão relativa aos tributos administrados pela RFB.\n\n§ 2º Considera-se terceiro interessado, para fins do disposto neste artigo, a pessoa física ou a entidade beneficiária do documento.\n\n§ 3º O disposto neste artigo aplica-se em relação aos documentos emitidos:\n\nI - a partir da data de publicação do ADE a que se refere:\n\na) o art. 38, no caso de pessoa jurídica omissa de declarações e demonstrativos; e\n\nb) o art. 39, no caso de pessoa jurídica não localizada;\n\nII - desde a data de ocorrência do fato, no caso de pessoa jurídica com irregularidade em operações de comércio exterior, a que se refere o art. 40.\n\n§ 4º A inidoneidade de documentos em virtude de inscrição declarada inapta não exclui as demais formas de inidoneidade de documentos previstas na legislação, nem legitima os emitidos anteriormente às datas referidas no § 3º.\n\n§ 5º O disposto no § 1º não se aplica aos casos em que o terceiro interessado, adquirente de bens, direitos e mercadorias, ou o tomador de serviços, comprovar o pagamento do preço respectivo e o recebimento dos bens, direitos ou mercadorias ou a utilização dos serviços.\n\n§ 6º A entidade que não efetuar a comprovação de que trata o § 5º sujeita-se ao pagamento do Imposto sobre a Renda Retido na Fonte (IRRF), na forma do art. 61 da Lei nº8.981, de 20 de janeiro de 1995, calculado sobre o valor pago constante dos documentos.\n\nArt. 44. A pessoa jurídica com inscrição declarada inapta tem sua inscrição enquadrada na situação cadastral ativa após regularizar todas as situações que motivaram a inaptidão.\n\nSeção V\nDos Créditos Tributários da Pessoa Jurídica Inapta\n\nArt. 45. O encaminhamento, para fins de inscrição e execução, de créditos tributários relativos à pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta, nas hipóteses previstas nos incisos I, II e III do caput do art. 37, deve ser efetuado com a indicação dessa circunstância e da identificação dos responsáveis tributários correspondentes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Inapta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Cidade"
+  }, {
+    "@language" : "en",
+    "@value" : "City"
+  }, {
+    "@language" : "pt",
+    "@value" : "Municipio"
+  }, {
+    "@language" : "pt",
+    "@value" : "Município"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Location"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Contact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Country"
+  }, {
+    "@language" : "pt",
+    "@value" : "País"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Location"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/District",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Bairro"
+  }, {
+    "@language" : "en",
+    "@value" : "District"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Location"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.\nEsta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."
+  }, {
+    "@language" : "en",
+    "@value" : "Economic activity carried out by the company. A company has a primary activity and can (optionally) have N secondary activities.\nThis activity is represented by the Classificação Nacional de Atividades Econômicas (CNAE) code."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Atividade econômica"
+  }, {
+    "@language" : "en",
+    "@value" : "Economic activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Art. 3º  Todas as entidades domiciliadas no Brasil, inclusive as pessoas jurídicas equiparadas pela legislação do Imposto sobre a Renda, estão obrigadas a se inscrever no CNPJ e a cada um de seus estabelecimentos localizados no Brasil ou no exterior, antes do início de suas atividades.\n\n§ 1º  Os estados, o Distrito Federal e os municípios devem ter uma inscrição no CNPJ, na condição de estabelecimento matriz, que os identifique como pessoa jurídica de direito público, sem prejuízo das inscrições de seus órgãos públicos, conforme disposto no inciso I do caput do art. 4º.\n§ 2º  Para fins inscrição do CNPJ, estabelecimento é o local privado ou público, edificado ou não, móvel ou imóvel, próprio ou de terceiro, onde a entidade exerce suas atividades em caráter temporário ou permanente ou onde se encontram armazenadas mercadorias, incluindo as unidades auxiliares constantes do Anexo VII desta Instrução Normativa.\n§ 3º  Considera-se estabelecimento, para fins do disposto no § 2º, a plataforma de produção e armazenamento de petróleo e gás natural, ainda que esteja em construção.\n§ 4º  No caso previsto no § 3º, o endereço a ser informado no CNPJ deve ser o do estabelecimento da entidade proprietária ou arrendatária da plataforma, em terra firme, cuja localização seja a mais próxima."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelecimento"
+  }, {
+    "@language" : "en",
+    "@value" : "Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=97729&visao=original"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment_Type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Indica se um um estabelecimento é uma matriz ou uma filial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Establishment type"
+  }, {
+    "@language" : "pt",
+    "@value" : "Tipo do estabelecimento"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Federative_Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Estado"
+  }, {
+    "@language" : "pt",
+    "@value" : "State"
+  }, {
+    "@language" : "pt",
+    "@value" : "UF"
+  }, {
+    "@language" : "pt",
+    "@value" : "Unidade Federativa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Location"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Individual_Microentrepreneur",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Legal_Nature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "A natureza jurídica de uma empresa é o  regime jurídico em que ela se enquadra,  isto é a relação da pessoa jurídica pública ou  privada com o exame que será feito pela FISCALIZAÇÃO no respectivo EMPREENDIMENTO, somado  ao  que consta dos dados da empresa nos cadastros da ADMINISTRAÇÃO PUBLICA. No momento de formalizar a empresa, informar a sua natureza jurídica tornou-se uma questão indispensável, já que cada natureza jurídica exige diferentes formas de aplicação das normas para as empresas.\n\nEm consonância com o código civil (Lei nº 10.406/02) existem várias espécies de natureza jurídica e entre elas estão os tipos jurídicos atribuídos à administração pública, entidades empresariais, entidades sem fins lucrativos e às pessoas físicas."
+  }, {
+    "@language" : "en",
+    "@value" : "The legal nature of a company is the legal regime in which it fits, that is, the relationship of the public or private legal person with the examination that will be done by the ENGINEER in the respective ENTERPRISE, added to what appears in the company data in the ADMINISTRATION records. PUBLISH. When formalizing the company, informing its legal nature has become an indispensable issue, since each legal nature requires different ways of applying the rules for companies.\n\nIn line with the civil code (Law No. 10,406 / 02), there are several types of legal nature and among them are the legal types attributed to the public administration, business entities, non-profit entities and individuals."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Legal nature"
+  }, {
+    "@language" : "pt",
+    "@value" : "Natureza jurídica"
+  }, {
+    "@language" : "pt",
+    "@value" : "Natureza legal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabelas-utilizadas-pelo-programa-cnpj/tabela-de-natureza-juridica-e-qualificacao-do-quadro-de-socios-e-administradores"
+  }, {
+    "@id" : "https://suporte.agilize.com.br/hc/pt-br/articles/216342283-Naturezas-Jur%C3%ADdicas-de-uma-empresa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Locality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A locality can be a street, avenue, court, etc."
+  }, {
+    "@language" : "pt",
+    "@value" : "Um logradouro pode ser uma rua, avenida, quadra, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Locality"
+  }, {
+    "@language" : "pt",
+    "@value" : "Logradouro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Location"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class that represents the concept of a geographical location."
+  }, {
+    "@language" : "pt",
+    "@value" : "Classe que representa o conceito de uma localização geográfica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Local"
+  }, {
+    "@language" : "pt",
+    "@value" : "Localização"
+  }, {
+    "@language" : "pt",
+    "@value" : "Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Indica se a empresa é optante pelo regime tributário SIMPLES Nacional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Option for SIMPLES"
+  }, {
+    "@language" : "pt",
+    "@value" : "Opção pelo regime SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Partnership",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Esta classe representa a relação de sociedade ou representação entre uma empresa e seu sócio/representante. Esta representação possui datas de início e fim, além de poder possuir o percentual do capital social possuído pelo sócio e seu percentual de participação (em cenários em que isto é possível). Por fim, a representação possui uma qualificação aplicável ao sócio representante existente na classe Representant_Qualification."
+  }, {
+    "@language" : "en",
+    "@value" : "This class represents the partnership or representation between a company and its partner / representative. This representation has start and end dates, in addition to having the percentage of share capital owned by the partner and its percentage of participation (in scenarios where this is possible). Finally, the representation has a qualification applicable to the representative partner existing in the Representant_Qualification class."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Partnership"
+  }, {
+    "@language" : "en",
+    "@value" : "Representation"
+  }, {
+    "@language" : "pt",
+    "@value" : "Representação"
+  }, {
+    "@language" : "pt",
+    "@value" : "Representação legal"
+  }, {
+    "@language" : "pt",
+    "@value" : "Sociedade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
+  }, {
+    "@id" : "_:genid32"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Provenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Esta classe agrupa informações sobre a qualificação de um sócio ou representante de uma empresa."
+  }, {
+    "@language" : "en",
+    "@value" : "This class groups information about the qualification of a partner or representative of a company."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Qualidificação do sócio ou representante"
+  }, {
+    "@language" : "pt",
+    "@value" : "Qualificação"
+  }, {
+    "@language" : "en",
+    "@value" : "Representant qualification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabela-de-qualificacao-do-socio-representante.ods"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Motivo da situação cadastral, quando diferente de ativa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Motivo de situação cadastral"
+  }, {
+    "@language" : "en",
+    "@value" : "Reason registration situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid40"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Excluded from SIMPLES"
+  }, {
+    "@language" : "pt",
+    "@value" : "Removido do SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Not optant for SIMPLES"
+  }, {
+    "@language" : "pt",
+    "@value" : "Não optante pelo SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Esta classe compreende os dados do evento da opção pelo regime Simples Nacional por uma empresa.\n\nO Simples Nacional é o nome abreviado do “Regime Especial Unificado de\nArrecadação de Tributos e Contribuições devidos pelas Microempresas e\nEmpresas de Pequeno Porte”.\nTrata-se de um regime tributário diferenciado, simplificado e favorecido previsto\npela Lei Complementar nº 123, de 2006, aplicável às Microempresas e às\nEmpresas de Pequeno Porte, a partir de 01/07/2007."
+  }, {
+    "@language" : "en",
+    "@value" : "This class comprises the event data of the option for the Simple National regime for a company.\n\nSimples Nacional is the abbreviated name of the “Special Unified Regime of\nCollection of Taxes and Contributions due by Microenterprises and\nSmall Companies ”.\nIt is a differentiated, simplified and favored tax regime foreseen\nby Complementary Law No. 123, 2006, applicable to Microenterprises and\nSmall Companies, as of 01/07/2007."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Optant for SIMPLES"
+  }, {
+    "@language" : "pt",
+    "@value" : "Optante pelo SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Size_Company",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;\n\nSelecionar o enquadramento de porte da empresa (ME, EPP, Demais) de acordo com a expectativa de Receita Bruta Anual.\n\nO porte informado deve estar compatível com a Receita Bruta auferida no anocalendário anterior. Assim, durante a prática do evento 222, caso seja solicitado reenquadramento como ME ou EPP, para período que já possua informação de porte atualizada pela RFB com resultado diferente do informado na aplicativo de coleta, a solicitação será indeferida.\n\nA data do evento é a data do registro da Declaração de Enquadramento / Reenquadramento / Desenquadramento no Órgão de Registro, conforme Tabela VIII;\n\nO evento 222 somente poderá ser praticado por estabelecimento matriz;\n\nSomente as naturezas jurídicas 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 e 231-3 exigem o enquadramento de Porte da Empresa. Para estas naturezas jurídicas, o porte pode ser “ME” ou “EPP”. Para o restante das naturezas jurídicas, o porte deve ser “Demais”.\n\nPara análise e deferimento do evento 222, será exigido que o contribuinte apresente a “Declaração de Enquadramento / Reenquadramento ou Desenquadramento”, registrada pelo Órgão de Registro. Caso a referida declaração não seja recente, também deverá ser exigida a Certidão Simplificada do Órgão de Registro, com o objetivo de comprovar o enquadramento atual da empresa naquele órgão.\n\n\nPossíveis portes:\n00 - NAO INFORMADO\n01 - MICRO EMPRESA\n03 - EMPRESA DE PEQUENO\nPORTE\n05 - DEMAIS"
+  }, {
+    "@language" : "en",
+    "@value" : "The new name for event 222 is “Framework / Reframing / Non-compliance of ME / EPP”;\n\nSelect the company's size framework (ME, EPP, Others) according to the expectation of Annual Gross Revenue.\n\nThe size informed must be compatible with the Gross Revenue earned in the previous anocalendar. Thus, during the practice of event 222, if it is requested to qualify as ME or EPP, for a period that already has size information updated by the RFB with a result different from that reported in the collection application, the request will be rejected.\n\nThe date of the event is the date of registration of the Declaration of Compliance / Reframing / Noncompliance with the Registry, as per Table VIII;\n\nEvent 222 can only be practiced by a parent establishment;\n\nOnly the legal nature 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 and 231-3 require the Company Scale . For these legal natures, the size can be “ME” or “EPP”. For the rest of the legal nature, the size must be \"Too much\".\n\nFor analysis and approval of event 222, the taxpayer will be required to submit the “Declaration of Compliance / Reframing or Noncompliance”, registered by the Registry. If the said statement is not recent, the Simplified Certificate of the Registration Body should also be required, in order to prove the current status of the company in that body.\n\nPossible sizes:\n00 - NAO INFORMADO\n01 - MICRO EMPRESA\n03 - EMPRESA DE PEQUENO\nPORTE\n05 - DEMAIS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Porte"
+  }, {
+    "@language" : "pt",
+    "@value" : "Porte da empresa"
+  }, {
+    "@language" : "pt",
+    "@value" : "Porte empresarial"
+  }, {
+    "@language" : "en",
+    "@value" : "Size company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www38.receita.fazenda.gov.br/cadsincnac/jsp/coleta/ajuda/topicos/Porte_da_Empresa.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid46"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid41"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Special_Situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "São os casos de: Extinção; Fusão; Incorporação/Incorporada; IncorporaçãoIncorporadora; Cisão total; Cisão parcial; Desenquadramento de Imune/Isenta; Inclusão no Simples nacional."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Situação especial"
+  }, {
+    "@language" : "en",
+    "@value" : "Special situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=39909"
+  }, {
+    "@id" : "https://www.contadores.cnt.br/noticias/artigos/2016/06/27/descomplicando-a-escrituracao-contabil-fiscal-ecf.html"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid51"
+  }, {
+    "@id" : "_:genid52"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/Type_Cadastral_Situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/abbreviation_UF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Federative_Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "abbreviation of the UF"
+  }, {
+    "@language" : "pt",
+    "@value" : "abreviação da UF"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/activity_start_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data de início das atividades do estabelecimento"
+  }, {
+    "@language" : "en",
+    "@value" : "establishment activity start date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/address_complement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "address complement"
+  }, {
+    "@language" : "pt",
+    "@value" : "complemento do endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/address_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "address number"
+  }, {
+    "@language" : "pt",
+    "@value" : "número do endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data da situação cadastral"
+  }, {
+    "@language" : "en",
+    "@value" : "date of cadastral situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/city_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "city code"
+  }, {
+    "@language" : "pt",
+    "@value" : "código da cidade"
+  }, {
+    "@language" : "pt",
+    "@value" : "código do município"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/city_code_RFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "city code RFB"
+  }, {
+    "@language" : "pt",
+    "@value" : "código da cidade pela RFB"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/city_code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/cnae",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CNAE"
+  }, {
+    "@language" : "pt",
+    "@value" : "Classificação Nacional de Atividades Econômicas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/cnpj",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CNPJ"
+  }, {
+    "@language" : "pt",
+    "@value" : "Cadastro Nacional da Pessoa Jurídica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/person_identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cpf"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "code"
+  }, {
+    "@language" : "pt",
+    "@value" : "código"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/code_qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "código da qualificação"
+  }, {
+    "@language" : "en",
+    "@value" : "qualification code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/code_size_company",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Size_Company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "código do porte da empresa"
+  }, {
+    "@language" : "en",
+    "@value" : "size company code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/company_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "company name"
+  }, {
+    "@language" : "pt",
+    "@value" : "razão social"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/trade_name"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/contact_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "número de contato"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/country_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country code"
+  }, {
+    "@language" : "pt",
+    "@value" : "código do país"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/country_code_RFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country code RFB"
+  }, {
+    "@language" : "pt",
+    "@value" : "código de país da RFB"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/country_code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/cpf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CPF"
+  }, {
+    "@language" : "pt",
+    "@value" : "Cadastro de Pessoa Física"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/person_identifier"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data de exclusão do regime SIMPLES"
+  }, {
+    "@language" : "en",
+    "@value" : "date of exclusion for SIMPLES regime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/date_file_download",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/date_file_record",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data de opção pelo regime SIMPLES"
+  }, {
+    "@language" : "en",
+    "@value" : "date of option for SIMPLES regime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/date_triplification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/ddd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/ddd_phone_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/fax_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "número de fax"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/contact_number"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/phone_number"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/formated_cnae",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CNAE formatado"
+  }, {
+    "@language" : "pt",
+    "@value" : "formated CNAE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cnae"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/full_cnpj",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cnpj"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has address"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has cadastral situation"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem situação cadastral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_city",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has city"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem cidade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/City"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_contact_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has country"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem pais"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Country"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_district",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has district"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem bairro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/District"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_economic_activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has economic activity"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem atividade econômica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_establishment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "tem estabelecimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_establishment_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "estabelecimento tem o tipo"
+  }, {
+    "@language" : "en",
+    "@value" : "has establishment type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment_Type"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_fax",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_federative_unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has federative unit"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem unidade federativa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Federative_Unit"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_headquarters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has headquarters"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem matriz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/has_establishment"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_legal_nature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has legal nature"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem natureza jurídica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Legal_Nature"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_locality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has locality"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem logradouro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Locality"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has main economic activity"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem atividade econômica principal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/has_economic_activity"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_part",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_partner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "tem sócio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Partnership"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has partner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_partnership",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has partnership"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem sociedade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Partnership"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_phone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_reason_situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has reason of cadastral situation"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem razão de situação cadastral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_representant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has representant"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem representante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_secondary_activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_size",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has size"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem porte"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem porte empresarial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Size_Company"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_special_situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has special situation"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem situação especial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Special_Situation"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_subsidiary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has branch"
+  }, {
+    "@language" : "en",
+    "@value" : "has subsidiary"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem filial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/has_establishment"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/has_type_situation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/is_MEI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "O microempreendedor individual (MEI), que é o empresário individual que atende aos seguintes requisitos, cumulativamente:\n• ser optante pelo Simples Nacional e cumprir seus requisitos;\n\n• exercer profissionalmente atividade econômica organizada para a produção\nou a circulação de bens ou de serviços (art. 966 do Código Civil);\n\n• auferir receita bruta acumulada nos anos-calendário anterior e em curso de\naté R$ 81.000,00 (oitenta e um mil reais) – no caso de início de atividade, o\nlimite deve ser de R$ 6.750,00 (seis mil setecentos e cinquenta reais)\nmultiplicados pelo número de meses compreendidos entre o mês de início\nde atividade e o final do respectivo ano-calendário, consideradas as frações\nde meses como um mês inteiro;\n\n• exercer tão-somente as ocupações constantes do Anexo XI da Resolução\nCGSN nº 140, de 2018;\n\n• possuir um único estabelecimento;\n\n• não participar de outra empresa como titular, sócio ou administrador;\n\n• não contratar mais de um empregado, que só poderá receber 1 (um) salário\nmínimo previsto em lei federal ou estadual ou o piso salarial da categoria\nprofissional, definido em lei federal ou por convenção coletiva da categoria\n(art. 18-C da Lei Complementar nº 123, de 2006);\n\n• não guardar, cumulativamente, com o contratante do serviço, relação de\npessoalidade, subordinação e habitualidade;\n\n• não realizar suas atividades mediante cessão ou locação de mão de obra\n(art. 112, \"caput\", da Resolução CGSN nº 140, de 2018).\n\n(Base legal: art. 18-A da Lei Complementar nº 123, de 2006.)\n\nNotas:\n1. Só pode ser MEI o empresário individual. Nenhum tipo de sociedade pode\nser MEI.\n\n2. A “Empresa Individual de Responsabilidade Limitada” (Eireli) não é um\n“empresário individual” do art. 966 do Código Civil. Por isso, não pode ser\nMEI nem pode optar pelo Simei (art. 18-A, § 1º, da Lei Complementar nº\n123, de 2006).\n\n3. Não pode ser MEI o salão-parceiro de que trata a Lei nº 12.592, de 2012\n(art. 100, § 7º, da Resolução CGSN nº 140, de 2018).\n\n4. O limite anual de R$ 81.000,00 é um só, somando receitas de mercado\ninterno e externo. O MEI não tem limite estendido para exportação."
+  }, {
+    "@language" : "en",
+    "@value" : "The individual microentrepreneur (MEI), who is the individual entrepreneur who meets the following requirements, cumulatively:\n• opting for Simples Nacional and fulfilling its requirements;\n\n• professionally carry out organized economic activity for the production\nor the circulation of goods or services (art. 966 of the Civil Code);\n\n• to obtain gross revenue accumulated in the previous and ongoing calendar years\nup to R $ 81,000.00 (eighty-one thousand reais) - in the case of start of activity, the\nlimit should be six thousand seven hundred and fifty reais (R $ 6,750.00)\nmultiplied by the number of months between the start month\nactivity and the end of the respective calendar year, considering the fractions\nmonths as a whole month;\n\n• exercise only the occupations listed in Annex XI of the Resolution\nCGSN No. 140, 2018;\n\n• have a single establishment;\n\n• not participating in another company as a holder, partner or administrator;\n\n• not hiring more than one employee, who can only receive 1 (one) salary\nminimum provided by federal or state law or the salary floor of the category\ndefined by federal law or by collective agreement of the category\n(Article 18-C of Complementary Law No. 123, 2006);\n\n• not to keep, cumulatively, with the service contractor, a relationship of\npersonality, subordination and habituality;\n\n• not carrying out its activities by assigning or hiring labor\n(art. 112, \"caput\", of Resolution CGSN nº 140, of 2018).\n\n(Legal basis: Article 18-A of Complementary Law No. 123, 2006.)\n\nGrades:\n1. Only the individual entrepreneur can be MEI. No type of society can\nbe MEI.\n\n2. The “Individual Limited Liability Company” (Eireli) is not a\n“Individual entrepreneur” of art. 966 of the Civil Code. So it cannot be\nMEI cannot even opt for Simei (art. 18-A, § 1, of Complementary Law nº\n123, of 2006).\n\n3. The partner salon referred to in Law No. 12,592, of 2012, cannot be MEI\n(art. 100, § 7, of Resolution CGSN nº 140, of 2018).\n\n4. The annual limit of R $ 81,000.00 is one, adding up market revenues\ninternal and external. The MEI has no extended export limit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "company is an Individual Microentrepreneur (MEI)?"
+  }, {
+    "@language" : "pt",
+    "@value" : "empresa é um Microempreendedor Individual (MEI)?"
+  }, {
+    "@language" : "en",
+    "@value" : "is MEI?"
+  }, {
+    "@language" : "pt",
+    "@value" : "é MEI?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoMEI.pdf"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/is_foreign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is foreign?"
+  }, {
+    "@language" : "pt",
+    "@value" : "É um estrangeiro?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/is_part_of_group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Faz parte do Grupo"
+  }, {
+    "@language" : "en",
+    "@value" : "is parte of group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Group"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/member"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/legal_nature_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Legal_Nature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "código da natureza jurídica"
+  }, {
+    "@language" : "en",
+    "@value" : "legal nature code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/locality_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Locality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "locality type"
+  }, {
+    "@language" : "pt",
+    "@value" : "tipo do logradouro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/option_simples",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "tem opção pelo SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has option for SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/part_whole_relation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/partner_qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Partnership"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "partner qualification"
+  }, {
+    "@language" : "pt",
+    "@value" : "qualificação do sócio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyDisjointWith" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/partnership_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/partnership_end_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/partnership_start_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Partnership"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data de início da sociedade"
+  }, {
+    "@language" : "en",
+    "@value" : "start date of partnership"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/percentage_participation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/percentage_share_capital",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/performed_economic_activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/performs_economic_activity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/person_identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "identificador de uma pessoa"
+  }, {
+    "@language" : "en",
+    "@value" : "person identifier"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/phone_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "número de telefone"
+  }, {
+    "@language" : "en",
+    "@value" : "phone number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/contact_number"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/raw_cnae",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CNAE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cnae"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/reason_situation_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "código da razão da situação cadastral"
+  }, {
+    "@language" : "en",
+    "@value" : "reason cadastral situation code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/code"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "qualification of the responsible"
+  }, {
+    "@language" : "pt",
+    "@value" : "qualificação do responsável"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Qualification"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/root_cnpj",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CNPJ raíz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/cnpj"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/sending_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/share_capital",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Capital Social"
+  }, {
+    "@language" : "en",
+    "@value" : "share capital"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/situation_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/special_situation_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Special_Situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "descrição da situação especial"
+  }, {
+    "@language" : "en",
+    "@value" : "special situation description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/special_situation_start_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Special_Situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data de início da situação especial"
+  }, {
+    "@language" : "en",
+    "@value" : "start date of special situation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/trade_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "nome fantasia"
+  }, {
+    "@language" : "en",
+    "@value" : "trade name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "tipo da opção pelo simples"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#country-name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/ontology/Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country name"
+  }, {
+    "@language" : "pt",
+    "@value" : "nome do país"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "e-mail"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2006/vcard/ns#postal-code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CEP"
+  }, {
+    "@language" : "pt",
+    "@value" : "código postal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Esta classe representa o conceito de agente, sendo este uma entidade que realiza alguma ação. Neste contexto um agente é considerado uma pessoa, onde esta pode ser ou pessoa física ou pessoa jurídica.\n\nCaso esta pessoa seja estrangeira, isto é representado pelo indicador is_foreigner."
+  }, {
+    "@language" : "en",
+    "@value" : "This class represents the concept of agent, which is an entity that performs some action. In this context, an agent is considered a person, where this can be either an individual or a legal entity.\n\nIf this person is a foreigner, this is represented by the is_foreigner indicator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Agent"
+  }, {
+    "@language" : "pt",
+    "@value" : "Agente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid53"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Esta coleção representa um grupo de Organizações (Pessoas Jurídicas) reunidas. Isto pode decorrer por conta de um acordo comercial, compra, fusão, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "This collection represents a group of Organizations (Legal Entities) brought together. This may be due to a commercial agreement, purchase, merger, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Group"
+  }, {
+    "@language" : "pt",
+    "@value" : "Grupo"
+  }, {
+    "@language" : "pt",
+    "@value" : "Grupo empresarial"
+  }, {
+    "@language" : "en",
+    "@value" : "Organizations group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  }, {
+    "@id" : "_:genid54"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In the legal conception, commercial law, business activity, or company, it is an economic activity exercised professionally by the entrepreneur through the articulation of the productive factors for the production or circulation of goods or services. The legal concept of company cannot be confused with that of a subject of law, that of a legal person, nor with the place where that economic activity is developed."
+  }, {
+    "@language" : "pt",
+    "@value" : "Na concepção jurídica, do direito comercial, atividade empresarial, ou empresa, é uma atividade econômica exercida profissionalmente pelo empresário por meio da articulação dos fatores produtivos para a produção ou circulação de bens ou de serviços. O conceito jurídico de empresa não pode ser confundido com o de um sujeito de direito, o de uma pessoa jurídica, tampouco com o local onde aquela atividade econômica é desenvolvida."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Company"
+  }, {
+    "@language" : "pt",
+    "@value" : "Empresa"
+  }, {
+    "@language" : "en",
+    "@value" : "Legal entity"
+  }, {
+    "@language" : "en",
+    "@value" : "Organization"
+  }, {
+    "@language" : "pt",
+    "@value" : "Organização"
+  }, {
+    "@language" : "pt",
+    "@value" : "Pessoa Jurídica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://pt.wikipedia.org/wiki/Empresa"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  }, {
+    "@id" : "_:genid59"
+  }, {
+    "@id" : "_:genid60"
+  }, {
+    "@id" : "_:genid61"
+  }, {
+    "@id" : "_:genid62"
+  }, {
+    "@id" : "_:genid63"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Natural Person is every human being as an individual, from birth to death. This designation is a legal concept and refers specifically to the individual as a subject with rights and duties.\n\nThe Cadastro de Pessoa Física (CPF) is the registration of citizens for tax purposes, made by the Federal Revenue Service. To be considered an individual, however, it is not necessary to have a CPF. For the law, the human being is an individual since he was born alive, since from then on he already has rights and duties. The birth certificate is, therefore, the first registration of the individual."
+  }, {
+    "@language" : "pt",
+    "@value" : "Pessoa física é todo ser humano enquanto indivíduo, do seu nascimento até a morte. Essa designação é um conceito jurídico e se refere especificamente ao indivíduo enquanto sujeito detentor de direitos e de deveres.\n\nO Cadastro de Pessoas Físicas (CPF) é o registro dos cidadãos para fins fiscais, feito pela Receita Federal. Para ser considerado uma pessoa física, porém, não é preciso ter um CPF. Para o direito, o ser humano é uma pessoa física desde que nasce com vida, pois a partir daí já é detentor de direitos e deveres. A certidão de nascimento é, portanto, o primeiro registro da pessoa física."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Natural Person"
+  }, {
+    "@language" : "en",
+    "@value" : "Natural person"
+  }, {
+    "@language" : "en",
+    "@value" : "Person"
+  }, {
+    "@language" : "pt",
+    "@value" : "Pessoa"
+  }, {
+    "@language" : "pt",
+    "@value" : "Pessoa Física"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.dicionariofinanceiro.com/pessoa-fisica/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  }, {
+    "@id" : "_:genid64"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/member",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "membro"
+  }, {
+    "@language" : "pt",
+    "@value" : "tem membro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "name"
+  }, {
+    "@language" : "pt",
+    "@value" : "nome"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+  } ]
+} ]

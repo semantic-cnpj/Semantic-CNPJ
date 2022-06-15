@@ -1,0 +1,23 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-pt.html> a prov:Entity;
+	 dc:title "Ontologia do Cadastro de Contribuintes da SEFAZ do Maranhão.";
+	 prov:wasAttributedTo <http://lattes.cnpq.br/3997725611303897>;
+	 dc:creator <http://lattes.cnpq.br/3997725611303897>;
+	 prov:wasAttributedTo <http://lattes.cnpq.br/0449925605343817>;
+	 dc:creator <http://lattes.cnpq.br/0449925605343817>;
+	 prov:wasAttributedTo <http://lattes.cnpq.br/9431229866203038>;
+	 dc:creator <http://lattes.cnpq.br/9431229866203038>;
+	 prov:wasAttributedTo < http://lattes.cnpq.br/9428387943972577>;
+	 dc:contributor < http://lattes.cnpq.br/9428387943972577>;
+	 prov:wasAttributedTo <http://lattes.cnpq.br/7091359747262945>;
+	 dc:contributor <http://lattes.cnpq.br/7091359747262945>;
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://www.sefaz.ma.gov.br/ontology/>;
+	 prov:wasRevisionOf <1.0>;
+	 prov:wasGeneratedAt "28/03/2022";
+.
+:agent0 a prov:Agent; foaf:name "Pedro Ivo Medeiros de Azevedo".

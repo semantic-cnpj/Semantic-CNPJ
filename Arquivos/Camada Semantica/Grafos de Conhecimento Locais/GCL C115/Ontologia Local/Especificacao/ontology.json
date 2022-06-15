@@ -1,0 +1,1545 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel"
+    }, {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/XML/1998/namespacepostal-code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#rational"
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/has_part"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Locality"
+  } ]
+}, {
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/City"
+  } ]
+}, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Country"
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao"
+    }, {
+      "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#hiddenLabel"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/District"
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/XML/1998/namespacepostal-code"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"
+    }, {
+      "@id" : "_:genid78"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    }, {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"
+    }, {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Concept that classifies an Object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Papel"
+  }, {
+    "@language" : "en",
+    "@value" : "Role"
+  }, {
+    "@language" : "it",
+    "@value" : "Ruolo"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relation between an object and a role, e.g. the person 'John' has role 'student'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "ha ruolo"
+  }, {
+    "@language" : "en",
+    "@value" : "has role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf"
+  } ]
+}, {
+  "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relation between an object and a role, e.g. the 'student' is the role of 'John'."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is role of"
+  }, {
+    "@language" : "it",
+    "@value" : "è un ruolo di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nTainan Khalil Leite Calixto\ntainan.calixto@sefaz.ma.gov.br\nCoordenador Técnico - COTEC\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n\n-----------------------------------------------------------------------------------------------\nFinanciador: Banco Interamericano de Desenvolvimento\n\nContrato 4458/OC-BR. \nP1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Ontologia do Convênio 115"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "pt",
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Código Fiscal de Operações e Prestações (CFOP) é o código que identifica uma determinada operação por categorias no momento da emissão da nota fiscal.\n\nDependendo do Código CFOP, será fixada a tributação sobre a operação e haverá movimentações financeiras e de estoque de interesse do Fisco. Os diferentes tipos de CFOP separam as notas fiscais por tipo (nota de entrada ou saída), por região e por natureza da operação.\n\nO CFOP contém quatro dígitos, e cada um deles tem uma identificação específica. O primeiro número se refere ao tipo de operação (por exemplo, se iniciar com 1 é uma operação dentro do Estado e se inicia com 2, fora do Estado), e os demais, à finalidade e ao tipo de produto ou serviço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "CFOP"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Classes de consumo são divisões utilizadas para classificar os consumidores de energia elétrica. São três: Industrial, Comercial e Residencial. A cada classe aplicam-se regras diferentes para aferição de qualidade de serviço e reajustes anuais de tarifas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Classe Consumo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "pt",
+    "@value" : "https://pt.wikipedia.org/wiki/Classes_de_consumo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Classificação de um Item (Serviço ou Fornecimento) , baseando-se em códigos identificadores a partir da definição do CONV115, sendo:\n\n     101  'Assinatura de serviços de telefonia'\n     102  'Assinatura de serviços de comunicação de dados'\n     103  'Assinatura de serviços de TV por Assinatura'\n     104  'Assinatura de serviços de provimento à internet'\n     105  'Assinatura de outros serviços de multimídia'\n     199  'Assinatura de outros serviços'\n     201  'Habilitação de serviços de telefonia'\n     202  'Habilitação de serviços de comunicação de dados'\n     203  'Habilitação de TV por Assinatura'\n     204  'Habilitação de serviços de provimento à internet'\n     205  'Habilitação de outros serviços multimídia'\n     299  'Habilitação de outros serviços'\n     301  'Serviço Medido - chamadas locais'\n     302  'Serviço Medido - chamadas interurbanas no Estado'\n     303  'Serviço Medido - chamadas interurbanas para fora do Estado'\n     304  'Serviço Medido - chamadas internacionais'\n     305  'Serviço Medido - Números Especiais (0300/0500/0600/0800/etc.)'\n     306  'Serviço Medido - comunicação de dados'\n     307  'Serviço Medido - chamadas originadas em Roaming'\n     308  'Serviço Medido - chamadas recebidas em Roaming'\n     309  'Serviço Medido - adicional de chamada'\n     310  'Serviço Medido - provimento de acesso à Internet'\n     311  'Serviço Medido - pay-per-view (programação TV)'\n     312  'Serviço Medido - Mensagem SMS'\n     313  'Serviço Medido - Mensagem MMS'\n     314  'Serviço Medido - outros mensagens'\n     315  'Serviço Medido - serviço multimídia'\n     399  'Serviço Medido - outros serviços'\n     401  'Cartão Telefônico - Telefonia Fixa'\n     402  'Cartão Telefônico - Telefonia Móvel'\n     403  'Cartão de Provimento de acesso à internet'\n     404  'Ficha Telefônica'\n     405  'Recarga de Créditos - Telefonia Fixa'\n     406  'Recarga de Créditos - Telefonia Móvel'\n     407  'Recarga de Créditos - Provimento de acesso à Internet'\n     499  'Outras cobranças realizadas de assinantes de plano serviço pré-pago'\n     501  'Serviço Adicional (substituição de número, troca de aparelho, emissão de 2ª via de conta, conta detalhada, etc.)'\n     502  'Serviço Facilidades (identificador de chamadas, caixa postal, transferência temporária, não-perturbe, etc.)'\n     599  'Outros Serviços'\n     601  'Energia Elétrica - Consumo'\n     602  'Energia Elétrica - Demanda'\n     603  'Energia Elétrica - Serviços (Vistoria de unidade consumidora, Aferição de Medidor, Ligação, Religação, Troca de medidor, etc.)'\n     604  'Energia Elétrica - Encargos Emergenciais'\n     605  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Cativo'\n     606  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Livre'\n     607  'Encargos de Conexão'\n     608  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Cativo'\n     609  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Livre'\n     610  'Subvenção econômica para consumidores da subclasse “baixa renda”'\n     699  'Energia Elétrica - Outros'\n     701  'de Aparelho Telefônico'\n     702  'de Aparelho Identificador de chamadas'\n     703  'de Modem'\n     704  'de Rack'\n     705  'de Sala/Recinto'\n     706  'de Roteador'\n     707  'de Servidor'\n     708  'de Multiplexador'\n     709  'de Decodificador/Conversor'\n     799  'Outras disponibilizações'\n     802  'Cobrança de Seguros'\n     803  'Cobrança de Financiamento de Aparelho/Serviços'\n     804  'Cobrança de Juros de Mora'\n     805  'Cobrança de Multa de Mora'\n     806  'Cobrança de Conta de meses anteriores'\n     807  'Cobrança de Taxa Iluminação Pública'\n     808  'Retenção de ICMS-ST'\n     899  'Outras Cobranças'\n     902  'Dedução referente ajuste de conta'\n     903  'Redutor - Energia Elétrica - Nº 306/2003 (PIS/COFINS/IRPJ/CSLL)'\n     904  'Dedução relativa à multa pela interrupção de fornecimento'\n     905  'Dedução relativa à distribuição de dividendos Eletrobrás'\n     906  'Dedução relativa à subvenção econômica para consumidores da subclasse “baixa renda”'\n     907  'Dedução relativa à parcela do valor da operação correspondente ao valor da energia elétrica adquirida de terceiros, quando aplicáveis os termos do Convênio ICMS 77/11.'\n     999  'Outras deduções'\n     1002  'Serviço não medido de serviços de comunicação de dados'\n     1003  'Serviço não medido de serviços de TV por Assinatura'\n     1004  'Serviço não medido de serviços de provimento à internet'\n     1005  'Serviço não medido de outros serviços de multimídia'\n     1099  'Serviço não medido de outros serviços'\n     1101  'Interconexão: Detraf, SMS, MMS'\n     1102  'Detrat, Transmissão'\n     1103  'Roaming'\n     1104  'Exploração Industrial de Linha Dedicada - EILD'\n     1105  'Lançamento de ICMS proporcional às saídas isentas, não tributadas ou com redução de base de cálculo (§ 1º, Cláusula terceira, Convênio ICMS17/2013)'\n     1106  'Lançamento de ICMS proporcional às cessões de meio destinadas a\nconsumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'\n     1107  'Lançamento de ICMS complementar, na condição de responsável tributário (§ 2º, Cláusula terceira, Convênio 17/2013)'\n     1199  'Outras Cessões de Meios de Rede'"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Conceito referente a Consumidores de Energia e Serviços de Comunicação e Telecomunicação"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Consumidor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid76"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Nota Fiscal emitida relativa à serviços de comunicação de dados / internet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Documento Comunicacao"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Nota Fiscal emitida relativa ao fornecimento de Energia Elétrica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Documento Energia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Documento fiscal é um documento que comprova as operações de venda de bens ou prestação de serviços entre empresas, órgãos públicos, ou até mesmo pessoas físicas. Além da circulação de mercadorias e serviços, esse documento é obrigatório para comprovar o recolhimento de impostos e tributos sobre faturamento."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Documento Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "pt",
+    "@value" : "https://arquivei.com.br/blog/documentos-fiscais-tudo-o-que-voce-precisa-saber/"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Nota Fiscal emitida relativa à serviços de telecomunicação, telefonia móvel e fixa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Documento Telecomunicacao"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "A distribuição da energia elétrica é feita de acordo com a necessidade de cada unidade consumidora, dependendo de seu tipo de utilização: residencial, comercial ou industrial. Antes de ser utilizada, a energia elétrica fornecida pelas concessionárias passa por transformadores instalados em postes. Esses equipamentos podem ser:\n\n1- Monofásico;\n2- Bifásico;\n3- Trifásico;"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Fornecimento de Energia Elétrica em uma Unidade de Consumo;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Fornecimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Classificação do Grupo de um determinado Item (Serviço ou Fornecimento):\n\n > 100 e < 201 =  'Assinatura' \n > 200 e < 301 =  'Habilitação'\n > 300 e < 401 = 'Serviço Médio'\n > 400 e < 501 = 'Serviço Pré-Pago'\n > 500 e < 601 = 'Outros Serviços'\n > 600 e  < 701 = 'Energia Elétrica'\n > 700 e  < 801 = 'Disponibilização de Meios ou Equipamentos'\n > 800 e  < 901 = 'Deduções'\n > 900 e < 1001 = 'Serviço não medido'\n > 1000 e < 1101 'Cessão de Meios de Rede'\n > 1100 e < 2000 'Serviço Médio'"
+  }, {
+    "@language" : "pt",
+    "@value" : "Grupo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Grupo de Tensão de Energia fornecida:\n\n01 - A1 AltaTensão (230kV ou mais);\n02 - A2 Alta Tensão (88 a 138kV);\n03 - A3 Alta Tensão (69kV);\n04 - A3a Alta Tensão (30kV a 44kV);\n05 - A4 Alta Tensão (2,3kV a 25kV);\n06 - AS Alta Tensão Subterrâneo\n07 - B1 – Residencial;\n08 - B1 Residencial Baixa Renda;\n09 - B2 – Rural;\n10 - B2 Cooperativa de Eletrificação\nRural;\n11 - B2 Serviço Público de Irrigação;\n12 - B3 Demais Classes;\n13 - B4a Iluminação Pública rede de\ndistribuição;\n14 - B4b Iluminação Pública bulbo\nde lâmpada;\n\nDemais modelos = 00;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Grupo Tensão"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Item de um Documento Fiscal - Conceito que Generaliza Fornecimento ou Serviço."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Item"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Modelo de Documento Fiscal, podendo ter o seguintes valores:\n\n6 = Modelo de Documento de Energia;\n21 = Modelo de Documento de Comunicação;\n22 = Modelo de Documento de Telecomunicação;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Modelo Documento"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Órgão que fornece e provê Energia e Serviços de Comunicação e Telecomunicação;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Provedor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid82"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Qualificação do Responsável pelo Documento Fiscal."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Qualificação"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Série do documento fiscal (U- Unica / B84);"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Série"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Serviço de Comunicação ou Telecomunicação realizados em uma Unidade de Consumo;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Serviço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Situação do Item:\n\n'S' = Cancelado\n'R' = Substituído\n'R' = Normal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Situação Item"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Tipo de Assinante de Serviços de Comunicação e Telecomunicação:\n\n1 =  'Comercial-Industrial'\n2 = 'Poder_Público'\n3 = 'Residencial-Pessoa_Física'\n4 = 'Público'\n5 = 'Semi_Público'"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Tipo Assinante"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Tipo de Utilização de Serviços de Comunicação ou Telecomunicação:\n\n1 = 'Telefonia'\n2 = 'Comunicacao_Dados'\n3 = 'TV_Assinatura'\n4 = 'Provimento_Acesso_Internet'\n5 = 'Multimidia'\n6 = 'Outros'"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Tipo Utilização"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Código Fiscal de Operações e Prestação."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estabelece a relação entre um Documento Fiscal de Energia e uma Classe de Consumo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estabelece a relação entre um Item e sua Classificação."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Consumidor de Energia ou de Serviços de Comunicação e Telecomunicação."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Emitente(Provedor)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Provedor ou Unidade de Consumo e um Endereço."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento de Energia e uma Fase de Energia."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Fornecimento de Energia."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre uma Classificação e um Grupo respectivo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento de Energia e um Grupo de Tensão."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Modelo de Documento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Responsável por emissão de Documento Fiscal e uma Qualificação"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Responsável"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e uma Série."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Serviço."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Tipo Assinante."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Estabelece a relação entre um Documento Fiscal e um Tipo de Utilização"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Representa o Endereço de uma determinada Empresa, Estabelecimento ou Pessoa Física."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Address"
+  }, {
+    "@language" : "pt",
+    "@value" : "Endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid62"
+  }, {
+    "@id" : "_:genid63"
+  }, {
+    "@id" : "_:genid64"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Nome da Cidade de acordo com a Localização.."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Cidade"
+  }, {
+    "@language" : "en",
+    "@value" : "City"
+  }, {
+    "@language" : "pt",
+    "@value" : "Municipio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Location"
+  }, {
+    "@id" : "_:genid65"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "País"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Location"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/District",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Bairro / Distrito de uma determinada Localização identificado em quase todos os casos pelo CEP."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Bairro"
+  }, {
+    "@language" : "en",
+    "@value" : "District"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Location"
+  }, {
+    "@id" : "_:genid66"
+  }, {
+    "@id" : "_:genid67"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Unidade Federativa de uma vcadalidade."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Estado"
+  }, {
+    "@language" : "en",
+    "@value" : "State"
+  }, {
+    "@language" : "pt",
+    "@value" : "UF"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Location"
+  }, {
+    "@id" : "_:genid68"
+  }, {
+    "@id" : "_:genid69"
+  }, {
+    "@id" : "_:genid70"
+  }, {
+    "@id" : "_:genid71"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Locality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Locality can be a street, avenue, court, etc."
+  }, {
+    "@language" : "pt",
+    "@value" : "Um logradouro pode ser uma rua, avenida, quadra, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Locality"
+  }, {
+    "@language" : "pt",
+    "@value" : "Logradouro"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Location"
+  }, {
+    "@id" : "_:genid72"
+  }, {
+    "@id" : "_:genid73"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class that represents the concept of a geographical Location."
+  }, {
+    "@language" : "pt",
+    "@value" : "Classe que representa o conceito de uma Localização geográfica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Localização"
+  }, {
+    "@language" : "en",
+    "@value" : "Location"
+  }, {
+    "@language" : "pt",
+    "@value" : "vcadal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid74"
+  }, {
+    "@id" : "_:genid75"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Responsável pelo Documento Fiscal (Nota Fiscal)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Responsável"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Quando Elétrica, é composta por instalações, equipamentos elétricos, condutores e acessórios, incluída a subestação, quando do fornecimento em tensão primária, caracterizado pelo recebimento de energia elétrica em apenas um ponto de entrega, com medição individualizada, correspondente a um único consumidor e localizado em uma mesma propriedade ou em propriedades contíguas.\n\nQuando Comunicação ou Telecomunicação é o Endereço relativo ao serviço prestado por uma empresa, tal como telefonia e / ou internet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Unidade Consumo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Endereço onde é provido o serviço de Comunicação de um consumidor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Unidade Consumo Comunicacao"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Endereço onde é provido o fornecimento de Energia de um consumidor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Unidade Consumo Energia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Endereço onde é provido o serviço de telecomunicação de um consumidor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "Unidade Consumo Telecomunicacao"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Abreviação de uma Unidade Federativa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "abreviação da UF"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/aliquota",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Alíquota do ICMS aplicado ao Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Item"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Ano de apuração do Documento Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "ano de apuração do documento fiscal"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Base de Cálculo do ICMS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "base de cálculo do ICMS"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/cnpj",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Identificador do Cadastro Nacional de Pessoas Jurídicas (CNPJ)"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/codigo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/identificador"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Código Identificador d Cidades / Municípios."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "código da cidade"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Código de Identificação de um determinado Conceito."
+  }, {
+    "@language" : "pt",
+    "@value" : "codigo de identificação"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/identificador"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/complemento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Complemento do Endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "complemento"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/cpf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Cadastro de Pessoas Físicas (CPF)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Data de Emissão de Documento Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data de emissão"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/data_primeira_emissao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Data primeira emissão de documento fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data primeira emissão"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/data_ultima_emissao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Data última emissão de documento fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "data da última emissão"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/descricao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Descrição de um determinado Conceito"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid31"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "descrição"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/has_part",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estabelece a relação entre partes de um Endereço"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/identificador",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Atributo identificador"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "identificador da unidade consumo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao"
+  }, {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia"
+  }, {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Inscrição Estadual de um Consumidor ou Provedor no âmbito do Estado do Maranhão."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid44"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "inscrição estadual"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Inscrição Estadual Numérica de um Consumidor ou Provedor no âmbito do Estado do Maranhão."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid47"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "inscrição estadual numérica"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Mês de Apuração de Documento Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "mês apuração"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Número seqüencial atribuído pelo sistema eletrônico de processamento de dados ao documento fiscal;"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "número"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Número do Endereço"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/outros_valores",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Outros valores de Impostos atribuídos a um Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid50"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Número de Telefone do Consumidor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "pt",
+    "@value" : "telefone"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estabelece a relação entre um Endereço e um Bairro."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/District"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/tem_cidade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/tem_logradouro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Locality"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/tem_uf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/tem_unidade_consumo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estabelece a relação entre um Documento Fiscal e uma Unidade de Consumo."
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/valor_icms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Valor do Imposto  sobre Circulação de Mercadorias e Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) atribuído a um Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid53"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/valor_operacoes_isentas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Valor atribuído a Operações Isentas de um Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid56"
+  } ]
+}, {
+  "@id" : "http://www.sefaz.ma.gov.br/CONV115/ontology/valor_total",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Valor total de um Item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid59"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/XML/1998/namespacepostal-code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "CEP"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pessoa Jurídica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "pt",
+    "@value" : "Representação de Pessoa Física identificada por um cpf."
+  }, {
+    "@value" : "A person."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Person"
+  }, {
+    "@language" : "pt",
+    "@value" : "Pessoa Física"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A name for some thing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nome"
+  } ]
+} ]

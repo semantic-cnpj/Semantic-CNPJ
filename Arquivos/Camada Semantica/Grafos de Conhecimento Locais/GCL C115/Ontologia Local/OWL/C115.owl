@@ -1,0 +1,1032 @@
+@prefix : <http://www.sefaz.ma.gov.br/CONV115/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sefaz.ma.gov.br/CONV115/ontology/> .
+
+<http://www.sefaz.ma.gov.br/CONV115/ontology/> rdf:type owl:Ontology ;
+                                                rdfs:comment """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Tainan Khalil Leite Calixto
+tainan.calixto@sefaz.ma.gov.br
+Coordenador Técnico - COTEC
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ;
+                                                rdfs:label "Ontologia do Convênio 115"@pt ;
+                                                owl:versionInfo "1.0"@pt .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> ;
+                                                                      owl:inverseOf <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> ;
+                                                                      rdfs:domain [ rdf:type owl:Class ;
+                                                                                    owl:unionOf ( :Responsavel
+                                                                                                  <http://xmlns.com/foaf/0.1/Person>
+                                                                                                )
+                                                                                  ] ;
+                                                                      rdfs:range <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> ;
+                                                                      rdfs:comment "A relation between an object and a role, e.g. the person 'John' has role 'student'."^^xsd:string ;
+                                                                      rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> ;
+                                                                      rdfs:label "ha ruolo"@it ,
+                                                                                 "has role"@en ,
+                                                                                 "tem papel"@pt .
+
+
+###  http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> ;
+                                                                       rdfs:domain <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> ;
+                                                                       rdfs:comment "A relation between an object and a role, e.g. the 'student' is the role of 'John'." ;
+                                                                       rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> ;
+                                                                       rdfs:label "e papel de"@pt ,
+                                                                                  "is role of"@en ,
+                                                                                  "è un ruolo di"@it .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/has_part
+:has_part rdf:type owl:ObjectProperty ;
+          rdfs:comment "Estabelece a relação entre partes de um Endereço" ;
+          rdfs:label "tem parte"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of
+:is_part_of rdf:type owl:ObjectProperty ;
+            rdfs:label "e parte de"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro
+:tem_bairro rdf:type owl:ObjectProperty ;
+            rdfs:domain :Address ;
+            rdfs:range :District ;
+            rdfs:comment "Estabelece a relação entre um Endereço e um Bairro." .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_cidade
+:tem_cidade rdf:type owl:ObjectProperty .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_contratacao
+:tem_contratacao rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> ;
+                 rdfs:range :Contratacao .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_logradouro
+:tem_logradouro rdf:type owl:ObjectProperty ;
+                rdfs:domain :Address ;
+                rdfs:range :Locality .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_produto
+:tem_produto rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> ;
+             rdfs:range :Produto ;
+             rdfs:label "tem produto"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_uf
+:tem_uf rdf:type owl:ObjectProperty ;
+        rdfs:domain :Address ;
+        rdfs:range :Federative_Unit .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/tem_unidade_consumo
+:tem_unidade_consumo rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Estabelece a relação entre um Documento Fiscal e uma Unidade de Consumo." .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                        rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> ;
+                                                        rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Código Fiscal de Operações e Prestação." .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> ;
+                                                                  rdfs:comment "Estabelece a relação entre um Documento Fiscal de Energia e uma Classe de Consumo." .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> ;
+                                                                 rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> ;
+                                                                 rdfs:comment "Estabelece a relação entre um Item e sua Classificação." .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                                rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> ;
+                                                                rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Consumidor de Energia ou de Serviços de Comunicação e Telecomunicação."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                            rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> ;
+                                                            rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Emitente(Provedor)."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor>
+                                                                                        <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor>
+                                                                                      )
+                                                                        ] ;
+                                                            rdfs:range :Address ;
+                                                            rdfs:comment "Estabelece a relação entre um Provedor ou Unidade de Consumo e um Endereço."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase> rdf:type owl:ObjectProperty ;
+                                                        rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase> ;
+                                                        rdfs:comment "Estabelece a relação entre um Documento de Energia e uma Fase de Energia."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                                rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> ;
+                                                                rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Fornecimento de Energia."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> ;
+                                                         rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> ;
+                                                         rdfs:comment "Estabelece a relação entre uma Classificação e um Grupo respectivo."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao> rdf:type owl:ObjectProperty ;
+                                                                rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> ;
+                                                                rdfs:comment "Estabelece a relação entre um Documento de Energia e um Grupo de Tensão."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                        rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> ;
+                                                        rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Item."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                                    rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> ;
+                                                                    rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Modelo de Documento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain :Responsavel ;
+                                                                rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> ;
+                                                                rdfs:comment "Estabelece a relação entre um Responsável por emissão de Documento Fiscal e uma Qualificação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                               rdfs:range :Responsavel ;
+                                                               rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Responsável"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                         rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> ;
+                                                         rdfs:comment "Estabelece a relação entre um Documento Fiscal e uma Série."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico> rdf:type owl:ObjectProperty ;
+                                                           rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                                                           rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> ;
+                                                           rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Serviço."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> ;
+                                                                  rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Tipo Assinante."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:range <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> ;
+                                                                   rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Tipo de Utilização"@pt .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF
+:abreviacao_UF rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Federative_Unit ;
+               rdfs:comment "Abreviação de uma Unidade Federativa."@pt ;
+               rdfs:label "abreviação da UF"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/aliquota
+:aliquota rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> ;
+          rdfs:comment "Alíquota do ICMS aplicado ao Item"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao
+:ano_apuracao rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+              rdfs:comment "Ano de apuração do Documento Fiscal"@pt ;
+              rdfs:label "ano de apuração do documento fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms
+:base_calculo_icms rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal>
+                                               <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item>
+                                             )
+                               ] ;
+                   rdfs:comment "Base de Cálculo do ICMS"@pt ;
+                   rdfs:label "base de cálculo do ICMS"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/cnpj
+:cnpj rdf:type owl:DatatypeProperty ;
+      rdfs:comment "Identificador do Cadastro Nacional de Pessoas Jurídicas (CNPJ)"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/codigo
+:codigo rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf :identificador ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item>
+                                    <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao>
+                                  )
+                    ] .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_autenticacao
+:codigo_autenticacao rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :codigo .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade
+:codigo_cidade rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :codigo ;
+               rdfs:comment "Código Identificador d Cidades / Municípios."@pt ;
+               rdfs:label "código da cidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao
+:codigo_identificacao rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :codigo ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor>
+                                                  <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor>
+                                                )
+                                  ] ;
+                      rdfs:comment "Código de Identificação de um determinado Conceito."@pt ,
+                                   "codigo de identificação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao_provedor
+:codigo_identificacao_provedor rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/complemento
+:complemento rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Address ;
+             rdfs:comment "Complemento do Endereço"@pt ;
+             rdfs:label "complemento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/cpf
+:cpf rdf:type owl:DatatypeProperty ;
+     rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+     rdfs:comment "Cadastro de Pessoas Físicas (CPF)."@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao
+:data_emissao rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+              rdfs:comment "Data de Emissão de Documento Fiscal"@pt ;
+              rdfs:label "data de emissão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/data_primaria
+:data_primaria rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Unidade_Consumo ;
+               rdfs:comment "Data primeira emissão de documento fiscal"@pt ;
+               rdfs:label "data primaria"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/data_ultima
+:data_ultima rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Unidade_Consumo ;
+             rdfs:comment "Data última emissão de documento fiscal"@pt ;
+             rdfs:label "data última"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/descricao
+:descricao rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante>
+                                       <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao>
+                                     )
+                       ] ;
+           rdfs:comment "Descrição de um determinado Conceito"@pt ;
+           rdfs:label "descrição"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/identificador
+:identificador rdf:type owl:DatatypeProperty ;
+               rdfs:comment "Atributo identificador" .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo
+:identificador_unidade_consumo rdf:type owl:DatatypeProperty ;
+                               rdfs:comment "identificador da unidade consumo"@pt ;
+                               rdfs:label "identificador unidade consumo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual
+:inscricao_estadual rdf:type owl:DatatypeProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor>
+                                                <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor>
+                                              )
+                                ] ;
+                    rdfs:comment "Inscrição Estadual de um Consumidor ou Provedor no âmbito do Estado do Maranhão." ;
+                    rdfs:label "inscrição estadual"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica
+:inscricao_estadual_numerica rdf:type owl:DatatypeProperty ;
+                             rdfs:domain [ rdf:type owl:Class ;
+                                           owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor>
+                                                         <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor>
+                                                       )
+                                         ] ;
+                             rdfs:comment "Inscrição Estadual Numérica de um Consumidor ou Provedor no âmbito do Estado do Maranhão." ;
+                             rdfs:label "inscrição estadual numérica"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao
+:mes_apuracao rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+              rdfs:comment "Mês de Apuração de Documento Fiscal"@pt ;
+              rdfs:label "mês apuração"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal
+:numero_documento_fiscal rdf:type owl:DatatypeProperty ;
+                         rdfs:domain <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> ;
+                         rdfs:comment "Número seqüencial atribuído pelo sistema eletrônico de processamento de dados ao documento fiscal;"@pt ;
+                         rdfs:label "número"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco
+:numero_endereco rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Address ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "Número do Endereço"@pt ;
+                 rdfs:label "numero endereço"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/outros_valores
+:outros_valores rdf:type owl:DatatypeProperty ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal>
+                                            <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item>
+                                          )
+                            ] ;
+                rdfs:comment "Outros valores de Impostos atribuídos a um Item."@pt ;
+                rdfs:label "outros valores"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor
+:telefone_consumidor rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "Número de Telefone do Consumidor"@pt ;
+                     rdfs:label "telefone"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/valor_acrescimo
+:valor_acrescimo rdf:type owl:DatatypeProperty ;
+                 rdfs:label "valor acréscimo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/valor_desconto
+:valor_desconto rdf:type owl:DatatypeProperty ;
+                rdfs:label "valor desconto"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/valor_icms
+:valor_icms rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal>
+                                        <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item>
+                                      )
+                        ] ;
+            rdfs:comment "Valor do Imposto  sobre Circulação de Mercadorias e Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) atribuído a um Item."@pt ;
+            rdfs:label "valor icms"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/valor_operacoes_isentas
+:valor_operacoes_isentas rdf:type owl:DatatypeProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal>
+                                                     <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item>
+                                                   )
+                                     ] ;
+                         rdfs:comment "Valor atribuído a Operações Isentas de um Item."@pt ;
+                         rdfs:label "valor operacoes isentas"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/valor_total
+:valor_total rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal>
+                                         <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item>
+                                       )
+                         ] ;
+             rdfs:comment "Valor total de um Item."@pt ;
+             rdfs:label "valor total"@pt .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/XML/1998/namespacepostal-code
+xml:postal-code rdf:type owl:DatatypeProperty ;
+                rdfs:comment "CEP"@pt .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> rdf:type owl:Class ;
+                                                                   rdfs:comment "A Concept that classifies an Object"^^xsd:string ;
+                                                                   rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> ;
+                                                                   rdfs:label "Papel"@pt ,
+                                                                              "Role"@en ,
+                                                                              "Ruolo"@it .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :telefone_consumidor ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty xml:postal-code ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :telefone_consumidor ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         rdfs:comment "Representa o Endereço de uma determinada Empresa, Estabelecimento ou Pessoa Física."@pt ;
+         rdfs:label "Address"@en ,
+                    "Endereço"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Location ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :codigo_cidade ;
+                        owl:someValuesFrom owl:rational
+                      ] ;
+      rdfs:comment "Nome da Cidade de acordo com a Localização.."@pt ;
+      rdfs:label "Cidade"@pt ,
+                 "City"@en ,
+                 "Municipio"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Contratacao
+:Contratacao rdf:type owl:Class .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Location ;
+         rdfs:label "País"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/District
+:District rdf:type owl:Class ;
+          rdfs:subClassOf :Location ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_part ;
+                            owl:someValuesFrom :Locality
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :is_part_of ;
+                            owl:someValuesFrom :City
+                          ] ;
+          rdfs:comment "Bairro / Distrito de uma determinada Localização identificado em quase todos os casos pelo CEP."@pt ;
+          rdfs:label "Bairro"@pt ,
+                     "District"@en .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit
+:Federative_Unit rdf:type owl:Class ;
+                 rdfs:subClassOf :Location ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_part_of ;
+                                   owl:someValuesFrom :Country
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :abreviacao_UF ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#hiddenLabel> ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ;
+                 rdfs:comment "Unidade Federativa de uma vcadalidade."@pt ;
+                 rdfs:label "Estado"@pt ,
+                            "State"@en ,
+                            "UF"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Locality
+:Locality rdf:type owl:Class ;
+          rdfs:subClassOf :Location ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :is_part_of ;
+                            owl:someValuesFrom :District
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty xml:postal-code ;
+                            owl:someValuesFrom xsd:string
+                          ] ;
+          rdfs:comment "A Locality can be a street, avenue, court, etc."@en ,
+                       "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt ;
+          rdfs:label "Locality"@en ,
+                     "Logradouro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+                            owl:someValuesFrom xsd:double
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+                            owl:someValuesFrom xsd:double
+                          ] ;
+          rdfs:comment "Class that represents the concept of a geographical Location."@en ,
+                       "Classe que representa o conceito de uma Localização geográfica."@pt ;
+          rdfs:label "Localização"@pt ,
+                     "Location"@en ,
+                     "vcadal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Produto
+:Produto rdf:type owl:Class ;
+         rdfs:comment "Produto é um Material ou Serviço adquiridos ou contratados registrados em um Documento Fiscal."@pt ;
+         rdfs:label "Produto"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel
+:Responsavel rdf:type owl:Class ;
+             rdfs:comment "Responsável pelo Documento Fiscal (Nota Fiscal)"@pt ;
+             rdfs:label "Responsável"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo
+:Unidade_Consumo rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Unidade_Consumo_Comunicacao
+                                                     :Unidade_Consumo_Energia
+                                                     :Unidade_Consumo_Telecomunicacao
+                                                   )
+                                     ] ;
+                 rdfs:comment """Quando Elétrica, é composta por instalações, equipamentos elétricos, condutores e acessórios, incluída a subestação, quando do fornecimento em tensão primária, caracterizado pelo recebimento de energia elétrica em apenas um ponto de entrega, com medição individualizada, correspondente a um único consumidor e localizado em uma mesma propriedade ou em propriedades contíguas.
+
+Quando Comunicação ou Telecomunicação é o Endereço relativo ao serviço prestado por uma empresa, tal como telefonia e / ou internet."""@pt ;
+                 rdfs:label "Unidade Consumo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao
+:Unidade_Consumo_Comunicacao rdf:type owl:Class ;
+                             rdfs:subClassOf :Unidade_Consumo ;
+                             rdfs:comment "Endereço onde é provido o serviço de Comunicação de um consumidor."@pt ;
+                             rdfs:label "Unidade Consumo Comunicacao"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia
+:Unidade_Consumo_Energia rdf:type owl:Class ;
+                         rdfs:subClassOf :Unidade_Consumo ;
+                         rdfs:comment "Endereço onde é provido o fornecimento de Energia de um consumidor."@pt ;
+                         rdfs:label "Unidade Consumo Energia"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao
+:Unidade_Consumo_Telecomunicacao rdf:type owl:Class ;
+                                 rdfs:subClassOf :Unidade_Consumo ;
+                                 rdfs:comment "Endereço onde é provido o serviço de telecomunicação de um consumidor."@pt ;
+                                 rdfs:label "Unidade Consumo Telecomunicacao"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> rdf:type owl:Class ;
+                                                    rdfs:comment """Código Fiscal de Operações e Prestações (CFOP) é o código que identifica uma determinada operação por categorias no momento da emissão da nota fiscal.
+
+Dependendo do Código CFOP, será fixada a tributação sobre a operação e haverá movimentações financeiras e de estoque de interesse do Fisco. Os diferentes tipos de CFOP separam as notas fiscais por tipo (nota de entrada ou saída), por região e por natureza da operação.
+
+O CFOP contém quatro dígitos, e cada um deles tem uma identificação específica. O primeiro número se refere ao tipo de operação (por exemplo, se iniciar com 1 é uma operação dentro do Estado e se inicia com 2, fora do Estado), e os demais, à finalidade e ao tipo de produto ou serviço"""@pt ;
+                                                    rdfs:label "CFOP"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> rdf:type owl:Class ;
+                                                              rdfs:comment "Classes de consumo são divisões utilizadas para classificar os consumidores de energia elétrica. São três: Industrial, Comercial e Residencial. A cada classe aplicam-se regras diferentes para aferição de qualidade de serviço e reajustes anuais de tarifas"@pt ;
+                                                              rdfs:label "Classe Consumo"@pt ;
+                                                              rdfs:seeAlso "https://pt.wikipedia.org/wiki/Classes_de_consumo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> rdf:type owl:Class ;
+                                                             rdfs:comment """Classificação de um Item (Serviço ou Fornecimento) , baseando-se em códigos identificadores a partir da definição do CONV115, sendo:
+
+     101  'Assinatura de serviços de telefonia'
+     102  'Assinatura de serviços de comunicação de dados'
+     103  'Assinatura de serviços de TV por Assinatura'
+     104  'Assinatura de serviços de provimento à internet'
+     105  'Assinatura de outros serviços de multimídia'
+     199  'Assinatura de outros serviços'
+     201  'Habilitação de serviços de telefonia'
+     202  'Habilitação de serviços de comunicação de dados'
+     203  'Habilitação de TV por Assinatura'
+     204  'Habilitação de serviços de provimento à internet'
+     205  'Habilitação de outros serviços multimídia'
+     299  'Habilitação de outros serviços'
+     301  'Serviço Medido - chamadas locais'
+     302  'Serviço Medido - chamadas interurbanas no Estado'
+     303  'Serviço Medido - chamadas interurbanas para fora do Estado'
+     304  'Serviço Medido - chamadas internacionais'
+     305  'Serviço Medido - Números Especiais (0300/0500/0600/0800/etc.)'
+     306  'Serviço Medido - comunicação de dados'
+     307  'Serviço Medido - chamadas originadas em Roaming'
+     308  'Serviço Medido - chamadas recebidas em Roaming'
+     309  'Serviço Medido - adicional de chamada'
+     310  'Serviço Medido - provimento de acesso à Internet'
+     311  'Serviço Medido - pay-per-view (programação TV)'
+     312  'Serviço Medido - Mensagem SMS'
+     313  'Serviço Medido - Mensagem MMS'
+     314  'Serviço Medido - outros mensagens'
+     315  'Serviço Medido - serviço multimídia'
+     399  'Serviço Medido - outros serviços'
+     401  'Cartão Telefônico - Telefonia Fixa'
+     402  'Cartão Telefônico - Telefonia Móvel'
+     403  'Cartão de Provimento de acesso à internet'
+     404  'Ficha Telefônica'
+     405  'Recarga de Créditos - Telefonia Fixa'
+     406  'Recarga de Créditos - Telefonia Móvel'
+     407  'Recarga de Créditos - Provimento de acesso à Internet'
+     499  'Outras cobranças realizadas de assinantes de plano serviço pré-pago'
+     501  'Serviço Adicional (substituição de número, troca de aparelho, emissão de 2ª via de conta, conta detalhada, etc.)'
+     502  'Serviço Facilidades (identificador de chamadas, caixa postal, transferência temporária, não-perturbe, etc.)'
+     599  'Outros Serviços'
+     601  'Energia Elétrica - Consumo'
+     602  'Energia Elétrica - Demanda'
+     603  'Energia Elétrica - Serviços (Vistoria de unidade consumidora, Aferição de Medidor, Ligação, Religação, Troca de medidor, etc.)'
+     604  'Energia Elétrica - Encargos Emergenciais'
+     605  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Cativo'
+     606  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Livre'
+     607  'Encargos de Conexão'
+     608  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Cativo'
+     609  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Livre'
+     610  'Subvenção econômica para consumidores da subclasse “baixa renda”'
+     699  'Energia Elétrica - Outros'
+     701  'de Aparelho Telefônico'
+     702  'de Aparelho Identificador de chamadas'
+     703  'de Modem'
+     704  'de Rack'
+     705  'de Sala/Recinto'
+     706  'de Roteador'
+     707  'de Servidor'
+     708  'de Multiplexador'
+     709  'de Decodificador/Conversor'
+     799  'Outras disponibilizações'
+     802  'Cobrança de Seguros'
+     803  'Cobrança de Financiamento de Aparelho/Serviços'
+     804  'Cobrança de Juros de Mora'
+     805  'Cobrança de Multa de Mora'
+     806  'Cobrança de Conta de meses anteriores'
+     807  'Cobrança de Taxa Iluminação Pública'
+     808  'Retenção de ICMS-ST'
+     899  'Outras Cobranças'
+     902  'Dedução referente ajuste de conta'
+     903  'Redutor - Energia Elétrica - Nº 306/2003 (PIS/COFINS/IRPJ/CSLL)'
+     904  'Dedução relativa à multa pela interrupção de fornecimento'
+     905  'Dedução relativa à distribuição de dividendos Eletrobrás'
+     906  'Dedução relativa à subvenção econômica para consumidores da subclasse “baixa renda”'
+     907  'Dedução relativa à parcela do valor da operação correspondente ao valor da energia elétrica adquirida de terceiros, quando aplicáveis os termos do Convênio ICMS 77/11.'
+     999  'Outras deduções'
+     1002  'Serviço não medido de serviços de comunicação de dados'
+     1003  'Serviço não medido de serviços de TV por Assinatura'
+     1004  'Serviço não medido de serviços de provimento à internet'
+     1005  'Serviço não medido de outros serviços de multimídia'
+     1099  'Serviço não medido de outros serviços'
+     1101  'Interconexão: Detraf, SMS, MMS'
+     1102  'Detrat, Transmissão'
+     1103  'Roaming'
+     1104  'Exploração Industrial de Linha Dedicada - EILD'
+     1105  'Lançamento de ICMS proporcional às saídas isentas, não tributadas ou com redução de base de cálculo (§ 1º, Cláusula terceira, Convênio ICMS17/2013)'
+     1106  'Lançamento de ICMS proporcional às cessões de meio destinadas a
+consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
+     1107  'Lançamento de ICMS complementar, na condição de responsável tributário (§ 2º, Cláusula terceira, Convênio 17/2013)'
+     1199  'Outras Cessões de Meios de Rede'"""@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> rdf:type owl:Class ;
+                                                          rdfs:subClassOf [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role>
+                                                                                                 [ rdf:type owl:Class ;
+                                                                                                   owl:unionOf ( <http://xmlns.com/foaf/0.1/Organization>
+                                                                                                                 <http://xmlns.com/foaf/0.1/Person>
+                                                                                                               )
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ] ;
+                                                          rdfs:comment "Conceito referente a Consumidores de Energia e Serviços de Comunicação e Telecomunicação"@pt ;
+                                                          rdfs:label "Consumidor"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> rdf:type owl:Class ;
+                                                                rdfs:comment "Documento fiscal é um documento que comprova as operações de venda de bens ou prestação de serviços entre empresas, órgãos públicos, ou até mesmo pessoas físicas. Além da circulação de mercadorias e serviços, esse documento é obrigatório para comprovar o recolhimento de impostos e tributos sobre faturamento."@pt ;
+                                                                rdfs:label "Documento Fiscal"@pt ;
+                                                                rdfs:seeAlso "https://arquivei.com.br/blog/documentos-fiscais-tudo-o-que-voce-precisa-saber/"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase> rdf:type owl:Class ;
+                                                    rdfs:comment """A distribuição da energia elétrica é feita de acordo com a necessidade de cada unidade consumidora, dependendo de seu tipo de utilização: residencial, comercial ou industrial. Antes de ser utilizada, a energia elétrica fornecida pelas concessionárias passa por transformadores instalados em postes. Esses equipamentos podem ser:
+
+1- Monofásico;
+2- Bifásico;
+3- Trifásico;"""@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> rdf:type owl:Class ;
+                                                            rdfs:subClassOf :Produto ;
+                                                            rdfs:comment "Fornecimento de Energia Elétrica em uma Unidade de Consumo;"@pt ;
+                                                            rdfs:label "Fornecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> rdf:type owl:Class ;
+                                                     rdfs:comment """Classificação do Grupo de um determinado Item (Serviço ou Fornecimento):
+
+ > 100 e < 201 =  'Assinatura' 
+ > 200 e < 301 =  'Habilitação'
+ > 300 e < 401 = 'Serviço Médio'
+ > 400 e < 501 = 'Serviço Pré-Pago'
+ > 500 e < 601 = 'Outros Serviços'
+ > 600 e  < 701 = 'Energia Elétrica'
+ > 700 e  < 801 = 'Disponibilização de Meios ou Equipamentos'
+ > 800 e  < 901 = 'Deduções'
+ > 900 e < 1001 = 'Serviço não medido'
+ > 1000 e < 1101 'Cessão de Meios de Rede'
+ > 1100 e < 2000 'Serviço Médio'"""@pt ,
+                                                                  "Grupo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> rdf:type owl:Class ;
+                                                            rdfs:comment """Grupo de Tensão de Energia fornecida:
+
+01 - A1 AltaTensão (230kV ou mais);
+02 - A2 Alta Tensão (88 a 138kV);
+03 - A3 Alta Tensão (69kV);
+04 - A3a Alta Tensão (30kV a 44kV);
+05 - A4 Alta Tensão (2,3kV a 25kV);
+06 - AS Alta Tensão Subterrâneo
+07 - B1 – Residencial;
+08 - B1 Residencial Baixa Renda;
+09 - B2 – Rural;
+10 - B2 Cooperativa de Eletrificação
+Rural;
+11 - B2 Serviço Público de Irrigação;
+12 - B3 Demais Classes;
+13 - B4a Iluminação Pública rede de
+distribuição;
+14 - B4b Iluminação Pública bulbo
+de lâmpada;
+
+Demais modelos = 00;"""@pt ;
+                                                            rdfs:label "Grupo Tensão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Item
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> rdf:type owl:Class ;
+                                                    rdfs:comment "Item de um Documento Fiscal - Conceito que Generaliza Fornecimento ou Serviço."@pt ;
+                                                    rdfs:label "Item"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> rdf:type owl:Class ;
+                                                                rdfs:comment """Modelo de Documento Fiscal, podendo ter o seguintes valores:
+
+6 = Modelo de Documento de Energia;
+21 = Modelo de Documento de Comunicação;
+22 = Modelo de Documento de Telecomunicação;"""@pt ;
+                                                                rdfs:label "Modelo Documento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ owl:intersectionOf ( <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role>
+                                                                                               <http://xmlns.com/foaf/0.1/Organization>
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                        rdfs:comment "Órgão que fornece e provê Energia e Serviços de Comunicação e Telecomunicação;"@pt ;
+                                                        rdfs:label "Provedor"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> rdf:type owl:Class ;
+                                                            rdfs:comment "Qualificação do Responsável pelo Documento Fiscal."@pt ;
+                                                            rdfs:label "Qualificação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> rdf:type owl:Class ;
+                                                     rdfs:comment "Série do documento fiscal (U- Unica / B84);"@pt ;
+                                                     rdfs:label "Série"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :Produto ;
+                                                       rdfs:comment "Serviço de Comunicação ou Telecomunicação realizados em uma Unidade de Consumo;"@pt ;
+                                                       rdfs:label "Serviço"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item> rdf:type owl:Class ;
+                                                             rdfs:comment """Situação do Item:
+
+'S' = Cancelado
+'R' = Substituído
+'R' = Normal"""@pt ;
+                                                             rdfs:label "Situação Item"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> rdf:type owl:Class ;
+                                                              rdfs:comment """Tipo de Assinante de Serviços de Comunicação e Telecomunicação:
+
+1 =  'Comercial-Industrial'
+2 = 'Poder_Público'
+3 = 'Residencial-Pessoa_Física'
+4 = 'Público'
+5 = 'Semi_Público'"""@pt ;
+                                                              rdfs:label "Tipo Assinante"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> rdf:type owl:Class ;
+                                                               rdfs:comment """Tipo de Utilização de Serviços de Comunicação ou Telecomunicação:
+
+1 = 'Telefonia'
+2 = 'Comunicacao_Dados'
+3 = 'TV_Assinatura'
+4 = 'Provimento_Acesso_Internet'
+5 = 'Multimidia'
+6 = 'Outros'"""@pt ;
+                                                               rdfs:label "Tipo Utilização"@pt .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                         rdfs:label "Pessoa Jurídica" .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ;
+                                   rdfs:comment "A person." ,
+                                                "Representação de Pessoa Física identificada por um cpf."@pt ;
+                                   rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                   rdfs:label "Person"@en ,
+                                              "Pessoa Física"@pt .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://xmlns.com/foaf/0.1/name> rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                 rdfs:label "nome" ;
+                                 rdfs:comment "A name for some thing." .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

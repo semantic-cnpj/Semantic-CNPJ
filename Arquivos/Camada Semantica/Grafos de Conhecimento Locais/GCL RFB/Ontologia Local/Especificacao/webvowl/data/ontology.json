@@ -1,0 +1,3441 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "pt", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation", "http://www.sefaz.ma.gov.br/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1", "http://www.w3.org/2006/vcard/ns", "http://purl.org/dc/elements/1.1", "http://www.w3.org/2004/02/skos/core" ],
+    "iri" : "http://www.sefaz.ma.gov.br/RFB/ontology/",
+    "version" : "1.0",
+    "labels" : {
+      "pt" : "RFB Cadastro"
+    },
+    "comments" : {
+      "pt" : "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nValeria Priscilla Monteiro Fernandes\nvaleria.fernandes@sefaz.ma.gov.br\n\nAdriano Dos Santos Rego\nadriano.rego@sefaz.ma.gov.br\n\n\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n\n-----------------------------------------------------------------------------------------------\nFinanciador: Banco Interamericano de Desenvolvimento\n\nContrato 4458/OC-BR. \nP1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica.",
+      "en" : "Cadastral Ontology of open data of companies registred with the Federal Revenue of Brazil"
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "pt",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "95",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "97",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "129",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "177",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "193",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "218",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "185",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "0",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "1",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Establishment",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=97729&visao=original",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Establishment",
+      "pt" : "Estabelecimento",
+      "en" : "Establishment"
+    },
+    "comment" : {
+      "pt" : "Art. 3º  Todas as entidades domiciliadas no Brasil, inclusive as pessoas jurídicas equiparadas pela legislação do Imposto sobre a Renda, estão obrigadas a se inscrever no CNPJ e a cada um de seus estabelecimentos localizados no Brasil ou no exterior, antes do início de suas atividades.\n\n§ 1º  Os estados, o Distrito Federal e os municípios devem ter uma inscrição no CNPJ, na condição de estabelecimento matriz, que os identifique como pessoa jurídica de direito público, sem prejuízo das inscrições de seus órgãos públicos, conforme disposto no inciso I do caput do art. 4º.\n§ 2º  Para fins inscrição do CNPJ, estabelecimento é o local privado ou público, edificado ou não, móvel ou imóvel, próprio ou de terceiro, onde a entidade exerce suas atividades em caráter temporário ou permanente ou onde se encontram armazenadas mercadorias, incluindo as unidades auxiliares constantes do Anexo VII desta Instrução Normativa.\n§ 3º  Considera-se estabelecimento, para fins do disposto no § 2º, a plataforma de produção e armazenamento de petróleo e gás natural, ainda que esteja em construção.\n§ 4º  No caso previsto no § 3º, o endereço a ser informado no CNPJ deve ser o do estabelecimento da entidade proprietária ou arrendatária da plataforma, em terra firme, cuja localização seja a mais próxima."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIMPLES_Excluded",
+      "pt" : "Removido do SIMPLES",
+      "en" : "Excluded from SIMPLES"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Location",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location",
+      "pt" : "Local"
+    },
+    "subClasses" : [ "44", "45", "10", "46", "47" ],
+    "comment" : {
+      "pt" : "Classe que representa o conceito de uma localização geográfica.",
+      "en" : "Class that represents the concept of a geographical location."
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Establishment_Type",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Establishment_Type",
+      "pt" : "Tipo do estabelecimento",
+      "en" : "Establishment type"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL",
+      "baseIri" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "pt" : "Como filial conceitua-se aquele estabelecimento que representa a direção principal, contudo, sem alçada de poder deliberativo e/ou executivo. Não há que se falar em \"matriz fiscal\" e \"filial scrictu sensu\" (uma 'filial fiscal', em contraponto a uma \"filial societária\"), nem se cogita que a RFB o faça, haja vista os artigos 109 e 110 do CTN, que balizam o operador do direito e o próprio legislador. Portanto, matriz é aquele centro de direção e administração da empresa de que trata a legislação civil. Os demais estabelecimentos são filiais (ou sucursais ou agências).",
+        "en" : "As a subsidiary, that establishment represents the management\nprincipal, however, without the power of deliberative and / or executive power. There is no need to talk about \"fiscal headquartes\" and \"filial scrictu sensu\" (a 'fiscal subsidiary', as opposed to a \"corporate subsidiary\"), nor is there any question that the RFB should do so, in view of articles 109 and 110 of CTN, which guide the operator of the law and the legislator itself. Therefore, the headquartes is that center of direction and administration of the company dealt with by civil legislation. The other establishments are subsidiaries (or branches or agencies)."
+      },
+      "labels" : {
+        "IRI-based" : "FILIAL",
+        "pt" : "Filial"
+      }
+    }, {
+      "iri" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ",
+      "baseIri" : "http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type",
+      "annotations" : {
+        "seeAlso" : [ {
+          "identifier" : "seeAlso",
+          "language" : "undefined",
+          "value" : "http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "pt" : "Conceitua-se matriz aquele estabelecimento chamado sede ou principal que tem a primazia na direção e ao qual estão subordinados todos os demais, chamados de filiais, sucursais ou agências. Estabelecimento matriz é aquele no qual se exercem a direção e a administração da pessoa jurídica (Empresa).  A pessoa jurídica de direito privado pode ter vários domicílios, mas uma só sede.",
+        "en" : "Headquarter is defined as that establishment called headquarters or principal that has primacy in the direction and to which all others are subordinate,\ncalled subsidiaries, branches or agencies. Headquarters establishment is the one in which the direction and administration of the legal entity (Company) is exercised. The legal entity under private law may have several domiciles, but only one headquarters."
+      },
+      "labels" : {
+        "IRI-based" : "MATRIZ",
+        "pt" : "Matriz"
+      }
+    } ],
+    "comment" : {
+      "pt" : "Indica se um um estabelecimento é uma matriz ou uma filial"
+    },
+    "attributes" : [ "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+    "instances" : 0,
+    "annotations" : {
+      "situation_code" : [ {
+        "identifier" : "situation_code",
+        "language" : "undefined",
+        "value" : "01",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NULL",
+      "pt" : "Nula"
+    },
+    "comment" : {
+      "pt" : "CAPÍTULO VI\nDA SITUAÇÃO CADASTRAL NULA\n\nArt. 47. A inscrição no CNPJ é enquadrada na situação cadastral nula quando for declarada a nulidade do ato de inscrição da entidade ou do estabelecimento filial, na forma prevista no art. 33."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "95",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "97",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "12",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+    "instances" : 0,
+    "annotations" : {
+      "situation_code" : [ {
+        "identifier" : "situation_code",
+        "language" : "undefined",
+        "value" : "02",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ACTIVE",
+      "pt" : "Ativa"
+    },
+    "comment" : {
+      "pt" : "CAPÍTULO II\nDA SITUAÇÃO CADASTRAL ATIVA\n\nArt. 35. A inscrição no CNPJ é enquadrada na situação cadastral ativa quando a entidade ou o estabelecimento filial, conforme o caso, não se enquadrar em nenhuma das situações cadastrais citadas nos incisos II a V do art. 34.",
+      "undefined" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "107",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/District",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "District",
+      "pt" : "Bairro",
+      "en" : "District"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SIMPLES_Optant",
+      "pt" : "Optante pelo SIMPLES",
+      "en" : "Optant for SIMPLES"
+    },
+    "comment" : {
+      "pt" : "Esta classe compreende os dados do evento da opção pelo regime Simples Nacional por uma empresa.\n\nO Simples Nacional é o nome abreviado do “Regime Especial Unificado de\nArrecadação de Tributos e Contribuições devidos pelas Microempresas e\nEmpresas de Pequeno Porte”.\nTrata-se de um regime tributário diferenciado, simplificado e favorecido previsto\npela Lei Complementar nº 123, de 2006, aplicável às Microempresas e às\nEmpresas de Pequeno Porte, a partir de 01/07/2007.",
+      "en" : "This class comprises the event data of the option for the Simple National regime for a company.\n\nSimples Nacional is the abbreviated name of the “Special Unified Regime of\nCollection of Taxes and Contributions due by Microenterprises and\nSmall Companies ”.\nIt is a differentiated, simplified and favored tax regime foreseen\nby Complementary Law No. 123, 2006, applicable to Microenterprises and\nSmall Companies, as of 01/07/2007."
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Legal_Nature",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabelas-utilizadas-pelo-programa-cnpj/tabela-de-natureza-juridica-e-qualificacao-do-quadro-de-socios-e-administradores",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://suporte.agilize.com.br/hc/pt-br/articles/216342283-Naturezas-Jur%C3%ADdicas-de-uma-empresa",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Legal_Nature",
+      "pt" : "Natureza legal",
+      "en" : "Legal nature"
+    },
+    "comment" : {
+      "pt" : "A natureza jurídica de uma empresa é o  regime jurídico em que ela se enquadra,  isto é a relação da pessoa jurídica pública ou  privada com o exame que será feito pela FISCALIZAÇÃO no respectivo EMPREENDIMENTO, somado  ao  que consta dos dados da empresa nos cadastros da ADMINISTRAÇÃO PUBLICA. No momento de formalizar a empresa, informar a sua natureza jurídica tornou-se uma questão indispensável, já que cada natureza jurídica exige diferentes formas de aplicação das normas para as empresas.\n\nEm consonância com o código civil (Lei nº 10.406/02) existem várias espécies de natureza jurídica e entre elas estão os tipos jurídicos atribuídos à administração pública, entidades empresariais, entidades sem fins lucrativos e às pessoas físicas.",
+      "en" : "The legal nature of a company is the legal regime in which it fits, that is, the relationship of the public or private legal person with the examination that will be done by the ENGINEER in the respective ENTERPRISE, added to what appears in the company data in the ADMINISTRATION records. PUBLISH. When formalizing the company, informing its legal nature has become an indispensable issue, since each legal nature requires different ways of applying the rules for companies.\n\nIn line with the civil code (Law No. 10,406 / 02), there are several types of legal nature and among them are the legal types attributed to the public administration, business entities, non-profit entities and individuals."
+    },
+    "attributes" : [ "external" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Address",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Address",
+      "pt" : "Endereço",
+      "en" : "Address"
+    },
+    "comment" : {
+      "pt" : "Esta classe agrupa informações sobre o endereço declarado de uma Organização. Este endereço é composto por um número e complemento, relacionados as demais instâncias de Localização, tais como, Logradouro, Bairro, Municipio, UF e País.\n\nCada endereço deve ser único. Deste modo, caso duas empresas apotem para uma mesma instância de enderço, então este deve gerar uma inconsistência.",
+      "en" : "This class groups information about a organization's declared address. This address consists of a number and complement, related to the other instances of Localization, such as, Street, District, City, Federative Unit and Country.\n\nEach address must be unique. Thus, if two companies provide for the same address, then this should generate an inconsistency."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "113",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Locality",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Locality",
+      "pt" : "Logradouro",
+      "en" : "Locality"
+    },
+    "comment" : {
+      "pt" : "Um logradouro pode ser uma rua, avenida, quadra, etc.",
+      "en" : "A locality can be a street, avenue, court, etc."
+    },
+    "attributes" : [ "external" ],
+    "id" : "46",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "114",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Size_Company",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www38.receita.fazenda.gov.br/cadsincnac/jsp/coleta/ajuda/topicos/Porte_da_Empresa.htm",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Size_Company",
+      "pt" : "Porte da empresa",
+      "en" : "Size company"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS",
+      "baseIri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company",
+      "comment" : {
+        "pt" : "Para que a empresa seja enquadrada desta maneira o contrato social precisa ser assinado por um advogado e são para empresas que têm uma atividade que não permite a classificação em nenhum dos outros portes ou tem como sócio uma pessoa jurídica. Neste formato é possível ter mais de 100 funcionários."
+      },
+      "labels" : {
+        "IRI-based" : "DEMAIS",
+        "pt" : "DEMAIS"
+      }
+    }, {
+      "iri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO",
+      "baseIri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company",
+      "labels" : {
+        "IRI-based" : "NAO_INFORMADO",
+        "pt" : "NÃO INFORMADO"
+      }
+    }, {
+      "iri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA",
+      "baseIri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company",
+      "comment" : {
+        "pt" : "Estes formatos são para as empresas que pretendem ter ou tenham um faturamento anual de até R$ 360 mil. Uma microempresa pode ter até 20 funcionários."
+      },
+      "labels" : {
+        "IRI-based" : "MICRO_EMPRESA",
+        "pt" : "MICRO EMPRESA"
+      }
+    }, {
+      "iri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE",
+      "baseIri" : "http://www.sefaz.ma.gov.br/RFB/resource/Size_Company",
+      "comment" : {
+        "pt" : "Indicado para negócios que têm um faturamento anual no limite de R$ 4,8 milhões. Este formato pode ter até 100 funcionários."
+      },
+      "labels" : {
+        "IRI-based" : "PEQUENO_PORTE",
+        "pt" : "EMPRESA DE PEQUENO PORTE"
+      }
+    } ],
+    "comment" : {
+      "pt" : "A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;\n\nSelecionar o enquadramento de porte da empresa (ME, EPP, Demais) de acordo com a expectativa de Receita Bruta Anual.\n\nO porte informado deve estar compatível com a Receita Bruta auferida no anocalendário anterior. Assim, durante a prática do evento 222, caso seja solicitado reenquadramento como ME ou EPP, para período que já possua informação de porte atualizada pela RFB com resultado diferente do informado na aplicativo de coleta, a solicitação será indeferida.\n\nA data do evento é a data do registro da Declaração de Enquadramento / Reenquadramento / Desenquadramento no Órgão de Registro, conforme Tabela VIII;\n\nO evento 222 somente poderá ser praticado por estabelecimento matriz;\n\nSomente as naturezas jurídicas 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 e 231-3 exigem o enquadramento de Porte da Empresa. Para estas naturezas jurídicas, o porte pode ser “ME” ou “EPP”. Para o restante das naturezas jurídicas, o porte deve ser “Demais”.\n\nPara análise e deferimento do evento 222, será exigido que o contribuinte apresente a “Declaração de Enquadramento / Reenquadramento ou Desenquadramento”, registrada pelo Órgão de Registro. Caso a referida declaração não seja recente, também deverá ser exigida a Certidão Simplificada do Órgão de Registro, com o objetivo de comprovar o enquadramento atual da empresa naquele órgão.\n\n\nPossíveis portes:\n00 - NAO INFORMADO\n01 - MICRO EMPRESA\n03 - EMPRESA DE PEQUENO\nPORTE\n05 - DEMAIS",
+      "en" : "The new name for event 222 is “Framework / Reframing / Non-compliance of ME / EPP”;\n\nSelect the company's size framework (ME, EPP, Others) according to the expectation of Annual Gross Revenue.\n\nThe size informed must be compatible with the Gross Revenue earned in the previous anocalendar. Thus, during the practice of event 222, if it is requested to qualify as ME or EPP, for a period that already has size information updated by the RFB with a result different from that reported in the collection application, the request will be rejected.\n\nThe date of the event is the date of registration of the Declaration of Compliance / Reframing / Noncompliance with the Registry, as per Table VIII;\n\nEvent 222 can only be practiced by a parent establishment;\n\nOnly the legal nature 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 and 231-3 require the Company Scale . For these legal natures, the size can be “ME” or “EPP”. For the rest of the legal nature, the size must be \"Too much\".\n\nFor analysis and approval of event 222, the taxpayer will be required to submit the “Declaration of Compliance / Reframing or Noncompliance”, registered by the Registry. If the said statement is not recent, the Simplified Certificate of the Registration Body should also be required, in order to prove the current status of the company in that body.\n\nPossible sizes:\n00 - NAO INFORMADO\n01 - MICRO EMPRESA\n03 - EMPRESA DE PEQUENO\nPORTE\n05 - DEMAIS"
+    },
+    "attributes" : [ "external" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Agent",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "pt" : "Agente",
+      "en" : "Agent"
+    },
+    "subClasses" : [ "78", "60", "37" ],
+    "comment" : {
+      "pt" : "Esta classe representa o conceito de agente, sendo este uma entidade que realiza alguma ação. Neste contexto um agente é considerado uma pessoa, onde esta pode ser ou pessoa física ou pessoa jurídica.\n\nCaso esta pessoa seja estrangeira, isto é representado pelo indicador is_foreigner.",
+      "en" : "This class represents the concept of agent, which is an entity that performs some action. In this context, an agent is considered a person, where this can be either an individual or a legal entity.\n\nIf this person is a foreigner, this is represented by the is_foreigner indicator."
+    },
+    "attributes" : [ "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "129",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Organization",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://pt.wikipedia.org/wiki/Empresa",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Organization",
+      "pt" : "Organização",
+      "en" : "Company"
+    },
+    "comment" : {
+      "pt" : "Na concepção jurídica, do direito comercial, atividade empresarial, ou empresa, é uma atividade econômica exercida profissionalmente pelo empresário por meio da articulação dos fatores produtivos para a produção ou circulação de bens ou de serviços. O conceito jurídico de empresa não pode ser confundido com o de um sujeito de direito, o de uma pessoa jurídica, tampouco com o local onde aquela atividade econômica é desenvolvida.",
+      "en" : "In the legal conception, commercial law, business activity, or company, it is an economic activity exercised professionally by the entrepreneur through the articulation of the productive factors for the production or circulation of goods or services. The legal concept of company cannot be confused with that of a subject of law, that of a legal person, nor with the place where that economic activity is developed."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "79" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Partnership",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Partnership",
+      "pt" : "Representação",
+      "en" : "Representation"
+    },
+    "comment" : {
+      "pt" : "Esta classe representa a relação de sociedade ou representação entre uma empresa e seu sócio/representante. Esta representação possui datas de início e fim, além de poder possuir o percentual do capital social possuído pelo sócio e seu percentual de participação (em cenários em que isto é possível). Por fim, a representação possui uma qualificação aplicável ao sócio representante existente na classe Representant_Qualification.",
+      "en" : "This class represents the partnership or representation between a company and its partner / representative. This representation has start and end dates, in addition to having the percentage of share capital owned by the partner and its percentage of participation (in scenarios where this is possible). Finally, the representation has a qualification applicable to the representative partner existing in the Representant_Qualification class."
+    },
+    "attributes" : [ "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Federative_Unit",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Federative_Unit",
+      "pt" : "State"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "148",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Economic_Activity",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Economic_Activity",
+      "pt" : "Atividade econômica",
+      "en" : "Economic activity"
+    },
+    "comment" : {
+      "pt" : "Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.\nEsta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE).",
+      "en" : "Economic activity carried out by the company. A company has a primary activity and can (optionally) have N secondary activities.\nThis activity is represented by the Classificação Nacional de Atividades Econômicas (CNAE) code."
+    },
+    "attributes" : [ "external" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.dicionariofinanceiro.com/pessoa-fisica/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Person",
+      "pt" : "Pessoa Física",
+      "en" : "Natural Person"
+    },
+    "comment" : {
+      "pt" : "Pessoa física é todo ser humano enquanto indivíduo, do seu nascimento até a morte. Essa designação é um conceito jurídico e se refere especificamente ao indivíduo enquanto sujeito detentor de direitos e de deveres.\n\nO Cadastro de Pessoas Físicas (CPF) é o registro dos cidadãos para fins fiscais, feito pela Receita Federal. Para ser considerado uma pessoa física, porém, não é preciso ter um CPF. Para o direito, o ser humano é uma pessoa física desde que nasce com vida, pois a partir daí já é detentor de direitos e deveres. A certidão de nascimento é, portanto, o primeiro registro da pessoa física.",
+      "en" : "Natural Person is every human being as an individual, from birth to death. This designation is a legal concept and refers specifically to the individual as a subject with rights and duties.\n\nThe Cadastro de Pessoa Física (CPF) is the registration of citizens for tax purposes, made by the Federal Revenue Service. To be considered an individual, however, it is not necessary to have a CPF. For the law, the human being is an individual since he was born alive, since from then on he already has rights and duties. The birth certificate is, therefore, the first registration of the individual."
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "79" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "150",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "152",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "153",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+    "instances" : 0,
+    "annotations" : {
+      "situation_code" : [ {
+        "identifier" : "situation_code",
+        "language" : "undefined",
+        "value" : "04",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UNFIT",
+      "pt" : "Inapta"
+    },
+    "comment" : {
+      "pt" : "CAPÍTULO IV\nDA SITUAÇÃO CADASTRAL INAPTA\n\nArt. 37. Pode ser declarada inapta a inscrição no CNPJ da pessoa jurídica:\n\nI - omissa de declarações e demonstrativos: a que, estando obrigada, deixar de apresentar declarações e demonstrativos em 2 (dois) exercícios consecutivos;\n\nII - não localizada: a que não for localizada no endereço constante do CNPJ; ou\n\nIII - com irregularidade em operações de comércio exterior: a que não comprovar a origem, a disponibilidade e a efetiva transferência, se for o caso, dos recursos empregados em operações de comércio exterior, na forma prevista em lei.\n\nParágrafo único. O disposto neste artigo não se aplica à entidade domiciliada no exterior.\n\nSeção I\nDa Pessoa Jurídica Omissa de Declarações e Demonstrativos\n\nArt. 38. No caso de pessoa jurídica omissa de declarações e demonstrativos, de que trata o inciso I do caput do art. 37, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.\n\n§ 1º A pessoa jurídica declarada inapta nos termos do caput pode regularizar sua situação mediante apresentação, por meio da Internet, das declarações e demonstrativos exigidos, ou comprovação de sua anterior apresentação na unidade da RFB que a jurisdiciona.\n\n§ 2º O disposto neste artigo não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas previstas no caput, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.\n\nSeção II\nDa Pessoa Jurídica não Localizada\n\nArt. 39. A pessoa jurídica não localizada, de que trata o inciso II do caput do art. 37, é assim considerada quando:\n\nI - não confirmar o recebimento de 2 (duas) ou mais correspondências enviadas pela RFB, comprovado pela devolução do Aviso de Recebimento (AR) dos Correios; ou\n\nII - não for localizada no endereço constante do CNPJ, comprovado mediante Termo de Diligência.\n\n§ 1º Na hipótese prevista no inciso I do caput, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.\n\n§ 2º Na hipótese prevista no inciso II do caput, a inscrição no CNPJ dever ser declarada inapta pelo Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\n§ 3º O disposto no § 1º não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas nele previstas, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.\n\n§ 4º A pessoa jurídica declarada inapta conforme este artigo pode regularizar sua situação mediante alteração do seu endereço no CNPJ, na forma prevista nos arts. 12 a 14, ou restabelecimento de sua inscrição, conforme previsto no inciso I do § 1º do art. 32, caso o seu endereço continue o mesmo constante do CNPJ.\n\nSeção III\nDa Pessoa Jurídica com Irregularidade em Operações de Comércio Exterior\n\nArt. 40. No caso de pessoa jurídica com irregularidade em operações de comércio exterior, de que trata o inciso III do caput do art. 37, o procedimento administrativo de declaração de inaptidão deve ser iniciado por representação consubstanciada com elementos que evidenciem o fato descrito no citado inciso.\n\n§ 1º O titular da unidade da RFB com jurisdição para fiscalização dos tributos sobre comércio exterior que constatar o fato, acatando a representação citada no caput, deve intimar a pessoa jurídica, por meio de edital, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, a regularizar, no prazo de 30 (trinta) dias, sua situação ou contrapor as razões da representação, suspendendo sua inscrição no CNPJ a partir da publicação do edital.\n\n§ 2º Na falta de atendimento à intimação referida no § 1º, ou quando não acatadas as contraposições apresentadas, a inscrição no CNPJ deve ser declarada inapta pelo titular da unidade da RFB citado no § 1º, por meio de ADE publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\n§ 3º A pessoa jurídica declarada inapta na forma prevista no § 2º pode regularizar sua situação mediante comprovação da origem, da disponibilidade e da efetiva transferência, se for o caso, dos recursos empregados em operações do comércio exterior, na forma prevista em lei, e deve ser realizada pelo titular da unidade da RFB citado no § 1º, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.\n\nArt. 41. Para fins do disposto no inciso III do art. 37 e no § 3º do art. 40, a comprovação da origem de recursos provenientes do exterior dá-se mediante, cumulativamente:\n\nI - prova do regular fechamento da operação de câmbio, inclusive com a identificação da instituição financeira no exterior encarregada da remessa dos recursos para o País; e\n\nII - identificação do remetente dos recursos, assim entendido como a pessoa física ou jurídica titular dos recursos remetidos.\n\n§ 1º No caso de o remetente referido no inciso II do caput ser pessoa jurídica, devem ser também identificados os integrantes do seu QSA.\n\n§ 2º O disposto neste artigo aplica-se também na hipótese de que trata o § 2º do art. 23 do Decreto-Lei nº 1.455, de 7 de abril de 1976.\n\nSeção IV\nDos Efeitos da Inscrição Inapta\n\nArt. 42. Sem prejuízo das sanções previstas na legislação, a pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta é:\n\nI - incluída no Cadastro Informativo de Créditos Não Quitados do Setor Público Federal (Cadin);\n\nII - impedida de:\n\na) participar de concorrência pública;\n\nb) celebrar convênios, acordos, ajustes ou contratos que envolvam desembolso, a qualquer título, de recursos públicos, e respectivos aditamentos;\n\nc) obter incentivos fiscais e financeiros;\n\nd) realizar operações de crédito que envolvam a utilização de recursos públicos; e\n\ne) transacionar com estabelecimentos bancários, inclusive quanto à movimentação de contas-correntes, à realização de aplicações financeiras e à obtenção de empréstimos.\n\nParágrafo único. O impedimento de transacionar com estabelecimentos bancários a que se refere a alínea \"e\" do inciso II não se aplica a saques de importâncias anteriormente depositadas ou aplicadas.\n\nArt. 43. É considerado inidôneo, não produzindo efeitos tributários em favor de terceiro interessado, o documento emitido por pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta.\n\n§ 1º Os valores constantes do documento de que trata o caput não podem ser:\n\nI - deduzidos como custo ou despesa, na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL);\n\nII - deduzidos na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Físicas (IRPF);\n\nIII - utilizados como crédito do Imposto sobre Produtos Industrializados (IPI), e da Contribuição para o PIS/Pasep e da Contribuição para o Financiamento da Seguridade Social (Cofins) não cumulativos;\n\nIV - utilizados para justificar qualquer outra dedução, abatimento, redução, compensação ou exclusão relativa aos tributos administrados pela RFB.\n\n§ 2º Considera-se terceiro interessado, para fins do disposto neste artigo, a pessoa física ou a entidade beneficiária do documento.\n\n§ 3º O disposto neste artigo aplica-se em relação aos documentos emitidos:\n\nI - a partir da data de publicação do ADE a que se refere:\n\na) o art. 38, no caso de pessoa jurídica omissa de declarações e demonstrativos; e\n\nb) o art. 39, no caso de pessoa jurídica não localizada;\n\nII - desde a data de ocorrência do fato, no caso de pessoa jurídica com irregularidade em operações de comércio exterior, a que se refere o art. 40.\n\n§ 4º A inidoneidade de documentos em virtude de inscrição declarada inapta não exclui as demais formas de inidoneidade de documentos previstas na legislação, nem legitima os emitidos anteriormente às datas referidas no § 3º.\n\n§ 5º O disposto no § 1º não se aplica aos casos em que o terceiro interessado, adquirente de bens, direitos e mercadorias, ou o tomador de serviços, comprovar o pagamento do preço respectivo e o recebimento dos bens, direitos ou mercadorias ou a utilização dos serviços.\n\n§ 6º A entidade que não efetuar a comprovação de que trata o § 5º sujeita-se ao pagamento do Imposto sobre a Renda Retido na Fonte (IRRF), na forma do art. 61 da Lei nº8.981, de 20 de janeiro de 1995, calculado sobre o valor pago constante dos documentos.\n\nArt. 44. A pessoa jurídica com inscrição declarada inapta tem sua inscrição enquadrada na situação cadastral ativa após regularizar todas as situações que motivaram a inaptidão.\n\nSeção V\nDos Créditos Tributários da Pessoa Jurídica Inapta\n\nArt. 45. O encaminhamento, para fins de inscrição e execução, de créditos tributários relativos à pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta, nas hipóteses previstas nos incisos I, II e III do caput do art. 37, deve ser efetuado com a indicação dessa circunstância e da identificação dos responsáveis tributários correspondentes."
+    },
+    "attributes" : [ "external" ],
+    "id" : "76",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "161",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "164",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIMPLES_Not_Optant",
+      "pt" : "Não optante pelo SIMPLES",
+      "en" : "Not optant for SIMPLES"
+    },
+    "attributes" : [ "external" ],
+    "id" : "84",
+    "superClasses" : [ "42" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "175",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "177",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "179",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "181",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "183",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Reason_Cadastral_Situation",
+      "pt" : "Motivo de situação cadastral",
+      "en" : "Reason registration situation"
+    },
+    "comment" : {
+      "pt" : "Motivo da situação cadastral, quando diferente de ativa"
+    },
+    "attributes" : [ "external" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "186",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+    "instances" : 0,
+    "annotations" : {
+      "situation_code" : [ {
+        "identifier" : "situation_code",
+        "language" : "undefined",
+        "value" : "03",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SUSPENDED",
+      "pt" : "Suspensa"
+    },
+    "comment" : {
+      "pt" : "CAPÍTULO III\nDA SITUAÇÃO CADASTRAL SUSPENSA\n\nArt. 36. A inscrição no CNPJ é enquadrada na situação cadastral suspensa quando, conforme o caso, a entidade ou o estabelecimento filial:\n\nI - domiciliada no exterior, encontrando-se na situação cadastral ativa, deixar de ser alcançada, temporariamente, pelas situações previstas no inciso XV do art. 4º;\n\nII - solicitar baixa de sua inscrição no CNPJ, enquanto a solicitação estiver em análise ou caso seja indeferida;\n\nIII - for intimada na forma prevista no § 1º do art. 29;\n\nIV - for intimada na forma prevista no § 1º do art. 40;\n\nV - apresentar indício de interposição fraudulenta de sócio ou titular, na situação prevista no § 2º do art. 3º do Decreto nº 3.724, de 10 de janeiro de 2001, enquanto o respectivo processo estiver em análise;\n\nVI - interromper temporariamente suas atividades;\n\nVII - não reconstituir, no prazo de 210 (duzentos e dez) dias, a pluralidade de sócios do seu QSA;\n\nVIII - tiver sua suspensão determinada por ordem judicial; ou\n\nIX - possuir inconsistência(s) em seus dados cadastrais.\n\n§ 1º A suspensão da inscrição no CNPJ nas hipóteses previstas nos incisos I e VI do caput ocorre por solicitação da entidade ou do estabelecimento filial, conforme o caso, mediante comunicação da interrupção temporária de suas atividades, na forma prevista nos arts. 12 a 14.\n\n§ 2º A inconsistência cadastral a que se refere o inciso IX do caput caracteriza-se, conforme o caso, pela:\n\nI - ausência do representante a que se refere o art. 7º ou quando sua inscrição no CPF for inexistente ou estiver cancelada ou nula;\n\nII - ausência do QSA, no caso das entidades relacionadas no Anexo VI desta Instrução Normativa;\n\nIII - ausência do ente federativo responsável, no caso de entidades da Administração Pública;\n\nIV - ausência da atividade econômica;\n\nV - ausência ou invalidade do Código de Endereçamento Postal (CEP);\n\nVI - ausência do valor do capital social, para as entidades cuja informação é obrigatória; ou\n\nVII - incompatibilidade entre o Número de Inscrição no Registro de Empresa (Nire) e a natureza jurídica da entidade."
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "193",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "195",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabela-de-qualificacao-do-socio-representante.ods",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Qualification",
+      "pt" : "Qualificação",
+      "en" : "Representant qualification"
+    },
+    "comment" : {
+      "pt" : "Esta classe agrupa informações sobre a qualificação de um sócio ou representante de uma empresa.",
+      "en" : "This class groups information about the qualification of a partner or representative of a company."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "199",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "206",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "210",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "212",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "214",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "216",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "218",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "222",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "224",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "226",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Special_Situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=39909",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.contadores.cnt.br/noticias/artigos/2016/06/27/descomplicando-a-escrituracao-contabil-fiscal-ecf.html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Special_Situation",
+      "pt" : "Situação especial",
+      "en" : "Special situation"
+    },
+    "comment" : {
+      "pt" : "São os casos de: Extinção; Fusão; Incorporação/Incorporada; IncorporaçãoIncorporadora; Cisão total; Cisão parcial; Desenquadramento de Imune/Isenta; Inclusão no Simples nacional."
+    },
+    "attributes" : [ "external" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Country",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "pt" : "País",
+      "en" : "Country"
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "230",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "233",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+    "instances" : 0,
+    "annotations" : {
+      "situation_code" : [ {
+        "identifier" : "situation_code",
+        "language" : "undefined",
+        "value" : "08",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DOWN",
+      "pt" : "Baixada"
+    },
+    "comment" : {
+      "pt" : "CAPÍTULO V\nDA SITUAÇÃO CADASTRAL BAIXADA\n\nArt. 46. A inscrição no CNPJ é enquadrada na situação cadastral baixada quando a entidade ou o estabelecimento filial, conforme o caso, tiver sua solicitação de baixa deferida, na forma prevista no art. 25, ou tiver sua inscrição baixada de ofício, conforme o art. 27."
+    },
+    "attributes" : [ "external" ],
+    "id" : "68",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Option_SIMPLES",
+      "pt" : "Opção pelo regime SIMPLES",
+      "en" : "Option for SIMPLES"
+    },
+    "subClasses" : [ "41", "84", "66" ],
+    "comment" : {
+      "pt" : "Indica se a empresa é optante pelo regime tributário SIMPLES Nacional"
+    },
+    "attributes" : [ "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cadastral_Situation",
+      "pt" : "Situação Cadastral",
+      "en" : "Cadastral situation"
+    },
+    "subClasses" : [ "68", "70", "72", "74", "76" ],
+    "comment" : {
+      "pt" : "A situação cadastral de CNPJ é o registro da empresa junto à Receita Federal. A partir da análise, é possível saber qual é o status do negócio, se há processos judiciais ou dívidas tributárias.",
+      "en" : "The CNPJ status is the company's registration with the Federal Revenue Service. From the analysis, it is possible to know what the status of the business is, whether there are lawsuits or tax debts."
+    },
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Group",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Group",
+      "pt" : "Grupo empresarial",
+      "en" : "Group"
+    },
+    "comment" : {
+      "pt" : "Esta coleção representa um grupo de Organizações (Pessoas Jurídicas) reunidas. Isto pode decorrer por conta de um acordo comercial, compra, fusão, etc.",
+      "en" : "This collection represents a group of Organizations (Legal Entities) brought together. This may be due to a commercial agreement, purchase, merger, etc."
+    },
+    "attributes" : [ "external" ],
+    "id" : "78",
+    "superClasses" : [ "79" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/City",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "City",
+      "pt" : "Municipio",
+      "en" : "City"
+    },
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "43" ]
+  } ],
+  "property" : [ {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "115",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "120",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "134",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "135",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "136",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "137",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "142",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "145",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "146",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "147",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "154",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "155",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "162",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "163",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "166",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "167",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "169",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "117",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "173",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "174",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "176",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "178",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "180",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "182",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "184",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "187",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "188",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "189",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "190",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "191",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "192",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "196",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "197",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "198",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "200",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "201",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "202",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "203",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "205",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "207",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "208",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "211",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "213",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "215",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "217",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "219",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "220",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "221",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "223",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "225",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "227",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "228",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "229",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "231",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "232",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "234",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "235",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "236",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "237",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "238",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "239",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "240",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "241",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "242",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "243",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "244",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "245",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "246",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "247",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "248",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "249",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "250",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "251",
+    "type" : "owl:disjointWith"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_federative_unit",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "has_federative_unit",
+      "pt" : "tem unidade federativa",
+      "en" : "has federative unit"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#postal-code",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "postal-code",
+      "pt" : "código postal"
+    },
+    "domain" : "12",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "12",
+    "subproperty" : [ "15" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/activity_start_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "activity_start_date",
+      "pt" : "data de início das atividades do estabelecimento",
+      "en" : "establishment activity start date"
+    },
+    "domain" : "20",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/partner_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "partner_qualification",
+      "pt" : "qualificação do sócio",
+      "en" : "partner qualification"
+    },
+    "domain" : "31",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/contact_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "contact_number",
+      "pt" : "número de contato"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/address_complement",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "address_complement",
+      "pt" : "complemento do endereço",
+      "en" : "address complement"
+    },
+    "domain" : "9",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "name",
+      "pt" : "nome",
+      "en" : "name"
+    },
+    "domain" : "37",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/country_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "country_code",
+      "pt" : "código do país",
+      "en" : "country code"
+    },
+    "domain" : "44",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://purl.org/dc/elements/1.1/source",
+    "baseIri" : "http://purl.org/dc/elements/1.1",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "source"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "type_SIMPLES_option",
+      "pt" : "tipo da opção pelo simples"
+    },
+    "domain" : "42",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "city_code",
+      "pt" : "código da cidade",
+      "en" : "city code"
+    },
+    "domain" : "47",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "has_cadastral_situation",
+      "pt" : "tem situação cadastral",
+      "en" : "has cadastral situation"
+    },
+    "domain" : "20",
+    "attributes" : [ "external", "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/fax_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "fax_number",
+      "pt" : "número de fax"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/root_cnpj",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "root_cnpj",
+      "pt" : "CNPJ raíz"
+    },
+    "domain" : "60",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_establishment_type",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "has_establishment_type",
+      "pt" : "estabelecimento tem o tipo",
+      "en" : "has establishment type"
+    },
+    "domain" : "20",
+    "attributes" : [ "external", "object" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/address_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "address_number",
+      "pt" : "número do endereço",
+      "en" : "address number"
+    },
+    "cardinality" : "1",
+    "domain" : "9",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "64"
+  }, {
+    "range" : "42",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "55",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "55",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "55",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "55",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "55",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "79",
+    "domain" : "78",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "range" : "79",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "range" : "79",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "81"
+  }, {
+    "range" : "42",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "range" : "42",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_partnership",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "has_partnership",
+      "pt" : "tem sociedade",
+      "en" : "has partnership"
+    },
+    "domain" : "60",
+    "attributes" : [ "external", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#notation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "notation"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "86"
+  }, {
+    "range" : "43",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "43",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "range" : "43",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "43",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_size",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "has_size",
+      "pt" : "tem porte",
+      "en" : "has size"
+    },
+    "domain" : "20",
+    "attributes" : [ "external", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "43",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/phone_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "phone_number",
+      "pt" : "número de telefone",
+      "en" : "phone number"
+    },
+    "domain" : "12",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/person_identifier",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "person_identifier",
+      "pt" : "identificador de uma pessoa",
+      "en" : "person identifier"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/option_simples",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "option_simples",
+      "en" : "has option for SIMPLES"
+    },
+    "domain" : "60",
+    "comment" : {
+      "pt" : "tem opção pelo SIMPLES"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/country_code_RFB",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "country_code_RFB",
+      "pt" : "código de país da RFB",
+      "en" : "country code RFB"
+    },
+    "domain" : "44",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of_group",
+    "inverse" : "110",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "78",
+    "label" : {
+      "IRI-based" : "is_part_of_group",
+      "pt" : "Faz parte do Grupo",
+      "en" : "is parte of group"
+    },
+    "domain" : "60",
+    "attributes" : [ "external", "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/locality_type",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "locality_type",
+      "pt" : "tipo do logradouro",
+      "en" : "locality type"
+    },
+    "domain" : "46",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_legal_nature",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "112",
+    "label" : {
+      "IRI-based" : "has_legal_nature",
+      "pt" : "tem natureza jurídica",
+      "en" : "has legal nature"
+    },
+    "domain" : "79",
+    "attributes" : [ "external", "object" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_headquarters",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "has_headquarters",
+      "pt" : "tem matriz",
+      "en" : "has headquarters"
+    },
+    "superproperty" : [ "117" ],
+    "domain" : "60",
+    "attributes" : [ "asymmetric", "irreflexive", "functional", "external", "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/cnpj",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "cnpj",
+      "pt" : "Cadastro Nacional da Pessoa Jurídica"
+    },
+    "domain" : "12",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#email",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "email",
+      "undefined" : "e-mail"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/phone_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "phone_number",
+      "pt" : "número de telefone",
+      "en" : "phone number"
+    },
+    "domain" : "20",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/raw_cnae",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "raw_cnae",
+      "pt" : "CNAE"
+    },
+    "domain" : "124",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "45",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_economic_activity",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "has_economic_activity",
+      "pt" : "tem atividade econômica",
+      "en" : "has economic activity"
+    },
+    "domain" : "20",
+    "subproperty" : [ "128" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/cnae",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "122",
+    "label" : {
+      "IRI-based" : "cnae",
+      "pt" : "Classificação Nacional de Atividades Econômicas"
+    },
+    "domain" : "124",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "130"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/formated_cnae",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "formated_cnae",
+      "pt" : "formated CNAE"
+    },
+    "domain" : "124",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_MEI",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "4",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoMEI.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "is_MEI",
+      "pt" : "é MEI?",
+      "en" : "is MEI?"
+    },
+    "domain" : "60",
+    "comment" : {
+      "pt" : "O microempreendedor individual (MEI), que é o empresário individual que atende aos seguintes requisitos, cumulativamente:\n• ser optante pelo Simples Nacional e cumprir seus requisitos;\n\n• exercer profissionalmente atividade econômica organizada para a produção\nou a circulação de bens ou de serviços (art. 966 do Código Civil);\n\n• auferir receita bruta acumulada nos anos-calendário anterior e em curso de\naté R$ 81.000,00 (oitenta e um mil reais) – no caso de início de atividade, o\nlimite deve ser de R$ 6.750,00 (seis mil setecentos e cinquenta reais)\nmultiplicados pelo número de meses compreendidos entre o mês de início\nde atividade e o final do respectivo ano-calendário, consideradas as frações\nde meses como um mês inteiro;\n\n• exercer tão-somente as ocupações constantes do Anexo XI da Resolução\nCGSN nº 140, de 2018;\n\n• possuir um único estabelecimento;\n\n• não participar de outra empresa como titular, sócio ou administrador;\n\n• não contratar mais de um empregado, que só poderá receber 1 (um) salário\nmínimo previsto em lei federal ou estadual ou o piso salarial da categoria\nprofissional, definido em lei federal ou por convenção coletiva da categoria\n(art. 18-C da Lei Complementar nº 123, de 2006);\n\n• não guardar, cumulativamente, com o contratante do serviço, relação de\npessoalidade, subordinação e habitualidade;\n\n• não realizar suas atividades mediante cessão ou locação de mão de obra\n(art. 112, \"caput\", da Resolução CGSN nº 140, de 2018).\n\n(Base legal: art. 18-A da Lei Complementar nº 123, de 2006.)\n\nNotas:\n1. Só pode ser MEI o empresário individual. Nenhum tipo de sociedade pode\nser MEI.\n\n2. A “Empresa Individual de Responsabilidade Limitada” (Eireli) não é um\n“empresário individual” do art. 966 do Código Civil. Por isso, não pode ser\nMEI nem pode optar pelo Simei (art. 18-A, § 1º, da Lei Complementar nº\n123, de 2006).\n\n3. Não pode ser MEI o salão-parceiro de que trata a Lei nº 12.592, de 2012\n(art. 100, § 7º, da Resolução CGSN nº 140, de 2018).\n\n4. O limite anual de R$ 81.000,00 é um só, somando receitas de mercado\ninterno e externo. O MEI não tem limite estendido para exportação.",
+      "en" : "The individual microentrepreneur (MEI), who is the individual entrepreneur who meets the following requirements, cumulatively:\n• opting for Simples Nacional and fulfilling its requirements;\n\n• professionally carry out organized economic activity for the production\nor the circulation of goods or services (art. 966 of the Civil Code);\n\n• to obtain gross revenue accumulated in the previous and ongoing calendar years\nup to R $ 81,000.00 (eighty-one thousand reais) - in the case of start of activity, the\nlimit should be six thousand seven hundred and fifty reais (R $ 6,750.00)\nmultiplied by the number of months between the start month\nactivity and the end of the respective calendar year, considering the fractions\nmonths as a whole month;\n\n• exercise only the occupations listed in Annex XI of the Resolution\nCGSN No. 140, 2018;\n\n• have a single establishment;\n\n• not participating in another company as a holder, partner or administrator;\n\n• not hiring more than one employee, who can only receive 1 (one) salary\nminimum provided by federal or state law or the salary floor of the category\ndefined by federal law or by collective agreement of the category\n(Article 18-C of Complementary Law No. 123, 2006);\n\n• not to keep, cumulatively, with the service contractor, a relationship of\npersonality, subordination and habituality;\n\n• not carrying out its activities by assigning or hiring labor\n(art. 112, \"caput\", of Resolution CGSN nº 140, of 2018).\n\n(Legal basis: Article 18-A of Complementary Law No. 123, 2006.)\n\nGrades:\n1. Only the individual entrepreneur can be MEI. No type of society can\nbe MEI.\n\n2. The “Individual Limited Liability Company” (Eireli) is not a\n“Individual entrepreneur” of art. 966 of the Civil Code. So it cannot be\nMEI cannot even opt for Simei (art. 18-A, § 1, of Complementary Law nº\n123, of 2006).\n\n3. The partner salon referred to in Law No. 12,592, of 2012, cannot be MEI\n(art. 100, § 7, of Resolution CGSN nº 140, of 2018).\n\n4. The annual limit of R $ 81,000.00 is one, adding up market revenues\ninternal and external. The MEI has no extended export limit."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "132"
+  }, {
+    "range" : "46",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "10",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/country_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "country_code",
+      "pt" : "código do país",
+      "en" : "country code"
+    },
+    "domain" : "44",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "135"
+  }, {
+    "range" : "46",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_city",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "has_city",
+      "pt" : "tem cidade",
+      "en" : "has city"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/full_cnpj",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "full_cnpj"
+    },
+    "domain" : "20",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "138"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "cadastral_situation_date",
+      "pt" : "data da situação cadastral",
+      "en" : "date of cadastral situation"
+    },
+    "domain" : "55",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_subsidiary",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "has_subsidiary",
+      "pt" : "tem filial",
+      "en" : "has branch"
+    },
+    "superproperty" : [ "117" ],
+    "domain" : "60",
+    "attributes" : [ "asymmetric", "irreflexive", "external", "object" ],
+    "id" : "140"
+  }, {
+    "range" : "10",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "45",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "46",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
+  }, {
+    "range" : "45",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "44",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "145"
+  }, {
+    "range" : "46",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "146"
+  }, {
+    "range" : "10",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "147"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_partner",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "has_partner",
+      "en" : "has partner"
+    },
+    "domain" : "31",
+    "comment" : {
+      "pt" : "tem sócio"
+    },
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "150",
+    "label" : {
+      "IRI-based" : "city_code",
+      "pt" : "código da cidade",
+      "en" : "city code"
+    },
+    "domain" : "47",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "151"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "153",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "46",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "154"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_address",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "has_address",
+      "pt" : "tem endereço",
+      "en" : "has address"
+    },
+    "domain" : "20",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "155"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "code",
+      "pt" : "código",
+      "en" : "code"
+    },
+    "domain" : "12",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "156"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/cnae",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "cnae",
+      "pt" : "Classificação Nacional de Atividades Econômicas"
+    },
+    "domain" : "124",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_district",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "has_district",
+      "pt" : "tem bairro",
+      "en" : "has district"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/legal_nature_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "160",
+    "label" : {
+      "IRI-based" : "legal_nature_code",
+      "pt" : "código da natureza jurídica",
+      "en" : "legal nature code"
+    },
+    "domain" : "112",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "152",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "112",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "162"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/abbreviation_UF",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "164",
+    "label" : {
+      "IRI-based" : "abbreviation_UF",
+      "pt" : "abreviação da UF",
+      "en" : "abbreviation of the UF"
+    },
+    "domain" : "10",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "163"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "161",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "10",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "166"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/reason_situation_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "reason_situation_code",
+      "pt" : "código da razão da situação cadastral",
+      "en" : "reason cadastral situation code"
+    },
+    "domain" : "168",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "167"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_reason_situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "168",
+    "label" : {
+      "IRI-based" : "has_reason_situation",
+      "pt" : "tem razão de situação cadastral",
+      "en" : "has reason of cadastral situation"
+    },
+    "domain" : "55",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "169"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/contact_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "165",
+    "label" : {
+      "IRI-based" : "contact_number",
+      "pt" : "número de contato"
+    },
+    "domain" : "20",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_establishment",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "has_establishment",
+      "pt" : "tem estabelecimento"
+    },
+    "domain" : "60",
+    "subproperty" : [ "140", "116" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "117"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_country",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "has_country",
+      "pt" : "tem pais",
+      "en" : "has country"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "172"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code_RFB",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "city_code_RFB",
+      "pt" : "código da cidade pela RFB",
+      "en" : "city code RFB"
+    },
+    "domain" : "47",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "173"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#email",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "171",
+    "label" : {
+      "IRI-based" : "email",
+      "undefined" : "e-mail"
+    },
+    "domain" : "20",
+    "attributes" : [ "external", "datatype", "allValues" ],
+    "id" : "174"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/full_cnpj",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "175",
+    "label" : {
+      "IRI-based" : "full_cnpj"
+    },
+    "domain" : "20",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "176"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/trade_name",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "177",
+    "label" : {
+      "IRI-based" : "trade_name",
+      "pt" : "nome fantasia",
+      "en" : "trade name"
+    },
+    "domain" : "20",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "178"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/company_name",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "179",
+    "label" : {
+      "IRI-based" : "company_name",
+      "pt" : "razão social",
+      "en" : "company name"
+    },
+    "domain" : "20",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "180"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/fax_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "181",
+    "label" : {
+      "IRI-based" : "fax_number",
+      "pt" : "número de fax"
+    },
+    "domain" : "20",
+    "attributes" : [ "external", "datatype", "allValues" ],
+    "id" : "182"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/special_situation_start_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "183",
+    "label" : {
+      "IRI-based" : "special_situation_start_date",
+      "pt" : "data de início da situação especial",
+      "en" : "start date of special situation"
+    },
+    "domain" : "185",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "184"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/special_situation_description",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "186",
+    "label" : {
+      "IRI-based" : "special_situation_description",
+      "pt" : "descrição da situação especial",
+      "en" : "special situation description"
+    },
+    "domain" : "185",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "187"
+  }, {
+    "range" : "66",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/partnership_start_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "113",
+    "label" : {
+      "IRI-based" : "partnership_start_date",
+      "pt" : "data de início da sociedade",
+      "en" : "start date of partnership"
+    },
+    "domain" : "31",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "189"
+  }, {
+    "range" : "66",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "190"
+  }, {
+    "range" : "84",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "191"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/legal_nature_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "legal_nature_code",
+      "pt" : "código da natureza jurídica",
+      "en" : "legal nature code"
+    },
+    "domain" : "112",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "192"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "193",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "32",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "194"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "195",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "168",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "196"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/partner_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "partner_qualification",
+      "pt" : "qualificação do sócio",
+      "en" : "partner qualification"
+    },
+    "domain" : "31",
+    "attributes" : [ "someValues", "functional", "external", "object" ],
+    "id" : "197"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "representant_qualification",
+      "pt" : "qualificação do responsável",
+      "en" : "qualification of the responsible"
+    },
+    "domain" : "31",
+    "attributes" : [ "functional", "external", "object", "allValues" ],
+    "id" : "198"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "has_main_economic_activity",
+      "pt" : "tem atividade econômica principal",
+      "en" : "has main economic activity"
+    },
+    "superproperty" : [ "127" ],
+    "domain" : "20",
+    "attributes" : [ "external", "object" ],
+    "id" : "128"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "representant_qualification",
+      "pt" : "qualificação do responsável",
+      "en" : "qualification of the responsible"
+    },
+    "domain" : "95",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "200"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/code_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "code_qualification",
+      "pt" : "código da qualificação",
+      "en" : "qualification code"
+    },
+    "domain" : "32",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "201"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/code_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "199",
+    "label" : {
+      "IRI-based" : "code_qualification",
+      "pt" : "código da qualificação",
+      "en" : "qualification code"
+    },
+    "domain" : "32",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "202"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/share_capital",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "share_capital",
+      "pt" : "Capital Social",
+      "en" : "share capital"
+    },
+    "domain" : "20",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "203"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/code_size_company",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "code_size_company",
+      "pt" : "código do porte da empresa",
+      "en" : "size company code"
+    },
+    "domain" : "93",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "204"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/partnership_start_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "206",
+    "label" : {
+      "IRI-based" : "partnership_start_date",
+      "pt" : "data de início da sociedade",
+      "en" : "start date of partnership"
+    },
+    "domain" : "31",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "205"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_representant",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "has_representant",
+      "pt" : "tem representante",
+      "en" : "has representant"
+    },
+    "superproperty" : [ "14" ],
+    "domain" : "31",
+    "attributes" : [ "functional", "external", "object", "allValues" ],
+    "id" : "207"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "date_option_for_SIMPLES",
+      "pt" : "data de opção pelo regime SIMPLES",
+      "en" : "date of option for SIMPLES regime"
+    },
+    "domain" : "42",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "208"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_locality",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "has_locality",
+      "pt" : "tem logradouro",
+      "en" : "has locality"
+    },
+    "domain" : "9",
+    "attributes" : [ "external", "object" ],
+    "id" : "209"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/locality_type",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "locality_type",
+      "pt" : "tipo do logradouro",
+      "en" : "locality type"
+    },
+    "domain" : "46",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "211"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "212",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "43",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "213"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/root_cnpj",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "214",
+    "label" : {
+      "IRI-based" : "root_cnpj",
+      "pt" : "CNPJ raíz"
+    },
+    "domain" : "60",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "215"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "216",
+    "label" : {
+      "IRI-based" : "name",
+      "pt" : "nome",
+      "en" : "name"
+    },
+    "domain" : "37",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "217"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "representant_qualification",
+      "pt" : "qualificação do responsável",
+      "en" : "qualification of the responsible"
+    },
+    "domain" : "60",
+    "attributes" : [ "someValues", "functional", "external", "object" ],
+    "id" : "219"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/representant_qualification",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "representant_qualification",
+      "pt" : "qualificação do responsável",
+      "en" : "qualification of the responsible"
+    },
+    "domain" : "60",
+    "attributes" : [ "functional", "external", "object", "allValues" ],
+    "id" : "220"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/address_number",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "222",
+    "label" : {
+      "IRI-based" : "address_number",
+      "pt" : "número do endereço",
+      "en" : "address number"
+    },
+    "domain" : "9",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "221"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "224",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "9",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "223"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "226",
+    "label" : {
+      "IRI-based" : "cadastral_situation_date",
+      "pt" : "data da situação cadastral",
+      "en" : "date of cadastral situation"
+    },
+    "domain" : "55",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "225"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_reason_situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "168",
+    "label" : {
+      "IRI-based" : "has_reason_situation",
+      "pt" : "tem razão de situação cadastral",
+      "en" : "has reason of cadastral situation"
+    },
+    "domain" : "55",
+    "attributes" : [ "someValues", "functional", "external", "object" ],
+    "id" : "227"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "148",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "47",
+    "attributes" : [ "someValues", "external", "datatype" ],
+    "id" : "228"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#postal-code",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "230",
+    "label" : {
+      "IRI-based" : "postal-code",
+      "pt" : "código postal"
+    },
+    "domain" : "9",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "229"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_foreign",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "is_foreign",
+      "pt" : "É um estrangeiro?",
+      "en" : "is foreign?"
+    },
+    "domain" : "79",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "231"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_headquarters",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "has_headquarters",
+      "pt" : "tem matriz",
+      "en" : "has headquarters"
+    },
+    "superproperty" : [ "117" ],
+    "domain" : "60",
+    "attributes" : [ "someValues", "asymmetric", "irreflexive", "functional", "external", "object" ],
+    "id" : "232"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/member",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "member",
+      "pt" : "tem membro"
+    },
+    "domain" : "78",
+    "attributes" : [ "external", "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/company_name",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "218",
+    "label" : {
+      "IRI-based" : "company_name",
+      "pt" : "razão social",
+      "en" : "company name"
+    },
+    "domain" : "60",
+    "attributes" : [ "someValues", "functional", "external", "datatype" ],
+    "id" : "234"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "date_exclusion_for_SIMPLES",
+      "pt" : "data de exclusão do regime SIMPLES",
+      "en" : "date of exclusion for SIMPLES regime"
+    },
+    "domain" : "42",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "235"
+  }, {
+    "range" : "37",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "236"
+  }, {
+    "range" : "76",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "74",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_special_situation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "185",
+    "label" : {
+      "IRI-based" : "has_special_situation",
+      "pt" : "tem situação especial",
+      "en" : "has special situation"
+    },
+    "domain" : "60",
+    "attributes" : [ "external", "object" ],
+    "id" : "239"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#email",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "233",
+    "label" : {
+      "IRI-based" : "email",
+      "undefined" : "e-mail"
+    },
+    "domain" : "79",
+    "attributes" : [ "external", "datatype", "allValues" ],
+    "id" : "240"
+  }, {
+    "range" : "76",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "241"
+  }, {
+    "range" : "76",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "242"
+  }, {
+    "range" : "74",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "243"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_representant",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "has_representant",
+      "pt" : "tem representante",
+      "en" : "has representant"
+    },
+    "superproperty" : [ "14" ],
+    "domain" : "97",
+    "attributes" : [ "functional", "external", "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/cpf",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "cpf",
+      "pt" : "Cadastro de Pessoa Física"
+    },
+    "domain" : "37",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "244"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#country-name",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "country-name",
+      "pt" : "nome do país",
+      "en" : "country name"
+    },
+    "domain" : "44",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "245"
+  }, {
+    "range" : "70",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
+  }, {
+    "range" : "70",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
+  }, {
+    "range" : "68",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "76",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/special_situation_start_date",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "special_situation_start_date",
+      "pt" : "data de início da situação especial",
+      "en" : "start date of special situation"
+    },
+    "domain" : "185",
+    "attributes" : [ "functional", "external", "datatype" ],
+    "id" : "250"
+  }, {
+    "range" : "74",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
+  } ]
+}

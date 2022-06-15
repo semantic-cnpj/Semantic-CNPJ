@@ -1,0 +1,1897 @@
+@prefix : <http://www.sefaz.ma.gov.br/CADSEFAZ/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcad: <http://www.sefaz.ma.gov.br/ontology/> .
+@base <http://www.sefaz.ma.gov.br/CADSEFAZ/ontology/> .
+
+<http://www.sefaz.ma.gov.br/CADSEFAZ/ontology/> rdf:type owl:Ontology ;
+                                                 rdfs:comment "Cadastro de Dados de Contribuintes do Estado do Maranhão"@pt ,
+                                                              """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Valeria Priscilla Monteiro Fernandes
+valeria.fernandes@sefaz.ma.gov.br
+
+Adriano Dos Santos Rego
+adriano.rego@sefaz.ma.gov.br
+
+
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
+                                                              "Ontologia de Situação Cadastral da Secretaria da Fazenda do Estado do Maranhão (SEFAZ-MA)"@pt ,
+                                                              "Ontology of the Taxpayer Data Register of the State of Maranhão"@en ;
+                                                 rdfs:label "Ontologia de Cadastro da SEFAZ-MA"@pt ;
+                                                 owl:versionInfo "1.0"@pt .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://rs.tdwg.org/ontology/voc/Person#birthdate
+<http://rs.tdwg.org/ontology/voc/Person#birthdate> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:domain foaf:Person .
+
+
+###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minCardinality
+owl:minCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
+                                              rdfs:range xsd:double ;
+                                              rdfs:domain vcad:Address ,
+                                                          <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty ;
+          rdfs:range rdfs:Literal ,
+                     xsd:string ;
+          rdfs:domain vcad:LegalRepresentant ,
+                      owl:Thing ,
+                      foaf:Agent .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/excluded_by
+vcad:excluded_by rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain vcad:Disabled_Event ;
+                 rdfs:range vcad:User ;
+                 rdfs:label "excluded by"@en ,
+                            "excluso por"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_address
+vcad:has_address rdf:type owl:ObjectProperty ,
+                          owl:AsymmetricProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain vcad:Establishment ,
+                             foaf:Agent ;
+                 rdfs:range vcad:Address ;
+                 rdfs:label "has address"@en ,
+                            "tem endereço"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_administrative_division
+vcad:has_administrative_division rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf vcad:is_administrative_division_of ;
+                                 rdf:type owl:SymmetricProperty ;
+                                 rdfs:domain foaf:Organization ;
+                                 rdfs:label "has administrative division"@en ,
+                                            "tem divisão administrativa"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation
+vcad:has_cadastral_situation rdf:type owl:ObjectProperty ,
+                                      owl:AsymmetricProperty ;
+                             rdfs:domain vcad:Establishment ;
+                             rdfs:range vcad:SEFAZ_CadastralSituation ;
+                             rdfs:label "has cadastral situation"@en ,
+                                        "tem situação cadastral"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_city
+vcad:has_city rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:label "has city"@en ,
+                         "tem cidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_compliance_level
+vcad:has_compliance_level rdf:type owl:ObjectProperty ,
+                                   owl:AsymmetricProperty ;
+                          rdfs:domain foaf:Organization ;
+                          rdfs:range vcad:ComplianceLevel ;
+                          rdfs:label "has compliance level"@en ,
+                                     "tem nivel cumprimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_consumer_unit
+vcad:has_consumer_unit rdf:type owl:ObjectProperty ,
+                                owl:SymmetricProperty ;
+                       rdfs:domain vcad:Establishment ;
+                       rdfs:label "has consumer unit"@en ,
+                                  "tem unidade consumidora"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_contact
+vcad:has_contact rdf:type owl:ObjectProperty ,
+                          owl:AsymmetricProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain foaf:Agent ;
+                 rdfs:label "has contact"@en ,
+                            "tem contato"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_deed
+vcad:has_deed rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain vcad:TaxBook ;
+              rdfs:range vcad:Deed ;
+              rdfs:label "has deed"@en ,
+                         "tem escritura"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_discharge
+vcad:has_discharge rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ;
+                   rdfs:domain vcad:SEFAZ_CadastralSituation ,
+                               foaf:Organization ;
+                   rdfs:range vcad:Reason_Cadastral_Situation ;
+                   rdfs:label "has discharge"@en ,
+                              "tem baixa"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_economic_activity
+vcad:has_economic_activity rdf:type owl:ObjectProperty ;
+                           rdfs:domain foaf:Organization ;
+                           rdfs:label "has economic activity"@en ,
+                                      "tem atividade econômica"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_establishment
+vcad:has_establishment rdf:type owl:ObjectProperty ;
+                       owl:inverseOf vcad:is_establishment_of ;
+                       rdf:type owl:AsymmetricProperty ;
+                       rdfs:domain vcad:Partner ,
+                                   foaf:Organization ;
+                       rdfs:range vcad:Establishment .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_establishment_type
+vcad:has_establishment_type rdf:type owl:ObjectProperty ,
+                                     owl:AsymmetricProperty ,
+                                     owl:TransitiveProperty ;
+                            rdfs:domain vcad:Establishment ;
+                            rdfs:label "has establishment type"@en ,
+                                       "tem tipo de estabelecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_fiscal_situation
+vcad:has_fiscal_situation rdf:type owl:ObjectProperty ,
+                                   owl:AsymmetricProperty ;
+                          rdfs:domain foaf:Organization ;
+                          rdfs:range vcad:FiscalSituation ;
+                          rdfs:label "has fiscal situation"@en ,
+                                     "tem situação fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_fiscal_unit
+vcad:has_fiscal_unit rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain vcad:Establishment ;
+                     rdfs:range vcad:FiscalUnit ;
+                     rdfs:label "has fiscal unit"@en ,
+                                "tem unidades fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_functional_situation
+vcad:has_functional_situation rdf:type owl:ObjectProperty ,
+                                       owl:AsymmetricProperty ;
+                              rdfs:domain vcad:Partner ;
+                              rdfs:range vcad:FunctionalSituation ;
+                              rdfs:label "has functional situation"@en ,
+                                         "tem situação funcional"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_head_office
+vcad:has_head_office rdf:type owl:ObjectProperty ;
+                     owl:inverseOf vcad:is_head_office_of_subsidiary ;
+                     rdf:type owl:TransitiveProperty ;
+                     rdfs:label "has head office"@en ,
+                                "tem matriz"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_legal_obligations
+vcad:has_legal_obligations rdf:type owl:ObjectProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain vcad:Establishment ;
+                           rdfs:range vcad:Legal_Obligations .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_nacionality
+vcad:has_nacionality rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:label "has nacionality"@en ,
+                                "tem nacionalidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_part
+vcad:has_part rdf:type owl:ObjectProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_payment_regime
+vcad:has_payment_regime rdf:type owl:ObjectProperty ,
+                                 owl:AsymmetricProperty ;
+                        rdfs:domain vcad:Establishment ,
+                                    foaf:Person ;
+                        rdfs:range vcad:Tipo_Regime_Tributario ;
+                        rdfs:label "has payment regime"@en ,
+                                   "tem regime pagamento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_periodicity
+vcad:has_periodicity rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain vcad:Tax ;
+                     rdfs:range vcad:Periodicity ;
+                     rdfs:label "has periodicity"@en ,
+                                "tem periodicidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_reason_disabled
+vcad:has_reason_disabled rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ;
+                         rdfs:domain vcad:Disabled_Event ;
+                         rdfs:range vcad:Reason_Cadastral_Situation ;
+                         rdfs:label "has reason disabled"@en ,
+                                    "tem razão desabilitado"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_reason_disabled_tax_situation
+vcad:has_reason_disabled_tax_situation rdf:type owl:ObjectProperty ,
+                                                owl:AsymmetricProperty ;
+                                       rdfs:domain vcad:FiscalSituation ;
+                                       rdfs:range vcad:Reason_Cadastral_Situation ;
+                                       rdfs:label "has reason disabled tax situation"@en ,
+                                                  "tem razão desabilitado situação fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_register_source
+vcad:has_register_source rdf:type owl:ObjectProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:range vcad:User ;
+                         rdfs:label "has register source"@en ,
+                                    "tem_fonte_cadastro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_relation
+vcad:has_relation rdf:type owl:ObjectProperty ,
+                           owl:SymmetricProperty ;
+                  rdfs:range vcad:Partner .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_tax
+vcad:has_tax rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:domain vcad:Legal_Obligations ;
+             rdfs:range vcad:Tax ;
+             rdfs:label "has tax"@en ,
+                        "tem imposto"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_tax_book
+vcad:has_tax_book rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain vcad:Partner ;
+                  rdfs:range vcad:TaxBook ;
+                  rdfs:label "has fiscal book"@en ,
+                             "tem livro fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_tax_regime
+vcad:has_tax_regime rdf:type owl:ObjectProperty ,
+                             owl:AsymmetricProperty ;
+                    rdfs:domain foaf:Organization ;
+                    rdfs:label "has tax regime"@en ,
+                               "tem regime fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_uf
+vcad:has_uf rdf:type owl:ObjectProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_user
+vcad:has_user rdf:type owl:ObjectProperty ;
+              owl:inverseOf vcad:updated_by ;
+              rdf:type owl:AsymmetricProperty ;
+              rdfs:range vcad:User ;
+              rdfs:label "has user"@en ,
+                         "tem usuário"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/included_by
+vcad:included_by rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain vcad:Disabled_Event ;
+                 rdfs:range vcad:User ;
+                 rdfs:label "included by"@en ,
+                            "incluso por"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_administrative_division_of
+vcad:is_administrative_division_of rdf:type owl:ObjectProperty ;
+                                   rdfs:range foaf:Organization ;
+                                   rdfs:label "is administrative division of"@en ,
+                                              "é divisão administrativa de"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_establishment_of
+vcad:is_establishment_of rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain vcad:Establishment ;
+                         rdfs:range vcad:Partner ,
+                                    foaf:Organization .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_head_office_of_subsidiary
+vcad:is_head_office_of_subsidiary rdf:type owl:ObjectProperty ,
+                                           owl:AsymmetricProperty ,
+                                           owl:TransitiveProperty ;
+                                  rdfs:label "is head office of subsidiary"@en ,
+                                             "é matriz da filial"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of
+vcad:is_part_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/stored_in_establishment
+vcad:stored_in_establishment rdf:type owl:ObjectProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain vcad:TaxBook ;
+                             rdfs:range vcad:Establishment .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/tem_qualificacao_socio
+vcad:tem_qualificacao_socio rdf:type owl:ObjectProperty ,
+                                     owl:AsymmetricProperty ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( vcad:Partner
+                                                        foaf:Organization
+                                                        foaf:Person
+                                                      )
+                                        ] ;
+                            rdfs:range vcad:Qualification ;
+                            rdfs:label "has relation type"@en ,
+                                       "tem qualificação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/tem_representante
+vcad:tem_representante rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ,
+                                owl:AsymmetricProperty ;
+                       rdfs:range vcad:LegalRepresentant ;
+                       rdfs:label "has legal representative"@en ,
+                                  "has representant"@en ,
+                                  "tem representante"@pt ,
+                                  "tem representante legal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/tem_situacao_obrigacao
+vcad:tem_situacao_obrigacao rdf:type owl:ObjectProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain vcad:Legal_Obligations ;
+                            rdfs:range vcad:SEFAZ_CadastralSituation ;
+                            rdfs:label "has obligation situation"@en ,
+                                       "tem situacao obrigacao"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/tem_sociedade
+vcad:tem_sociedade rdf:type owl:ObjectProperty ,
+                            owl:TransitiveProperty ;
+                   rdfs:domain foaf:Organization ;
+                   rdfs:range vcad:Partnership ;
+                   rdfs:label "has society type"@en ,
+                              "tem tipo de sociedade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/tem_tipo_contribuicao
+vcad:tem_tipo_contribuicao rdf:type owl:ObjectProperty ;
+                           rdfs:domain vcad:Establishment ,
+                                       foaf:Person ;
+                           rdfs:range vcad:Tipo_Contribuicao ;
+                           rdfs:label "tem tipo contribuicao"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/update
+vcad:update rdf:type owl:ObjectProperty ;
+            owl:inverseOf vcad:updated_by ;
+            rdf:type owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:label "atualiza"@pt ,
+                       "update"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/updated_by
+vcad:updated_by rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ;
+                rdfs:range vcad:User ;
+                rdfs:label "atualizado por"@pt ,
+                           "updated by"@en .
+
+
+###  http://www.w3.org/ns/org#linkedTo
+<http://www.w3.org/ns/org#linkedTo> rdf:type owl:ObjectProperty ,
+                                             owl:ReflexiveProperty ;
+                                    rdfs:domain foaf:Organization ;
+                                    rdfs:range foaf:Organization ;
+                                    rdfs:comment "2ã¤ã®çµ„ç¹”ã®ä»»æ„ã®é–¢ä¿‚ã‚’ç¤ºã—ã¾ã™ã€‚"@ja ,
+                                                 "Indica una relazione arbitraria tra due organizzazioni. Ad esempio, specializzazioni di questa proprietÃ  possono essere usate per denotare relazioni particolari tipo il finanziamento o la fornitura."@it ,
+                                                 "Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships."@en ,
+                                                 "Indique une relation arbitraire entre deux Organisations. Des spÃ©cialisations peuvent Ãªtre utilisÃ©es pour, par exemple, qualifier une relation de fournisseur ou de financeur."@fr ,
+                                                 "RelaciÃ³n arbitraria entre dos organizaciones. Las especializaciones de esta relaciÃ³n se pueden utilizar para denotar relaciones de financiaciÃ³n o suministro, entre otras."@es ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+                                    rdfs:label "collegato a"@it ,
+                                               "estÃ¡ relacionada con"@es ,
+                                               "estÃ¡ relacionado con"@es ,
+                                               "linked to"@en ,
+                                               "relaciona-se a"@pt ,
+                                               "reliÃ© Ã "@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://id.vcad.gov/ontologies/bibframe/code
+<http://id.vcad.gov/ontologies/bibframe/code> rdf:type owl:DatatypeProperty ;
+                                              rdfs:range rdfs:Literal ;
+                                              <http://purl.org/dc/elements/1.1/modified> "2016-04-21 (New)" ;
+                                              rdfs:comment "String of characters that serves as a code representing information." ;
+                                              rdfs:label "Code" .
+
+
+###  http://rs.tdwg.org/ontology/voc/Person#deathdate
+<http://rs.tdwg.org/ontology/voc/Person#deathdate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/abreviacao_UF
+vcad:abreviacao_UF rdf:type owl:DatatypeProperty ;
+                   rdfs:domain vcad:Federative_Unit ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/accountant_crc
+vcad:accountant_crc rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain vcad:Accountant ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "accountant crc"@en ,
+                               "crc do contador"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/area
+vcad:area rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:double .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/beginning_deed
+vcad:beginning_deed rdf:type owl:DatatypeProperty ;
+                    rdfs:domain vcad:Deed ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:label "beginning_deed"@en ,
+                               "data de inicio escritura"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date
+vcad:cadastral_situation_date rdf:type owl:DatatypeProperty ;
+                              rdfs:domain vcad:SEFAZ_CadastralSituation ;
+                              rdfs:range xsd:dateTime ;
+                              rdfs:label "cadastral situation date"@en ,
+                                         "data situação cadastral"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/caixa_postal
+vcad:caixa_postal rdf:type owl:DatatypeProperty ;
+                  rdfs:domain vcad:Address ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnpj
+vcad:cnpj rdf:type owl:DatatypeProperty ;
+          rdfs:domain vcad:Representante_Legal_Juridico ,
+                      foaf:Organization ;
+          rdfs:range xsd:string ;
+          rdfs:label "cnpj"@en ,
+                     "cnpj"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnpj_raiz
+vcad:cnpj_raiz rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf vcad:cnpj .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_UF
+vcad:codigo_UF rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <http://id.vcad.gov/ontologies/bibframe/code> ;
+               rdfs:range xsd:integer ;
+               rdfs:label "codigo da unidade federativa"@pt ,
+                          "federative unit code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_cidade
+vcad:codigo_cidade rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <http://id.vcad.gov/ontologies/bibframe/code> ;
+                   rdfs:range xsd:integer ;
+                   rdfs:label "city code"@en ,
+                              "código da cidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_imposto
+vcad:codigo_imposto rdf:type owl:DatatypeProperty ;
+                    rdfs:domain vcad:Tax ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_nivel_cumprimento
+vcad:codigo_nivel_cumprimento rdf:type owl:DatatypeProperty ;
+                              rdfs:domain vcad:ComplianceLevel ;
+                              rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_periodicidade
+vcad:codigo_periodicidade rdf:type owl:DatatypeProperty ;
+                          rdfs:domain vcad:Periodicity ;
+                          rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_qualificacao
+vcad:codigo_qualificacao rdf:type owl:DatatypeProperty ;
+                         rdfs:domain vcad:Qualification ;
+                         rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_razao_situacao_cadastral
+vcad:codigo_razao_situacao_cadastral rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain vcad:Reason_Cadastral_Situation ;
+                                     rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_regime_mercantil
+vcad:codigo_regime_mercantil rdf:type owl:DatatypeProperty ;
+                             rdfs:label "codigo regime mercantil"@pt ,
+                                        "mechant regime code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_situacao_cadastral
+vcad:codigo_situacao_cadastral rdf:type owl:DatatypeProperty ;
+                               rdfs:domain vcad:SEFAZ_CadastralSituation ;
+                               rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_situacao_fiscal
+vcad:codigo_situacao_fiscal rdf:type owl:DatatypeProperty ;
+                            rdfs:domain vcad:FiscalSituation ;
+                            rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_contribuicao
+vcad:codigo_tipo_contribuicao rdf:type owl:DatatypeProperty ;
+                              rdfs:domain vcad:Tipo_Contribuicao ;
+                              rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_estabelecimento
+vcad:codigo_tipo_estabelecimento rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain vcad:Establishment_Type ,
+                                             vcad:Porte ;
+                                 rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_regime_tributario
+vcad:codigo_tipo_regime_tributario rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain vcad:Contribuinte_Geral ,
+                                               vcad:Tipo_Regime_Tributario ;
+                                   rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/complemento
+vcad:complemento rdf:type owl:DatatypeProperty ;
+                 rdfs:domain vcad:Address ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/country_code_IBGE
+vcad:country_code_IBGE rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cpf
+vcad:cpf rdf:type owl:DatatypeProperty ;
+         rdfs:domain vcad:Representante_Legal_Fisico ,
+                     foaf:Person ;
+         rdfs:range xsd:string ;
+         rdfs:label "cpf" .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_baixa
+vcad:data_baixa rdf:type owl:DatatypeProperty ;
+                rdfs:domain vcad:Reason_Cadastral_Situation ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "data da baixa"@pt ,
+                           "discharge date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_constituicao
+vcad:data_constituicao rdf:type owl:DatatypeProperty ;
+                       rdfs:domain foaf:Organization ;
+                       rdfs:range xsd:dateTime ,
+                                  xsd:string ;
+                       rdfs:label "constitution date"@en ,
+                                  "data de constituição"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_fechamento_fiscal
+vcad:data_fechamento_fiscal rdf:type owl:DatatypeProperty ;
+                            rdfs:label "closing fiscal date"@en ,
+                                       "data de fechamento fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_fechamento_liquido
+vcad:data_fechamento_liquido rdf:type owl:DatatypeProperty ;
+                             rdfs:domain foaf:Organization ;
+                             rdfs:range xsd:dateTime ;
+                             rdfs:label "data de fechamento líquido"@pt ,
+                                        "liquid closing date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_fim_obrigacao_legal
+vcad:data_fim_obrigacao_legal rdf:type owl:DatatypeProperty ;
+                              rdfs:domain vcad:Legal_Obligations ;
+                              rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_incorporacao
+vcad:data_incorporacao rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:label "data de incorporação"@pt ,
+                                  "incorporation date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_inicio_obrigacao_legal
+vcad:data_inicio_obrigacao_legal rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain vcad:Legal_Obligations ;
+                                 rdfs:range xsd:dateTime ;
+                                 rdfs:label "data inicio obrigação legal"@pt ,
+                                            "start date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_modificacao
+vcad:data_modificacao rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:dateTime ;
+                      rdfs:label "data de modificacao"@pt ,
+                                 "modification date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_razao_situacao_cadastral
+vcad:data_razao_situacao_cadastral rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain vcad:Reason_Cadastral_Situation ;
+                                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/data_situacao_cadastral
+vcad:data_situacao_cadastral rdf:type owl:DatatypeProperty ;
+                             rdfs:domain vcad:SEFAZ_CadastralSituation ;
+                             rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/ddd
+vcad:ddd rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/dddFax
+vcad:dddFax rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf vcad:ddd .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/descricao_situacao
+vcad:descricao_situacao rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/descricao_situacao_fiscal
+vcad:descricao_situacao_fiscal rdf:type owl:DatatypeProperty ;
+                               rdfs:domain vcad:FiscalSituation ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "descricao de situação fiscal"@pt ,
+                                          "fiscal situation description"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/discharge_reason
+vcad:discharge_reason rdf:type owl:DatatypeProperty ;
+                      rdfs:domain vcad:Reason_Cadastral_Situation ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "discharge reason"@en ,
+                                 "razão da baixa"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/division_number
+vcad:division_number rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:int ;
+                     rdfs:label "division number"@en ,
+                                "divisão administrativa"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/end_date
+vcad:end_date rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain vcad:Legal_Obligations ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "data fim"@pt ,
+                         "end date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/end_deed
+vcad:end_deed rdf:type owl:DatatypeProperty ;
+              rdfs:domain vcad:Deed ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "data final da escritura"@pt ,
+                         "end deed"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/end_participation
+vcad:end_participation rdf:type owl:DatatypeProperty ;
+                       rdfs:domain vcad:Partner ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:label "data final de participação"@pt ,
+                                  "end participation"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/establishment_type
+vcad:establishment_type rdf:type owl:DatatypeProperty ;
+                        rdfs:domain vcad:Establishment ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "establishment type"@en ,
+                                   "tipo de estabelecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/estimated_value
+vcad:estimated_value rdf:type owl:DatatypeProperty ;
+                     rdfs:domain foaf:Organization ;
+                     rdfs:range xsd:double ;
+                     rdfs:label "estimated value"@en ,
+                                "valor estimado"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/fax
+vcad:fax rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf vcad:numero_telefone ;
+         rdfs:range rdfs:Literal .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_establishment
+vcad:has_establishment rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_legal_obligations
+vcad:has_legal_obligations rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_relation
+vcad:has_relation rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/identity_number
+vcad:identity_number rdf:type owl:DatatypeProperty ;
+                     rdfs:domain foaf:Person ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "identity number"@en ,
+                                "número de identidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/inscricao_estadual
+vcad:inscricao_estadual rdf:type owl:DatatypeProperty ;
+                        rdfs:domain vcad:Disabled_Registry ,
+                                    vcad:Establishment ,
+                                    vcad:Legal_Obligations ,
+                                    vcad:Partner ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "inscrição estadual"@pt ,
+                                   "state registration"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/mailbox_code
+vcad:mailbox_code rdf:type owl:DatatypeProperty ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:label "codigo caixa postal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/nome_bairro
+vcad:nome_bairro rdf:type owl:DatatypeProperty ;
+                 rdfs:domain vcad:District ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "district name"@en ,
+                            "nome do bairro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/nome_fantasia
+vcad:nome_fantasia rdf:type owl:DatatypeProperty ;
+                   rdfs:domain vcad:Establishment ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "nome fantasia"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/numero_endereco
+vcad:numero_endereco rdf:type owl:DatatypeProperty ;
+                     rdfs:domain vcad:Address ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/numero_licenca
+vcad:numero_licenca rdf:type owl:DatatypeProperty ;
+                    rdfs:domain foaf:Organization ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "license number"@en ,
+                               "número da licença"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/numero_telefone
+vcad:numero_telefone rdf:type owl:DatatypeProperty ;
+                     rdfs:domain vcad:LegalRepresentant .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/observation
+vcad:observation rdf:type owl:DatatypeProperty ;
+                 rdfs:domain vcad:Disabled_Event ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "observacao"@pt ,
+                            "observation"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/percentual_participacao
+vcad:percentual_participacao rdf:type owl:DatatypeProperty ;
+                             rdfs:domain vcad:Partnership ;
+                             rdfs:range xsd:double ;
+                             rdfs:label "percentage participation"@en ,
+                                        "percentual de participação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/razao_social
+vcad:razao_social rdf:type owl:DatatypeProperty ;
+                  rdfs:domain foaf:Organization ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "razao_social"@pt ,
+                             "social name"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/reason
+vcad:reason rdf:type owl:DatatypeProperty ;
+            rdfs:domain vcad:Disabled_Event ;
+            rdfs:range xsd:string ;
+            rdfs:label "razão"@pt ,
+                       "reason"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/referencia
+vcad:referencia rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain vcad:Address ;
+                rdfs:range xsd:string ;
+                rdfs:label "reference"@en ,
+                           "referência"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/regime_code
+vcad:regime_code rdf:type owl:DatatypeProperty ;
+                 rdfs:domain vcad:Tipo_Regime_Tributario ;
+                 rdfs:range xsd:int ;
+                 rdfs:label "código do regime"@pt ,
+                            "regime code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/regime_name
+vcad:regime_name rdf:type owl:DatatypeProperty ;
+                 rdfs:domain vcad:Tipo_Regime_Tributario ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "nome do regime"@pt ,
+                            "regime name"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/siglas
+vcad:siglas rdf:type owl:DatatypeProperty ;
+            rdfs:domain foaf:Organization ;
+            rdfs:range xsd:string ;
+            rdfs:label "acronyms"@en ,
+                       "siglas"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/situation_name
+vcad:situation_name rdf:type owl:DatatypeProperty ;
+                    rdfs:domain vcad:SEFAZ_CadastralSituation ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "nome situação"@pt ,
+                               "situation name"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/start_participation
+vcad:start_participation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain vcad:Partner ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "inicio da participação"@pt ,
+                                    "start_participation"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/status_baixa
+vcad:status_baixa rdf:type owl:DatatypeProperty ;
+                  rdfs:domain vcad:SEFAZ_CadastralSituation ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/stored_in_establishment
+vcad:stored_in_establishment rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/street_name
+vcad:street_name rdf:type owl:DatatypeProperty ;
+                 rdfs:label "nome da rua"@pt ,
+                            "street name"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/telefone
+vcad:telefone rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf vcad:numero_telefone .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/tipo_logradouro
+vcad:tipo_logradouro rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain vcad:Locality ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:label "street type"@en ,
+                                "tipo logradouro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/valor_capital_social
+vcad:valor_capital_social rdf:type owl:DatatypeProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( vcad:Establishment
+                                                      vcad:Porte
+                                                    )
+                                      ] ;
+                          rdfs:range xsd:double ;
+                          rdfs:label "share capital value"@en ,
+                                     "valor capital social"@pt .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain vcad:Address ;
+                                               rdfs:range xsd:double ;
+                                               rdfs:label "longitude"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#email
+xml:email rdf:type owl:DatatypeProperty ;
+          rdfs:domain vcad:LegalRepresentant ,
+                      foaf:Agent ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "e-mail" .
+
+
+###  http://www.w3.org/2006/vcard/ns#postal-code
+xml:postal-code rdf:type owl:DatatypeProperty ;
+                rdfs:label "cep"@pt ,
+                           "postal-code"@en .
+
+
+###  http://xmlns.com/foaf/0.1/birthday
+foaf:birthday rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain foaf:Agent ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "The birthday of this Agent, represented in mm-dd string form, eg. '12-31'." ;
+              rdfs:isDefinedBy foaf: ;
+              rdfs:label "birthday" .
+
+
+###  http://xmlns.com/foaf/0.1/familyName
+foaf:familyName rdf:type owl:DatatypeProperty ;
+                rdfs:domain foaf:Person ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "The family name of some person." ;
+                rdfs:isDefinedBy foaf: ;
+                rdfs:label "familyName" .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+foaf:firstName rdf:type owl:DatatypeProperty ;
+               rdfs:domain foaf:Person ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "The first name of a person." ;
+               rdfs:isDefinedBy foaf: ;
+               rdfs:label "firstName" .
+
+
+###  http://xmlns.com/foaf/0.1/gender
+foaf:gender rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain foaf:Agent ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "The gender of this Agent (typically but not necessarily 'male' or 'female')." ;
+            rdfs:isDefinedBy foaf: ;
+            rdfs:label "gender" .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+foaf:lastName rdf:type owl:DatatypeProperty ;
+              rdfs:domain foaf:Person ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "The last name of a person." ;
+              rdfs:isDefinedBy foaf: ;
+              rdfs:label "lastName" .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/ACTIVE
+vcad:ACTIVE rdf:type owl:Class ;
+            rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+            rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: ATIVO"@pt ;
+            rdfs:label "ACTIVE"@en ,
+                       "ATIVO"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Accountant
+vcad:Accountant rdf:type owl:Class ;
+                rdfs:subClassOf vcad:Qualification ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty vcad:tem_qualificacao_socio ;
+                                                         owl:allValuesFrom vcad:Qualification
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty vcad:tem_qualificacao_socio ;
+                                                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:comment "Accountant is the professional of accounting science or accounting responsible for dealing with the entire financial, economic and patrimonial area of a legal entity or individual."@en ,
+                             "É o profissional da ciência contábil ou contabilidade responsável por lidar com toda a área financeira, econômica e patrimonial de uma pessoa jurídica ou pessoa física."@pt ;
+                rdfs:label "Accountant"@en ,
+                           "Contador"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Address
+vcad:Address rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty vcad:numero_telefone ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty rdfs:label ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty xml:postal-code ;
+                               owl:someValuesFrom xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty vcad:numero_telefone ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             rdfs:comment "Representa o Endereço de uma determinada Empresa, Estabelecimento ou Pessoa Física."@pt ;
+             rdfs:label "Address"@en ,
+                        "Endereço"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CANCELED
+vcad:CANCELED rdf:type owl:Class ;
+              rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+              rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: CANCELADO"@pt ;
+              rdfs:label "CANCELADO"@pt ,
+                         "CANCELED"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CONTRIBUINTE_ICMS
+vcad:CONTRIBUINTE_ICMS rdf:type owl:Class ;
+                       rdfs:subClassOf vcad:Tipo_Contribuicao .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CONTRIBUINTE_IPVA
+vcad:CONTRIBUINTE_IPVA rdf:type owl:Class ;
+                       rdfs:subClassOf vcad:Tipo_Contribuicao .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CONTRIBUINTE_NORMAL
+vcad:CONTRIBUINTE_NORMAL rdf:type owl:Class ;
+                         rdfs:subClassOf vcad:Contribuinte_Geral ,
+                                         vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CRAFT_DOWN
+vcad:CRAFT_DOWN rdf:type owl:Class ;
+                rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+                rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: BAIXA DE OFÍCIO"@pt ;
+                rdfs:label "BAIXA DE OFÍCIO"@pt ,
+                           "CRAFT DOWN"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/City
+vcad:City rdf:type owl:Class ;
+          rdfs:subClassOf vcad:Location ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty vcad:codigo_cidade ;
+                            owl:someValuesFrom owl:rational
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty rdfs:label ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty skos:prefLabel ;
+                            owl:someValuesFrom xsd:string
+                          ] ;
+          rdfs:comment "Nome da Cidade de acordo com a Localização.."@pt ;
+          rdfs:label "Cidade"@pt ,
+                     "City"@en ,
+                     "Municipio"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/ComplianceLevel
+vcad:ComplianceLevel rdf:type owl:Class ;
+                     rdfs:comment "Level of compliance with tax obligations, with the objective of providing the Government with resources for the achievement of public policies. In this sense, the achievement of better levels of compliance must be oriented to the analysis and observation of the known failures of compliance: omission and delay."@en ,
+                                  "Nível de cumprimento das obrigações tributárias, com o objetivo de prover ao Governo recursos para a consecução das políticas públicas. Nesse sentido, a obtenção de melhores níveis de cumprimento precisa estar orientada à análise e à observação das conhecidas falhas de cumprimento: omissão e morosidade."@pt ;
+                     rdfs:label "Compliance Level"@en ,
+                                "Nivel Cumprimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Contribuinte_Geral
+vcad:Contribuinte_Geral rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Class ;
+                                              owl:unionOf ( vcad:CONTRIBUINTE_NORMAL
+                                                            vcad:EXTRA_CADASTRO
+                                                            vcad:ISENTO
+                                                            vcad:PEM
+                                                            vcad:SIMEI
+                                                            vcad:SIMPLES_NACIONAL
+                                                            vcad:SUBSTITUTO_TRIBUTARIO
+                                                          )
+                                            ] ;
+                        owl:disjointWith vcad:NON_TAXPAYER ;
+                        rdfs:label "Contribuinte Geral"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Country
+vcad:Country rdf:type owl:Class ;
+             rdfs:subClassOf vcad:Location ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty vcad:country_code_IBGE ;
+                               owl:someValuesFrom xsd:string
+                             ] ;
+             rdfs:comment "Nome do País de acordo com a Localização.."@pt ;
+             rdfs:label "Country"@en ,
+                        "País"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/DOWN
+vcad:DOWN rdf:type owl:Class ;
+          rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+          rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: BAIXA"@pt ;
+          rdfs:label "BAIXA"@pt ,
+                     "DOWN"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/DOWN_PROCESS
+vcad:DOWN_PROCESS rdf:type owl:Class ;
+                  rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+                  rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: EM PROCESSO DE BAIXA"@pt ;
+                  rdfs:label "DOWN PROCESS"@en ,
+                             "PROCESSO DE BAIXA"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Deed
+vcad:Deed rdf:type owl:Class ;
+          rdfs:subClassOf foaf:Document ;
+          rdfs:comment "Escritura Fiscal é uma obrigação das empresas para com as autoridades fiscais de modo a prestar contas sobre seus faturamentos, movimentações bem como impostos pagos junto ao FISCO."@pt ;
+          rdfs:label "Deed"@en ,
+                     "Escritura"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Disabled_Event
+vcad:Disabled_Event rdf:type owl:Class ;
+                    rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty vcad:excluded_by ;
+                                                             owl:allValuesFrom vcad:User
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty vcad:excluded_by ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass vcad:User
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ,
+                                    [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                             owl:onProperty vcad:included_by ;
+                                                             owl:allValuesFrom vcad:User
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty vcad:included_by ;
+                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                             owl:onClass vcad:User
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty vcad:has_reason_disabled ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass vcad:Reason_Cadastral_Situation
+                                    ] ;
+                    rdfs:comment "Representa a ocorrência de Desabilitação / Baixa de Estabelecimentos e suas respectivas informações de início e fim."@pt ;
+                    rdfs:label "Disabled Event"@en ,
+                               "Evento Desabilitação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Disabled_Registry
+vcad:Disabled_Registry rdf:type owl:Class ;
+                       rdfs:comment "Registro de Ocorrência de Desabilitação de uma Determinada Empresa. Armazena uma cópia das informações da Empresa bem como a data e hora de desabilitação."@pt ;
+                       rdfs:label "Disabled Registry"@en ,
+                                  "Registro Desabilitado"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/District
+vcad:District rdf:type owl:Class ;
+              rdfs:subClassOf vcad:Location ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty vcad:has_part ;
+                                owl:someValuesFrom vcad:Locality
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty vcad:is_part_of ;
+                                owl:someValuesFrom vcad:City
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty rdfs:label ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "Bairro / Distrito de uma determinada Localização identificado em quase todos os casos pelo CEP."@pt ;
+              rdfs:label "Bairro"@pt ,
+                         "District"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/EXTRA_CADASTRO
+vcad:EXTRA_CADASTRO rdf:type owl:Class ;
+                    rdfs:subClassOf vcad:Contribuinte_Geral ,
+                                    vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Establishment
+vcad:Establishment rdf:type owl:Class ;
+                   rdfs:subClassOf vcad:Contribuinte_Geral ,
+                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty vcad:has_fiscal_unit ;
+                                                            owl:allValuesFrom vcad:FiscalUnit
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty vcad:has_fiscal_unit ;
+                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass vcad:FiscalSituation
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ,
+                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty vcad:has_legal_obligations ;
+                                                            owl:allValuesFrom vcad:Legal_Obligations
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty vcad:has_legal_obligations ;
+                                                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   rdfs:comment "Unidade Física de uma determinada Empresa, podendo ser do tipo Filial ou Matriz situada em uma Localização. Estabelecimentos são identificados através de um CNPJ e por sua inscrição estadual."@pt ;
+                   rdfs:label "Estabelecimento"@pt ,
+                              "Establishment"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Establishment_Type
+vcad:Establishment_Type rdf:type owl:Class ;
+                        rdfs:comment "Tipo de Estabelecimento – podendo ser dos tipos Matriz ou Único, Filial, Depósito, Outros e Principal."@pt ;
+                        rdfs:label "Establishment Type"@en ,
+                                   "Tipo de Estabelecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+vcad:Federative_Unit rdf:type owl:Class ;
+                     rdfs:subClassOf vcad:Location ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty vcad:is_part_of ;
+                                       owl:someValuesFrom vcad:Country
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty vcad:abreviacao_UF ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty rdfs:label ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty skos:hiddenLabel ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty skos:prefLabel ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ;
+                     rdfs:comment "Unidade Federativa de uma vcadalidade."@pt ;
+                     rdfs:label "Estado"@pt ,
+                                "State"@en ,
+                                "UF"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/FiscalSituation
+vcad:FiscalSituation rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty vcad:has_reason_disabled ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass vcad:Reason_Cadastral_Situation
+                                     ] ;
+                     rdfs:comment "Situação Fiscal de uma determinada Empresa, podendo estar Habilitado ou  Desabilitado."@pt ;
+                     rdfs:label "Fiscal Situation"@en ,
+                                "Situação Fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/FiscalUnit
+vcad:FiscalUnit rdf:type owl:Class ;
+                rdfs:subClassOf foaf:Organization ;
+                rdfs:comment "Representa uma Unidade Regional responsável por realizar a fiscalização de Contribuintes em uma determinada região."@pt ;
+                rdfs:label "Fiscal Unit"@en ,
+                           "Unidade Fiscal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/FunctionalSituation
+vcad:FunctionalSituation rdf:type owl:Class ;
+                         rdfs:comment "Situação Fiscal de uma determinada Empresa, podendo estar Habilitado ou  Desabilitado."@pt ;
+                         rdfs:label "Functional Situation"@en ,
+                                    "Situação Funcional"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/ISENTO
+vcad:ISENTO rdf:type owl:Class ;
+            rdfs:subClassOf vcad:Contribuinte_Geral ,
+                            vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/LegalRepresentant
+vcad:LegalRepresentant rdf:type owl:Class ;
+                       rdfs:comment "Responsável Legalmente pelos atos e atividades realizadas por uma Empresa."@pt ;
+                       rdfs:label "Legal Representant"@en ,
+                                  "Representante Legal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Legal_Obligations
+vcad:Legal_Obligations rdf:type owl:Class ;
+                       rdfs:subClassOf owl:Thing ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty vcad:has_tax ;
+                                         owl:allValuesFrom vcad:Tax
+                                       ] ;
+                       rdfs:comment "Conjunto de questões fiscais, trabalhistas, contábeis e de registro que são impostas a uma empresa. Obrigações legais também compreendem a manutenção de alvarás, certidões, peças contábeis, alterações contratuais, independentemente da modificação que ocorre na empresa."@pt ;
+                       rdfs:label "Legal Obligation"@en ,
+                                  "Obrigação Legal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Locality
+vcad:Locality rdf:type owl:Class ;
+              rdfs:subClassOf vcad:Location ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty vcad:is_part_of ;
+                                owl:someValuesFrom vcad:District
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty rdfs:label ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty xml:postal-code ;
+                                owl:someValuesFrom xsd:string
+                              ] ;
+              rdfs:comment "A Locality can be a street, avenue, court, etc."@en ,
+                           "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt ;
+              rdfs:label "Locality"@en ,
+                         "Logradouro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Location
+vcad:Location rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty rdfs:label ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+                                owl:someValuesFrom xsd:double
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+                                owl:someValuesFrom xsd:double
+                              ] ;
+              rdfs:comment "Class that represents the concept of a geographical Location."@en ,
+                           "Classe que representa o conceito de uma Localização geográfica."@pt ;
+              rdfs:label "Localização"@pt ,
+                         "Location"@en ,
+                         "vcadal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/NON_TAXPAYER
+vcad:NON_TAXPAYER rdf:type owl:Class ;
+                  rdfs:subClassOf vcad:Contribuinte_Geral ,
+                                  vcad:Tipo_Regime_Tributario ;
+                  rdfs:comment "Tipo Não Contribuinte – Que não exerce papel de contribuinte."@pt ;
+                  rdfs:label "NON TAXPAYER"@en ,
+                             "NÃO CONTRIBUINTE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/PEM
+vcad:PEM rdf:type owl:Class ;
+         rdfs:subClassOf vcad:Contribuinte_Geral ,
+                         vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Partner
+vcad:Partner rdf:type owl:Class ;
+             rdfs:subClassOf owl:Thing ,
+                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty vcad:has_tax_book ;
+                                                      owl:allValuesFrom vcad:TaxBook
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty vcad:has_tax_book ;
+                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass vcad:TaxBook
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:comment "Indivíduo que exerce função de Sócio em uma Empresa."@pt ;
+             rdfs:label "Partner"@en ,
+                        "Sócio"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Partnership
+vcad:Partnership rdf:type owl:Class ;
+                 rdfs:comment "Relação entre uma Empresa e um Sócio contendo informações de entrada/ saída do quadro de sócios."@pt ;
+                 rdfs:label "Partnership"@en ,
+                            "Sociedade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Periodicity
+vcad:Periodicity rdf:type owl:Class ;
+                 rdfs:comment "Periodicidade no qual um Imposto é aplicado, sendo Mensal ou Anual."@pt ;
+                 rdfs:label "Periodicidade"@pt ,
+                            "Periodicity"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Porte
+vcad:Porte rdf:type owl:Class ;
+           rdfs:comment "Tamanho da Empresa, adotando-se a classificação de MEI para Empresas com capital inferior ou igual a R$81.000; ME para Empresas com capital entre R$360.00 e R$4.800.000; EMP para Empresas com capital superior a R$4.800.000 e até R$300.000.000; e EGP para Empresas com capital superior a R$300.000.000."@pt ;
+           rdfs:label "Porte da Empresa"@pt ,
+                      "Size Company"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Qualification
+vcad:Qualification rdf:type owl:Class ;
+                   rdfs:comment """Tipo de Qualificação / Relação entre um Sócio e um determinado Cargo exercido. Pode adotar as seguintes Qualificações:
+
+SÓCIO
+ACIONISTA
+SÓCIO COMANDITARIO
+SÓCIO COMANDITADO
+SÓCIO DE INDUSTRIA
+SÓCIO CAPITALISTA
+SÓCIO OSTENSIVO
+SOCIEDADE DE COMANDO
+SOCIEDADE FILIADA
+EMPRESA LIDER
+EMPRESA CONSORCIADA
+SÓCIO/ESPÓLIO
+SÓCIO GERENTE
+GERENTE DELEGADO
+DIRETOR
+CONSELHEIRO DE ADMINISTRACAO
+ADMINISTRADOR
+ADMINISTRADOR DO GRUPO
+ADMINISTRADOR DE SOCIEDADE FILIADA
+GERENTE
+PRESIDENTE
+RESPONSÁVEL
+ADMINISTRADOR JUDICIAL - PF
+ADMINISTRADOR JUDICIAL - PJ
+ADMJ - PROFISSIONAL RESPONSÁVEL
+ADMINISTRADOR JUDICIAL/GESTOR
+ADMINISTRADOR DE FATO
+CONSELHEIRO DE ADMINISTRAÇÃO DE FATO
+GESTOR JUDICIAL
+PAI/REPRESENTANTE
+MAE/REPRESENTANTE
+CURADOR/REPRESENTANTE
+TUTOR/REPRESENTANTE
+PAI/ASSISTENTE
+MAE/ASSISTENTE
+CURADOR/ASSISTENTE
+TUTOR/ASSISTENTE
+PROCURADOR
+DELEGADO
+COMISSARIO
+INVENTARIANTE
+LIQUIDANTE
+SINDICO
+INTERVENTOR
+REPRESENTANTE LEGAL (FILIAL EMP ESTRANG)
+TABELIÃO
+OFICIAL DE REGISTRO
+CÔNSUL HONORÁRIO
+CÔNSUL
+DIPLOMATA
+CANDIDATO A CARGO POLÍTICO ELETIVO
+EMPRESARIO"""@pt ;
+                   rdfs:label "Qualification"@en ,
+                              "Qualificação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation
+vcad:Reason_Cadastral_Situation rdf:type owl:Class ;
+                                rdfs:comment "Closure of the activities of the company or establishment and its impression of the Taxpayer registered in the ICMS Taxpayer Register."@en ,
+                                             "Razão de Desabilitação de uma Empresa ou Estabelecimento inscrito no Cadastro de Contribuintes do ICMS."@pt ;
+                                rdfs:label "Razão Desabilitado"@pt ,
+                                           "Razão Desabilitado Situação Fiscal"@en ,
+                                           "Razão de Desabilitação da Situação Cadastral"@pt ,
+                                           "Reason Cadastral Situation"@en ,
+                                           "Reason Disabled"@en ,
+                                           "Reason Disabled Tax Situation"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Representante_Legal_Fisico
+vcad:Representante_Legal_Fisico rdf:type owl:Class ;
+                                rdfs:subClassOf vcad:LegalRepresentant .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Representante_Legal_Juridico
+vcad:Representante_Legal_Juridico rdf:type owl:Class ;
+                                  rdfs:subClassOf vcad:LegalRepresentant .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SEFAZ_CadastralSituation
+vcad:SEFAZ_CadastralSituation rdf:type owl:Class ;
+                              rdfs:comment """Cadastral status is the information that reflects in the CNPJ the registration condition of the entity's registration. The registration situations, before the CNPJ, fall into:
+
+• Active;
+• Downloaded;
+• Suspended;
+• Canceled;
+• Suspended from Office;
+• Discharge process;
+• Suspension process;
+• Low of Office;"""@en ,
+                                           """Situação cadastral é a informação que espelha no CNPJ a condição cadastral da inscrição da entidade. As situações cadastrais, perante o CNPJ, enquadram-se em:
+
+• Ativo;
+• Baixa;
+• Baixa de Ofício;
+• Cancelado;
+• Em Processo de Suspensão;
+• Processo de Baixa;
+• Suspenso;
+• Suspenso de Ofício;"""@pt ;
+                              rdfs:label "Cadastral Situation"@en ,
+                                         "Situação Cadastral SEFAZ"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SIMEI
+vcad:SIMEI rdf:type owl:Class ;
+           rdfs:subClassOf vcad:Contribuinte_Geral ,
+                           vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SIMPLES_NACIONAL
+vcad:SIMPLES_NACIONAL rdf:type owl:Class ;
+                      rdfs:subClassOf vcad:Contribuinte_Geral ,
+                                      vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SUBSTITUTO_TRIBUTARIO
+vcad:SUBSTITUTO_TRIBUTARIO rdf:type owl:Class ;
+                           rdfs:subClassOf vcad:Contribuinte_Geral ,
+                                           vcad:Tipo_Regime_Tributario .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SUSPENDED
+vcad:SUSPENDED rdf:type owl:Class ;
+               rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+               rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: SUSPENSO"@pt ;
+               rdfs:label "SUSPENDED"@en ,
+                          "SUSPENSO"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SUSPENDED_FROM_OFFICE
+vcad:SUSPENDED_FROM_OFFICE rdf:type owl:Class ;
+                           rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+                           rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: SUSPENSO DE OFÍCIO"@pt ;
+                           rdfs:label "SUSPENDED FROM OFFICE"@en ,
+                                      "SUSPENSO DE OFÍCIO"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SUSPENSION_PROCESS
+vcad:SUSPENSION_PROCESS rdf:type owl:Class ;
+                        rdfs:subClassOf vcad:SEFAZ_CadastralSituation ;
+                        rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: EM PROCESSO DE SUSPENSÃO"@pt ;
+                        rdfs:label "EM PROCESSO DE SUSPENSÃO"@pt ,
+                                   "SUSPENSION PROCESS"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Tax
+vcad:Tax rdf:type owl:Class ;
+         rdfs:comment "Tributo cobrado a um Estabelecimento através do cumprimento de uma Obrigação Legal."@pt ;
+         rdfs:label "Imposto"@pt ,
+                    "Tax"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/TaxBook
+vcad:TaxBook rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty vcad:has_deed ;
+                                                      owl:allValuesFrom vcad:Deed
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty vcad:has_deed ;
+                                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass vcad:Deed
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:comment "Classe que Representa um Livro Fiscal de Escriturações e Obrigações Fiscais no qual um Estabelecimento deve cumprir. Através dos livros fiscais que o fisco audita todas as transações das empresas, conferindo todos os registros efetuados pela empresa, retificando-os ou ratificando-os conforme constatações."@pt ;
+             rdfs:label "Livro Fiscal"@pt ,
+                        "Tax Book"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Tipo_Contribuicao
+vcad:Tipo_Contribuicao rdf:type owl:Class ;
+                       rdfs:comment "Tipo de Contribuicao – pode ser ou não contribuinte, caso seja será do tipo ICMS ou IPVA."@pt ;
+                       rdfs:label "Contribution Type"@en ,
+                                  "Tipo Contribuicao"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Tipo_Regime_Tributario
+vcad:Tipo_Regime_Tributario rdf:type owl:Class ;
+                            rdfs:comment """Regime de Pagamento da Empresa podendo ser:
+
+ EXTRA CADASTRO;
+ NORMAL;
+ PEM;
+ SUBST. TRIBUTARIA;
+ ISENTO;
+ SIMPLES NACIONAL;
+ SIMEI;
+ NÃO CONTRIBUINTE."""@pt ;
+                            rdfs:label "Payment Regime"@en ,
+                                       "Tipo Regime Tributario"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/User
+vcad:User rdf:type owl:Class ;
+          rdfs:comment "Responsável por inserção, alteração ou remoção de dados no Cadastro."@pt ;
+          rdfs:label "User"@en ,
+                     "Usuário"@pt .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:comment "An agent (eg. person, group, software or physical artifact)." ,
+                        "Conceito Genérico para representar Organizações e Pessoas."@pt ;
+           rdfs:label "Agent"@en ,
+                      "Agente"@pt .
+
+
+###  http://xmlns.com/foaf/0.1/Document
+foaf:Document rdf:type owl:Class ;
+              owl:disjointWith foaf:Organization ;
+              rdfs:comment "A document." ,
+                           "Classe Genérica para representar Documentos."@pt ;
+              rdfs:isDefinedBy foaf: ;
+              rdfs:label "Document"@en ,
+                         "Documento"@pt .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+foaf:Organization rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Class ;
+                                    owl:unionOf ( vcad:Contribuinte_Geral
+                                                  foaf:Agent
+                                                )
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty vcad:has_fiscal_situation ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass vcad:FiscalSituation
+                                  ] ;
+                  owl:disjointWith foaf:Person ;
+                  rdfs:comment "A classe Organização representa uma espécie de Agente correspondente a instituições sociais como empresas, sociedades e entidades do gênero."@pt ,
+                               "An organization." ;
+                  rdfs:isDefinedBy foaf: ;
+                  rdfs:label "Empresa"@pt ,
+                             "Organization"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class ;
+            rdfs:subClassOf foaf:Agent ;
+            rdfs:comment "A person." ,
+                         "Representação de Pessoa Física identificada por um cpf."@pt ;
+            rdfs:isDefinedBy foaf: ;
+            rdfs:label "Person"@en ,
+                       "Pessoa"@pt .
+
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:minCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+vcad:has_establishment rdfs:label "tem estabelecimento"@pt ,
+                                   "has establishment"@en .
+
+
+vcad:has_legal_obligations rdfs:label "has legal obligations"@en ,
+                                      "tem obrigação legal"@pt .
+
+
+vcad:has_relation rdfs:label "tem relação"@pt ,
+                             "has relation"@en .
+
+
+vcad:stored_in_establishment rdfs:label "stored in establishment"@en ,
+                                        "armazenado em estabelecimento"@pt .
+
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdfs:comment "The WGS84 latitude of a SpatialThing (decimal degrees)." ;
+                                              rdfs:label "latitude" .
+
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
+                                                   rdfs:label "lat/long" .
+
+
+foaf:name rdfs:isDefinedBy foaf: ;
+          rdfs:label "nome" ;
+          rdfs:comment "A name for some thing." .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

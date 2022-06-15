@@ -1,0 +1,1025 @@
+#./ontop materialize -p config.properties -m maps.ttl -o RFB_instances.ttl -f turtle
+#Atualização: 08/02/2021
+#OBS.: Esse mapeamento é o implementado na SEFAZ, onde não são materializadas AS inferências para diminuir o tamanho do dataset.
+
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix ex: <http://example.com/ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rfb: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix cnae: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix map: <http://sistemas.sefaz.ma.gov.br/maps/RFB/2020-04-01> .
+@prefix rfb_resource: <http://www.sefaz.ma.gov.br/RFB/resource/> .
+
+
+### Mapeamentos RFB
+#Organization
+<map:Organization> a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """SELECT * FROM "UFC_SEM"."RFB_EMPRESA" """;
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{CNPJ_RAIZ}";
+        rr:class foaf:Organization, sefazma:Empresa_RFB;
+        # rr:graphMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/Graph/RFB" ] ; 
+	];
+	
+    rr:predicateObjectMap [
+		rr:predicate sefazma:cnpj, sefazma:cnpj_raiz;
+		rr:objectMap [
+			rr:column "CNPJ_RAIZ";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:razao_social, rdfs:label;
+		rr:objectMap [
+			rr:column "RAZAO_SOCIAL";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_natureza_legal;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Natureza_Legal/{ID_NATUREZA_LEGAL}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_matriz, sefazma:tem_matriz_rfb;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{ID_ESTABELECIMENTO_MATRIZ}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:opcao_simples;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Opcao_Simples/{ID_OPCAO_SIMPLES}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:valor_capital_social;
+		rr:objectMap [
+			rr:column "CAPITAL_SOCIAL";
+			rr:datatype xsd:double
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_porte;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Porte/{TEM_PORTE}";
+		];
+	].
+
+
+
+map:Establishment a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * 
+            FROM "UFC_SEM"."RFB_ESTABELECIMENTO"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{CNPJ}";
+		rr:class sefazma:Estabelecimento, sefazma:Estabelecimento_RFB;
+		# rr:graphMap [ rr:template "http://www.sefaz.ma.gov.br/ontology/Graph/RFB" ] ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:cnpj_completo, sefazma:cnpj;
+		rr:objectMap [
+			rr:column "CNPJ";
+			rr:datatype xsd:string
+            
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:razao_social, rdfs:label;
+		rr:objectMap [
+			rr:column "RAZAO_SOCIAL";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:nome_fantasia;
+		rr:objectMap [
+			rr:column "NOME_FANTASIA";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_situacao_cadastral;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Situacao_Cadastral/{ID_SITUACAO}";
+		];
+   ];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_inicio_atividade;
+		rr:objectMap [
+			rr:column "DATA_INICIO_ATIV";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_atividade_economica_principal, sefazma:tem_atividade_economica;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_ATIVIDADE_ECONOMICA}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_endereco;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Endereco/{ID_ENDERECO}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_tipo_estabelecimento;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Tipo_Estabelecimento/{TIPO_ESTABELECIMENTO}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate vcard:email;
+		rr:objectMap [
+			rr:column "EMAIL";
+			rr:datatype xsd:anyURI
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:telefone, sefazma:numero_contato;
+		rr:objectMap [
+			rr:column "TELEFONE_1";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:telefone, sefazma:numero_contato;
+		rr:objectMap [
+			rr:column "TELEFONE_2";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:fax, sefazma:numero_contato;
+		rr:objectMap [
+			rr:column "FAX";
+			rr:datatype xsd:string
+		];
+	].
+
+#RFBTemSituacaoCadastral
+
+#map:temSituacaoCadastralRFB a rr:TriplesMap;
+#	rr:logicalTable [
+#		rr:sqlQuery """
+#			SELECT * from "UFC_SEM"."RFB_TEM_SITUACAO_CADASTRAL"
+#		""";
+#	];
+#	rr:subjectMap [
+#		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{CNPJ}";
+#      # rr:class sefazma:Estabelecimento, sefazma:Estabelecimento_RFB;
+#	];
+ #  rr:predicateObjectMap [
+#		rr:predicate sefazma:tem_situacao_cadastral;
+#		rr:objectMap [
+#			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Situacao_Cadastral/{ID_SITUACAO}";
+#		];
+#	].
+
+#Sociedade_Fisica
+map:Sociedade_Fisica a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_SOCIEDADE_COM_PESSOA_FISICA" 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Sociedade_PF/{ID_SOCIEDADE}";
+			rr:class sefazma:Sociedade, sefazma:Sociedade_PF, sefazma:Sociedade_RFB, sefazma:Sociedade_PF_RFB;
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:inicio_participacao;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SOCIEDADE";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ROTULO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_qualificacao_socio;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_SOCIO}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_socio ;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Pessoa/{ID_SOCIO}";
+		];
+	].
+
+map:Partnership_jID a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * 
+            FROM "UFC_SEM"."RFB_SOCIEDADE_COM_HOLDING"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Sociedade_PJ/{ID_SOCIEDADE}";
+			rr:class sefazma:Sociedade, sefazma:Sociedade_PJ, sefazma:Sociedade_RFB, sefazma:Sociedade_PJ_RFB;
+			# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_socio ;
+		rr:objectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{ID_SOCIO}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SOCIEDADE";
+			rr:datatype xsd:string
+			
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_entrada_participacao;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SOCIEDADE";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_representante;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Pessoa/{ID_REPRESENTANTE}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:qualificacao_socio;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_SOCIO}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:qualificacao_do_responsavel;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_REPRESENTANTE}";
+		];
+	].
+
+
+
+map:Partnership_estrang a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_SOCIEDADE_COM_ESTRANGEIRO"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Sociedade_Estrangeiro/{ID_SOCIEDADE}";
+			rr:class sefazma:Sociedade, sefazma:Sociedade_Estrangeiro, sefazma:Sociedade_RFB;
+			# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_socio ;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Agent/{ID_SOCIO}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SOCIEDADE";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_entrada_participacao;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SOCIEDADE";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_representante;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Pessoa/{ID_REPRESENTANTE}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:qualificacao_do_responsavel;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_REPRESENTANTE}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:qualificacao_socio;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_SOCIO}";
+		];
+	].
+
+#Socio RFB PF
+map:Socio_RFB a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_SOCIO,DATA_INICIO_SOCIEDADE, ID_QUALIFICACAO_SOCIO, 'SOCIO_PESSOA_FISICA' AS TIPO FROM "UFC_SEM"."RFB_SOCIEDADE_COM_PESSOA_FISICA"
+ 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Pessoa/{ID_SOCIO}";
+			rr:class sefazma:Socio, sefazma:Socio_RFB, foaf:Person;
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:inicio_participacao;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SOCIEDADE";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SOCIO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_qualificacao_socio;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_SOCIO}";
+		];
+    ].
+
+
+#Socio RFB PJ
+map:Socio_RFB_PJ a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_SOCIO,DATA_INICIO_SOCIEDADE, ID_QUALIFICACAO_SOCIO, 'SOCIO_PESSOA_JURIDICA' AS TIPO FROM "UFC_SEM"."RFB_SOCIEDADE_COM_HOLDING"
+ 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Socio/{ID_SOCIO}";
+			rr:class sefazma:Socio, sefazma:Socio_RFB, foaf:Organization;
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:inicio_participacao;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SOCIEDADE";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SOCIO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_qualificacao_socio;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_SOCIO}";
+		];
+    ].
+
+
+#Socio RFB Estrangeiro
+map:Socio_RFB_PF a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_SOCIO,DATA_INICIO_SOCIEDADE, ID_QUALIFICACAO_SOCIO, 'SOCIO_ESTRANGEIRO' AS TIPO FROM "UFC_SEM"."RFB_SOCIEDADE_COM_ESTRANGEIRO"
+ 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Agente/{ID_SOCIO}";
+			rr:class sefazma:Socio, sefazma:Socio_RFB, foaf:Person, sefazma:Estrangeiro;
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:inicio_participacao;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SOCIEDADE";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SOCIO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_qualificacao_socio;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Qualificacao/{ID_QUALIFICACAO_SOCIO}";
+		];
+    ].
+
+map:Organization_partner_ a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+            SELECT emp.* FROM "UFC_SEM"."RFB_EMPRESA_HOLDING" emp_holding
+            INNER JOIN
+             "UFC_SEM"."RFB_EMPRESA" emp
+            ON
+            emp.cnpj_raiz = emp_holding.cnpj_raiz
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa_Holding/{CNPJ_RAIZ}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+        rr:class foaf:Organization, sefazma:Empresa_Holding_RFB, sefazma:Empresa_Holding, foaf:Group;
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:cnpj, sefazma:cnpj_raiz;
+		rr:objectMap [
+			rr:column "CNPJ_RAIZ";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:razao_social, rdfs:label;
+		rr:objectMap [
+			rr:column "RAZAO_SOCIAL";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_natureza_legal;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Natureza_Legal/{ID_NATUREZA_LEGAL}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_matriz, sefazma:tem_matriz_rfb;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{ID_ESTABELECIMENTO_MATRIZ}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:opcao_simples;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Opcao_Simples/{ID_OPCAO_SIMPLES}";
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:valor_capital_social;
+		rr:objectMap [
+			rr:column "CAPITAL_SOCIAL";
+			rr:datatype xsd:double
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_porte;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Porte/{TEM_PORTE}";
+		];
+	].
+
+
+## foaf:Person
+map:Person a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_PESSOA" """;
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Pessoa/{ID_PESSOA}";
+		rr:class foaf:Person,foaf:Agent, sefazma:Pessoa_RFB, sefazma:Pessoa, sefazma:Socio;
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:cpf;
+		rr:objectMap [
+			rr:column "CPF";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate foaf:name,rdfs:label;
+		rr:objectMap [
+			rr:column "NOME";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:faixa_etaria;
+		rr:objectMap [
+			rr:column "FAIXA_ETARIA"
+		];
+	].
+
+
+map:Person_represen a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT *
+			FROM "UFC_SEM"."RFB_REPRESENTANTE" 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/Pessoa/{ID_REPRESENTANTE}";
+		rr:class foaf:Person,foaf:Agent, sefazma:Representante_RFB, sefazma:Pessoa, sefazma:Pessoa_RFB, sefazma:Representante_Legal, sefazma:Representante_Legal_Fisico, sefazma:Socio;
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:cpf,sefazma:identificador_pessoa;
+		rr:objectMap [
+			rr:column "CPF";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate foaf:name,rdfs:label;
+		rr:objectMap [
+			rr:column "NOME";
+			rr:datatype xsd:string
+		];
+	].
+
+
+#sefazma:e_estrangeiro
+
+map:Estrangeiro a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_ESTRANGEIRO"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Agente/{NOME}";
+		rr:class foaf:Agent, sefazma:Estrangeiro;
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "NOME";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:e_estrangeiro;
+		rr:objectMap [
+			rr:constant "true";
+			rr:datatype xsd:boolean
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_pais;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Pais/{ID_PAIS}";
+		];
+	].
+
+#has_special_situation@Organization
+map:Organization_has_special_situation a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_TEM_SITUACAO_ESPECIAL"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{ID_EMPRESA}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_situacao_especial;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Situacao_Especial/{ID_SITUACAO_ESPECIAL}";
+		];
+	].
+
+#has_subsidiary@Organization
+map:has_subsidiary a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_TEM_ESTABELECIMENTO"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{ID_EMPRESA}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_estabelecimento, sefazma:tem_filial, sefazma:tem_filial_rfb;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{ID_ESTABELECIMENTO}";
+		];
+	].
+
+#has_partnership@Organization
+map:has_partnership_fisic a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_TEM_SOCIEDADE_FISICA"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{ID_EMPRESA}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_sociedade, sefazma:tem_sociedade_fisica;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Sociedade_PF/{ID_SOCIEDADE}";
+		];
+	].
+
+
+map:has_partnership_jID a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_EMPRESA, ID_SOCIEDADE FROM "UFC_SEM"."RFB_TEM_SOCIEDADE_JURIDICA"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{ID_EMPRESA}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_sociedade, sefazma:tem_sociedade_juridica;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Sociedade_PJ/{ID_SOCIEDADE}";
+		];
+	].
+
+map:has_partnership_extrang a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_EMPRESA,ID_SOCIEDADE FROM "UFC_SEM"."RFB_TEM_SOCIEDADE_ESTRANGEIRA"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{ID_EMPRESA}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_sociedade, sefazma:tem_sociedade_estrangeiro;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Sociedade_Estrangeiro/{ID_SOCIEDADE}";
+		];
+	].
+
+
+#Option_SIMPLES
+map:Option_SIMPLES a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_OPCAO_SIMPLES,TIPO_SIMPLES,DATA_OPCAO_SIMPLES,DATA_EXCLUSAO_SIMPLES 
+            FROM "UFC_SEM"."RFB_OPCAO_SIMPLES"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Opcao_Simples/{ID_OPCAO_SIMPLES}";
+		rr:class sefazma:Opcao_SIMPLES;
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+    rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_OPCAO_SIMPLES";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tipo_opcao_SIMPLES;
+		rr:objectMap [
+			rr:column "TIPO_SIMPLES";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_opcao_SIMPLES;
+		rr:objectMap [
+			rr:column "DATA_OPCAO_SIMPLES";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_exclusao_SIMPLES;
+		rr:objectMap [
+			rr:column "DATA_EXCLUSAO_SIMPLES";
+			rr:datatype xsd:date
+		];
+	].
+
+
+#map:Option_SIMPLES_SubClass a rr:TriplesMap;
+#	rr:logicalTable [
+#		rr:sqlQuery """
+#			SELECT * FROM "UFC_SEM"."RFB_OPCAO_SIMPLES"
+#		""";
+#	];
+#	rr:subjectMap [
+#		rr:template "http://www.sefaz.ma.gov.br/resource/OPCAO_SIMPLES/{opc_simples}-{root_cnpj}";
+#	];
+#	rr:predicateObjectMap [
+#		rr:predicate rdf:type;
+#		rr:objectMap [
+#			rr:template "http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES/SIMPLES_{class_simples}";
+#		];
+#	].
+
+
+
+
+#Special_Situation
+map:Special_Situation a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT ID_SITUACAO_ESPECIAL,DATA_INICIO_SIT_ESPECIAL,DESCRICAO FROM "UFC_SEM"."RFB_SITUACAO_ESPECIAL"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Situacao_Especial/{ID_SITUACAO_ESPECIAL}";
+		rr:class sefazma:Situacao_Especial;
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+    rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SITUACAO_ESPECIAL";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_inicio_situacao_especial;
+		rr:objectMap [
+			rr:column "DATA_INICIO_SIT_ESPECIAL";
+			rr:datatype xsd:date
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:descricao_situacao_especial,rdfs:label;
+		rr:objectMap [
+			rr:column "DESCRICAO";
+			rr:datatype xsd:string
+		];
+	].
+
+#has_economic_activity
+map:has_secondary_activity a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_TEM_ATIV_ECONOMICA_SECUNDARIA"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{ID_ESTABELECIMENTO}";
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_atividade_economica;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{ID_ATIVIDADE_ECONOMICA}"
+		];
+	].
+
+#Cadastral_Situation
+map:Cadastral_Situation a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_SITUACAO_CADASTRAL" 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Situacao_Cadastral/{ID_SITUACAO_CADASTRAL}";
+		rr:class sefazma:Situacao_Cadastral, sefazma:Situacao_Cadastral_RFB;
+#		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+    rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ID_SITUACAO_CADASTRAL";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:data_da_situacao_cadastral;
+		rr:objectMap [
+			rr:column "DATA_SITUACAO";
+			rr:datatype xsd:date
+		];
+	];
+    rr:predicateObjectMap [
+		rr:predicate sefazma:tipo_situacao;
+		rr:objectMap [
+			rr:column "SITUACAO";
+			rr:datatype xsd:string
+		];
+	];
+
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_razao_situacao;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Razao_Situacao_Cadastral/{ID_RAZAO_SITUACAO}"
+		];
+	].
+
+#map:Cadastral_Situation_Class a rr:TriplesMap;
+#	rr:logicalTable [
+#		rr:sqlQuery """
+#			SELECT * FROM "UFC_SEM"."RFB_SITUACAO_CADASTRAL" 
+#		""";
+#	];
+#	rr:subjectMap [
+#		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Situacao_Cadastral/{ID_SITUACAO_CADASTRAL}";
+#		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+#	];
+#	rr:predicateObjectMap [
+#		rr:predicate rdf:type;
+#		rr:objectMap [
+#			rr:template "http://www.sefaz.ma.gov.br/ontology/{TIPO_SITUACAO}"
+#		];
+#	].
+
+#Reason_Cadastral_Situation
+map:Reason_Cadastral_Situation a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."RFB_RAZAO_SITUACAO_CADASTRAL"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Razao_Situacao_Cadastral/{ID_RAZAO_SITUACAO_CADASTRAL}";
+		rr:class sefazma:Razao_Situacao_Cadastral;
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ROTULO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:codigo_razao_situacao;
+		rr:objectMap [
+			rr:column "CODIGO_RAZAO_SITUACAO";
+			rr:datatype xsd:string
+		];
+	].
+
+#Address
+map:Address a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+                SELECT ID_ENDERECO, PAIS,LOGRADOURO,NUMERO,COMPLEMENTO,BAIRRO,CIDADE,ESTADO,CEP,
+			CASE ESTADO
+            WHEN 'ACRE' THEN 'AC'
+                            WHEN 'ALAGOAS' THEN 'AL'
+                            WHEN 'AMAPA' THEN 'AP'
+                            WHEN 'AMAZONAS' THEN 'AM'
+                            WHEN 'BAHIA' THEN 'BA'
+                            WHEN 'CEARA' THEN 'CE'
+                            WHEN 'ESPIRITO_SANTO' THEN 'ES'
+                            WHEN 'GOIAS' THEN 'GO'
+                            WHEN 'MARANHAO' THEN 'MA'
+                            WHEN 'MATO_GROSSO' THEN 'MT'
+                            WHEN 'MATO_GROSSO DO SUL' THEN 'MS'
+                            WHEN 'MINAS_GERAIS' THEN 'MG'
+                            WHEN 'PARA' THEN 'PA'
+                            WHEN 'PARAIBA' THEN 'PB'
+                            WHEN 'PARANA' THEN 'PR'
+                            WHEN 'PERNAMBUCO' THEN 'PE'
+                            WHEN 'PIAUI' THEN 'PI'
+                            WHEN 'RIO_DE_JANEIRO' THEN 'RJ'
+                            WHEN 'RIO_GRANDE_DO_NORTE' THEN 'RN'
+                            WHEN 'RIO_GRANDE_DO_SUL' THEN 'RS'
+                            WHEN 'RONDONIA' THEN 'RO'
+                            WHEN 'RORAIMA' THEN 'RR'
+                            WHEN 'SANTA_CATARINA' THEN 'SC'
+                            WHEN 'SAO_PAULO' THEN 'SP'
+                            WHEN 'SERGIPE' THEN 'SE'
+                            WHEN 'TOCANTINS' THEN 'TO'
+                            WHEN 'DISTRITO_FEDERAL' THEN 'DF'
+            END AS UF,
+            CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(CONCAT(PAIS,'-'),LOGRADOURO),'-'),NUMERO),'-'),COMPLEMENTO),'-'),BAIRRO),'-'),CIDADE),'-'),ESTADO),'-'),CEP) AS ENDERECO
+            FROM "UFC_SEM"."RFB_ENDERECO" 
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Endereco/{ID_ENDERECO}";
+		rr:class sefazma:Endereco, sefazma:Endereco_RFB;
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:numero;
+		rr:objectMap [
+			rr:column "NUMERO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:complemento;
+		rr:objectMap [
+			rr:column "COMPLEMENTO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ENDERECO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_estado, sefazma:tem_unidade_federativa;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_pais;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Pais/{PAIS}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_cidade;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{CIDADE}-{UF}"
+		];
+	];
+	#rr:predicateObjectMap [
+	#	rr:predicate sefazma:has_city;
+	#	rr:objectMap [
+	#		rr:template "http://www.sefaz.ma.gov.br/resource/Cidade/{nm_cidade_exterior}-{nome_pais}"
+	#	];
+	#];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_bairro;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Bairro/{BAIRRO}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_logradouro;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Logradouro/{LOGRADOURO}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate vcard:postal-code, sefazma:cep ;
+		rr:objectMap [
+			rr:column "CEP";
+			rr:datatype xsd:string
+		];
+	].
+
+
+#Address Exterior
+map:AddressExt a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT CEP, PAIS, CIDADE_EXTERIOR, ID_ENDERECO, 
+            CONCAT(CONCAT(PAIS,'-'),CIDADE_EXTERIOR) AS ENDERECO
+            FROM "UFC_SEM"."RFB_ENDERECO_EXTERIOR"  
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Endereco_Exterior/{ID_ENDERECO}";
+		rr:class sefazma:Endereco, sefazma:Endereco_Exterior;
+		# rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+    rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			rr:column "ENDERECO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_pais;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Pais/{PAIS}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_cidade;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{CIDADE_EXTERIOR}"
+		];
+	].

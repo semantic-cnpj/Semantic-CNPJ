@@ -1,0 +1,156 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcad: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : <http://www.sefaz.ma.gov.br/ontology/> .
+@base <http://www.sefaz.ma.gov.br/ontology/> .
+
+# Mapeamento de Inadimplentes
+<#TriplesMapInadimplentesPJ> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEI_INADIMPLENTE" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Inadimplente/{CNPJ_CPF}";
+        rr:class sefazma:Inadimplente, sefazma:Fornecedor_Restrito, sefazma:Fornecedor_PJ;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Tem Inadimplencia
+<#TriplesMapInadimplentesTemInadimplencia> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT CNPJ_CPF, CNPJ_CPF_INADIMPLENTE, CODIGO
+FROM "UFC_SEM"."CEI_INADIMPLENTE"
+LEFT JOIN
+"UFC_SEM"."CEI_INADIMPLENCIA"
+ON
+CNPJ_CPF = CNPJ_CPF_INADIMPLENTE """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Inadimplente/{CNPJ_CPF}";
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_inadimplencia;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Inadimplencia/{CODIGO}"; ];
+    ].
+
+# Mapeamento Inadimplencia
+<#TriplesMapInadimplencia> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEI_INADIMPLENCIA_MAT" """];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Inadimplencia/{CODIGO}";
+        rr:class sefazma:Inadimplencia;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "OBJETO_OBRIGACAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_inicial;
+        rr:objectMap [ rr:column "DATA_INICIAL"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_meses;
+        rr:objectMap [ rr:column "NUM_MESES"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:observacao;
+        rr:objectMap [ rr:column "OBSERVACAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_exclusao;
+        rr:objectMap [ rr:column "DATA_EXCLUSAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_inclusao;
+        rr:objectMap [ rr:column "DATA_INCLUSAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:motivo_exclusao;
+        rr:objectMap [ rr:column "MOTIVO_EXCLUSAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:unidade_inclusao;
+        rr:objectMap [ rr:column "UNIDADE_INCLUSAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:usuario_inclusao;
+        rr:objectMap [ rr:column "USUARIO_INCLUSAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:usuario_exclusao;
+        rr:objectMap [ rr:column "USUARIO_EXCLUSAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_infracao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Infracao/{CODIGO_INFRACAO}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_obrigacao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Obrigacao/{OBJETO_OBRIGACAO}"; ];
+    ].
+
+
+# Obrigacao
+<#TriplesMapObrigacao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEI_INADIMPLENCIA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Obrigacao/{OBJETO_OBRIGACAO}";
+        rr:class sefazma:Obrigacao;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "OBJETO_OBRIGACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_obrigacao;
+        rr:objectMap [ rr:column "VALOR_OBRIGACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:objeto_obrigacao;
+        rr:objectMap [ rr:column "OBJETO_OBRIGACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_vencimento;
+        rr:objectMap [ rr:column "DATA_VENCIMENTO_OBRIGACAO"; rr:datatype xsd:string ];
+    ].
+
+# Infracao
+<#TriplesMapInfracao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEI_INADIMPLENCIA_MAT" """];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEI/Infracao/{CODIGO_INFRACAO}";
+        rr:class sefazma:Infracao;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "TIPO_INFRACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_infracao;
+        rr:objectMap [ rr:column "CODIGO_INFRACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_infracao;
+        rr:objectMap [ rr:column "TIPO_INFRACAO"; rr:datatype xsd:string ];
+    ].

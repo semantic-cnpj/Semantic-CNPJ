@@ -1,0 +1,844 @@
+@prefix : <http://www.sefaz.ma.gov.br/CNAE/ontology/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cnae: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cnaer: <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/> .
+@base <http://www.sefaz.ma.gov.br/CNAE/ontology/> .
+
+<http://www.sefaz.ma.gov.br/CNAE/ontology/> rdf:type owl:Ontology ;
+                                             rdfs:comment """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Valeria Priscilla Monteiro Fernandes
+valeria.fernandes@sefaz.ma.gov.br
+
+Adriano Dos Santos Rego
+adriano.rego@sefaz.ma.gov.br
+
+Tainan Khalil Leite Calixto
+tainan.calixto@sefaz.ma.gov.br
+
+
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
+                                                          "Ontologia modelando a estrutura da Classificação Nacional de Atividades Econômicas (CNAE) definida pelo Instituto Brasileiro de Geografia e Estatística (IBGE)"@pt ,
+                                                          "Ontology modeling the structure of the National Classification of Economic Activities (NCEA) defined by the Brazilian Institute of Geography and Statistics (BIGS)"@en ;
+                                             rdfs:label "CNAE Ontology" ;
+                                             rdfs:seeAlso <http://www.w3.org/TR/skos-reference/> ,
+                                                          <https://concla.ibge.gov.br/concla.html> ;
+                                             owl:versionInfo "1.0"@pt .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/activity_description
+cnae:activity_description rdf:type owl:AnnotationProperty ;
+                          rdfs:range xsd:string ;
+                          rdfs:domain cnae:Economic_Activity .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+skos:historyNote rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:subPropertyOf skos:note .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_class
+cnae:has_cnae_class rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:range cnae:CNAE_Class ;
+                    rdfs:label "has cnae class"@en ,
+                               "tem classe CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_division
+cnae:has_cnae_division rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:range cnae:CNAE_Division ;
+                       rdfs:label "has cnae division"@en ,
+                                  "tem divisão CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_group
+cnae:has_cnae_group rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:range cnae:CNAE_Group ;
+                    rdfs:label "has cnae group"@en ,
+                               "tem grupo CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_section
+cnae:has_cnae_section rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:range cnae:CNAE_Section ;
+                      rdfs:label "has CNAE section"@en ,
+                                 "tem seção CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_version
+cnae:has_version rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain cnae:Economic_Activity ;
+                 rdfs:range cnae:CNAE_Version ;
+                 rdfs:comment "relaciona o CNAE de uma atividade econômica a versão do CNAE desta"@pt ,
+                              "relates the CNAE of an economic activity to the CNAE version of this"@en ;
+                 rdfs:label "has version"@en ,
+                            "tem versão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/next_version
+cnae:next_version rdf:type owl:ObjectProperty ;
+                  owl:inverseOf cnae:previous_version ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:comment "Relaciona uma coisa a uma próxima versão sua."@pt ,
+                               "Relates something to your next version."@en ;
+                  rdfs:label "next version"@en ,
+                             "próxima versão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/previous_version
+cnae:previous_version rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:comment "Relaciona uma coisa a uma versão sua anterior."@pt ,
+                                   "Relates something to its previous version."@en ;
+                      rdfs:label "previous version"@en ,
+                                 "versão anterior"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broaderTransitive ;
+             owl:inverseOf skos:narrower .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+skos:broaderTransitive rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf skos:semanticRelation ;
+                       owl:inverseOf skos:narrowerTransitive ;
+                       rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:ObjectProperty ;
+            rdfs:domain skos:Collection .
+
+
+###  http://www.w3.org/2004/02/skos/core#memberList
+skos:memberList rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain skos:OrderedCollection ;
+                rdfs:range rdf:List .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:narrowerTransitive .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+skos:narrowerTransitive rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf skos:semanticRelation ;
+                        rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:semanticRelation ;
+             rdf:type owl:SymmetricProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+skos:semanticRelation rdf:type owl:ObjectProperty ;
+                      rdfs:domain skos:Concept ;
+                      rdfs:range skos:Concept .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/activity_description
+cnae:activity_description rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf skos:prefLabel ;
+                          rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnae
+cnae:cnae rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf skos:notation ;
+          rdfs:domain cnae:Economic_Activity ;
+          rdfs:range xsd:string ;
+          rdfs:label "CNAE"@pt ,
+                     "Classificação Nacional de Atividades Econômicas"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnae_version
+cnae:cnae_version rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:range xsd:double ;
+                  rdfs:comment "version of the cnae table"@en ,
+                               "versão da tabela cnae"@pt ;
+                  rdfs:label "cnae version"@en ,
+                             "versão do cnae"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/formated_cnae
+cnae:formated_cnae rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf cnae:cnae ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain cnae:Economic_Activity ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "CNAE formatado"@pt ,
+                              "formated CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/raw_cnae
+cnae:raw_cnae rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf cnae:cnae ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain cnae:Economic_Activity ;
+              rdfs:range xsd:string ;
+              rdfs:label "CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/validate_year
+cnae:validate_year rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:range xsd:int ;
+                   rdfs:label "ano de validade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/validity_end
+cnae:validity_end rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain cnae:CNAE_Version ;
+                  rdfs:range xsd:dateTime ;
+                  rdfs:comment "Data de fim da vigência de uma versão da tabela CNAE"@pt ,
+                               "validity end date of a CNAE table version"@en ;
+                  rdfs:label "fim de vigência"@pt ,
+                             "validity end"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/validity_start
+cnae:validity_start rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain cnae:CNAE_Version ;
+                    rdfs:range xsd:dateTime ;
+                    rdfs:comment "CNAE table version validity end date"@en ,
+                                 "Data de fim da vigência da versão da tabela de CNAE"@pt ;
+                    rdfs:label "início da vigência"@pt ,
+                               "validity start"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf rdfs:label .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_Allowed_For_MEI
+cnae:Activities_Allowed_For_MEI rdf:type owl:Class ;
+                                rdfs:subClassOf cnae:Activities_Collection ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty cnae:validate_year ;
+                                                  owl:someValuesFrom xsd:int
+                                                ] ;
+                                rdfs:label "Activities allowed for MEI"@en ,
+                                           "Atividades permitidas para MEI"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_Collection
+cnae:Activities_Collection rdf:type owl:Class ;
+                           rdfs:subClassOf skos:Collection ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty skos:member ;
+                                             owl:someValuesFrom cnae:Economic_Activity
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty skos:member ;
+                                             owl:allValuesFrom cnae:Economic_Activity
+                                           ] ;
+                           rdfs:label "Coleções de atividades econômicas"@pt ,
+                                      "Economic activities collection"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_ICMS-Free
+cnae:Activities_ICMS-Free rdf:type owl:Class ;
+                          rdfs:subClassOf cnae:Activities_Collection ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty cnae:cnae_version ;
+                                            owl:someValuesFrom xsd:double
+                                          ] ;
+                          rdfs:comment "Coleção de atividades que são isentas do tributo ICMS"@pt ,
+                                       "Collection of economic activities icms-free"@en ;
+                          rdfs:label "Atividades isentas de ICMS"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_Prevented_For_SIMPLES
+cnae:Activities_Prevented_For_SIMPLES rdf:type owl:Class ;
+                                      rdfs:subClassOf cnae:Activities_Collection ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty cnae:validate_year ;
+                                                        owl:someValuesFrom xsd:int
+                                                      ] ;
+                                      rdfs:label "Atividades impeditivas para o SIMPLES Nacional"@pt ,
+                                                 "Preventive activities for SIMPLES Nacional"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Class
+cnae:CNAE_Class rdf:type owl:Class ;
+                rdfs:subClassOf cnae:Economic_Activity ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty skos:broader ;
+                                  owl:someValuesFrom cnae:CNAE_Group
+                                ] ;
+                rdfs:label "CNAE class"@en ,
+                           "Classe CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Division
+cnae:CNAE_Division rdf:type owl:Class ;
+                   rdfs:subClassOf cnae:Economic_Activity ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty skos:broader ;
+                                     owl:someValuesFrom cnae:CNAE_Section
+                                   ] ;
+                   rdfs:label "CNAE division"@en ,
+                              "Divisão CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Group
+cnae:CNAE_Group rdf:type owl:Class ;
+                rdfs:subClassOf cnae:Economic_Activity ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty skos:broader ;
+                                  owl:someValuesFrom cnae:CNAE_Division
+                                ] ;
+                rdfs:label "CNAE group"@en ,
+                           "Grupo CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Section
+cnae:CNAE_Section rdf:type owl:Class ;
+                  rdfs:subClassOf cnae:Economic_Activity ;
+                  rdfs:label "CNAE section"@en ,
+                             "Seção CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass
+cnae:CNAE_Subclass rdf:type owl:Class ;
+                   rdfs:subClassOf cnae:Economic_Activity ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty skos:broader ;
+                                     owl:someValuesFrom cnae:CNAE_Class
+                                   ] ;
+                   rdfs:label "CNAE subclass"@en ,
+                              "Subclasse CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Version
+cnae:CNAE_Version rdf:type owl:Class ;
+                  rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                           owl:onProperty cnae:next_version ;
+                                                           owl:allValuesFrom cnae:CNAE_Version
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty cnae:previous_version ;
+                                                           owl:allValuesFrom cnae:CNAE_Version
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty rdfs:label ;
+                                    owl:someValuesFrom xsd:string
+                                  ] ;
+                  rdfs:comment "Representa a versão da tabela de Classificação Nacional de Atividades Econômicas (CNAE ) à qual a atividade econômica está associada"@pt ,
+                               "Represents the version of the Classificação Nacional de Atividades Econômicas (CNAE )  table to which economic activity is associated"@en ;
+                  rdfs:label "CNAE Version"@en ,
+                             "Versão do CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity
+cnae:Economic_Activity rdf:type owl:Class ;
+                       rdfs:subClassOf skos:Concept ,
+                                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                owl:onProperty cnae:next_version ;
+                                                                owl:allValuesFrom cnae:Economic_Activity
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty cnae:previous_version ;
+                                                                owl:allValuesFrom cnae:Economic_Activity
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cnae:has_version ;
+                                         owl:someValuesFrom cnae:CNAE_Version
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cnae:activity_description ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cnae:cnae ;
+                                         owl:someValuesFrom xsd:string
+                                       ] .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+rdf:List rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#OrderedCollection
+skos:OrderedCollection rdf:type owl:Class ;
+                       rdfs:subClassOf skos:Collection .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity
+cnae:Economic_Activity rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity_Collection
+cnae:Economic_Activity_Collection rdf:type owl:NamedIndividual ;
+                                  rdfs:label "Coleção de atividades econômicas"@pt ,
+                                             "Economic activity collection"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_member_of
+cnae:is_member_of rdf:type owl:NamedIndividual ;
+                  rdfs:label "Is member of"@en ,
+                             "É membro de"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+skos:Collection rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#OrderedCollection
+skos:OrderedCollection rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+skos:broadMatch rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+skos:broaderTransitive rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+skos:hiddenLabel rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+skos:historyNote rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#mappingRelation
+skos:mappingRelation rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+skos:member rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#memberList
+skos:memberList rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+skos:narrowMatch rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+skos:narrowerTransitive rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#relatedMatch
+skos:relatedMatch rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+skos:semanticRelation rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+cnae:Economic_Activity rdfs:label "Atividade econômica"@pt ;
+                       rdfs:comment """Economic activity carried out by the company. A company has a primary activity and can (optionally) have N secondary activities.
+This activity is represented by the Classificação Nacional de Atividades Econômicas (CNAE) code."""@en ;
+                       rdfs:seeAlso <https://pt.wikipedia.org/wiki/Classifica%C3%A7%C3%A3o_Nacional_de_Atividades_Econ%C3%B4micas> ;
+                       rdfs:label "Economic activity"@en ;
+                       rdfs:comment """Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.
+Esta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."""@pt .
+
+
+cnae:activity_description rdfs:label "descrição da atividade econômica"@pt ;
+                          rdfs:comment "Economic activity name"@pt ;
+                          rdfs:label "economic activity description"@en ;
+                          rdfs:comment "Nome da atividade econômica"@pt ;
+                          rdfs:label "denominação da atividade econômica"@pt .
+
+
+skos:Collection rdfs:label "Collection"@en ;
+                skos:definition "A meaningful collection of concepts."@en ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                skos:scopeNote "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy."@en .
+
+
+skos:Concept rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             skos:definition "An idea or notion; a unit of thought."@en ;
+             rdfs:label "Concept"@en ,
+                        "Conceito"@pt ,
+                        "Uma ideia ou noção; uma unidade de pensamento."@pt .
+
+
+skos:OrderedCollection skos:definition "An ordered collection of concepts, where both the grouping and the ordering are meaningful."@en ;
+                       skos:scopeNote "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'."@en ;
+                       rdfs:label "Ordered Collection"@en ;
+                       rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+skos:altLabel skos:example "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en ;
+              rdfs:comment "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              skos:definition "An alternative lexical label for a resource."@en ;
+              rdfs:label "alternative label"@en ;
+              rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en .
+
+
+skos:broader rdfs:label "has broader"@en ;
+             skos:definition "Relates a concept to a concept that is more general in meaning."@en ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:comment "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ;
+             skos:scopeNote "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en ;
+             rdfs:label "mais geral"@pt .
+
+
+skos:broaderTransitive rdfs:label "has broader transitive"@en ;
+                       rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                       skos:scopeNote "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en ;
+                       rdfs:label "mais geral transitivo"@pt ;
+                       skos:definition "skos:broaderTransitive is a transitive superproperty of skos:broader." .
+
+
+skos:changeNote rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                skos:definition "A note about a modification to a concept."@en ;
+                rdfs:label "change note"@en .
+
+
+skos:definition rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "definition"@en ;
+                skos:definition "A statement or formal explanation of the meaning of a concept."@en .
+
+
+skos:editorialNote rdfs:label "editorial note"@en ;
+                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                   skos:definition "A note for an editor, translator or maintainer of the vocabulary."@en .
+
+
+skos:example rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "example"@en ;
+             skos:definition "An example of the use of a concept."@en .
+
+
+skos:hiddenLabel rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ;
+                 skos:definition "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
+                 rdfs:label "hidden label"@en ;
+                 rdfs:comment "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+skos:historyNote skos:definition "A note about the past state/use/meaning of a concept."@en ;
+                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                 rdfs:label "history note"@en .
+
+
+skos:member skos:definition "Relates a collection to one of its members."@en ;
+            rdfs:label "tem membro"@pt ;
+            rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+            rdfs:label "has member"@en .
+
+
+skos:memberList skos:definition "Relates an ordered collection to the RDF list containing its members."@en ;
+                rdfs:label "has member list"@en ;
+                rdfs:comment """For any resource, every item in the list given as the value of the
+      skos:memberList property is also a value of the skos:member property."""@en ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
+
+
+skos:narrower skos:definition "Relates a concept to a concept that is more specific in meaning."@en ;
+              rdfs:comment "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ;
+              rdfs:label "mais específico"@pt ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              skos:scopeNote "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en ;
+              rdfs:label "has narrower"@en .
+
+
+skos:narrowerTransitive skos:scopeNote "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en ;
+                        rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                        skos:definition "skos:narrowerTransitive is a transitive superproperty of skos:narrower." ;
+                        rdfs:label "mais específico transitivo"@pt ,
+                                   "has narrower transitive"@en .
+
+
+skos:notation rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              skos:scopeNote "By convention, skos:notation is used with a typed literal in the object position of the triple."@en ;
+              skos:definition "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
+              rdfs:label "notation"@en .
+
+
+skos:note rdfs:label "note"@en ;
+          skos:scopeNote "This property may be used directly, or as a super-property for more specific note types."@en ;
+          rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+          skos:definition "A general note, for any purpose."@en .
+
+
+skos:prefLabel rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:comment "The range of skos:prefLabel is the class of RDF plain literals."@en ;
+               skos:definition "The preferred lexical label for a resource, in a given language."@en ;
+               rdfs:label "preferred label"@en ;
+               rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
+                            """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties."""@en .
+
+
+skos:related rdfs:label "has related"@en ;
+             rdfs:comment "skos:related is disjoint with skos:broaderTransitive"@en ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "relacionado"@pt ;
+             skos:definition "Relates a concept to a concept with which there is an associative semantic relationship."@en .
+
+
+skos:scopeNote skos:definition "A note that helps to clarify the meaning and/or the use of a concept."@en ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "scope note"@en .
+
+
+skos:semanticRelation skos:scopeNote "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."@en ;
+                      rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                      rdfs:label "is in semantic relation with"@en ;
+                      skos:definition "Links a concept to a concept related by meaning."@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cnae:CNAE_Class
+                cnae:CNAE_Division
+                cnae:CNAE_Group
+                cnae:CNAE_Section
+                cnae:CNAE_Subclass
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( cnae:has_cnae_class
+                cnae:has_cnae_division
+                cnae:has_cnae_group
+                cnae:has_cnae_section
+                cnae:has_version
+                cnae:next_version
+                cnae:previous_version
+                skos:semanticRelation
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

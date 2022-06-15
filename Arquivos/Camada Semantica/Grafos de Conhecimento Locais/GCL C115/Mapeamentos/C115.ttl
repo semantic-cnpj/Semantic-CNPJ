@@ -1,0 +1,461 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcad: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : <http://www.sefaz.ma.gov.br/ontology/> .
+@base <http://www.sefaz.ma.gov.br/ontology/> .
+
+# Mapeamento de Provedor
+<#TriplesMapProvedor> a rr:TriplesMap;
+    rr:logicalTable [ rr:tableName "UFC_SEM.C115_PROVEDOR" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Provedor/{CNPJ}";
+        rr:class foaf:Organization, sefazma:Provedor, sefazma:Papel;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name, sefazma:razao_social;
+        rr:objectMap [ rr:column "RAZAO_SOCIAL"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "CNPJ"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_estadual;
+        rr:objectMap [ rr:column "INSCRICAO_ESTADUAL"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate vcard:email;
+        rr:objectMap [ rr:column "EMAIL"; rr:datatype xsd:integer ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Endereco/{CNPJ}" ];
+    ].
+
+# Mapeamento Consumidor
+<#TriplesMapConsumidor> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_CONSUMIDOR" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF}";
+        rr:class sefazma:Consumidor, sefazma:Papel;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name, sefazma:nome, sefazma:razao_social;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj, sefazma:cpf;
+        rr:objectMap [ rr:column "CNPJCPF"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_estadual;
+        rr:objectMap [ rr:column "INSCRICAO_ESTADUAL"; rr:datatype xsd:integer ];
+    ].
+
+
+# Tipo Consumidor - PJ
+<#TriplesMapTipoConsumidorPJ> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_CONSUMIDOR" WHERE LENGTH(CNPJCPF) >= 12 """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF}";
+        rr:class foaf:Organization, sefazma:Consumidor_PJ, sefazma:Consumidor;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name, sefazma:razao_social;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "CNPJCPF"; rr:datatype xsd:string ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_estadual;
+        rr:objectMap [ rr:column "INSCRICAO_ESTADUAL"; rr:datatype xsd:integer ];
+    ].
+
+# Tipo Consumidor - PF
+<#TriplesMapTipoConsumidorPF> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_CONSUMIDOR" WHERE LENGTH(CNPJCPF) < 12""" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF}";
+        rr:class foaf:Person, sefazma:Consumidor_PF, sefazma:Pessoa, sefazma:Consumidor, sefazma:Pessoa_C115;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cpf;
+        rr:objectMap [ rr:column "CNPJCPF"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_estadual;
+        rr:objectMap [ rr:column "INSCRICAO_ESTADUAL"; rr:datatype xsd:integer ];
+    ].
+
+# Mapeamento Endereco C115
+<#TriplesMapEnderecoC115> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_UNIDADE_CONSUMO_MAT" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Endereco/{ID_UNIDADE}";
+        rr:class sefazma:Endereco, sefazma:Endereco_C115;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,foaf:name,sefazma:nome;
+        rr:objectMap [  rr:column "ROTULO"; ];
+    ];
+    
+    rr:predicateObjectMap [
+		rr:predicate sefazma:numero;
+		rr:objectMap [
+			rr:column "NUMERO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:complemento;
+		rr:objectMap [
+			rr:column "COMPLEMENTO";
+			rr:datatype xsd:string
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_estado, sefazma:tem_unidade_federativa;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_cidade;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{MUNICIPIO}-{UF}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_bairro;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Bairro/{BAIRRO}-{MUNICIPIO}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate sefazma:tem_logradouro;
+		rr:objectMap [
+			rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Logradouro/{CEP}"
+		];
+	];
+	rr:predicateObjectMap [
+		rr:predicate vcard:postal-code, sefazma:cep ;
+		rr:objectMap [
+			rr:column "CEP";
+			rr:datatype xsd:string
+		];
+	].
+
+# Mapeamento Unidade Consumo
+<#TriplesMapUnidadeConsumo> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_UNIDADE_CONSUMO_MAT" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Unidade_Consumo/{ID_UNIDADE}";
+        rr:class sefazma:Unidade_Consumo;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,foaf:name,sefazma:nome;
+        rr:objectMap [  rr:column "ROTULO"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Endereco/{CNPJCPF_CONSUMIDOR}-{CEP}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_provedor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Provedor/{CNPJ_PROVEDOR}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_consumidor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF_CONSUMIDOR}" ];
+    ].
+
+# Mapeamento Unidade Consumo Eletrica
+<#TriplesMapUnidadeConsumoEletrica> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_UNIDADE_ENERGIA_ELETRICA_MAT_" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Unidade_Consumo_Eletrica/{ID_UNIDADE}";
+        rr:class sefazma:Unidade_Consumo_Eletrica;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,foaf:name,sefazma:nome;
+        rr:objectMap [  rr:column "ROTULO"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:grupo_tensao;
+        rr:objectMap [ rr:column "GRUPO_TENSAO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:classe_consumo;
+        rr:objectMap [ rr:column "CLASSE_CONSUMO" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:fase;
+        rr:objectMap [ rr:column "FASE" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Endereco/{INSCRICAO_ESTADUAL}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_provedor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Provedor/{CNPJ_PROVEDOR}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_consumidor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF_CONSUMIDOR}" ];
+    ].
+
+
+# Mapeamento Unidade Consumo Comunicação
+<#TriplesMapUnidadeConsumoComunicacao> a rr:TriplesMap;
+    rr:logicalTable [ rr:tableName "UFC_SEM.C115_UNIDADE_COMUNICACAO_MAT" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Unidade_Consumo_Comunicacao/{ID_UNIDADE}";
+        rr:class sefazma:Unidade_Consumo_Comunicacao;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,foaf:name,sefazma:nome;
+        rr:objectMap [  rr:column "ROTULO"; ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Endereco/{INSCRICAO_ESTADUAL}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_provedor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Provedor/{CNPJ_PROVEDOR}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_consumidor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF_CONSUMIDOR}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_assinante;
+        rr:objectMap [ rr:column "TIPO_ASSINANTE" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_utilizacao;
+        rr:objectMap [ rr:column "TIPO_UTILIZACAO" ];
+    ].
+
+# Mapeamento Unidade Consumo Telecomunicação
+<#TriplesMapUnidadeConsumoTelecomunicacao> a rr:TriplesMap;
+    rr:logicalTable [ rr:tableName "UFC_SEM.C115_UNIDADE_TELECOMUNICACAO_MAT" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Unidade_Consumo_Telecomunicacao/{ID_UNIDADE}";
+        rr:class sefazma:Unidade_Consumo_Telecomunicacao;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,foaf:name,sefazma:nome;
+        rr:objectMap [  rr:column "ROTULO"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_endereco;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Endereco/{INSCRICAO_ESTADUAL}" ];
+    ];
+
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_provedor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Provedor/{CNPJ_PROVEDOR}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_consumidor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{CNPJCPF_CONSUMIDOR}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_assinante;
+        rr:objectMap [ rr:column "TIPO_ASSINANTE" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_utilizacao;
+        rr:objectMap [ rr:column "TIPO_UTILIZACAO" ];
+    ].
+
+# Mapeamento de Documento Fiscal
+<#TriplesMapDocumentoFiscal> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT *FROM "UFC_SEM"."C115_DOCUMENTO_FISCAL" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Documento_Fiscal/{ID_DOCUMENTO}";
+        rr:class sefazma:Documento_Fiscal;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,sefazma:codigo_documento;
+        rr:objectMap [ rr:column "ID_DOCUMENTO"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_documento;
+        rr:objectMap [ rr:column "NUMERO_DOCUMENTO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_emissao;
+        rr:objectMap [ rr:column "DATA_EMISSAO"; ]
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate sefazma:ano_apuracao;
+        rr:objectMap [ rr:column "ANO_APURACAO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:mes_apuracao;
+        rr:objectMap [ rr:column "MES_APURACAO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_autenticacao;
+        rr:objectMap [ rr:column "CODIGO_AUTENTICACAO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:outros_valores;
+        rr:objectMap [ rr:column "OUTROS_VALORES"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_total;
+        rr:objectMap [ rr:column "VALOR_TOTAL"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_operacoes_isentas;
+        rr:objectMap [ rr:column "VALOR_OPERACOES_ISENTAS"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_icms;
+        rr:objectMap [ rr:column "VALOR_ICMS"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:base_calculo_icms;
+        rr:objectMap [ rr:column "BASE_CALCULO_ICMS"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:serie;
+        rr:objectMap [ rr:column "SERIE" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:modelo;
+        rr:objectMap [ rr:column "MODELO" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_unidade_consumo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Unidade_Consumo/{ID_UNIDADE_CONSUMO}" ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_consumidor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Consumidor/{ID_CONSUMIDOR}" ];
+    ].
+
+
+# Mapeamento de Item
+<#TriplesMapItemC115> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."C115_ITEM" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/C115/Item/{ID_ITEM}";
+        rr:class sefazma:Item;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "ID_ITEM"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_item;
+        rr:objectMap [ rr:column "ID_ITEM"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_ordem;
+        rr:objectMap [ rr:column "NUMERO_ORDEM"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_total;
+        rr:objectMap [ rr:column "VALOR_TOTAL"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_desconto;
+        rr:objectMap [ rr:column "VALOR_DESCONTO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_acrescimo;
+        rr:objectMap [ rr:column "VALOR_ACRESCIMO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:base_calculo_icms;
+        rr:objectMap [ rr:column "BASE_CALCULO_ICMS"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_icms;
+        rr:objectMap [ rr:column "VALOR_ICMS"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_operacoes_isentas;
+        rr:objectMap [ rr:column "VALOR_OPERACOES_ISENTAS"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:outros_valores;
+        rr:objectMap [ rr:column "OUTROS_VALORES"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:aliquota;
+        rr:objectMap [ rr:column "ALIQUOTA"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:unidade_medida;
+        rr:objectMap [ rr:column "UNIDADE_MEDIDA"; ]
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:situacao;
+        rr:objectMap [ rr:column "SITUACAO"; ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:classificacao;
+        rr:objectMap [ rr:column "DESCRICAO_CLASSIFICACAO"; ]
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:grupo;
+        rr:objectMap [ rr:column "GRUPO"; ]
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_documento_fiscal;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/C115/Documento_Fiscal/{ID_DOCUMENTO}" ];
+    ].

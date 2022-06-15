@@ -1,0 +1,833 @@
+<http://www.sefaz.ma.gov.br/CONV115/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipe SEFAZ/MA\n\nRoberval Gomes Mariano \nCoordenador \nGestor Chefe CEGPA \nmariano@sefaz.ma.gov.br\n\nTainan Khalil Leite Calixto\ntainan.calixto@sefaz.ma.gov.br\nCoordenador Técnico - COTEC\n\n------------------------------------------------------------------------------------------\nEquipe UFC\n\nVania P Vidal \nCoordenador \nvaniap.vidal@gmail.com \n\nAngelo Brayner\nbrayner@dc.ufc.br\n\nJosé Maria Monteiro \nzemaria@lia.ufc.br\n\nCaio Viktor da Silva Avila\nEngenheiro do Conhecimento\nDesenvolvedor\ncaioviktor@alu.ufc.br\n\n\nTúlio Vidal Rolim\nEngenheiro do Conhecimento\nDesenvolvedor\ntulio.xcrtf@gmail.com\n\n\n-----------------------------------------------------------------------------------------------\nFinanciador: Banco Interamericano de Desenvolvimento\n\nContrato 4458/OC-BR. \nP1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia do Convênio 115"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@pt .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy
+<http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Person> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an object and a role, e.g. the person 'John' has role 'student'." .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "ha ruolo"@it .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an object and a role, e.g. the 'student' is the role of 'John'." .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#label> "is role of"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf> <http://www.w3.org/2000/01/rdf-schema#label> "è un ruolo di"@it .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/has_part
+<http://www.sefaz.ma.gov.br/CONV115/ontology/has_part> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/has_part> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre partes de um Endereço" .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Address> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/District> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_bairro> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Endereço e um Bairro." .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/tem_cidade
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_cidade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/tem_logradouro
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_logradouro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_logradouro> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Address> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_logradouro> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/tem_uf
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_uf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_uf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Address> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_uf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/tem_unidade_consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_unidade_consumo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/tem_unidade_consumo> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e uma Unidade de Consumo." .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_cfop> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Código Fiscal de Operações e Prestação." .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classe_consumo> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal de Energia e uma Classe de Consumo." .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_classificacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Item e sua Classificação." .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_destinatario> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Consumidor de Energia ou de Serviços de Comunicação e Telecomunicação."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_emitente> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Emitente(Provedor)."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/Address> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_endereco> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Provedor ou Unidade de Consumo e um Endereço."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fase> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento de Energia e uma Fase de Energia."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_fornecimento> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Fornecimento de Energia."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre uma Classificação e um Grupo respectivo."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_grupo_tensao> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento de Energia e um Grupo de Tensão."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_item> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Item."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_modelo_documento> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Modelo de Documento"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_qualificacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Responsável por emissão de Documento Fiscal e uma Qualificação"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_responsavel> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Responsável"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_serie> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e uma Série."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_servico> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Serviço."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_assinante> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Tipo Assinante."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#tem_tipo_utilizacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Estabelece a relação entre um Documento Fiscal e um Tipo de Utilização"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF
+<http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF> <http://www.w3.org/2000/01/rdf-schema#comment> "Abreviação de uma Unidade Federativa."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF> <http://www.w3.org/2000/01/rdf-schema#label> "abreviação da UF"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/aliquota
+<http://www.sefaz.ma.gov.br/CONV115/ontology/aliquota> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/aliquota> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/aliquota> <http://www.w3.org/2000/01/rdf-schema#comment> "Alíquota do ICMS aplicado ao Item"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao> <http://www.w3.org/2000/01/rdf-schema#comment> "Ano de apuração do Documento Fiscal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/ano_apuracao> <http://www.w3.org/2000/01/rdf-schema#label> "ano de apuração do documento fiscal"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms
+<http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms> <http://www.w3.org/2000/01/rdf-schema#comment> "Base de Cálculo do ICMS"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/base_calculo_icms> <http://www.w3.org/2000/01/rdf-schema#label> "base de cálculo do ICMS"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/cnpj
+<http://www.sefaz.ma.gov.br/CONV115/ontology/cnpj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/cnpj> <http://www.w3.org/2000/01/rdf-schema#comment> "Identificador do Cadastro Nacional de Pessoas Jurídicas (CNPJ)"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/codigo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/identificador> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade> <http://www.w3.org/2000/01/rdf-schema#comment> "Código Identificador d Cidades / Municípios."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade> <http://www.w3.org/2000/01/rdf-schema#label> "código da cidade"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/identificador> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid28 <http://www.w3.org/2002/07/owl#unionOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Código de Identificação de um determinado Conceito."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_identificacao> <http://www.w3.org/2000/01/rdf-schema#comment> "codigo de identificação"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/complemento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/complemento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/complemento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Address> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/complemento> <http://www.w3.org/2000/01/rdf-schema#comment> "Complemento do Endereço"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/complemento> <http://www.w3.org/2000/01/rdf-schema#label> "complemento"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/cpf
+<http://www.sefaz.ma.gov.br/CONV115/ontology/cpf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/cpf> <http://www.w3.org/2000/01/rdf-schema#comment> "Cadastro de Pessoas Físicas (CPF)."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao> <http://www.w3.org/2000/01/rdf-schema#comment> "Data de Emissão de Documento Fiscal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_emissao> <http://www.w3.org/2000/01/rdf-schema#label> "data de emissão"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/data_primeira_emissao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_primeira_emissao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_primeira_emissao> <http://www.w3.org/2000/01/rdf-schema#comment> "Data primeira emissão de documento fiscal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_primeira_emissao> <http://www.w3.org/2000/01/rdf-schema#label> "data primeira emissão"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/data_ultima_emissao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_ultima_emissao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_ultima_emissao> <http://www.w3.org/2000/01/rdf-schema#comment> "Data última emissão de documento fiscal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/data_ultima_emissao> <http://www.w3.org/2000/01/rdf-schema#label> "data da última emissão"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/descricao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/descricao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/descricao> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid31 <http://www.w3.org/2002/07/owl#unionOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/descricao> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrição de um determinado Conceito"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/descricao> <http://www.w3.org/2000/01/rdf-schema#label> "descrição"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/identificador
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador> <http://www.w3.org/2000/01/rdf-schema#comment> "Atributo identificador" .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/identificador_unidade_consumo> <http://www.w3.org/2000/01/rdf-schema#comment> "identificador da unidade consumo"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid44 <http://www.w3.org/2002/07/owl#unionOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual> <http://www.w3.org/2000/01/rdf-schema#comment> "Inscrição Estadual de um Consumidor ou Provedor no âmbito do Estado do Maranhão." .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual> <http://www.w3.org/2000/01/rdf-schema#label> "inscrição estadual"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid47 <http://www.w3.org/2002/07/owl#unionOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica> <http://www.w3.org/2000/01/rdf-schema#comment> "Inscrição Estadual Numérica de um Consumidor ou Provedor no âmbito do Estado do Maranhão." .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/inscricao_estadual_numerica> <http://www.w3.org/2000/01/rdf-schema#label> "inscrição estadual numérica"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao> <http://www.w3.org/2000/01/rdf-schema#comment> "Mês de Apuração de Documento Fiscal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/mes_apuracao> <http://www.w3.org/2000/01/rdf-schema#label> "mês apuração"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal> <http://www.w3.org/2000/01/rdf-schema#comment> "Número seqüencial atribuído pelo sistema eletrônico de processamento de dados ao documento fiscal;"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_documento_fiscal> <http://www.w3.org/2000/01/rdf-schema#label> "número"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.sefaz.ma.gov.br/CONV115/ontology/Address> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/numero_endereco> <http://www.w3.org/2000/01/rdf-schema#comment> "Número do Endereço"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/outros_valores
+<http://www.sefaz.ma.gov.br/CONV115/ontology/outros_valores> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/outros_valores> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid50 <http://www.w3.org/2002/07/owl#unionOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/outros_valores> <http://www.w3.org/2000/01/rdf-schema#comment> "Outros valores de Impostos atribuídos a um Item."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor
+<http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor> <http://www.w3.org/2000/01/rdf-schema#comment> "Número de Telefone do Consumidor"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor> <http://www.w3.org/2000/01/rdf-schema#label> "telefone"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/valor_icms
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_icms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_icms> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid53 <http://www.w3.org/2002/07/owl#unionOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_icms> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor do Imposto  sobre Circulação de Mercadorias e Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) atribuído a um Item."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/valor_operacoes_isentas
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_operacoes_isentas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_operacoes_isentas> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid56 <http://www.w3.org/2002/07/owl#unionOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_operacoes_isentas> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor atribuído a Operações Isentas de um Item."@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/valor_total
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_total> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_total> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid59 <http://www.w3.org/2002/07/owl#unionOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/valor_total> <http://www.w3.org/2000/01/rdf-schema#comment> "Valor total de um Item."@pt .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://www.w3.org/XML/1998/namespacepostal-code
+<http://www.w3.org/XML/1998/namespacepostal-code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/XML/1998/namespacepostal-code> <http://www.w3.org/2000/01/rdf-schema#comment> "CEP"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "A Concept that classifies an Object" .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Papel"@pt .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
+<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Ruolo"@it .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Address
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor> .
+_:genid62 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/XML/1998/namespacepostal-code> .
+_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/telefone_consumidor> .
+_:genid64 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid64 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa o Endereço de uma determinada Empresa, Estabelecimento ou Pessoa Física."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Address> <http://www.w3.org/2000/01/rdf-schema#label> "Endereço"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/City
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Location> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/codigo_cidade> .
+_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/2000/01/rdf-schema#comment> "Nome da Cidade de acordo com a Localização.."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Cidade"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Country
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Location> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "País"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/District
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Location> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/has_part> .
+_:genid66 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of> .
+_:genid67 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/CONV115/ontology/City> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/2000/01/rdf-schema#comment> "Bairro / Distrito de uma determinada Localização identificado em quase todos os casos pelo CEP."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/2000/01/rdf-schema#label> "Bairro"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/District> <http://www.w3.org/2000/01/rdf-schema#label> "District"@en .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Location> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of> .
+_:genid68 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/CONV115/ontology/Country> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/abreviacao_UF> .
+_:genid69 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#hiddenLabel> .
+_:genid70 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#prefLabel> .
+_:genid71 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "Unidade Federativa de uma vcadalidade."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Estado"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "State"@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Federative_Unit> <http://www.w3.org/2000/01/rdf-schema#label> "UF"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Locality
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Location> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://www.sefaz.ma.gov.br/CONV115/ontology/is_part_of> .
+_:genid72 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.sefaz.ma.gov.br/CONV115/ontology/District> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/XML/1998/namespacepostal-code> .
+_:genid73 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#comment> "A Locality can be a street, avenue, court, etc."@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#comment> "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#label> "Locality"@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Locality> <http://www.w3.org/2000/01/rdf-schema#label> "Logradouro"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Location
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> .
+_:genid74 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#long> .
+_:genid75 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents the concept of a geographical Location."@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Classe que representa o conceito de uma Localização geográfica."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Localização"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Location> <http://www.w3.org/2000/01/rdf-schema#label> "vcadal"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsável pelo Documento Fiscal (Nota Fiscal)"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Responsavel> <http://www.w3.org/2000/01/rdf-schema#label> "Responsável"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo> <http://www.w3.org/2000/01/rdf-schema#comment> "Quando Elétrica, é composta por instalações, equipamentos elétricos, condutores e acessórios, incluída a subestação, quando do fornecimento em tensão primária, caracterizado pelo recebimento de energia elétrica em apenas um ponto de entrega, com medição individualizada, correspondente a um único consumidor e localizado em uma mesma propriedade ou em propriedades contíguas.\n\nQuando Comunicação ou Telecomunicação é o Endereço relativo ao serviço prestado por uma empresa, tal como telefonia e / ou internet."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo> <http://www.w3.org/2000/01/rdf-schema#label> "Unidade Consumo"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Endereço onde é provido o serviço de Comunicação de um consumidor."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Comunicacao> <http://www.w3.org/2000/01/rdf-schema#label> "Unidade Consumo Comunicacao"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia> <http://www.w3.org/2000/01/rdf-schema#comment> "Endereço onde é provido o fornecimento de Energia de um consumidor."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Energia> <http://www.w3.org/2000/01/rdf-schema#label> "Unidade Consumo Energia"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Endereço onde é provido o serviço de telecomunicação de um consumidor."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/Unidade_Consumo_Telecomunicacao> <http://www.w3.org/2000/01/rdf-schema#label> "Unidade Consumo Telecomunicacao"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> <http://www.w3.org/2000/01/rdf-schema#comment> "Código Fiscal de Operações e Prestações (CFOP) é o código que identifica uma determinada operação por categorias no momento da emissão da nota fiscal.\n\nDependendo do Código CFOP, será fixada a tributação sobre a operação e haverá movimentações financeiras e de estoque de interesse do Fisco. Os diferentes tipos de CFOP separam as notas fiscais por tipo (nota de entrada ou saída), por região e por natureza da operação.\n\nO CFOP contém quatro dígitos, e cada um deles tem uma identificação específica. O primeiro número se refere ao tipo de operação (por exemplo, se iniciar com 1 é uma operação dentro do Estado e se inicia com 2, fora do Estado), e os demais, à finalidade e ao tipo de produto ou serviço"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#CFOP> <http://www.w3.org/2000/01/rdf-schema#label> "CFOP"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> <http://www.w3.org/2000/01/rdf-schema#comment> "Classes de consumo são divisões utilizadas para classificar os consumidores de energia elétrica. São três: Industrial, Comercial e Residencial. A cada classe aplicam-se regras diferentes para aferição de qualidade de serviço e reajustes anuais de tarifas"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> <http://www.w3.org/2000/01/rdf-schema#label> "Classe Consumo"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classe_Consumo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://pt.wikipedia.org/wiki/Classes_de_consumo"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Classificacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Classificação de um Item (Serviço ou Fornecimento) , baseando-se em códigos identificadores a partir da definição do CONV115, sendo:\n\n     101  'Assinatura de serviços de telefonia'\n     102  'Assinatura de serviços de comunicação de dados'\n     103  'Assinatura de serviços de TV por Assinatura'\n     104  'Assinatura de serviços de provimento à internet'\n     105  'Assinatura de outros serviços de multimídia'\n     199  'Assinatura de outros serviços'\n     201  'Habilitação de serviços de telefonia'\n     202  'Habilitação de serviços de comunicação de dados'\n     203  'Habilitação de TV por Assinatura'\n     204  'Habilitação de serviços de provimento à internet'\n     205  'Habilitação de outros serviços multimídia'\n     299  'Habilitação de outros serviços'\n     301  'Serviço Medido - chamadas locais'\n     302  'Serviço Medido - chamadas interurbanas no Estado'\n     303  'Serviço Medido - chamadas interurbanas para fora do Estado'\n     304  'Serviço Medido - chamadas internacionais'\n     305  'Serviço Medido - Números Especiais (0300/0500/0600/0800/etc.)'\n     306  'Serviço Medido - comunicação de dados'\n     307  'Serviço Medido - chamadas originadas em Roaming'\n     308  'Serviço Medido - chamadas recebidas em Roaming'\n     309  'Serviço Medido - adicional de chamada'\n     310  'Serviço Medido - provimento de acesso à Internet'\n     311  'Serviço Medido - pay-per-view (programação TV)'\n     312  'Serviço Medido - Mensagem SMS'\n     313  'Serviço Medido - Mensagem MMS'\n     314  'Serviço Medido - outros mensagens'\n     315  'Serviço Medido - serviço multimídia'\n     399  'Serviço Medido - outros serviços'\n     401  'Cartão Telefônico - Telefonia Fixa'\n     402  'Cartão Telefônico - Telefonia Móvel'\n     403  'Cartão de Provimento de acesso à internet'\n     404  'Ficha Telefônica'\n     405  'Recarga de Créditos - Telefonia Fixa'\n     406  'Recarga de Créditos - Telefonia Móvel'\n     407  'Recarga de Créditos - Provimento de acesso à Internet'\n     499  'Outras cobranças realizadas de assinantes de plano serviço pré-pago'\n     501  'Serviço Adicional (substituição de número, troca de aparelho, emissão de 2ª via de conta, conta detalhada, etc.)'\n     502  'Serviço Facilidades (identificador de chamadas, caixa postal, transferência temporária, não-perturbe, etc.)'\n     599  'Outros Serviços'\n     601  'Energia Elétrica - Consumo'\n     602  'Energia Elétrica - Demanda'\n     603  'Energia Elétrica - Serviços (Vistoria de unidade consumidora, Aferição de Medidor, Ligação, Religação, Troca de medidor, etc.)'\n     604  'Energia Elétrica - Encargos Emergenciais'\n     605  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Cativo'\n     606  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Livre'\n     607  'Encargos de Conexão'\n     608  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Cativo'\n     609  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Livre'\n     610  'Subvenção econômica para consumidores da subclasse “baixa renda”'\n     699  'Energia Elétrica - Outros'\n     701  'de Aparelho Telefônico'\n     702  'de Aparelho Identificador de chamadas'\n     703  'de Modem'\n     704  'de Rack'\n     705  'de Sala/Recinto'\n     706  'de Roteador'\n     707  'de Servidor'\n     708  'de Multiplexador'\n     709  'de Decodificador/Conversor'\n     799  'Outras disponibilizações'\n     802  'Cobrança de Seguros'\n     803  'Cobrança de Financiamento de Aparelho/Serviços'\n     804  'Cobrança de Juros de Mora'\n     805  'Cobrança de Multa de Mora'\n     806  'Cobrança de Conta de meses anteriores'\n     807  'Cobrança de Taxa Iluminação Pública'\n     808  'Retenção de ICMS-ST'\n     899  'Outras Cobranças'\n     902  'Dedução referente ajuste de conta'\n     903  'Redutor - Energia Elétrica - Nº 306/2003 (PIS/COFINS/IRPJ/CSLL)'\n     904  'Dedução relativa à multa pela interrupção de fornecimento'\n     905  'Dedução relativa à distribuição de dividendos Eletrobrás'\n     906  'Dedução relativa à subvenção econômica para consumidores da subclasse “baixa renda”'\n     907  'Dedução relativa à parcela do valor da operação correspondente ao valor da energia elétrica adquirida de terceiros, quando aplicáveis os termos do Convênio ICMS 77/11.'\n     999  'Outras deduções'\n     1002  'Serviço não medido de serviços de comunicação de dados'\n     1003  'Serviço não medido de serviços de TV por Assinatura'\n     1004  'Serviço não medido de serviços de provimento à internet'\n     1005  'Serviço não medido de outros serviços de multimídia'\n     1099  'Serviço não medido de outros serviços'\n     1101  'Interconexão: Detraf, SMS, MMS'\n     1102  'Detrat, Transmissão'\n     1103  'Roaming'\n     1104  'Exploração Industrial de Linha Dedicada - EILD'\n     1105  'Lançamento de ICMS proporcional às saídas isentas, não tributadas ou com redução de base de cálculo (§ 1º, Cláusula terceira, Convênio ICMS17/2013)'\n     1106  'Lançamento de ICMS proporcional às cessões de meio destinadas a\nconsumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'\n     1107  'Lançamento de ICMS complementar, na condição de responsável tributário (§ 2º, Cláusula terceira, Convênio 17/2013)'\n     1199  'Outras Cessões de Meios de Rede'"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+_:genid76 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid78 <http://www.w3.org/2002/07/owl#unionOf> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Person> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> <http://www.w3.org/2000/01/rdf-schema#comment> "Conceito referente a Consumidores de Energia e Serviços de Comunicação e Telecomunicação"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Consumidor> <http://www.w3.org/2000/01/rdf-schema#label> "Consumidor"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Nota Fiscal emitida relativa à serviços de comunicação de dados / internet."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Comunicacao> <http://www.w3.org/2000/01/rdf-schema#label> "Documento Comunicacao"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> <http://www.w3.org/2000/01/rdf-schema#comment> "Nota Fiscal emitida relativa ao fornecimento de Energia Elétrica."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Energia> <http://www.w3.org/2000/01/rdf-schema#label> "Documento Energia"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> <http://www.w3.org/2000/01/rdf-schema#comment> "Documento fiscal é um documento que comprova as operações de venda de bens ou prestação de serviços entre empresas, órgãos públicos, ou até mesmo pessoas físicas. Além da circulação de mercadorias e serviços, esse documento é obrigatório para comprovar o recolhimento de impostos e tributos sobre faturamento."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> <http://www.w3.org/2000/01/rdf-schema#label> "Documento Fiscal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://arquivei.com.br/blog/documentos-fiscais-tudo-o-que-voce-precisa-saber/"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Fiscal> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Nota Fiscal emitida relativa à serviços de telecomunicação, telefonia móvel e fixa."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Documento_Telecomunicacao> <http://www.w3.org/2000/01/rdf-schema#label> "Documento Telecomunicacao"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fase> <http://www.w3.org/2000/01/rdf-schema#comment> "A distribuição da energia elétrica é feita de acordo com a necessidade de cada unidade consumidora, dependendo de seu tipo de utilização: residencial, comercial ou industrial. Antes de ser utilizada, a energia elétrica fornecida pelas concessionárias passa por transformadores instalados em postes. Esses equipamentos podem ser:\n\n1- Monofásico;\n2- Bifásico;\n3- Trifásico;"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornecimento de Energia Elétrica em uma Unidade de Consumo;"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Fornecimento> <http://www.w3.org/2000/01/rdf-schema#label> "Fornecimento"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Classificação do Grupo de um determinado Item (Serviço ou Fornecimento):\n\n > 100 e < 201 =  'Assinatura' \n > 200 e < 301 =  'Habilitação'\n > 300 e < 401 = 'Serviço Médio'\n > 400 e < 501 = 'Serviço Pré-Pago'\n > 500 e < 601 = 'Outros Serviços'\n > 600 e  < 701 = 'Energia Elétrica'\n > 700 e  < 801 = 'Disponibilização de Meios ou Equipamentos'\n > 800 e  < 901 = 'Deduções'\n > 900 e < 1001 = 'Serviço não medido'\n > 1000 e < 1101 'Cessão de Meios de Rede'\n > 1100 e < 2000 'Serviço Médio'"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo> <http://www.w3.org/2000/01/rdf-schema#comment> "Grupo"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> <http://www.w3.org/2000/01/rdf-schema#comment> "Grupo de Tensão de Energia fornecida:\n\n01 - A1 AltaTensão (230kV ou mais);\n02 - A2 Alta Tensão (88 a 138kV);\n03 - A3 Alta Tensão (69kV);\n04 - A3a Alta Tensão (30kV a 44kV);\n05 - A4 Alta Tensão (2,3kV a 25kV);\n06 - AS Alta Tensão Subterrâneo\n07 - B1 – Residencial;\n08 - B1 Residencial Baixa Renda;\n09 - B2 – Rural;\n10 - B2 Cooperativa de Eletrificação\nRural;\n11 - B2 Serviço Público de Irrigação;\n12 - B3 Demais Classes;\n13 - B4a Iluminação Pública rede de\ndistribuição;\n14 - B4b Iluminação Pública bulbo\nde lâmpada;\n\nDemais modelos = 00;"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Grupo_Tensao> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo Tensão"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Item
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> <http://www.w3.org/2000/01/rdf-schema#comment> "Item de um Documento Fiscal - Conceito que Generaliza Fornecimento ou Serviço."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> <http://www.w3.org/2000/01/rdf-schema#label> "Item"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> <http://www.w3.org/2000/01/rdf-schema#comment> "Modelo de Documento Fiscal, podendo ter o seguintes valores:\n\n6 = Modelo de Documento de Energia;\n21 = Modelo de Documento de Comunicação;\n22 = Modelo de Documento de Telecomunicação;"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Modelo_Documento> <http://www.w3.org/2000/01/rdf-schema#label> "Modelo Documento"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid82 .
+_:genid82 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> <http://www.w3.org/2000/01/rdf-schema#comment> "Órgão que fornece e provê Energia e Serviços de Comunicação e Telecomunicação;"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Provedor> <http://www.w3.org/2000/01/rdf-schema#label> "Provedor"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualificação do Responsável pelo Documento Fiscal."@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Qualificacao> <http://www.w3.org/2000/01/rdf-schema#label> "Qualificação"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> <http://www.w3.org/2000/01/rdf-schema#comment> "Série do documento fiscal (U- Unica / B84);"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Serie> <http://www.w3.org/2000/01/rdf-schema#label> "Série"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.sefaz.ma.gov.br/CONV115/ontology/#Item> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> <http://www.w3.org/2000/01/rdf-schema#comment> "Serviço de Comunicação ou Telecomunicação realizados em uma Unidade de Consumo;"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Servico> <http://www.w3.org/2000/01/rdf-schema#label> "Serviço"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item> <http://www.w3.org/2000/01/rdf-schema#comment> "Situação do Item:\n\n'S' = Cancelado\n'R' = Substituído\n'R' = Normal"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Situacao_Item> <http://www.w3.org/2000/01/rdf-schema#label> "Situação Item"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de Assinante de Serviços de Comunicação e Telecomunicação:\n\n1 =  'Comercial-Industrial'\n2 = 'Poder_Público'\n3 = 'Residencial-Pessoa_Física'\n4 = 'Público'\n5 = 'Semi_Público'"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Assinante> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo Assinante"@pt .
+# 
+# http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipo de Utilização de Serviços de Comunicação ou Telecomunicação:\n\n1 = 'Telefonia'\n2 = 'Comunicacao_Dados'\n3 = 'TV_Assinatura'\n4 = 'Provimento_Acesso_Internet'\n5 = 'Multimidia'\n6 = 'Outros'"@pt .
+<http://www.sefaz.ma.gov.br/CONV115/ontology/#Tipo_Utilizacao> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo Utilização"@pt .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Pessoa Jurídica" .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Representação de Pessoa Física identificada por um cpf."@pt .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A person." .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Pessoa Física"@pt .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#comment> "A name for some thing." .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://xmlns.com/foaf/0.1/> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "nome" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

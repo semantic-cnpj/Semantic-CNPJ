@@ -1,0 +1,116 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcad: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : <http://www.sefaz.ma.gov.br/ontology/> .
+@base <http://www.sefaz.ma.gov.br/ontology/> .
+
+# Mapeamento de Fornecedor Inidôneo
+<#TriplesMapFornecedorInidoneo> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."TCU_FORNECEDOR_INIDONEO_VIEW" """];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/TCU/Fornecedor_Inidoneo/{CNPJ_CPF}";
+        rr:class sefazma:Fornecedor_Inidoneo, sefazma:Fornecedor_Restrito;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj_cpf;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_unidade_federativa;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/TCU/Unidade_Federativa/{UF}"; ];
+    ].
+
+
+# Mapeamento Fornecedor Inabilitado
+<#TriplesMapFornecedorInabilitado> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT CNPJ_CPF, NOME, UF, MUNICIPIO FROM "UFC_SEM"."TCU_FORNECEDOR_INABILITADO_VIEW" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/TCU/Fornecedor_Inabilitado/{CNPJ_CPF}";
+        rr:class sefazma:Fornecedor_Inabilitado, sefazma:Fornecedor_Restrito, sefazma:Fornecedor_PF;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cpf;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_unidade_federativa;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_cidade;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{MUNICIPIO}-{UF}"; ];
+    ].
+
+
+# Processo
+<#TriplesMapProcesso> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """ SELECT * FROM "UFC_SEM"."RESTRICOES_PROCESSO_VIEW"
+WHERE DATA_TRANSITO_JULGADO IS NOT NULL """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Restricoes/Processo/{NUMERO}";
+        rr:class sefazma:Processo;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "NUMERO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:deliberacao;
+        rr:objectMap [ rr:column "DELIBERACAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_transito_julgado;
+        rr:objectMap [ rr:column "DATA_TRANSITO_JULGADO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_acordao;
+        rr:objectMap [ rr:column "DATA_ACORDAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_final;
+        rr:objectMap [ rr:column "DATA_FINAL"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_fornecedor_restrito;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Restricoes/Fornecedor_Restrito/{CNPJ_CPF}"; ];
+    ].
+
+# Acórdão
+<#TriplesMapAcordao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """
+     SELECT  NUMERO, DELIBERACAO,  DATA_TRANSITO_JULGADO, DATA_ACORDAO, 
+ DATA_FINAL ,  CNPJ_CPF, FONTE, CONCAT(CONCAT(CNPJ_CPF,'-'),DATA_ACORDAO) AS ROTULO 
+FROM "UFC_SEM"."RESTRICOES_PROCESSO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Restricoes/Acordao/{CNPJ_CPF}-{DATA_ACORDAO}-{NUMERO}";
+        rr:class sefazma:Acordao;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "ROTULO";  ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_acordao;
+        rr:objectMap [ rr:column "DATA_ACORDAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_processo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Restricoes/Processo/{NUMERO}"; ];
+    ].

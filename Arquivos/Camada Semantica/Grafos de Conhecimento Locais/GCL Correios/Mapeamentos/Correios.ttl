@@ -1,0 +1,59 @@
+
+<MapeamentoEstado> a rr:TriplesMap;
+ rr:logicalTable [ rr:sqlQuery """SELECT * from "UFC_SEM"."CEP_ESTADO" """ ] ; 
+ rr:subjectMap [ rr:class sefazma:Unidade_Federativa ;  rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF}" ;  ] ; 
+ rr:predicateObjectMap 
+  [ rr:predicate rdfs:label; rr:objectMap [ rr:column "\"UF\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:abreviacao_UF; rr:objectMap [ rr:column "\"UF\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:estado; rr:objectMap [ rr:column "\"ESTADO\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:codigo_ibge; rr:objectMap [ rr:column "\"CODIGO_IBGE\"" ; ]  ] 
+  . 
+
+<MapeamentoCidade> a rr:TriplesMap;
+ rr:logicalTable [ rr:sqlQuery """ SELECT ID_CIDADE, ESTADO, CEP, CODIGO_IBGE, CIDADE from "UFC_SEM"."CEP_CIDADE" """ ] ; 
+ rr:subjectMap [ rr:class sefazma:Cidade;  rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{CIDADE}-{ESTADO}" ;  ] ; 
+ rr:predicateObjectMap 
+  [ rr:predicate rdfs:label; rr:objectMap [ rr:column "\"CIDADE\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:codigo_cidade; rr:objectMap [ rr:column "\"ID_CIDADE\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:codigo_ibge; rr:objectMap [ rr:column "\"CODIGO_IBGE\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:tem_unidade_federativa,sefazma:tem_estado; rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{ESTADO}" ; ]  ] 
+ ,  [ rr:predicate sefazma:cep; rr:objectMap [ rr:column "\"CEP\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:cidade; rr:objectMap [ rr:column "\"CIDADE\"" ; ]  ] 
+  . 
+
+<MapeamentoBairro> a rr:TriplesMap;
+ rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEP_BAIRRO" bairro""" ] ; 
+ rr:subjectMap [ 
+    rr:class sefazma:Bairro;  
+    rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Bairro/{ID_BAIRROS}" ;  
+ ] ; 
+ rr:predicateObjectMap 
+  [ rr:predicate rdfs:label; rr:objectMap [ rr:column "BAIRRO" ; ]  ] 
+ ,  [ rr:predicate sefazma:bairro; rr:objectMap [ rr:column "BAIRRO" ; ]  ] 
+ ,  [ rr:predicate sefazma:tem_cidade; rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{CIDADE}-{ESTADO}" ; ]  ] 
+  . 
+
+ <MapeamentoLogradouro> a rr:TriplesMap;
+ rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEP_LOGRADOURO" """ ] ; 
+ rr:subjectMap [ rr:class sefazma:Logradouro ;  
+ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Logradouro/{ID_LOGRADOURO}" ;  ] ; 
+ rr:predicateObjectMap 
+  [ rr:predicate rdfs:label; rr:objectMap [ rr:column "\"LOGRADOURO\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:logradouro; rr:objectMap [ rr:column "\"LOGRADOURO\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:tipo_logradouro; rr:objectMap [ rr:column "\"TIPO_LOGRADOURO\"" ; ]  ] 
+ ,  [ rr:predicate sefazma:tem_cidade; rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Cidade/{CIDADE}-{ESTADO}" ; ]  ] 
+ ,  [ rr:predicate sefazma:tem_bairro; rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Bairro/{BAIRRO}-{CIDADE}" ; ]  ] 
+ ,  [ rr:predicate sefazma:tem_cep; rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/CEP_Logradouro/{CEP}" ; ]  ] 
+  . 
+
+<MapeamentoCEPLogradouro> a rr:TriplesMap;
+ rr:logicalTable [ rr:sqlQuery """SELECT * from "UFC_SEM"."CEP_CEP_LOGRADOURO" """ ] ; 
+ rr:subjectMap [ rr:class <http://www.sefaz.ma.gov.br/ontology/CEP_Logradouro> ; 
+  rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/CEP_Logradouro/{CEP}" ;  ] ; 
+ rr:predicateObjectMap 
+  [ rr:predicate rdfs:label; rr:objectMap [ rr:column "\"CEP\"" ; ]  ] 
+ ,  [ rr:predicate  sefazma:logradouro; rr:objectMap [ rr:column "\"LOCAL_CEP\"" ; ]  ] 
+ ,  [ rr:predicate  sefazma:complemento; rr:objectMap [ rr:column "\"COMPLEMENTO\"" ; ]  ] 
+ ,  [ rr:predicate  sefazma:latitude; rr:objectMap [ rr:column "\"LATITUDE\"" ; ]  ] 
+ ,  [ rr:predicate  sefazma:longitude; rr:objectMap [ rr:column "\"LONGITUDE\"" ; ]  ] 
+  . 

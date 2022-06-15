@@ -1,0 +1,795 @@
+@prefix : <http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> .
+
+<http://www.sefaz.ma.gov.br/IBGE/Location/ontology/> rdf:type owl:Ontology ;
+                                                      <http://purl.org/dc/terms/contributor> "Dave Beckett" ,
+                                                                                             "Nikki Rogers" ,
+                                                                                             "Participants in W3C's Semantic Web Deployment Working Group." ;
+                                                      <http://purl.org/dc/terms/creator> "Alistair Miles" ,
+                                                                                         "Sean Bechhofer" ;
+                                                      <http://purl.org/dc/terms/description> "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies."@en ;
+                                                      <http://purl.org/dc/terms/title> "SKOS Vocabulary"@en ;
+                                                      rdfs:comment "Cadastral Ontology of SEFAZ Taxpayers (SEFAZ-MA) and Open Data of Companies of the Federal Revenue of Brazil (RFB)"@en ,
+                                                                   """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Valeria Priscilla Monteiro Fernandes
+valeria.fernandes@sefaz.ma.gov.br
+
+Adriano Dos Santos Rego
+adriano.rego@sefaz.ma.gov.br
+
+Tainan Khalil Leite Calixto
+tainan.calixto@sefaz.ma.gov.br
+
+
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
+                                                                   "Ontologia contendo dados sobre Municípios, Microregiões, Mesoregiões, Unidades Federativas e Paises disponibilizados pelo Instituto Brasileiro de Geografia e Estatística (IBGE)"@pt ;
+                                                      rdfs:label "IBGE - Location" ;
+                                                      rdfs:seeAlso <http://www.w3.org/TR/skos-reference/> ,
+                                                                   <https://www.ibge.gov.br/explica/codigos-dos-municipios.php> ;
+                                                      owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://rs.tdwg.org/ontology/voc/Person#birthdate
+<http://rs.tdwg.org/ontology/voc/Person#birthdate> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:domain <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> rdf:type owl:AnnotationProperty ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+
+
+###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
+owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty ;
+                                                    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty ;
+                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty ;
+                                 rdfs:range rdfs:Literal ,
+                                            xsd:string ;
+                                 rdfs:domain owl:Thing ,
+                                             <http://xmlns.com/foaf/0.1/Person> .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/has_part
+<http://www.sefaz.ma.gov.br/ontology/has_part> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/part_whole_relation> ;
+                                               owl:inverseOf <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                               rdf:type owl:TransitiveProperty ;
+                                               rdfs:label "has part"@en ,
+                                                          "tem parte"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/part_whole_relation> ;
+                                                 rdf:type owl:TransitiveProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/part_whole_relation
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> rdf:type owl:ObjectProperty ,
+                                                                   owl:TransitiveProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf rdfs:label ;
+                                                      rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/city_code
+<http://www.sefaz.ma.gov.br/ontology/city_code> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                rdfs:domain <http://www.sefaz.ma.gov.br/ontology/City> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:label "city code"@en ,
+                                                           "código da cidade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/city_code_IBGE
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/city_code> ;
+                                                     rdfs:domain <http://www.sefaz.ma.gov.br/ontology/City> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:label "city code IBGE"@en ,
+                                                                "código da cidade do IBGE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full
+<http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> ;
+                                                          rdf:type owl:FunctionalProperty ;
+                                                          rdfs:domain <http://www.sefaz.ma.gov.br/ontology/City> ;
+                                                          rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/country_code
+<http://www.sefaz.ma.gov.br/ontology/country_code> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Country> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:label "country code"@en ,
+                                                              "código do país"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/country_code_IBGE
+<http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/country_code> ;
+                                                        rdf:type owl:FunctionalProperty ;
+                                                        rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Country> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:label "country code IBGE"@en ,
+                                                                   "código do país do IBGE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/mesoregion_code
+<http://www.sefaz.ma.gov.br/ontology/mesoregion_code> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                      rdf:type owl:FunctionalProperty ;
+                                                      rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Mesoregion> ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:label "código da mesoregião"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/mircroregion_code
+<http://www.sefaz.ma.gov.br/ontology/mircroregion_code> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                        rdf:type owl:FunctionalProperty ;
+                                                        rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Microregion> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:label "código da microregião"@pt ,
+                                                                   "microregion code"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE
+<http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                   rdf:type owl:FunctionalProperty ;
+                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:label "código da unidade federativa do IBGE"@pt .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:label "latitude"@pt ,
+                                                         "lattitude"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:range xsd:decimal ;
+                                               rdfs:label "longitude"@en ,
+                                                          "longitude"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2006/vcard/ns#country-name
+<http://www.w3.org/2006/vcard/ns#country-name> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf rdfs:label ;
+                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Country> ;
+                                               rdfs:range xsd:string .
+
+
+###  http://www.w3.org/2006/vcard/ns#postal-code
+<http://www.w3.org/2006/vcard/ns#postal-code> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Locality> ;
+                                              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                                             owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Microregion>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.sefaz.ma.gov.br/ontology/city_code_IBGE> ;
+                                                             owl:someValuesFrom owl:rational
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty rdfs:label ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.sefaz.ma.gov.br/ontology/country_code_IBGE> ;
+                                                                owl:someValuesFrom xsd:string
+                                                              ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.sefaz.ma.gov.br/ontology/has_part> ;
+                                                                 owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Locality>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                                                 owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/City>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty rdfs:label ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                                                        owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Country>
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty rdfs:label ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#hiddenLabel> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                                                 owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/District>
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty rdfs:label ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.w3.org/2006/vcard/ns#postal-code> ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> rdf:type owl:Class ;
+                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty rdfs:label ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+                                                                 owl:someValuesFrom xsd:double
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+                                                                 owl:someValuesFrom xsd:double
+                                                               ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Mesoregion
+<http://www.sefaz.ma.gov.br/ontology/Mesoregion> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                                                   owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Federative_Unit>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.sefaz.ma.gov.br/ontology/mesoregion_code> ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty rdfs:label ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ] ;
+                                                 rdfs:label "Mesoregion"@en ,
+                                                            "Mesoregião"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Microregion
+<http://www.sefaz.ma.gov.br/ontology/Microregion> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.sefaz.ma.gov.br/ontology/is_part_of> ;
+                                                                    owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Mesoregion>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.sefaz.ma.gov.br/ontology/mircroregion_code> ;
+                                                                    owl:someValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty rdfs:label ;
+                                                                    owl:someValuesFrom xsd:string
+                                                                  ] ;
+                                                  rdfs:label "Microregion"@en ,
+                                                             "Microregião"@pt .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/composition_relation
+<http://www.sefaz.ma.gov.br/ontology/composition_relation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of_group
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/locality_type
+<http://www.sefaz.ma.gov.br/ontology/locality_type> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/part_whole_relation
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#OrderedCollection
+<http://www.w3.org/2004/02/skos/core#OrderedCollection> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+<http://www.w3.org/2004/02/skos/core#broadMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#mappingRelation
+<http://www.w3.org/2004/02/skos/core#mappingRelation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+<http://www.w3.org/2004/02/skos/core#member> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#memberList
+<http://www.w3.org/2004/02/skos/core#memberList> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+<http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#relatedMatch
+<http://www.w3.org/2004/02/skos/core#relatedMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+<http://www.w3.org/2004/02/skos/core#semanticRelation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:NamedIndividual .
+
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.sefaz.ma.gov.br/ontology/City> rdfs:label "Cidade"@pt ,
+                                                       "City"@en ,
+                                                       "Municipio"@pt ,
+                                                       "Município"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Country> rdfs:label "Country"@en ,
+                                                         "País"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/District> rdfs:label "Bairro"@pt ,
+                                                          "District"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> rdfs:label "Estado"@pt ,
+                                                                 "State"@pt ,
+                                                                 "UF"@pt ,
+                                                                 "Unidade Federativa"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Locality> rdfs:comment "A locality can be a street, avenue, court, etc."@en ,
+                                                            "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt ;
+                                               rdfs:label "Locality"@en ,
+                                                          "Logradouro"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Location> rdfs:comment "Class that represents the concept of a geographical location."@en ,
+                                                            "Classe que representa o conceito de uma localização geográfica."@pt ;
+                                               rdfs:label "Local"@pt ,
+                                                          "Localização"@pt ,
+                                                          "Location"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/code> rdfs:label "code"@en ,
+                                                      "código"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> rdfs:label "faz parte de"@pt ,
+                                                            "is part of"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> rdfs:label "part whole relation"@en ,
+                                                                     "relação de parte todo"@pt .
+
+
+<http://www.w3.org/2004/02/skos/core#altLabel> rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
+                                                            "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "alternative label"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "An alternative lexical label for a resource."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#changeNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "change note"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A note about a modification to a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#definition> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "definition"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                    rdfs:label "editorial note"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A note for an editor, translator or maintainer of the vocabulary."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#example> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "example"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An example of the use of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
+                                                               "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                  rdfs:label "hidden label"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#historyNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                  rdfs:label "history note"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A note about the past state/use/meaning of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#notation> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "notation"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#note> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                           rdfs:label "note"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#scopeNote> "This property may be used directly, or as a super-property for more specific note types."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
+                                                             "The range of skos:prefLabel is the class of RDF plain literals."@en ,
+                                                             """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties."""@en ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "preferred label"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "The preferred lexical label for a resource, in a given language."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "scope note"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "A note that helps to clarify the meaning and/or the use of a concept."@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.sefaz.ma.gov.br/ontology/City>
+                <http://www.sefaz.ma.gov.br/ontology/Country>
+                <http://www.sefaz.ma.gov.br/ontology/District>
+                <http://www.sefaz.ma.gov.br/ontology/Federative_Unit>
+                <http://www.sefaz.ma.gov.br/ontology/Locality>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

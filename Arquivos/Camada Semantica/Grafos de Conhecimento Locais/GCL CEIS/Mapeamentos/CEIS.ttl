@@ -1,0 +1,147 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcad: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : <http://www.sefaz.ma.gov.br/ontology/> .
+@base <http://www.sefaz.ma.gov.br/ontology/> .
+
+# Mapeamento de Sancionados
+<#TriplesMapSancionadosOrganizacao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEIS_SANCIONADO" WHERE TIPO_PESSOA = 'J'""" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Sancionado/{CNPJ_CPF}";
+        rr:class sefazma:Sancionado, sefazma:Fornecedor_Restrito , sefazma:Fornecedor_PJ, foaf:Organization;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name, sefazma:razao_social;
+        rr:objectMap [ rr:column "NOME_RAZAO_SOCIAL"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nome_fantasia;
+        rr:objectMap [ rr:column "NOME_FANTASIA"; rr:datatype xsd:string ];
+    ].
+
+<#TriplesMapSancionadosPessoa> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEIS_SANCIONADO" WHERE TIPO_PESSOA = 'F' """];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Sancionado/{CNPJ_CPF}";
+        rr:class sefazma:Sancionado, sefazma:Fornecedor_Restrito, sefazma:Fornecedor_PF, foaf:Person, sefazma:Pessoa, sefazma:Pessoa_CEIS;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "NOME_RAZAO_SOCIAL"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cpf;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ].
+
+<#TriplesMapSancionadosSancao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEIS_SANCAO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Sancao/{CNPJ_CPF_SANCIONADO}-{TIPO}";
+        rr:class sefazma:Sancao;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "TIPO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_inicio;
+        rr:objectMap [ rr:column "DATA_INICIO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_final;
+        rr:objectMap [ rr:column "DATA_FINAL"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_publicacao;
+        rr:objectMap [ rr:column "DATA_PUBLICACAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:publicacao;
+        rr:objectMap [ rr:column "PUBLICACAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:detalhamento;
+        rr:objectMap [ rr:column "DETALHAMENTO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:abrangencia;
+        rr:objectMap [ rr:column "ABRANGENCIA"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:fundamentacao_legal;
+        rr:objectMap [ rr:column "FUNDAMENTACAO_LEGAL"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_fundamentacao;
+        rr:objectMap [ rr:column "DESCRICAO_FUNDAMENTACAO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:observacoes;
+        rr:objectMap [ rr:column "OBSERVACOES"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_orgao, sefazma:tem_orgao_sancionador;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Orgao/{NOME_ORGAO}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_processo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Restricoes/Processo/{NUMERO_PROCESSO}"; ];
+    ].
+
+### Sancionado tem Sanção
+<#TriplesMapSancionadoTemSancao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT sancionado.CNPJ_CPF, sancao.TIPO 
+    FROM "UFC_SEM"."CEIS_SANCAO" sancao
+    INNER JOIN "UFC_SEM"."CEIS_SANCIONADO" sancionado 
+    ON sancao.CNPJ_CPF_SANCIONADO = sancionado.CNPJ_CPF""" ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Sancionado/{CNPJ_CPF}";
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_sancao;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Sancao/{CNPJ_CPF}-{TIPO}"; ];
+    ].
+
+### Orgao
+<#TriplesMapOrgao> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."CEIS_ORGAO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/CEIS/Orgao/{ORGAO}";
+        rr:class sefazma:Orgao_Sancionador;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, foaf:name;
+        rr:objectMap [ rr:column "ORGAO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:complemento;
+        rr:objectMap [ rr:column "COMPLEMENTO"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_unidade_federativa;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF}"; ];
+    ].

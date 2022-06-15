@@ -1,0 +1,2219 @@
+@prefix : <http://www.sefaz.ma.gov.br/RFB/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sefaz.ma.gov.br/RFB/ontology/> .
+
+<http://www.sefaz.ma.gov.br/RFB/ontology/> rdf:type owl:Ontology ;
+                                            rdfs:comment "Cadastral Ontology of open data of companies registred with the Federal Revenue of Brazil"@en ,
+                                                         """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Valeria Priscilla Monteiro Fernandes
+valeria.fernandes@sefaz.ma.gov.br
+
+Adriano Dos Santos Rego
+adriano.rego@sefaz.ma.gov.br
+
+
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
+                                                         "Ontologia Cadastral dos Dados Abertos de Empresas da Receita Federal do Brasil - RFB"@pt ;
+                                            rdfs:label "RFB Cadastro"@pt ;
+                                            rdfs:seeAlso <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/dados-publicos-cnpj> ;
+                                            owl:versionInfo "1.0"@pt .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> rdf:type owl:AnnotationProperty ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/company_name
+<http://www.sefaz.ma.gov.br/ontology/company_name> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/situation_code
+<http://www.sefaz.ma.gov.br/ontology/situation_code> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/special_situation_description
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> rdf:type owl:AnnotationProperty ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Special_Situation> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/trade_name
+<http://www.sefaz.ma.gov.br/ontology/trade_name> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:range xsd:string .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/has_address
+<http://www.sefaz.ma.gov.br/ontology/has_address> rdf:type owl:ObjectProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                  rdfs:range <http://www.sefaz.ma.gov.br/ontology/Address> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                              rdfs:range <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_city
+<http://www.sefaz.ma.gov.br/ontology/has_city> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                               rdfs:range <http://www.sefaz.ma.gov.br/ontology/City> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_country
+<http://www.sefaz.ma.gov.br/ontology/has_country> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                                  rdfs:range <http://www.sefaz.ma.gov.br/ontology/Country> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_district
+<http://www.sefaz.ma.gov.br/ontology/has_district> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                                   rdfs:range <http://www.sefaz.ma.gov.br/ontology/District> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                            rdfs:range <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_establishment
+<http://www.sefaz.ma.gov.br/ontology/has_establishment> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                        rdfs:range <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                        rdfs:label "tem estabelecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_establishment_type
+<http://www.sefaz.ma.gov.br/ontology/has_establishment_type> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                             rdfs:range <http://www.sefaz.ma.gov.br/ontology/Establishment_Type> ;
+                                                             rdfs:label "estabelecimento tem o tipo"@pt ,
+                                                                        "has establishment type"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_federative_unit
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                                          rdfs:range <http://www.sefaz.ma.gov.br/ontology/Federative_Unit> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_headquarters
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/has_establishment> ;
+                                                       rdf:type owl:FunctionalProperty ,
+                                                                owl:AsymmetricProperty ,
+                                                                owl:IrreflexiveProperty ;
+                                                       rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                       rdfs:range <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_legal_nature
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+                                                       rdfs:range <http://www.sefaz.ma.gov.br/ontology/Legal_Nature> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_locality
+<http://www.sefaz.ma.gov.br/ontology/has_locality> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                                   rdfs:range <http://www.sefaz.ma.gov.br/ontology/Locality> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/has_economic_activity> ;
+                                                                 rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                                 rdfs:range <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_partner
+<http://www.sefaz.ma.gov.br/ontology/has_partner> rdf:type owl:ObjectProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Partnership> ;
+                                                  rdfs:range <http://xmlns.com/foaf/0.1/Agent> ;
+                                                  rdfs:comment "tem sócio"@pt ;
+                                                  rdfs:label "has partner"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_partnership
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                      rdfs:range <http://www.sefaz.ma.gov.br/ontology/Partnership> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_reason_situation
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> rdf:type owl:ObjectProperty ,
+                                                                    owl:FunctionalProperty ;
+                                                           rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                           rdfs:range <http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_representant
+<http://www.sefaz.ma.gov.br/ontology/has_representant> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                       rdf:type owl:FunctionalProperty ;
+                                                       rdfs:range <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_size
+<http://www.sefaz.ma.gov.br/ontology/has_size> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                               rdfs:range <http://www.sefaz.ma.gov.br/ontology/Size_Company> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_special_situation
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                            rdfs:range <http://www.sefaz.ma.gov.br/ontology/Special_Situation> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_subsidiary
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/has_establishment> ;
+                                                     rdf:type owl:AsymmetricProperty ,
+                                                              owl:IrreflexiveProperty ;
+                                                     rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                     rdfs:range <http://www.sefaz.ma.gov.br/ontology/Establishment> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of_group
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> rdf:type owl:ObjectProperty ;
+                                                       owl:inverseOf <http://xmlns.com/foaf/0.1/member> ;
+                                                       rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                       rdfs:range <http://xmlns.com/foaf/0.1/Group> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/option_simples
+<http://www.sefaz.ma.gov.br/ontology/option_simples> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                     rdfs:range <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                     rdfs:comment "tem opção pelo SIMPLES"@pt ;
+                                                     rdfs:label "has option for SIMPLES"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/partner_qualification
+<http://www.sefaz.ma.gov.br/ontology/partner_qualification> rdf:type owl:ObjectProperty ,
+                                                                     owl:FunctionalProperty ;
+                                                            rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Partnership> ;
+                                                            rdfs:range <http://www.sefaz.ma.gov.br/ontology/Qualification> ;
+                                                            owl:propertyDisjointWith <http://www.sefaz.ma.gov.br/ontology/representant_qualification> ;
+                                                            rdfs:label "partner qualification"@en ,
+                                                                       "qualificação do sócio"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/representant_qualification
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> rdf:type owl:ObjectProperty ,
+                                                                          owl:FunctionalProperty ;
+                                                                 rdfs:range <http://www.sefaz.ma.gov.br/ontology/Qualification> .
+
+
+###  http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://xmlns.com/foaf/0.1/Group> ;
+                                   rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf rdfs:label ;
+                                                      rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/activity_start_date
+<http://www.sefaz.ma.gov.br/ontology/activity_start_date> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                          rdf:type owl:FunctionalProperty ;
+                                                          rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                          rdfs:range xsd:date ;
+                                                          rdfs:label "data de início das atividades do estabelecimento"@pt ,
+                                                                     "establishment activity start date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/address_complement
+<http://www.sefaz.ma.gov.br/ontology/address_complement> rdf:type owl:DatatypeProperty ,
+                                                                  owl:FunctionalProperty ;
+                                                         rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                                         rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/address_number
+<http://www.sefaz.ma.gov.br/ontology/address_number> rdf:type owl:DatatypeProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Address> ;
+                                                     rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> rdf:type owl:DatatypeProperty ,
+                                                                        owl:FunctionalProperty ;
+                                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                               rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/city_code
+<http://www.sefaz.ma.gov.br/ontology/city_code> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                rdf:type owl:FunctionalProperty ;
+                                                rdfs:domain <http://www.sefaz.ma.gov.br/ontology/City> ;
+                                                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/city_code_RFB
+<http://www.sefaz.ma.gov.br/ontology/city_code_RFB> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/city_code> ;
+                                                    rdf:type owl:FunctionalProperty ;
+                                                    rdfs:domain <http://www.sefaz.ma.gov.br/ontology/City> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:label "city code RFB"@en ,
+                                                               "código da cidade pela RFB"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnae
+<http://www.sefaz.ma.gov.br/ontology/cnae> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+                                           rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:label "CNAE"@pt ,
+                                                      "Classificação Nacional de Atividades Econômicas"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnpj
+<http://www.sefaz.ma.gov.br/ontology/cnpj> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/person_identifier> ;
+                                           rdf:type owl:FunctionalProperty ;
+                                           rdfs:range xsd:string ;
+                                           owl:propertyDisjointWith <http://www.sefaz.ma.gov.br/ontology/cpf> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code_qualification
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                         rdf:type owl:FunctionalProperty ;
+                                                         rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Qualification> ;
+                                                         rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code_size_company
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                        rdf:type owl:FunctionalProperty ;
+                                                        rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Size_Company> ;
+                                                        rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/company_name
+<http://www.sefaz.ma.gov.br/ontology/company_name> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf rdfs:label ;
+                                                   rdf:type owl:FunctionalProperty ;
+                                                   owl:propertyDisjointWith <http://www.sefaz.ma.gov.br/ontology/trade_name> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/contact_number
+<http://www.sefaz.ma.gov.br/ontology/contact_number> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:label "número de contato"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/country_code
+<http://www.sefaz.ma.gov.br/ontology/country_code> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                   rdf:type owl:FunctionalProperty ;
+                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Country> ;
+                                                   rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/country_code_RFB
+<http://www.sefaz.ma.gov.br/ontology/country_code_RFB> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/country_code> ;
+                                                       rdf:type owl:FunctionalProperty ;
+                                                       rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Country> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:label "country code RFB"@en ,
+                                                                  "código de país da RFB"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cpf
+<http://www.sefaz.ma.gov.br/ontology/cpf> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/person_identifier> ;
+                                          rdf:type owl:FunctionalProperty ;
+                                          rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                          rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> rdf:type owl:DatatypeProperty ,
+                                                                          owl:FunctionalProperty ;
+                                                                 rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                                 rdfs:range xsd:date ;
+                                                                 owl:propertyDisjointWith <http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> rdf:type owl:DatatypeProperty ,
+                                                                       owl:FunctionalProperty ;
+                                                              rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                              rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/fax_number
+<http://www.sefaz.ma.gov.br/ontology/fax_number> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/contact_number> ;
+                                                 rdfs:range xsd:string ;
+                                                 owl:propertyDisjointWith <http://www.sefaz.ma.gov.br/ontology/phone_number> ;
+                                                 rdfs:label "número de fax"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/formated_cnae
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/cnae> ;
+                                                    rdf:type owl:FunctionalProperty ;
+                                                    rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:label "CNAE formatado"@pt ,
+                                                               "formated CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/full_cnpj
+<http://www.sefaz.ma.gov.br/ontology/full_cnpj> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/cnpj> ;
+                                                rdf:type owl:FunctionalProperty ;
+                                                rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_MEI
+<http://www.sefaz.ma.gov.br/ontology/is_MEI> rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                             rdfs:range xsd:boolean ;
+                                             rdfs:comment """O microempreendedor individual (MEI), que é o empresário individual que atende aos seguintes requisitos, cumulativamente:
+• ser optante pelo Simples Nacional e cumprir seus requisitos;
+
+• exercer profissionalmente atividade econômica organizada para a produção
+ou a circulação de bens ou de serviços (art. 966 do Código Civil);
+
+• auferir receita bruta acumulada nos anos-calendário anterior e em curso de
+até R$ 81.000,00 (oitenta e um mil reais) – no caso de início de atividade, o
+limite deve ser de R$ 6.750,00 (seis mil setecentos e cinquenta reais)
+multiplicados pelo número de meses compreendidos entre o mês de início
+de atividade e o final do respectivo ano-calendário, consideradas as frações
+de meses como um mês inteiro;
+
+• exercer tão-somente as ocupações constantes do Anexo XI da Resolução
+CGSN nº 140, de 2018;
+
+• possuir um único estabelecimento;
+
+• não participar de outra empresa como titular, sócio ou administrador;
+
+• não contratar mais de um empregado, que só poderá receber 1 (um) salário
+mínimo previsto em lei federal ou estadual ou o piso salarial da categoria
+profissional, definido em lei federal ou por convenção coletiva da categoria
+(art. 18-C da Lei Complementar nº 123, de 2006);
+
+• não guardar, cumulativamente, com o contratante do serviço, relação de
+pessoalidade, subordinação e habitualidade;
+
+• não realizar suas atividades mediante cessão ou locação de mão de obra
+(art. 112, \"caput\", da Resolução CGSN nº 140, de 2018).
+
+(Base legal: art. 18-A da Lei Complementar nº 123, de 2006.)
+
+Notas:
+1. Só pode ser MEI o empresário individual. Nenhum tipo de sociedade pode
+ser MEI.
+
+2. A “Empresa Individual de Responsabilidade Limitada” (Eireli) não é um
+“empresário individual” do art. 966 do Código Civil. Por isso, não pode ser
+MEI nem pode optar pelo Simei (art. 18-A, § 1º, da Lei Complementar nº
+123, de 2006).
+
+3. Não pode ser MEI o salão-parceiro de que trata a Lei nº 12.592, de 2012
+(art. 100, § 7º, da Resolução CGSN nº 140, de 2018).
+
+4. O limite anual de R$ 81.000,00 é um só, somando receitas de mercado
+interno e externo. O MEI não tem limite estendido para exportação."""@pt ,
+                                                          """The individual microentrepreneur (MEI), who is the individual entrepreneur who meets the following requirements, cumulatively:
+• opting for Simples Nacional and fulfilling its requirements;
+
+• professionally carry out organized economic activity for the production
+or the circulation of goods or services (art. 966 of the Civil Code);
+
+• to obtain gross revenue accumulated in the previous and ongoing calendar years
+up to R $ 81,000.00 (eighty-one thousand reais) - in the case of start of activity, the
+limit should be six thousand seven hundred and fifty reais (R $ 6,750.00)
+multiplied by the number of months between the start month
+activity and the end of the respective calendar year, considering the fractions
+months as a whole month;
+
+• exercise only the occupations listed in Annex XI of the Resolution
+CGSN No. 140, 2018;
+
+• have a single establishment;
+
+• not participating in another company as a holder, partner or administrator;
+
+• not hiring more than one employee, who can only receive 1 (one) salary
+minimum provided by federal or state law or the salary floor of the category
+defined by federal law or by collective agreement of the category
+(Article 18-C of Complementary Law No. 123, 2006);
+
+• not to keep, cumulatively, with the service contractor, a relationship of
+personality, subordination and habituality;
+
+• not carrying out its activities by assigning or hiring labor
+(art. 112, \"caput\", of Resolution CGSN nº 140, of 2018).
+
+(Legal basis: Article 18-A of Complementary Law No. 123, 2006.)
+
+Grades:
+1. Only the individual entrepreneur can be MEI. No type of society can
+be MEI.
+
+2. The “Individual Limited Liability Company” (Eireli) is not a
+“Individual entrepreneur” of art. 966 of the Civil Code. So it cannot be
+MEI cannot even opt for Simei (art. 18-A, § 1, of Complementary Law nº
+123, of 2006).
+
+3. The partner salon referred to in Law No. 12,592, of 2012, cannot be MEI
+(art. 100, § 7, of Resolution CGSN nº 140, of 2018).
+
+4. The annual limit of R $ 81,000.00 is one, adding up market revenues
+internal and external. The MEI has no extended export limit."""@en ;
+                                             rdfs:label "company is an Individual Microentrepreneur (MEI)?"@en ,
+                                                        "empresa é um Microempreendedor Individual (MEI)?"@pt ,
+                                                        "is MEI?"@en ,
+                                                        "é MEI?"@pt ;
+                                             rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoMEI.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_foreign
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> rdf:type owl:DatatypeProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <http://xmlns.com/foaf/0.1/Agent> ;
+                                                 rdfs:range xsd:boolean .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/legal_nature_code
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                        rdf:type owl:FunctionalProperty ;
+                                                        rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Legal_Nature> ;
+                                                        rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/locality_type
+<http://www.sefaz.ma.gov.br/ontology/locality_type> rdf:type owl:DatatypeProperty ,
+                                                             owl:FunctionalProperty ;
+                                                    rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Locality> ;
+                                                    rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/partnership_start_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Partnership> ;
+                                                             rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/person_identifier
+<http://www.sefaz.ma.gov.br/ontology/person_identifier> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:label "identificador de uma pessoa"@pt ,
+                                                                   "person identifier"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/phone_number
+<http://www.sefaz.ma.gov.br/ontology/phone_number> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/contact_number> ;
+                                                   rdf:type owl:FunctionalProperty ;
+                                                   rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/raw_cnae
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/cnae> ;
+                                               rdf:type owl:FunctionalProperty ;
+                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/reason_situation_code
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/code> ;
+                                                            rdf:type owl:FunctionalProperty ;
+                                                            rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> ;
+                                                            rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/root_cnpj
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/cnpj> ;
+                                                rdf:type owl:FunctionalProperty ;
+                                                rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+                                                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/share_capital
+<http://www.sefaz.ma.gov.br/ontology/share_capital> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Establishment> ;
+                                                    rdfs:range xsd:double .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/special_situation_description
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf rdfs:label ;
+                                                                    rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/special_situation_start_date
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> rdf:type owl:DatatypeProperty ,
+                                                                            owl:FunctionalProperty ;
+                                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Special_Situation> ;
+                                                                   rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/trade_name
+<http://www.sefaz.ma.gov.br/ontology/trade_name> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option
+<http://www.sefaz.ma.gov.br/ontology/type_SIMPLES_option> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:label "tipo da opção pelo simples"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#country-name
+<http://www.w3.org/2006/vcard/ns#country-name> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf rdfs:label ;
+                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Country> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "country name"@en ,
+                                                          "nome do país"@pt .
+
+
+###  http://www.w3.org/2006/vcard/ns#email
+<http://www.w3.org/2006/vcard/ns#email> rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:anyURI ;
+                                        rdfs:label "e-mail" .
+
+
+###  http://www.w3.org/2006/vcard/ns#postal-code
+<http://www.w3.org/2006/vcard/ns#postal-code> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:label "CEP"@pt ,
+                                                         "código postal"@pt .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf rdfs:label ;
+                                 rdfs:domain <http://xmlns.com/foaf/0.1/Person> ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:label "name"@en ,
+                                            "nome"@pt .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/Address
+<http://www.sefaz.ma.gov.br/ontology/Address> rdf:type owl:Class ;
+                                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.sefaz.ma.gov.br/ontology/address_number> ;
+                                                                owl:someValuesFrom xsd:string
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty rdfs:label ;
+                                                                owl:someValuesFrom xsd:string
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.w3.org/2006/vcard/ns#postal-code> ;
+                                                                owl:someValuesFrom xsd:string
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.sefaz.ma.gov.br/ontology/address_number> ;
+                                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                owl:onDataRange xsd:string
+                                                              ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> rdf:type owl:Class ;
+                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.sefaz.ma.gov.br/ontology/has_reason_situation> ;
+                                                                            owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> ;
+                                                                            owl:someValuesFrom xsd:dateTime
+                                                                          ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.sefaz.ma.gov.br/ontology/city_code> ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty rdfs:label ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://www.sefaz.ma.gov.br/ontology/country_code> ;
+                                                                owl:someValuesFrom xsd:string
+                                                              ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty rdfs:label ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/cnae> ;
+                                                                          owl:someValuesFrom xsd:string
+                                                                        ] ;
+                                                        rdfs:comment """Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.
+Esta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."""@pt ,
+                                                                     """Economic activity carried out by the company. A company has a primary activity and can (optionally) have N secondary activities.
+This activity is represented by the Classificação Nacional de Atividades Econômicas (CNAE) code."""@en ;
+                                                        rdfs:label "Atividade econômica"@pt ,
+                                                                   "Economic activity"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Establishment
+<http://www.sefaz.ma.gov.br/ontology/Establishment> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/company_name> ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/contact_number> ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/full_cnpj> ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/phone_number> ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/trade_name> ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/fax_number> ;
+                                                                      owl:allValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2006/vcard/ns#email> ;
+                                                                      owl:allValuesFrom xsd:anyURI
+                                                                    ] ;
+                                                    rdfs:comment """Art. 3º  Todas as entidades domiciliadas no Brasil, inclusive as pessoas jurídicas equiparadas pela legislação do Imposto sobre a Renda, estão obrigadas a se inscrever no CNPJ e a cada um de seus estabelecimentos localizados no Brasil ou no exterior, antes do início de suas atividades.
+
+§ 1º  Os estados, o Distrito Federal e os municípios devem ter uma inscrição no CNPJ, na condição de estabelecimento matriz, que os identifique como pessoa jurídica de direito público, sem prejuízo das inscrições de seus órgãos públicos, conforme disposto no inciso I do caput do art. 4º.
+§ 2º  Para fins inscrição do CNPJ, estabelecimento é o local privado ou público, edificado ou não, móvel ou imóvel, próprio ou de terceiro, onde a entidade exerce suas atividades em caráter temporário ou permanente ou onde se encontram armazenadas mercadorias, incluindo as unidades auxiliares constantes do Anexo VII desta Instrução Normativa.
+§ 3º  Considera-se estabelecimento, para fins do disposto no § 2º, a plataforma de produção e armazenamento de petróleo e gás natural, ainda que esteja em construção.
+§ 4º  No caso previsto no § 3º, o endereço a ser informado no CNPJ deve ser o do estabelecimento da entidade proprietária ou arrendatária da plataforma, em terra firme, cuja localização seja a mais próxima."""@pt ;
+                                                    rdfs:label "Estabelecimento"@pt ,
+                                                               "Establishment"@en ;
+                                                    rdfs:seeAlso <http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=97729&visao=original> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Establishment_Type
+<http://www.sefaz.ma.gov.br/ontology/Establishment_Type> rdf:type owl:Class ;
+                                                         owl:equivalentClass [ rdf:type owl:Class ;
+                                                                               owl:oneOf ( <http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL>
+                                                                                           <http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ>
+                                                                                         )
+                                                                             ] ;
+                                                         rdfs:comment "Indica se um um estabelecimento é uma matriz ou uma filial"@pt ;
+                                                         rdfs:label "Establishment type"@en ,
+                                                                    "Tipo do estabelecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty rdfs:label ;
+                                                                        owl:someValuesFrom xsd:string
+                                                                      ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Legal_Nature
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.sefaz.ma.gov.br/ontology/legal_nature_code> ;
+                                                                     owl:someValuesFrom xsd:string
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty rdfs:label ;
+                                                                     owl:someValuesFrom xsd:string
+                                                                   ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Location> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.sefaz.ma.gov.br/ontology/locality_type> ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty rdfs:label ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> rdf:type owl:Class ;
+                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty rdfs:label ;
+                                                                 owl:someValuesFrom xsd:string
+                                                               ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> rdf:type owl:Class ;
+                                                     rdfs:comment "Indica se a empresa é optante pelo regime tributário SIMPLES Nacional"@pt ;
+                                                     rdfs:label "Option for SIMPLES"@en ,
+                                                                "Opção pelo regime SIMPLES"@pt ;
+                                                     rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Partnership
+<http://www.sefaz.ma.gov.br/ontology/Partnership> rdf:type owl:Class ;
+                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.sefaz.ma.gov.br/ontology/partner_qualification> ;
+                                                                    owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Qualification>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.sefaz.ma.gov.br/ontology/has_representant> ;
+                                                                    owl:allValuesFrom <http://xmlns.com/foaf/0.1/Person>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.sefaz.ma.gov.br/ontology/representant_qualification> ;
+                                                                    owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/Qualification>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.sefaz.ma.gov.br/ontology/partnership_start_date> ;
+                                                                    owl:someValuesFrom xsd:dateTime
+                                                                  ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Qualification
+<http://www.sefaz.ma.gov.br/ontology/Qualification> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.sefaz.ma.gov.br/ontology/code_qualification> ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty rdfs:label ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/reason_situation_code> ;
+                                                                                                          owl:someValuesFrom xsd:string
+                                                                                                        ]
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/reason_situation_code> ;
+                                                                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                          owl:onDataRange xsd:string
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty rdfs:label ;
+                                                                                   owl:someValuesFrom xsd:string
+                                                                                 ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                       rdfs:label "Excluded from SIMPLES"@en ,
+                                                                  "Removido do SIMPLES"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                         rdfs:label "Not optant for SIMPLES"@en ,
+                                                                    "Não optante pelo SIMPLES"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant
+<http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Option_SIMPLES> ;
+                                                     rdfs:comment """Esta classe compreende os dados do evento da opção pelo regime Simples Nacional por uma empresa.
+
+O Simples Nacional é o nome abreviado do “Regime Especial Unificado de
+Arrecadação de Tributos e Contribuições devidos pelas Microempresas e
+Empresas de Pequeno Porte”.
+Trata-se de um regime tributário diferenciado, simplificado e favorecido previsto
+pela Lei Complementar nº 123, de 2006, aplicável às Microempresas e às
+Empresas de Pequeno Porte, a partir de 01/07/2007."""@pt ,
+                                                                  """This class comprises the event data of the option for the Simple National regime for a company.
+
+Simples Nacional is the abbreviated name of the “Special Unified Regime of
+Collection of Taxes and Contributions due by Microenterprises and
+Small Companies ”.
+It is a differentiated, simplified and favored tax regime foreseen
+by Complementary Law No. 123, 2006, applicable to Microenterprises and
+Small Companies, as of 01/07/2007."""@en ;
+                                                     rdfs:label "Optant for SIMPLES"@en ,
+                                                                "Optante pelo SIMPLES"@pt ;
+                                                     rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Size_Company
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ rdf:type owl:Class ;
+                                                                         owl:oneOf ( <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS>
+                                                                                     <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA>
+                                                                                     <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO>
+                                                                                     <http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE>
+                                                                                   )
+                                                                       ] ;
+                                                   rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.sefaz.ma.gov.br/ontology/code_size_company> ;
+                                                                                            owl:someValuesFrom xsd:string
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty rdfs:label ;
+                                                                                            owl:someValuesFrom xsd:string
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Special_Situation
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/special_situation_description> ;
+                                                                          owl:someValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> ;
+                                                                          owl:someValuesFrom xsd:dateTime
+                                                                        ] .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                                 <http://www.sefaz.ma.gov.br/ontology/situation_code> 02 ;
+                                                                 rdfs:comment <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> ,
+                                                                              """CAPÍTULO II
+DA SITUAÇÃO CADASTRAL ATIVA
+
+Art. 35. A inscrição no CNPJ é enquadrada na situação cadastral ativa quando a entidade ou o estabelecimento filial, conforme o caso, não se enquadrar em nenhuma das situações cadastrais citadas nos incisos II a V do art. 34."""@pt ;
+                                                                 rdfs:label "Ativa"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                               <http://www.sefaz.ma.gov.br/ontology/situation_code> 08 ;
+                                                               rdfs:comment """CAPÍTULO V
+DA SITUAÇÃO CADASTRAL BAIXADA
+
+Art. 46. A inscrição no CNPJ é enquadrada na situação cadastral baixada quando a entidade ou o estabelecimento filial, conforme o caso, tiver sua solicitação de baixa deferida, na forma prevista no art. 25, ou tiver sua inscrição baixada de ofício, conforme o art. 27."""@pt ;
+                                                               rdfs:label "Baixada"@pt ;
+                                                               rdfs:seeAlso <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                               <http://www.sefaz.ma.gov.br/ontology/situation_code> 01 ;
+                                                               rdfs:comment """CAPÍTULO VI
+DA SITUAÇÃO CADASTRAL NULA
+
+Art. 47. A inscrição no CNPJ é enquadrada na situação cadastral nula quando for declarada a nulidade do ato de inscrição da entidade ou do estabelecimento filial, na forma prevista no art. 33."""@pt ;
+                                                               rdfs:label "Nula"@pt ;
+                                                               rdfs:seeAlso <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                                    <http://www.sefaz.ma.gov.br/ontology/situation_code> 03 ;
+                                                                    rdfs:comment """CAPÍTULO III
+DA SITUAÇÃO CADASTRAL SUSPENSA
+
+Art. 36. A inscrição no CNPJ é enquadrada na situação cadastral suspensa quando, conforme o caso, a entidade ou o estabelecimento filial:
+
+I - domiciliada no exterior, encontrando-se na situação cadastral ativa, deixar de ser alcançada, temporariamente, pelas situações previstas no inciso XV do art. 4º;
+
+II - solicitar baixa de sua inscrição no CNPJ, enquanto a solicitação estiver em análise ou caso seja indeferida;
+
+III - for intimada na forma prevista no § 1º do art. 29;
+
+IV - for intimada na forma prevista no § 1º do art. 40;
+
+V - apresentar indício de interposição fraudulenta de sócio ou titular, na situação prevista no § 2º do art. 3º do Decreto nº 3.724, de 10 de janeiro de 2001, enquanto o respectivo processo estiver em análise;
+
+VI - interromper temporariamente suas atividades;
+
+VII - não reconstituir, no prazo de 210 (duzentos e dez) dias, a pluralidade de sócios do seu QSA;
+
+VIII - tiver sua suspensão determinada por ordem judicial; ou
+
+IX - possuir inconsistência(s) em seus dados cadastrais.
+
+§ 1º A suspensão da inscrição no CNPJ nas hipóteses previstas nos incisos I e VI do caput ocorre por solicitação da entidade ou do estabelecimento filial, conforme o caso, mediante comunicação da interrupção temporária de suas atividades, na forma prevista nos arts. 12 a 14.
+
+§ 2º A inconsistência cadastral a que se refere o inciso IX do caput caracteriza-se, conforme o caso, pela:
+
+I - ausência do representante a que se refere o art. 7º ou quando sua inscrição no CPF for inexistente ou estiver cancelada ou nula;
+
+II - ausência do QSA, no caso das entidades relacionadas no Anexo VI desta Instrução Normativa;
+
+III - ausência do ente federativo responsável, no caso de entidades da Administração Pública;
+
+IV - ausência da atividade econômica;
+
+V - ausência ou invalidade do Código de Endereçamento Postal (CEP);
+
+VI - ausência do valor do capital social, para as entidades cuja informação é obrigatória; ou
+
+VII - incompatibilidade entre o Número de Inscrição no Registro de Empresa (Nire) e a natureza jurídica da entidade."""@pt ;
+                                                                    rdfs:label "Suspensa"@pt ;
+                                                                    rdfs:seeAlso <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> ;
+                                                                <http://www.sefaz.ma.gov.br/ontology/situation_code> 04 ;
+                                                                rdfs:comment """CAPÍTULO IV
+DA SITUAÇÃO CADASTRAL INAPTA
+
+Art. 37. Pode ser declarada inapta a inscrição no CNPJ da pessoa jurídica:
+
+I - omissa de declarações e demonstrativos: a que, estando obrigada, deixar de apresentar declarações e demonstrativos em 2 (dois) exercícios consecutivos;
+
+II - não localizada: a que não for localizada no endereço constante do CNPJ; ou
+
+III - com irregularidade em operações de comércio exterior: a que não comprovar a origem, a disponibilidade e a efetiva transferência, se for o caso, dos recursos empregados em operações de comércio exterior, na forma prevista em lei.
+
+Parágrafo único. O disposto neste artigo não se aplica à entidade domiciliada no exterior.
+
+Seção I
+Da Pessoa Jurídica Omissa de Declarações e Demonstrativos
+
+Art. 38. No caso de pessoa jurídica omissa de declarações e demonstrativos, de que trata o inciso I do caput do art. 37, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.
+
+§ 1º A pessoa jurídica declarada inapta nos termos do caput pode regularizar sua situação mediante apresentação, por meio da Internet, das declarações e demonstrativos exigidos, ou comprovação de sua anterior apresentação na unidade da RFB que a jurisdiciona.
+
+§ 2º O disposto neste artigo não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas previstas no caput, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.
+
+Seção II
+Da Pessoa Jurídica não Localizada
+
+Art. 39. A pessoa jurídica não localizada, de que trata o inciso II do caput do art. 37, é assim considerada quando:
+
+I - não confirmar o recebimento de 2 (duas) ou mais correspondências enviadas pela RFB, comprovado pela devolução do Aviso de Recebimento (AR) dos Correios; ou
+
+II - não for localizada no endereço constante do CNPJ, comprovado mediante Termo de Diligência.
+
+§ 1º Na hipótese prevista no inciso I do caput, cabe à Cocad emitir ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, com a relação das inscrições no CNPJ declaradas inaptas.
+
+§ 2º Na hipótese prevista no inciso II do caput, a inscrição no CNPJ dever ser declarada inapta pelo Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.
+
+§ 3º O disposto no § 1º não elide a competência do Delegado da DRF, da Derat, da Deinf, da Defis, da Delex ou da Demac Rio de Janeiro, que jurisdiciona a pessoa jurídica, para adotar as medidas nele previstas, publicando o ADE no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU.
+
+§ 4º A pessoa jurídica declarada inapta conforme este artigo pode regularizar sua situação mediante alteração do seu endereço no CNPJ, na forma prevista nos arts. 12 a 14, ou restabelecimento de sua inscrição, conforme previsto no inciso I do § 1º do art. 32, caso o seu endereço continue o mesmo constante do CNPJ.
+
+Seção III
+Da Pessoa Jurídica com Irregularidade em Operações de Comércio Exterior
+
+Art. 40. No caso de pessoa jurídica com irregularidade em operações de comércio exterior, de que trata o inciso III do caput do art. 37, o procedimento administrativo de declaração de inaptidão deve ser iniciado por representação consubstanciada com elementos que evidenciem o fato descrito no citado inciso.
+
+§ 1º O titular da unidade da RFB com jurisdição para fiscalização dos tributos sobre comércio exterior que constatar o fato, acatando a representação citada no caput, deve intimar a pessoa jurídica, por meio de edital, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, a regularizar, no prazo de 30 (trinta) dias, sua situação ou contrapor as razões da representação, suspendendo sua inscrição no CNPJ a partir da publicação do edital.
+
+§ 2º Na falta de atendimento à intimação referida no § 1º, ou quando não acatadas as contraposições apresentadas, a inscrição no CNPJ deve ser declarada inapta pelo titular da unidade da RFB citado no § 1º, por meio de ADE publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.
+
+§ 3º A pessoa jurídica declarada inapta na forma prevista no § 2º pode regularizar sua situação mediante comprovação da origem, da disponibilidade e da efetiva transferência, se for o caso, dos recursos empregados em operações do comércio exterior, na forma prevista em lei, e deve ser realizada pelo titular da unidade da RFB citado no § 1º, por meio de ADE, publicado no sítio da RFB na Internet, no endereço citado no caput do art. 12, ou alternativamente no DOU, no qual devem ser indicados o nome empresarial e o número de inscrição da pessoa jurídica no CNPJ.
+
+Art. 41. Para fins do disposto no inciso III do art. 37 e no § 3º do art. 40, a comprovação da origem de recursos provenientes do exterior dá-se mediante, cumulativamente:
+
+I - prova do regular fechamento da operação de câmbio, inclusive com a identificação da instituição financeira no exterior encarregada da remessa dos recursos para o País; e
+
+II - identificação do remetente dos recursos, assim entendido como a pessoa física ou jurídica titular dos recursos remetidos.
+
+§ 1º No caso de o remetente referido no inciso II do caput ser pessoa jurídica, devem ser também identificados os integrantes do seu QSA.
+
+§ 2º O disposto neste artigo aplica-se também na hipótese de que trata o § 2º do art. 23 do Decreto-Lei nº 1.455, de 7 de abril de 1976.
+
+Seção IV
+Dos Efeitos da Inscrição Inapta
+
+Art. 42. Sem prejuízo das sanções previstas na legislação, a pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta é:
+
+I - incluída no Cadastro Informativo de Créditos Não Quitados do Setor Público Federal (Cadin);
+
+II - impedida de:
+
+a) participar de concorrência pública;
+
+b) celebrar convênios, acordos, ajustes ou contratos que envolvam desembolso, a qualquer título, de recursos públicos, e respectivos aditamentos;
+
+c) obter incentivos fiscais e financeiros;
+
+d) realizar operações de crédito que envolvam a utilização de recursos públicos; e
+
+e) transacionar com estabelecimentos bancários, inclusive quanto à movimentação de contas-correntes, à realização de aplicações financeiras e à obtenção de empréstimos.
+
+Parágrafo único. O impedimento de transacionar com estabelecimentos bancários a que se refere a alínea \"e\" do inciso II não se aplica a saques de importâncias anteriormente depositadas ou aplicadas.
+
+Art. 43. É considerado inidôneo, não produzindo efeitos tributários em favor de terceiro interessado, o documento emitido por pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta.
+
+§ 1º Os valores constantes do documento de que trata o caput não podem ser:
+
+I - deduzidos como custo ou despesa, na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL);
+
+II - deduzidos na determinação da base de cálculo do Imposto sobre a Renda das Pessoas Físicas (IRPF);
+
+III - utilizados como crédito do Imposto sobre Produtos Industrializados (IPI), e da Contribuição para o PIS/Pasep e da Contribuição para o Financiamento da Seguridade Social (Cofins) não cumulativos;
+
+IV - utilizados para justificar qualquer outra dedução, abatimento, redução, compensação ou exclusão relativa aos tributos administrados pela RFB.
+
+§ 2º Considera-se terceiro interessado, para fins do disposto neste artigo, a pessoa física ou a entidade beneficiária do documento.
+
+§ 3º O disposto neste artigo aplica-se em relação aos documentos emitidos:
+
+I - a partir da data de publicação do ADE a que se refere:
+
+a) o art. 38, no caso de pessoa jurídica omissa de declarações e demonstrativos; e
+
+b) o art. 39, no caso de pessoa jurídica não localizada;
+
+II - desde a data de ocorrência do fato, no caso de pessoa jurídica com irregularidade em operações de comércio exterior, a que se refere o art. 40.
+
+§ 4º A inidoneidade de documentos em virtude de inscrição declarada inapta não exclui as demais formas de inidoneidade de documentos previstas na legislação, nem legitima os emitidos anteriormente às datas referidas no § 3º.
+
+§ 5º O disposto no § 1º não se aplica aos casos em que o terceiro interessado, adquirente de bens, direitos e mercadorias, ou o tomador de serviços, comprovar o pagamento do preço respectivo e o recebimento dos bens, direitos ou mercadorias ou a utilização dos serviços.
+
+§ 6º A entidade que não efetuar a comprovação de que trata o § 5º sujeita-se ao pagamento do Imposto sobre a Renda Retido na Fonte (IRRF), na forma do art. 61 da Lei nº8.981, de 20 de janeiro de 1995, calculado sobre o valor pago constante dos documentos.
+
+Art. 44. A pessoa jurídica com inscrição declarada inapta tem sua inscrição enquadrada na situação cadastral ativa após regularizar todas as situações que motivaram a inaptidão.
+
+Seção V
+Dos Créditos Tributários da Pessoa Jurídica Inapta
+
+Art. 45. O encaminhamento, para fins de inscrição e execução, de créditos tributários relativos à pessoa jurídica cuja inscrição no CNPJ tenha sido declarada inapta, nas hipóteses previstas nos incisos I, II e III do caput do art. 37, deve ser efetuado com a indicação dessa circunstância e da identificação dos responsáveis tributários correspondentes."""@pt ;
+                                                                rdfs:label "Inapta"@pt ;
+                                                                rdfs:seeAlso <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class ;
+                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/2006/vcard/ns#email> ;
+                                                    owl:allValuesFrom xsd:anyURI
+                                                  ] .
+
+
+###  http://xmlns.com/foaf/0.1/Group
+<http://xmlns.com/foaf/0.1/Group> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ,
+                                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://xmlns.com/foaf/0.1/member> ;
+                                                                           owl:someValuesFrom <http://xmlns.com/foaf/0.1/Organization>
+                                                                         ]
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://xmlns.com/foaf/0.1/member> ;
+                                                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                           owl:onClass <http://xmlns.com/foaf/0.1/Organization>
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.sefaz.ma.gov.br/ontology/has_headquarters> ;
+                                                           owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Establishment>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.sefaz.ma.gov.br/ontology/representant_qualification> ;
+                                                           owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Qualification>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.sefaz.ma.gov.br/ontology/representant_qualification> ;
+                                                           owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/Qualification>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.sefaz.ma.gov.br/ontology/company_name> ;
+                                                           owl:someValuesFrom xsd:string
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.sefaz.ma.gov.br/ontology/root_cnpj> ;
+                                                           owl:someValuesFrom xsd:string
+                                                         ] ;
+                                         owl:disjointWith <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://xmlns.com/foaf/0.1/Agent> ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://xmlns.com/foaf/0.1/name> ;
+                                                     owl:someValuesFrom xsd:string
+                                                   ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Alagoas
+<http://dbpedia.org/resource/Alagoas> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Amapá
+<http://dbpedia.org/resource/Amapá> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Bahia
+<http://dbpedia.org/resource/Bahia> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Ceará
+<http://dbpedia.org/resource/Ceará> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Espírito_Santo
+<http://dbpedia.org/resource/Espírito_Santo> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Goiás
+<http://dbpedia.org/resource/Goiás> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Maranhão
+<http://dbpedia.org/resource/Maranhão> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Mato_Grosso
+<http://dbpedia.org/resource/Mato_Grosso> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Mato_Grosso_do_Sul
+<http://dbpedia.org/resource/Mato_Grosso_do_Sul> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Minas_Gerais
+<http://dbpedia.org/resource/Minas_Gerais> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Paraíba
+<http://dbpedia.org/resource/Paraíba> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Pará
+<http://dbpedia.org/resource/Pará> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Pernambuco
+<http://dbpedia.org/resource/Pernambuco> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Piauí
+<http://dbpedia.org/resource/Piauí> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Rio_Grande_do_Norte
+<http://dbpedia.org/resource/Rio_Grande_do_Norte> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Rio_Grande_do_Sul
+<http://dbpedia.org/resource/Rio_Grande_do_Sul> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Rondônia
+<http://dbpedia.org/resource/Rondônia> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Roraima
+<http://dbpedia.org/resource/Roraima> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Sergipe
+<http://dbpedia.org/resource/Sergipe> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Tocantins
+<http://dbpedia.org/resource/Tocantins> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Acre_(state)
+<http://dbpedia.org/resource/Acre_(state)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Amazonas_(Brazilian_state)
+<http://dbpedia.org/resource/Amazonas_(Brazilian_state)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Federal_District_(Brazil)
+<http://dbpedia.org/resource/Federal_District_(Brazil)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Paraná_(state)
+<http://dbpedia.org/resource/Paraná_(state)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Rio_de_Janeiro_(state)
+<http://dbpedia.org/resource/Rio_de_Janeiro_(state)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Santa_Catarina_(state)
+<http://dbpedia.org/resource/Santa_Catarina_(state)> rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/São_Paulo_(state)
+<http://dbpedia.org/resource/São_Paulo_(state)> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/FILIAL> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.sefaz.ma.gov.br/ontology/Establishment_Type> ;
+                                                                    rdfs:comment """As a subsidiary, that establishment represents the management
+principal, however, without the power of deliberative and / or executive power. There is no need to talk about \"fiscal headquartes\" and \"filial scrictu sensu\" (a 'fiscal subsidiary', as opposed to a \"corporate subsidiary\"), nor is there any question that the RFB should do so, in view of articles 109 and 110 of CTN, which guide the operator of the law and the legislator itself. Therefore, the headquartes is that center of direction and administration of the company dealt with by civil legislation. The other establishments are subsidiaries (or branches or agencies)."""@en ,
+                                                                                 "Como filial conceitua-se aquele estabelecimento que representa a direção principal, contudo, sem alçada de poder deliberativo e/ou executivo. Não há que se falar em \"matriz fiscal\" e \"filial scrictu sensu\" (uma 'filial fiscal', em contraponto a uma \"filial societária\"), nem se cogita que a RFB o faça, haja vista os artigos 109 e 110 do CTN, que balizam o operador do direito e o próprio legislador. Portanto, matriz é aquele centro de direção e administração da empresa de que trata a legislação civil. Os demais estabelecimentos são filiais (ou sucursais ou agências)."@pt ;
+                                                                    rdfs:label "Filial"@pt ;
+                                                                    rdfs:seeAlso <http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ
+<http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.sefaz.ma.gov.br/ontology/Establishment_Type> ;
+                                                                    rdfs:comment "Conceitua-se matriz aquele estabelecimento chamado sede ou principal que tem a primazia na direção e ao qual estão subordinados todos os demais, chamados de filiais, sucursais ou agências. Estabelecimento matriz é aquele no qual se exercem a direção e a administração da pessoa jurídica (Empresa).  A pessoa jurídica de direito privado pode ter vários domicílios, mas uma só sede."@pt ,
+                                                                                 """Headquarter is defined as that establishment called headquarters or principal that has primacy in the direction and to which all others are subordinate,
+called subsidiaries, branches or agencies. Headquarters establishment is the one in which the direction and administration of the legal entity (Company) is exercised. The legal entity under private law may have several domiciles, but only one headquarters."""@en ;
+                                                                    rdfs:label "Matriz"@pt ;
+                                                                    rdfs:seeAlso <http://www.receita.fazenda.gov.br/publico/Legislacao/SolucoesConsultaCosit/2013/SCCosit272013.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_6
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_6> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_8
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/EXCLUIDO_8> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/NAO_OPTANTE
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/NAO_OPTANTE> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_5
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_5> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_7
+<http://www.sefaz.ma.gov.br/RFB/resource/Option_SIMPLES/OPTANTE_7> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/DEMAIS> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.sefaz.ma.gov.br/ontology/Size_Company> ;
+                                                              <http://www.sefaz.ma.gov.br/ontology/code_size_company> "05" ;
+                                                              rdfs:comment "Para que a empresa seja enquadrada desta maneira o contrato social precisa ser assinado por um advogado e são para empresas que têm uma atividade que não permite a classificação em nenhum dos outros portes ou tem como sócio uma pessoa jurídica. Neste formato é possível ter mais de 100 funcionários."@pt ;
+                                                              rdfs:label "DEMAIS"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/MICRO_EMPRESA> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.sefaz.ma.gov.br/ontology/Size_Company> ;
+                                                                     <http://www.sefaz.ma.gov.br/ontology/code_size_company> "01" ;
+                                                                     rdfs:comment "Estes formatos são para as empresas que pretendem ter ou tenham um faturamento anual de até R$ 360 mil. Uma microempresa pode ter até 20 funcionários."@pt ;
+                                                                     rdfs:label "MICRO EMPRESA"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/NAO_INFORMADO> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.sefaz.ma.gov.br/ontology/Size_Company> ;
+                                                                     <http://www.sefaz.ma.gov.br/ontology/code_size_company> "00" ;
+                                                                     rdfs:label "NÃO INFORMADO"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE
+<http://www.sefaz.ma.gov.br/RFB/resource/Size_Company/PEQUENO_PORTE> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.sefaz.ma.gov.br/ontology/Size_Company> ;
+                                                                     <http://www.sefaz.ma.gov.br/ontology/code_size_company> "03" ;
+                                                                     rdfs:comment "Indicado para negócios que têm um faturamento anual no limite de R$ 4,8 milhões. Este formato pode ter até 100 funcionários."@pt ;
+                                                                     rdfs:label "EMPRESA DE PEQUENO PORTE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Address
+<http://www.sefaz.ma.gov.br/ontology/Address> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/City
+<http://www.sefaz.ma.gov.br/ontology/City> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Contact
+<http://www.sefaz.ma.gov.br/ontology/Contact> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Country
+<http://www.sefaz.ma.gov.br/ontology/Country> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/District
+<http://www.sefaz.ma.gov.br/ontology/District> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Federative_Unit
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Individual_Microentrepreneur
+<http://www.sefaz.ma.gov.br/ontology/Individual_Microentrepreneur> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Legal_Nature
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Locality
+<http://www.sefaz.ma.gov.br/ontology/Locality> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Location
+<http://www.sefaz.ma.gov.br/ontology/Location> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Partnership
+<http://www.sefaz.ma.gov.br/ontology/Partnership> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Provenance
+<http://www.sefaz.ma.gov.br/ontology/Provenance> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Qualification
+<http://www.sefaz.ma.gov.br/ontology/Qualification> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Size_Company
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Special_Situation
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Type_Cadastral_Situation
+<http://www.sefaz.ma.gov.br/ontology/Type_Cadastral_Situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/abbreviation_UF
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/address_complement
+<http://www.sefaz.ma.gov.br/ontology/address_complement> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/address_number
+<http://www.sefaz.ma.gov.br/ontology/address_number> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/city_code
+<http://www.sefaz.ma.gov.br/ontology/city_code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnpj
+<http://www.sefaz.ma.gov.br/ontology/cnpj> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code
+<http://www.sefaz.ma.gov.br/ontology/code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code_qualification
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/code_size_company
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/company_name
+<http://www.sefaz.ma.gov.br/ontology/company_name> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/country_code
+<http://www.sefaz.ma.gov.br/ontology/country_code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cpf
+<http://www.sefaz.ma.gov.br/ontology/cpf> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_file_download
+<http://www.sefaz.ma.gov.br/ontology/date_file_download> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_file_record
+<http://www.sefaz.ma.gov.br/ontology/date_file_record> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/date_triplification
+<http://www.sefaz.ma.gov.br/ontology/date_triplification> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/ddd
+<http://www.sefaz.ma.gov.br/ontology/ddd> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/ddd_phone_number
+<http://www.sefaz.ma.gov.br/ontology/ddd_phone_number> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_address
+<http://www.sefaz.ma.gov.br/ontology/has_address> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_city
+<http://www.sefaz.ma.gov.br/ontology/has_city> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_contact_number
+<http://www.sefaz.ma.gov.br/ontology/has_contact_number> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_country
+<http://www.sefaz.ma.gov.br/ontology/has_country> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_district
+<http://www.sefaz.ma.gov.br/ontology/has_district> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_fax
+<http://www.sefaz.ma.gov.br/ontology/has_fax> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_federative_unit
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_headquarters
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_legal_nature
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_locality
+<http://www.sefaz.ma.gov.br/ontology/has_locality> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_part
+<http://www.sefaz.ma.gov.br/ontology/has_part> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_partnership
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_phone
+<http://www.sefaz.ma.gov.br/ontology/has_phone> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_qualification
+<http://www.sefaz.ma.gov.br/ontology/has_qualification> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_reason_situation
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_representant
+<http://www.sefaz.ma.gov.br/ontology/has_representant> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_secondary_activity
+<http://www.sefaz.ma.gov.br/ontology/has_secondary_activity> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_size
+<http://www.sefaz.ma.gov.br/ontology/has_size> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_special_situation
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_subsidiary
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_type_situation
+<http://www.sefaz.ma.gov.br/ontology/has_type_situation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_foreign
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of
+<http://www.sefaz.ma.gov.br/ontology/is_part_of> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_part_of_group
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/legal_nature_code
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/locality_type
+<http://www.sefaz.ma.gov.br/ontology/locality_type> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/part_whole_relation
+<http://www.sefaz.ma.gov.br/ontology/part_whole_relation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/partnership_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_date> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/partnership_end_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_end_date> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/partnership_start_date
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/percentage_participation
+<http://www.sefaz.ma.gov.br/ontology/percentage_participation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/percentage_share_capital
+<http://www.sefaz.ma.gov.br/ontology/percentage_share_capital> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/performed_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/performed_economic_activity> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/performs_economic_activity
+<http://www.sefaz.ma.gov.br/ontology/performs_economic_activity> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/phone_number
+<http://www.sefaz.ma.gov.br/ontology/phone_number> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/reason_situation_code
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/representant_qualification
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/root_cnpj
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/sending_number
+<http://www.sefaz.ma.gov.br/ontology/sending_number> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/share_capital
+<http://www.sefaz.ma.gov.br/ontology/share_capital> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/situation_code
+<http://www.sefaz.ma.gov.br/ontology/situation_code> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/special_situation_description
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/special_situation_start_date
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/trade_name
+<http://www.sefaz.ma.gov.br/ontology/trade_name> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/0.1/Group
+<http://xmlns.com/foaf/0.1/Group> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.sefaz.ma.gov.br/ontology/Address> rdfs:comment """Esta classe agrupa informações sobre o endereço declarado de uma Organização. Este endereço é composto por um número e complemento, relacionados as demais instâncias de Localização, tais como, Logradouro, Bairro, Municipio, UF e País.
+
+Cada endereço deve ser único. Deste modo, caso duas empresas apotem para uma mesma instância de enderço, então este deve gerar uma inconsistência."""@pt ,
+                                                           """This class groups information about a organization's declared address. This address consists of a number and complement, related to the other instances of Localization, such as, Street, District, City, Federative Unit and Country.
+
+Each address must be unique. Thus, if two companies provide for the same address, then this should generate an inconsistency."""@en ;
+                                              rdfs:label "Address"@en ,
+                                                         "Endereço"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation> rdfs:comment "A situação cadastral de CNPJ é o registro da empresa junto à Receita Federal. A partir da análise, é possível saber qual é o status do negócio, se há processos judiciais ou dívidas tributárias."@pt ,
+                                                                       "The CNPJ status is the company's registration with the Federal Revenue Service. From the analysis, it is possible to know what the status of the business is, whether there are lawsuits or tax debts."@en ;
+                                                          rdfs:label "Cadastral situation"@en ,
+                                                                     "Situação Cadastral"@pt ;
+                                                          rdfs:seeAlso <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/City> rdfs:label "Cidade"@pt ,
+                                                      "City"@en ,
+                                                      "Municipio"@pt ,
+                                                      "Município"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Country> rdfs:label "Country"@en ,
+                                                         "País"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/District> rdfs:label "Bairro"@pt ,
+                                                          "District"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Federative_Unit> rdfs:label "Estado"@pt ,
+                                                                 "State"@pt ,
+                                                                 "UF"@pt ,
+                                                                 "Unidade Federativa"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Legal_Nature> rdfs:comment """A natureza jurídica de uma empresa é o  regime jurídico em que ela se enquadra,  isto é a relação da pessoa jurídica pública ou  privada com o exame que será feito pela FISCALIZAÇÃO no respectivo EMPREENDIMENTO, somado  ao  que consta dos dados da empresa nos cadastros da ADMINISTRAÇÃO PUBLICA. No momento de formalizar a empresa, informar a sua natureza jurídica tornou-se uma questão indispensável, já que cada natureza jurídica exige diferentes formas de aplicação das normas para as empresas.
+
+Em consonância com o código civil (Lei nº 10.406/02) existem várias espécies de natureza jurídica e entre elas estão os tipos jurídicos atribuídos à administração pública, entidades empresariais, entidades sem fins lucrativos e às pessoas físicas."""@pt ,
+                                                                """The legal nature of a company is the legal regime in which it fits, that is, the relationship of the public or private legal person with the examination that will be done by the ENGINEER in the respective ENTERPRISE, added to what appears in the company data in the ADMINISTRATION records. PUBLISH. When formalizing the company, informing its legal nature has become an indispensable issue, since each legal nature requires different ways of applying the rules for companies.
+
+In line with the civil code (Law No. 10,406 / 02), there are several types of legal nature and among them are the legal types attributed to the public administration, business entities, non-profit entities and individuals."""@en ;
+                                                   rdfs:label "Legal nature"@en ,
+                                                              "Natureza jurídica"@pt ,
+                                                              "Natureza legal"@pt ;
+                                                   rdfs:seeAlso <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabelas-utilizadas-pelo-programa-cnpj/tabela-de-natureza-juridica-e-qualificacao-do-quadro-de-socios-e-administradores> ,
+                                                                <https://suporte.agilize.com.br/hc/pt-br/articles/216342283-Naturezas-Jur%C3%ADdicas-de-uma-empresa> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Locality> rdfs:comment "A locality can be a street, avenue, court, etc."@en ,
+                                                            "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt ;
+                                               rdfs:label "Locality"@en ,
+                                                          "Logradouro"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Location> rdfs:comment "Class that represents the concept of a geographical location."@en ,
+                                                            "Classe que representa o conceito de uma localização geográfica."@pt ;
+                                               rdfs:label "Local"@pt ,
+                                                          "Localização"@pt ,
+                                                          "Location"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Partnership> rdfs:comment "Esta classe representa a relação de sociedade ou representação entre uma empresa e seu sócio/representante. Esta representação possui datas de início e fim, além de poder possuir o percentual do capital social possuído pelo sócio e seu percentual de participação (em cenários em que isto é possível). Por fim, a representação possui uma qualificação aplicável ao sócio representante existente na classe Representant_Qualification."@pt ,
+                                                               "This class represents the partnership or representation between a company and its partner / representative. This representation has start and end dates, in addition to having the percentage of share capital owned by the partner and its percentage of participation (in scenarios where this is possible). Finally, the representation has a qualification applicable to the representative partner existing in the Representant_Qualification class."@en ;
+                                                  rdfs:label "Partnership"@en ,
+                                                             "Representation"@en ,
+                                                             "Representação"@pt ,
+                                                             "Representação legal"@pt ,
+                                                             "Sociedade"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Qualification> rdfs:comment "Esta classe agrupa informações sobre a qualificação de um sócio ou representante de uma empresa."@pt ,
+                                                                 "This class groups information about the qualification of a partner or representative of a company."@en ;
+                                                    rdfs:label "Qualidificação do sócio ou representante"@pt ,
+                                                               "Qualificação"@pt ,
+                                                               "Representant qualification"@en ;
+                                                    rdfs:seeAlso <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/tabela-de-qualificacao-do-socio-representante.ods> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Reason_Cadastral_Situation> rdfs:comment "Motivo da situação cadastral, quando diferente de ativa"@pt ;
+                                                                 rdfs:label "Motivo de situação cadastral"@pt ,
+                                                                            "Reason registration situation"@en ;
+                                                                 rdfs:seeAlso <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Size_Company> rdfs:comment """A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;
+
+Selecionar o enquadramento de porte da empresa (ME, EPP, Demais) de acordo com a expectativa de Receita Bruta Anual.
+
+O porte informado deve estar compatível com a Receita Bruta auferida no anocalendário anterior. Assim, durante a prática do evento 222, caso seja solicitado reenquadramento como ME ou EPP, para período que já possua informação de porte atualizada pela RFB com resultado diferente do informado na aplicativo de coleta, a solicitação será indeferida.
+
+A data do evento é a data do registro da Declaração de Enquadramento / Reenquadramento / Desenquadramento no Órgão de Registro, conforme Tabela VIII;
+
+O evento 222 somente poderá ser praticado por estabelecimento matriz;
+
+Somente as naturezas jurídicas 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 e 231-3 exigem o enquadramento de Porte da Empresa. Para estas naturezas jurídicas, o porte pode ser “ME” ou “EPP”. Para o restante das naturezas jurídicas, o porte deve ser “Demais”.
+
+Para análise e deferimento do evento 222, será exigido que o contribuinte apresente a “Declaração de Enquadramento / Reenquadramento ou Desenquadramento”, registrada pelo Órgão de Registro. Caso a referida declaração não seja recente, também deverá ser exigida a Certidão Simplificada do Órgão de Registro, com o objetivo de comprovar o enquadramento atual da empresa naquele órgão.
+
+
+Possíveis portes:
+00 - NAO INFORMADO
+01 - MICRO EMPRESA
+03 - EMPRESA DE PEQUENO
+PORTE
+05 - DEMAIS"""@pt ,
+                                                                """The new name for event 222 is “Framework / Reframing / Non-compliance of ME / EPP”;
+
+Select the company's size framework (ME, EPP, Others) according to the expectation of Annual Gross Revenue.
+
+The size informed must be compatible with the Gross Revenue earned in the previous anocalendar. Thus, during the practice of event 222, if it is requested to qualify as ME or EPP, for a period that already has size information updated by the RFB with a result different from that reported in the collection application, the request will be rejected.
+
+The date of the event is the date of registration of the Declaration of Compliance / Reframing / Noncompliance with the Registry, as per Table VIII;
+
+Event 222 can only be practiced by a parent establishment;
+
+Only the legal nature 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 and 231-3 require the Company Scale . For these legal natures, the size can be “ME” or “EPP”. For the rest of the legal nature, the size must be \"Too much\".
+
+For analysis and approval of event 222, the taxpayer will be required to submit the “Declaration of Compliance / Reframing or Noncompliance”, registered by the Registry. If the said statement is not recent, the Simplified Certificate of the Registration Body should also be required, in order to prove the current status of the company in that body.
+
+Possible sizes:
+00 - NAO INFORMADO
+01 - MICRO EMPRESA
+03 - EMPRESA DE PEQUENO
+PORTE
+05 - DEMAIS"""@en ;
+                                                   rdfs:label "Porte"@pt ,
+                                                              "Porte da empresa"@pt ,
+                                                              "Porte empresarial"@pt ,
+                                                              "Size company"@en ;
+                                                   rdfs:seeAlso <https://www38.receita.fazenda.gov.br/cadsincnac/jsp/coleta/ajuda/topicos/Porte_da_Empresa.htm> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/Special_Situation> rdfs:comment "São os casos de: Extinção; Fusão; Incorporação/Incorporada; IncorporaçãoIncorporadora; Cisão total; Cisão parcial; Desenquadramento de Imune/Isenta; Inclusão no Simples nacional."@pt ;
+                                                        rdfs:label "Situação especial"@pt ,
+                                                                   "Special situation"@en ;
+                                                        rdfs:seeAlso <http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=39909> ,
+                                                                     <https://www.contadores.cnt.br/noticias/artigos/2016/06/27/descomplicando-a-escrituracao-contabil-fiscal-ecf.html> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/abbreviation_UF> rdfs:label "abbreviation of the UF"@en ,
+                                                                 "abreviação da UF"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/address_complement> rdfs:label "address complement"@en ,
+                                                                    "complemento do endereço"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/address_number> rdfs:label "address number"@en ,
+                                                                "número do endereço"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/cadastral_situation_date> rdfs:label "data da situação cadastral"@pt ,
+                                                                          "date of cadastral situation"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/city_code> rdfs:label "city code"@en ,
+                                                           "código da cidade"@pt ,
+                                                           "código do município"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/cnpj> rdfs:label "CNPJ"@pt ,
+                                                      "Cadastro Nacional da Pessoa Jurídica"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/code> rdfs:label "code"@en ,
+                                                      "código"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/code_qualification> rdfs:label "código da qualificação"@pt ,
+                                                                    "qualification code"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/code_size_company> rdfs:label "código do porte da empresa"@pt ,
+                                                                   "size company code"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/company_name> rdfs:label "company name"@en ,
+                                                              "razão social"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/country_code> rdfs:label "country code"@en ,
+                                                              "código do país"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/cpf> rdfs:label "CPF"@pt ,
+                                                     "Cadastro de Pessoa Física"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/date_exclusion_for_SIMPLES> rdfs:label "data de exclusão do regime SIMPLES"@pt ,
+                                                                            "date of exclusion for SIMPLES regime"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/date_option_for_SIMPLES> rdfs:label "data de opção pelo regime SIMPLES"@pt ,
+                                                                         "date of option for SIMPLES regime"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_address> rdfs:label "has address"@en ,
+                                                             "tem endereço"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_cadastral_situation> rdfs:label "has cadastral situation"@en ,
+                                                                         "tem situação cadastral"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_city> rdfs:label "has city"@en ,
+                                                          "tem cidade"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_country> rdfs:label "has country"@en ,
+                                                             "tem pais"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_district> rdfs:label "has district"@en ,
+                                                              "tem bairro"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_economic_activity> rdfs:label "has economic activity"@en ,
+                                                                       "tem atividade econômica"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_federative_unit> rdfs:label "has federative unit"@en ,
+                                                                     "tem unidade federativa"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_headquarters> rdfs:label "has headquarters"@en ,
+                                                                  "tem matriz"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_legal_nature> rdfs:label "has legal nature"@en ,
+                                                                  "tem natureza jurídica"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_locality> rdfs:label "has locality"@en ,
+                                                              "tem logradouro"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_main_economic_activity> rdfs:label "has main economic activity"@en ,
+                                                                            "tem atividade econômica principal"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_partnership> rdfs:label "has partnership"@en ,
+                                                                 "tem sociedade"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_reason_situation> rdfs:label "has reason of cadastral situation"@en ,
+                                                                      "tem razão de situação cadastral"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_representant> rdfs:label "has representant"@en ,
+                                                                  "tem representante"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_size> rdfs:label "has size"@en ,
+                                                          "tem porte"@pt ,
+                                                          "tem porte empresarial"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_special_situation> rdfs:label "has special situation"@en ,
+                                                                       "tem situação especial"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/has_subsidiary> rdfs:label "has branch"@en ,
+                                                                "has subsidiary"@en ,
+                                                                "tem filial"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/is_foreign> rdfs:label "is foreign?"@en ,
+                                                            "É um estrangeiro?"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/is_part_of_group> rdfs:label "Faz parte do Grupo"@pt ,
+                                                                  "is parte of group"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/legal_nature_code> rdfs:label "código da natureza jurídica"@pt ,
+                                                                   "legal nature code"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/locality_type> rdfs:label "locality type"@en ,
+                                                               "tipo do logradouro"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/partnership_start_date> rdfs:label "data de início da sociedade"@pt ,
+                                                                        "start date of partnership"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/phone_number> rdfs:label "número de telefone"@pt ,
+                                                              "phone number"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/reason_situation_code> rdfs:label "código da razão da situação cadastral"@pt ,
+                                                                       "reason cadastral situation code"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/representant_qualification> rdfs:label "qualification of the responsible"@en ,
+                                                                            "qualificação do responsável"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/root_cnpj> rdfs:label "CNPJ raíz"@pt .
+
+
+<http://www.sefaz.ma.gov.br/ontology/share_capital> rdfs:label "Capital Social"@pt ,
+                                                               "share capital"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/special_situation_description> rdfs:label "descrição da situação especial"@pt ,
+                                                                               "special situation description"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/special_situation_start_date> rdfs:label "data de início da situação especial"@pt ,
+                                                                              "start date of special situation"@en .
+
+
+<http://www.sefaz.ma.gov.br/ontology/trade_name> rdfs:label "nome fantasia"@pt ,
+                                                            "trade name"@en .
+
+
+<http://xmlns.com/foaf/0.1/Agent> rdfs:comment """Esta classe representa o conceito de agente, sendo este uma entidade que realiza alguma ação. Neste contexto um agente é considerado uma pessoa, onde esta pode ser ou pessoa física ou pessoa jurídica.
+
+Caso esta pessoa seja estrangeira, isto é representado pelo indicador is_foreigner."""@pt ,
+                                               """This class represents the concept of agent, which is an entity that performs some action. In this context, an agent is considered a person, where this can be either an individual or a legal entity.
+
+If this person is a foreigner, this is represented by the is_foreigner indicator."""@en ;
+                                  rdfs:label "Agent"@en ,
+                                             "Agente"@pt .
+
+
+<http://xmlns.com/foaf/0.1/Group> rdfs:comment "Esta coleção representa um grupo de Organizações (Pessoas Jurídicas) reunidas. Isto pode decorrer por conta de um acordo comercial, compra, fusão, etc."@pt ,
+                                               "This collection represents a group of Organizations (Legal Entities) brought together. This may be due to a commercial agreement, purchase, merger, etc."@en ;
+                                  rdfs:label "Group"@en ,
+                                             "Grupo"@pt ,
+                                             "Grupo empresarial"@pt ,
+                                             "Organizations group"@en .
+
+
+<http://xmlns.com/foaf/0.1/Organization> rdfs:comment "In the legal conception, commercial law, business activity, or company, it is an economic activity exercised professionally by the entrepreneur through the articulation of the productive factors for the production or circulation of goods or services. The legal concept of company cannot be confused with that of a subject of law, that of a legal person, nor with the place where that economic activity is developed."@en ,
+                                                      "Na concepção jurídica, do direito comercial, atividade empresarial, ou empresa, é uma atividade econômica exercida profissionalmente pelo empresário por meio da articulação dos fatores produtivos para a produção ou circulação de bens ou de serviços. O conceito jurídico de empresa não pode ser confundido com o de um sujeito de direito, o de uma pessoa jurídica, tampouco com o local onde aquela atividade econômica é desenvolvida."@pt ;
+                                         rdfs:label "Company"@en ,
+                                                    "Empresa"@pt ,
+                                                    "Legal entity"@en ,
+                                                    "Organization"@en ,
+                                                    "Organização"@pt ,
+                                                    "Pessoa Jurídica"@pt ;
+                                         rdfs:seeAlso <https://pt.wikipedia.org/wiki/Empresa> .
+
+
+<http://xmlns.com/foaf/0.1/Person> rdfs:comment """Natural Person is every human being as an individual, from birth to death. This designation is a legal concept and refers specifically to the individual as a subject with rights and duties.
+
+The Cadastro de Pessoa Física (CPF) is the registration of citizens for tax purposes, made by the Federal Revenue Service. To be considered an individual, however, it is not necessary to have a CPF. For the law, the human being is an individual since he was born alive, since from then on he already has rights and duties. The birth certificate is, therefore, the first registration of the individual."""@en ,
+                                                """Pessoa física é todo ser humano enquanto indivíduo, do seu nascimento até a morte. Essa designação é um conceito jurídico e se refere especificamente ao indivíduo enquanto sujeito detentor de direitos e de deveres.
+
+O Cadastro de Pessoas Físicas (CPF) é o registro dos cidadãos para fins fiscais, feito pela Receita Federal. Para ser considerado uma pessoa física, porém, não é preciso ter um CPF. Para o direito, o ser humano é uma pessoa física desde que nasce com vida, pois a partir daí já é detentor de direitos e deveres. A certidão de nascimento é, portanto, o primeiro registro da pessoa física."""@pt ;
+                                   rdfs:label "Natural Person"@en ,
+                                              "Natural person"@en ,
+                                              "Person"@en ,
+                                              "Pessoa"@pt ,
+                                              "Pessoa Física"@pt ;
+                                   rdfs:seeAlso <https://www.dicionariofinanceiro.com/pessoa-fisica/> .
+
+
+<http://xmlns.com/foaf/0.1/member> rdfs:label "membro"@pt ,
+                                              "tem membro"@pt .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.sefaz.ma.gov.br/ontology/City>
+                <http://www.sefaz.ma.gov.br/ontology/Country>
+                <http://www.sefaz.ma.gov.br/ontology/District>
+                <http://www.sefaz.ma.gov.br/ontology/Federative_Unit>
+                <http://www.sefaz.ma.gov.br/ontology/Locality>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.sefaz.ma.gov.br/ontology/SIMPLES_Excluded>
+                <http://www.sefaz.ma.gov.br/ontology/SIMPLES_Not_Optant>
+                <http://www.sefaz.ma.gov.br/ontology/SIMPLES_Optant>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/ACTIVE>
+                <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/DOWN>
+                <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/NULL>
+                <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/SUSPENDED>
+                <http://www.sefaz.ma.gov.br/ontology/Cadastral_Situation/UNFIT>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -1,0 +1,1390 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "pt", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.sefaz.ma.gov.br/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2003/01/geo/wgs84_pos", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2006/vcard/ns", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "SKOS Vocabulary"
+    },
+    "iri" : "http://www.sefaz.ma.gov.br/IBGE/Location/ontology/",
+    "version" : "1.0",
+    "author" : [ "Sean Bechhofer", "Alistair Miles" ],
+    "description" : {
+      "en" : "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies."
+    },
+    "labels" : {
+      "undefined" : "IBGE - Location"
+    },
+    "comments" : {
+      "pt" : "Ontologia contendo dados sobre Municípios, Microregiões, Mesoregiões, Unidades Federativas e Paises disponibilizados pelo Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "en" : "Cadastral Ontology of SEFAZ Taxpayers (SEFAZ-MA) and Open Data of Companies of the Federal Revenue of Brazil (RFB)"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sean Bechhofer",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Alistair Miles",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Dave Beckett",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Participants in W3C's Semantic Web Deployment Working Group.",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Nikki Rogers",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "SKOS Vocabulary",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.ibge.gov.br/explica/codigos-dos-municipios.php",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/TR/skos-reference/",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Federative_Unit",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Federative_Unit",
+      "pt" : "Estado"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#rational",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "rational"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Mesoregion",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mesoregion",
+      "pt" : "Mesoregião",
+      "en" : "Mesoregion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Location",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location",
+      "pt" : "Local",
+      "en" : "Location"
+    },
+    "subClasses" : [ "12", "7", "18", "1", "27", "4", "32" ],
+    "comment" : {
+      "pt" : "Classe que representa o conceito de uma localização geográfica.",
+      "en" : "Class that represents the concept of a geographical location."
+    },
+    "attributes" : [ "external" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "46",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Microregion",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Microregion",
+      "pt" : "Microregião",
+      "en" : "Microregion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Country",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "pt" : "País",
+      "en" : "Country"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/District",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "District",
+      "pt" : "Bairro",
+      "en" : "District"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/Locality",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Locality",
+      "pt" : "Logradouro",
+      "en" : "Locality"
+    },
+    "comment" : {
+      "pt" : "Um logradouro pode ser uma rua, avenida, quadra, etc.",
+      "en" : "A locality can be a street, avenue, court, etc."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "25" ]
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/City",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "City",
+      "pt" : "Municipio",
+      "en" : "City"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "25" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "11",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "16",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "17",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "20",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "22",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "31",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "33",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "36",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "37",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "39",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "44",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "55",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "56",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "62",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "67",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "72",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "73",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "75",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "91",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "92",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "93",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "94",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "95",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "98",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "99",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The preferred lexical label for a resource, in a given language.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "prefLabel",
+      "en" : "preferred label"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise\n      disjoint properties."
+    },
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#postal-code",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "postal-code"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/mesoregion_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "mesoregion_code",
+      "pt" : "código da mesoregião"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "is_part_of",
+      "pt" : "faz parte de",
+      "en" : "is part of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "1",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#hiddenLabel",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "15",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hiddenLabel",
+      "en" : "hidden label"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."
+    },
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/has_part",
+    "inverse" : "21",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "has_part",
+      "pt" : "tem parte",
+      "en" : "has part"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "18",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/abbreviation_UF",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "abbreviation_UF"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "someValues", "external", "functional" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/country_code_IBGE",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "country_code_IBGE",
+      "pt" : "código do país do IBGE",
+      "en" : "country code IBGE"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/mircroregion_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "mircroregion_code",
+      "pt" : "código da microregião"
+    },
+    "domain" : "27",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/country_code_IBGE",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "country_code_IBGE",
+      "pt" : "código do país do IBGE",
+      "en" : "country code IBGE"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "someValues", "external", "functional" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "is_part_of",
+      "pt" : "faz parte de",
+      "en" : "is part of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "18",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "is_part_of",
+      "pt" : "faz parte de",
+      "en" : "is part of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "32",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "38",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The preferred lexical label for a resource, in a given language.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "prefLabel",
+      "en" : "preferred label"
+    },
+    "domain" : "32",
+    "comment" : {
+      "en" : "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise\n      disjoint properties."
+    },
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code_IBGE",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "city_code_IBGE",
+      "pt" : "código da cidade do IBGE",
+      "en" : "city code IBGE"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/uf_code_IBGE",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "uf_code_IBGE",
+      "pt" : "código da unidade federativa do IBGE"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/mircroregion_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "mircroregion_code",
+      "pt" : "código da microregião"
+    },
+    "domain" : "27",
+    "attributes" : [ "datatype", "someValues", "external", "functional" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "is_part_of",
+      "pt" : "faz parte de",
+      "en" : "is part of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "27",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "long",
+      "pt" : "longitude",
+      "en" : "longitude"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/country_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "country_code",
+      "pt" : "código do país",
+      "en" : "country code"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "code",
+      "pt" : "código",
+      "en" : "code"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "is_part_of",
+      "pt" : "faz parte de",
+      "en" : "is part of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "7",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "27",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/mesoregion_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "mesoregion_code",
+      "pt" : "código da mesoregião"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "someValues", "external", "functional" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "city_code",
+      "pt" : "código da cidade",
+      "en" : "city code"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "lat",
+      "pt" : "latitude",
+      "en" : "lattitude"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "lat",
+      "pt" : "latitude",
+      "en" : "lattitude"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "68",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#postal-code",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "postal-code"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "someValues", "external", "functional" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "long",
+      "pt" : "longitude",
+      "en" : "longitude"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "label"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/is_part_of",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "is_part_of",
+      "pt" : "faz parte de",
+      "en" : "is part of"
+    },
+    "superproperty" : [ "13" ],
+    "domain" : "4",
+    "attributes" : [ "transitive", "someValues", "external", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "25",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
+    "range" : "25",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "range" : "25",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "78"
+  }, {
+    "range" : "25",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "25",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code_IBGE",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "city_code_IBGE",
+      "pt" : "código da cidade do IBGE",
+      "en" : "city code IBGE"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#notation",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "84",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:notation is used with a typed literal in the object position of the triple.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "notation",
+      "en" : "notation"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/part_whole_relation",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "part_whole_relation",
+      "pt" : "relação de parte todo",
+      "en" : "part whole relation"
+    },
+    "domain" : "46",
+    "subproperty" : [ "21", "88" ],
+    "attributes" : [ "transitive", "external", "object" ],
+    "id" : "13"
+  }, {
+    "range" : "1",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "4",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "18",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "1",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "range" : "4",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "93"
+  }, {
+    "range" : "1",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "4",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#altLabel",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "81",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An alternative lexical label for a resource.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "altLabel",
+      "en" : "alternative label"
+    },
+    "domain" : "46",
+    "comment" : {
+      "en" : "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "96"
+  }, {
+    "range" : "4",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "97"
+  }, {
+    "range" : "12",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "18",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.w3.org/2006/vcard/ns#country-name",
+    "baseIri" : "http://www.w3.org/2006/vcard/ns",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "country-name"
+    },
+    "domain" : "12",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.sefaz.ma.gov.br/ontology/city_code_IBGE_full",
+    "baseIri" : "http://www.sefaz.ma.gov.br/ontology",
+    "range" : "87",
+    "label" : {
+      "IRI-based" : "city_code_IBGE_full"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype", "external", "functional" ],
+    "id" : "101"
+  }, {
+    "range" : "25",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "range" : "25",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "103"
+  } ]
+}

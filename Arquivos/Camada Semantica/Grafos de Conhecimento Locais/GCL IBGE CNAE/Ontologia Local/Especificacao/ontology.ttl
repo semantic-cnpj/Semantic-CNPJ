@@ -1,0 +1,1044 @@
+@prefix : <http://www.sefaz.ma.gov.br/CNAE/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sefaz.ma.gov.br/CNAE/ontology/> .
+
+<http://www.sefaz.ma.gov.br/CNAE/ontology/> rdf:type owl:Ontology ;
+                                             rdfs:comment """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Valeria Priscilla Monteiro Fernandes
+valeria.fernandes@sefaz.ma.gov.br
+
+Adriano Dos Santos Rego
+adriano.rego@sefaz.ma.gov.br
+
+Tainan Khalil Leite Calixto
+tainan.calixto@sefaz.ma.gov.br
+
+
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
+                                                          "Ontologia modelando a estrutura da Classificação Nacional de Atividades Econômicas (CNAE) definida pelo Instituto Brasileiro de Geografia e Estatística (IBGE)"@pt ,
+                                                          "Ontology modeling the structure of the National Classification of Economic Activities (NCEA) defined by the Brazilian Institute of Geography and Statistics (BIGS)"@en ;
+                                             rdfs:label "CNAE Ontology" ;
+                                             rdfs:seeAlso <http://www.w3.org/TR/skos-reference/> ,
+                                                          <https://concla.ibge.gov.br/concla.html> ;
+                                             owl:versionInfo "1.0"@pt .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/activity_description
+<http://www.sefaz.ma.gov.br/ontology/activity_description> rdf:type owl:AnnotationProperty ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty ;
+                                                    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty ;
+                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty ;
+                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_class
+<http://www.sefaz.ma.gov.br/ontology/has_cnae_class> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                     rdfs:range <http://www.sefaz.ma.gov.br/ontology/CNAE_Class> ;
+                                                     rdfs:label "has cnae class"@en ,
+                                                                "tem classe CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_division
+<http://www.sefaz.ma.gov.br/ontology/has_cnae_division> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:range <http://www.sefaz.ma.gov.br/ontology/CNAE_Division> ;
+                                                        rdfs:label "has cnae division"@en ,
+                                                                   "tem divisão CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_group
+<http://www.sefaz.ma.gov.br/ontology/has_cnae_group> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                     rdfs:range <http://www.sefaz.ma.gov.br/ontology/CNAE_Group> ;
+                                                     rdfs:label "has cnae group"@en ,
+                                                                "tem grupo CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_cnae_section
+<http://www.sefaz.ma.gov.br/ontology/has_cnae_section> rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                                       rdfs:range <http://www.sefaz.ma.gov.br/ontology/CNAE_Section> ;
+                                                       rdfs:label "has CNAE section"@en ,
+                                                                  "tem seção CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/has_version
+<http://www.sefaz.ma.gov.br/ontology/has_version> rdf:type owl:ObjectProperty ,
+                                                           owl:FunctionalProperty ;
+                                                  rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                  rdfs:range <http://www.sefaz.ma.gov.br/ontology/CNAE_Version> ;
+                                                  rdfs:comment "relaciona o CNAE de uma atividade econômica a versão do CNAE desta"@pt ,
+                                                               "relates the CNAE of an economic activity to the CNAE version of this"@en ;
+                                                  rdfs:label "has version"@en ,
+                                                             "tem versão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/next_version
+<http://www.sefaz.ma.gov.br/ontology/next_version> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <http://www.sefaz.ma.gov.br/ontology/previous_version> ;
+                                                   rdf:type owl:FunctionalProperty ;
+                                                   rdfs:comment "Relaciona uma coisa a uma próxima versão sua."@pt ,
+                                                                "Relates something to your next version."@en ;
+                                                   rdfs:label "next version"@en ,
+                                                              "próxima versão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/previous_version
+<http://www.sefaz.ma.gov.br/ontology/previous_version> rdf:type owl:ObjectProperty ,
+                                                                owl:FunctionalProperty ;
+                                                       rdfs:comment "Relaciona uma coisa a uma versão sua anterior."@pt ,
+                                                                    "Relates something to its previous version."@en ;
+                                                       rdfs:label "previous version"@en ,
+                                                                  "versão anterior"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#broaderTransitive> ;
+                                              owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrower> .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
+                                                        owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ;
+                                                        rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+<http://www.w3.org/2004/02/skos/core#member> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://www.w3.org/2004/02/skos/core#Collection> .
+
+
+###  http://www.w3.org/2004/02/skos/core#memberList
+<http://www.w3.org/2004/02/skos/core#memberList> rdf:type owl:ObjectProperty ,
+                                                          owl:FunctionalProperty ;
+                                                 rdfs:domain <http://www.w3.org/2004/02/skos/core#OrderedCollection> ;
+                                                 rdfs:range rdf:List .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
+                                                         rdf:type owl:TransitiveProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
+                                              rdf:type owl:SymmetricProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+<http://www.w3.org/2004/02/skos/core#semanticRelation> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                       rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/activity_description
+<http://www.sefaz.ma.gov.br/ontology/activity_description> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+                                                           rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/cnae
+<http://www.sefaz.ma.gov.br/ontology/cnae> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+                                           rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:label "CNAE"@pt ,
+                                                      "Classificação Nacional de Atividades Econômicas"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/formated_cnae
+<http://www.sefaz.ma.gov.br/ontology/formated_cnae> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/cnae> ;
+                                                    rdf:type owl:FunctionalProperty ;
+                                                    rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:label "CNAE formatado"@pt ,
+                                                               "formated CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/raw_cnae
+<http://www.sefaz.ma.gov.br/ontology/raw_cnae> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf <http://www.sefaz.ma.gov.br/ontology/cnae> ;
+                                               rdf:type owl:FunctionalProperty ;
+                                               rdfs:domain <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:label "CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/validate_year
+<http://www.sefaz.ma.gov.br/ontology/validate_year> rdf:type owl:DatatypeProperty ,
+                                                             owl:FunctionalProperty ;
+                                                    rdfs:range xsd:int ;
+                                                    rdfs:label "ano de validade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/validity_end
+<http://www.sefaz.ma.gov.br/ontology/validity_end> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                   rdf:type owl:FunctionalProperty ;
+                                                   rdfs:domain <http://www.sefaz.ma.gov.br/ontology/CNAE_Version> ;
+                                                   rdfs:range xsd:dateTime ;
+                                                   rdfs:comment "Data de fim da vigência de uma versão da tabela CNAE"@pt ,
+                                                                "validity end date of a CNAE table version"@en ;
+                                                   rdfs:label "fim de vigência"@pt ,
+                                                              "validity end"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/validity_start
+<http://www.sefaz.ma.gov.br/ontology/validity_start> rdf:type owl:DatatypeProperty ,
+                                                              owl:FunctionalProperty ;
+                                                     rdfs:domain <http://www.sefaz.ma.gov.br/ontology/CNAE_Version> ;
+                                                     rdfs:range xsd:dateTime ;
+                                                     rdfs:comment "CNAE table version validity end date"@en ,
+                                                                  "Data de fim da vigência da versão da tabela de CNAE"@pt ;
+                                                     rdfs:label "início da vigência"@pt ,
+                                                                "validity start"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf rdfs:label .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_Allowed_For_MEI
+<http://www.sefaz.ma.gov.br/ontology/Activities_Allowed_For_MEI> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Activities_Collection> ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.sefaz.ma.gov.br/ontology/validate_year> ;
+                                                                                   owl:someValuesFrom xsd:int
+                                                                                 ] ;
+                                                                 rdfs:label "Activities allowed for MEI"@en ,
+                                                                            "Atividades permitidas para MEI"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_Collection
+<http://www.sefaz.ma.gov.br/ontology/Activities_Collection> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#member> ;
+                                                                              owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/Economic_Activity>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#member> ;
+                                                                              owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/Economic_Activity>
+                                                                            ] ;
+                                                            rdfs:label "Coleções de atividades econômicas"@pt ,
+                                                                       "Economic activities collection"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Activities_Prevented_For_SIMPLES
+<http://www.sefaz.ma.gov.br/ontology/Activities_Prevented_For_SIMPLES> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Activities_Collection> ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://www.sefaz.ma.gov.br/ontology/validate_year> ;
+                                                                                         owl:someValuesFrom xsd:int
+                                                                                       ] ;
+                                                                       rdfs:label "Atividades impeditivas para o SIMPLES Nacional"@pt ,
+                                                                                  "Preventive activities for SIMPLES Nacional"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Class
+<http://www.sefaz.ma.gov.br/ontology/CNAE_Class> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                                                   owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Group>
+                                                                 ] ;
+                                                 rdfs:label "CNAE class"@en ,
+                                                            "Classe CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Division
+<http://www.sefaz.ma.gov.br/ontology/CNAE_Division> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                                                      owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Section>
+                                                                    ] ;
+                                                    rdfs:label "CNAE division"@en ,
+                                                               "Divisão CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Group
+<http://www.sefaz.ma.gov.br/ontology/CNAE_Group> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                                                   owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Division>
+                                                                 ] ;
+                                                 rdfs:label "CNAE group"@en ,
+                                                            "Grupo CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Section
+<http://www.sefaz.ma.gov.br/ontology/CNAE_Section> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                   rdfs:label "CNAE section"@en ,
+                                                              "Seção CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass
+<http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ,
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                                                      owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Class>
+                                                                    ] ;
+                                                    rdfs:label "CNAE subclass"@en ,
+                                                               "Subclasse CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/CNAE_Version
+<http://www.sefaz.ma.gov.br/ontology/CNAE_Version> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.sefaz.ma.gov.br/ontology/next_version> ;
+                                                                                            owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Version>
+                                                                                          ]
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://www.sefaz.ma.gov.br/ontology/previous_version> ;
+                                                                                            owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Version>
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty rdfs:label ;
+                                                                     owl:someValuesFrom xsd:string
+                                                                   ] ;
+                                                   rdfs:comment "Representa a versão da tabela de Classificação Nacional de Atividades Econômicas (CNAE ) à qual a atividade econômica está associada"@pt ,
+                                                                "Represents the version of the Classificação Nacional de Atividades Econômicas (CNAE )  table to which economic activity is associated"@en ;
+                                                   rdfs:label "CNAE Version"@en ,
+                                                              "Versão do CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> rdf:type owl:Class ;
+                                                        owl:equivalentClass [ rdf:type owl:Class ;
+                                                                              owl:oneOf ( <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SUBCLASSE-CULTIVO_DE_ARROZ>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL>
+                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SUBCLASSE-CULTIVO_DE_ARROZ>
+                                                                                        )
+                                                                            ] ;
+                                                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                        [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.sefaz.ma.gov.br/ontology/next_version> ;
+                                                                                                 owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/Economic_Activity>
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://www.sefaz.ma.gov.br/ontology/previous_version> ;
+                                                                                                 owl:allValuesFrom <http://www.sefaz.ma.gov.br/ontology/Economic_Activity>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/has_version> ;
+                                                                          owl:someValuesFrom <http://www.sefaz.ma.gov.br/ontology/CNAE_Version>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/activity_description> ;
+                                                                          owl:someValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.sefaz.ma.gov.br/ontology/cnae> ;
+                                                                          owl:someValuesFrom xsd:string
+                                                                        ] .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+rdf:List rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#OrderedCollection
+<http://www.w3.org/2004/02/skos/core#OrderedCollection> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Activities_Allowed_For_MEI/PERMITIDO_MEI_EM_2020
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Activities_Allowed_For_MEI/PERMITIDO_MEI_EM_2020> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.sefaz.ma.gov.br/ontology/Activities_Allowed_For_MEI> ;
+                                                                                                 <http://www.w3.org/2004/02/skos/core#member> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_2.3_SUBCLASSE-FABRICACAO_DE_PRODUTOS_DO_ARROZ> ;
+                                                                                                 <http://www.sefaz.ma.gov.br/ontology/validate_year> "2020"^^xsd:int ;
+                                                                                                 rdfs:label "Atividades econômicas permitidas para MEI no ano de 2020"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.sefaz.ma.gov.br/ontology/CNAE_Version> ;
+                                                                      <http://www.sefaz.ma.gov.br/ontology/validity_end> "2003-03-31T00:00:00"^^xsd:dateTime ;
+                                                                      <http://www.sefaz.ma.gov.br/ontology/validity_start> "2002-01-01T00:00:00"^^xsd:dateTime ;
+                                                                      rdfs:label "1.0" ;
+                                                                      rdfs:seeAlso <https://biblioteca.ibge.gov.br/visualizacao/livros/liv2725.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.sefaz.ma.gov.br/ontology/CNAE_Version> ;
+                                                                      <http://www.sefaz.ma.gov.br/ontology/previous_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> ;
+                                                                      <http://www.sefaz.ma.gov.br/ontology/validity_start> "2003-04-01T00:00:00"^^xsd:dateTime ;
+                                                                      rdfs:label "1.1" ;
+                                                                      rdfs:seeAlso <https://biblioteca.ibge.gov.br/visualizacao/livros/liv2725.pdf> .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> rdf:type owl:NamedIndividual ,
+                                                                                                                         <http://www.sefaz.ma.gov.br/ontology/CNAE_Class> ,
+                                                                                                                         <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_cnae_division> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_cnae_group> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ,
+                                                                                                                                                                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ,
+                                                                                                                                                                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "0111-2" ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "1112" ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/activity_description> "Cultivo de cereais para grãos" ;
+                                                                                                                rdfs:label "Cultivo de cereais para grãos" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> rdf:type owl:NamedIndividual ,
+                                                                                                                                                               <http://www.sefaz.ma.gov.br/ontology/CNAE_Division> ,
+                                                                                                                                                               <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> ;
+                                                                                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                                      <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "01" ;
+                                                                                                                                                      <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "1" ;
+                                                                                                                                                      <http://www.sefaz.ma.gov.br/ontology/activity_description> "AGRICULTURA, PECUÁRIA E SERVIÇOS RELACIONADOS COM ESSAS ATIVIDADES" ;
+                                                                                                                                                      rdfs:label "AGRICULTURA, PECUÁRIA E SERVIÇOS RELACIONADOS COM ESSAS ATIVIDADES" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://www.sefaz.ma.gov.br/ontology/CNAE_Group> ,
+                                                                                                                           <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/has_cnae_division> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> ;
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ;
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ,
+                                                                                                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "011" ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "11" ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/activity_description> "PRODUÇÃO DE LAVOURAS TEMPORÁRIAS" ;
+                                                                                                                  rdfs:label "PRODUÇÃO DE LAVOURAS TEMPORÁRIAS" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> rdf:type owl:NamedIndividual ,
+                                                                                                                                                     <http://www.sefaz.ma.gov.br/ontology/CNAE_Section> ,
+                                                                                                                                                     <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "A" ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "a" ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/activity_description> "AGRICULTURA, PECUÁRIA, SILVICULTURA E EXPLORAÇÃO FLORESTAL" ;
+                                                                                                                                            rdfs:label "AGRICULTURA, PECUÁRIA, SILVICULTURA E EXPLORAÇÃO FLORESTAL" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SUBCLASSE-CULTIVO_DE_ARROZ
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SUBCLASSE-CULTIVO_DE_ARROZ> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass> ,
+                                                                                                               <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_class> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_division> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_group> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0> ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ,
+                                                                                                                                                              <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES> ,
+                                                                                                                                                              <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ,
+                                                                                                                                                              <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "0111-2/01" ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "111201" ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/activity_description> "Cultivo de arroz" ;
+                                                                                                      rdfs:label "Cultivo de arroz" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> rdf:type owl:NamedIndividual ,
+                                                                                                                         <http://www.sefaz.ma.gov.br/ontology/CNAE_Class> ,
+                                                                                                                         <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_cnae_division> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_cnae_group> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/previous_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ,
+                                                                                                                                                                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ,
+                                                                                                                                                                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "0111-2" ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "1112" ;
+                                                                                                                <http://www.sefaz.ma.gov.br/ontology/activity_description> "Cultivo de cereais para grãos" ;
+                                                                                                                rdfs:label "Cultivo de cereais para grãos" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> rdf:type owl:NamedIndividual ,
+                                                                                                                                          <http://www.sefaz.ma.gov.br/ontology/CNAE_Division> ,
+                                                                                                                                          <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                                 <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                 <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1> ;
+                                                                                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                 <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                 <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "1" ;
+                                                                                                                                 <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "1" ;
+                                                                                                                                 <http://www.sefaz.ma.gov.br/ontology/activity_description> "AGRICULTURA, PECUÁRIA E SERVIÇOS RELACIONADOS" ;
+                                                                                                                                 rdfs:label "AGRICULTURA, PECUÁRIA E SERVIÇOS RELACIONADOS" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://www.sefaz.ma.gov.br/ontology/CNAE_Group> ,
+                                                                                                                           <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/has_cnae_division> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/previous_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ;
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ,
+                                                                                                                                                                          <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "11" ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "11" ;
+                                                                                                                  <http://www.sefaz.ma.gov.br/ontology/activity_description> "PRODUÇÃO DE LAVOURAS TEMPORÁRIAS" ;
+                                                                                                                  rdfs:label "PRODUÇÃO DE LAVOURAS TEMPORÁRIAS" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> rdf:type owl:NamedIndividual ,
+                                                                                                                                                     <http://www.sefaz.ma.gov.br/ontology/CNAE_Section> ,
+                                                                                                                                                     <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1> ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/previous_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "A" ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "a" ;
+                                                                                                                                            <http://www.sefaz.ma.gov.br/ontology/activity_description> "AGRICULTURA, PECUÁRIA, SILVICULTURA E EXPLORAÇÃO FLORESTAL" ;
+                                                                                                                                            rdfs:label "AGRICULTURA, PECUÁRIA, SILVICULTURA E EXPLORAÇÃO FLORESTAL" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SUBCLASSE-CULTIVO_DE_ARROZ
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SUBCLASSE-CULTIVO_DE_ARROZ> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass> ,
+                                                                                                               <http://www.sefaz.ma.gov.br/ontology/Economic_Activity> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_class> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_division> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_group> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_cnae_section> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/has_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/previous_version> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SUBCLASSE-CULTIVO_DE_ARROZ> ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS> ,
+                                                                                                                                                              <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS> ,
+                                                                                                                                                              <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS> ,
+                                                                                                                                                              <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL> ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/formated_cnae> "0111-2/01" ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/raw_cnae> "111201" ;
+                                                                                                      <http://www.sefaz.ma.gov.br/ontology/activity_description> "Cultivo de arroz" ;
+                                                                                                      rdfs:label "Cultivo de arroz" .
+
+
+###  http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_2.3_SUBCLASSE-FABRICACAO_DE_PRODUTOS_DO_ARROZ
+<http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_2.3_SUBCLASSE-FABRICACAO_DE_PRODUTOS_DO_ARROZ> rdf:type owl:NamedIndividual ,
+                                                                                                                              <http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass> ;
+                                                                                                                     <http://www.sefaz.ma.gov.br/ontology/formated_cnae> 1061902 ,
+                                                                                                                                                                         "1061-9/02" ;
+                                                                                                                     <http://www.sefaz.ma.gov.br/ontology/activity_description> "Fabricação de produtos do arroz" .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Economic_Activity_Collection
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity_Collection> rdf:type owl:NamedIndividual ;
+                                                                   rdfs:label "Coleção de atividades econômicas"@pt ,
+                                                                              "Economic activity collection"@en .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/is_member_of
+<http://www.sefaz.ma.gov.br/ontology/is_member_of> rdf:type owl:NamedIndividual ;
+                                                   rdfs:label "Is member of"@en ,
+                                                              "É membro de"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#OrderedCollection
+<http://www.w3.org/2004/02/skos/core#OrderedCollection> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+<http://www.w3.org/2004/02/skos/core#broadMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#mappingRelation
+<http://www.w3.org/2004/02/skos/core#mappingRelation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#member
+<http://www.w3.org/2004/02/skos/core#member> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#memberList
+<http://www.w3.org/2004/02/skos/core#memberList> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+<http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#relatedMatch
+<http://www.w3.org/2004/02/skos/core#relatedMatch> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+<http://www.w3.org/2004/02/skos/core#semanticRelation> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.sefaz.ma.gov.br/ontology/Economic_Activity> rdfs:comment """Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.
+Esta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."""@pt ,
+                                                                     """Economic activity carried out by the company. A company has a primary activity and can (optionally) have N secondary activities.
+This activity is represented by the Classificação Nacional de Atividades Econômicas (CNAE) code."""@en ;
+                                                        rdfs:label "Atividade econômica"@pt ,
+                                                                   "Economic activity"@en ;
+                                                        rdfs:seeAlso <https://pt.wikipedia.org/wiki/Classifica%C3%A7%C3%A3o_Nacional_de_Atividades_Econ%C3%B4micas> .
+
+
+<http://www.sefaz.ma.gov.br/ontology/activity_description> rdfs:comment "Economic activity name"@pt ,
+                                                                        "Nome da atividade econômica"@pt ;
+                                                           rdfs:label "denominação da atividade econômica"@pt ,
+                                                                      "descrição da atividade econômica"@pt ,
+                                                                      "economic activity description"@en .
+
+
+<http://www.w3.org/2004/02/skos/core#Collection> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "Collection"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A meaningful collection of concepts."@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#Concept> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "Conceito"@pt ,
+                                                         "Concept"@en ,
+                                                         "Uma ideia ou noção; uma unidade de pensamento."@pt ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An idea or notion; a unit of thought."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#OrderedCollection> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                        rdfs:label "Ordered Collection"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "An ordered collection of concepts, where both the grouping and the ordering are meaningful."@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#altLabel> rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
+                                                            "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "alternative label"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "An alternative lexical label for a resource."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#broader> rdfs:comment "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "has broader"@en ,
+                                                         "mais geral"@pt ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more general in meaning."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                        rdfs:label "has broader transitive"@en ,
+                                                                   "mais geral transitivo"@pt ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "skos:broaderTransitive is a transitive superproperty of skos:broader." ;
+                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#changeNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "change note"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A note about a modification to a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#definition> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "definition"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                    rdfs:label "editorial note"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A note for an editor, translator or maintainer of the vocabulary."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#example> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "example"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An example of the use of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
+                                                               "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                  rdfs:label "hidden label"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#historyNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                  rdfs:label "history note"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A note about the past state/use/meaning of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#member> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                             rdfs:label "has member"@en ,
+                                                        "tem membro"@pt ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "Relates a collection to one of its members."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#memberList> rdfs:comment """For any resource, every item in the list given as the value of the
+      skos:memberList property is also a value of the skos:member property."""@en ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "has member list"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Relates an ordered collection to the RDF list containing its members."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#narrower> rdfs:comment "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "has narrower"@en ,
+                                                          "mais específico"@pt ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more specific in meaning."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                         rdfs:label "has narrower transitive"@en ,
+                                                                    "mais específico transitivo"@pt ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "skos:narrowerTransitive is a transitive superproperty of skos:narrower." ;
+                                                         <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#notation> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "notation"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#note> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                           rdfs:label "note"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#scopeNote> "This property may be used directly, or as a super-property for more specific note types."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
+                                                             "The range of skos:prefLabel is the class of RDF plain literals."@en ,
+                                                             """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties."""@en ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "preferred label"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "The preferred lexical label for a resource, in a given language."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#related> rdfs:comment "skos:related is disjoint with skos:broaderTransitive"@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "has related"@en ,
+                                                         "relacionado"@pt ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept with which there is an associative semantic relationship."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "scope note"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "A note that helps to clarify the meaning and/or the use of a concept."@en .
+
+
+<http://www.w3.org/2004/02/skos/core#semanticRelation> rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                       rdfs:label "is in semantic relation with"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Links a concept to a concept related by meaning."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.sefaz.ma.gov.br/ontology/CNAE_Class>
+                <http://www.sefaz.ma.gov.br/ontology/CNAE_Division>
+                <http://www.sefaz.ma.gov.br/ontology/CNAE_Group>
+                <http://www.sefaz.ma.gov.br/ontology/CNAE_Section>
+                <http://www.sefaz.ma.gov.br/ontology/CNAE_Subclass>
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.0>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/CNAE_Version/CNAE_1.1>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS_COM_ESSAS_ATIVIDADES>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.0_SUBCLASSE-CULTIVO_DE_ARROZ>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_CLASSE-CULTIVO_DE_CEREAIS_PARA_GRAOS>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_DIVISAO-AGRICULTURA__PECUARIA_E_SERVICOS_RELACIONADOS>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_GRUPO-PRODUCAO_DE_LAVOURAS_TEMPORARIAS>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SECAO-AGRICULTURA__PECUARIA__SILVICULTURA_E_EXPLORACAO_FLORESTAL>
+                        <http://www.sefaz.ma.gov.br/IBGE/CNAE/resource/Economic_Activity/CNAE_1.1_SUBCLASSE-CULTIVO_DE_ARROZ>
+                      )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( <http://www.sefaz.ma.gov.br/ontology/has_cnae_class>
+                <http://www.sefaz.ma.gov.br/ontology/has_cnae_division>
+                <http://www.sefaz.ma.gov.br/ontology/has_cnae_group>
+                <http://www.sefaz.ma.gov.br/ontology/has_cnae_section>
+                <http://www.sefaz.ma.gov.br/ontology/has_version>
+                <http://www.sefaz.ma.gov.br/ontology/next_version>
+                <http://www.sefaz.ma.gov.br/ontology/previous_version>
+                <http://www.w3.org/2004/02/skos/core#semanticRelation>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

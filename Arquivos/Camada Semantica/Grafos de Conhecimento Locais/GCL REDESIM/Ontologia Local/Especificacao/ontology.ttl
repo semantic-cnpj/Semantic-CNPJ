@@ -1,0 +1,4133 @@
+@prefix : <http://www.sefaz.ma.gov.br/REDESIM/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sefaz.ma.gov.br/REDESIM/ontology/> .
+
+<http://www.sefaz.ma.gov.br/REDESIM/ontology/> rdf:type owl:Ontology ;
+                                                rdfs:comment """Equipe SEFAZ/MA
+
+Roberval Gomes Mariano 
+Coordenador 
+Gestor Chefe CEGPA 
+mariano@sefaz.ma.gov.br
+
+Valeria Priscilla Monteiro Fernandes
+valeria.fernandes@sefaz.ma.gov.br
+
+Adriano Dos Santos Rego
+adriano.rego@sefaz.ma.gov.br
+
+Tainan Khalil Leite Calixto
+tainan.calixto@sefaz.ma.gov.br
+
+------------------------------------------------------------------------------------------
+Equipe UFC
+
+Vania P Vidal 
+Coordenador 
+vaniap.vidal@gmail.com 
+
+Angelo Brayner
+brayner@dc.ufc.br
+
+José Maria Monteiro 
+zemaria@lia.ufc.br
+
+Caio Viktor da Silva Avila
+Engenheiro do Conhecimento
+Desenvolvedor
+caioviktor@alu.ufc.br
+
+
+Túlio Vidal Rolim
+Engenheiro do Conhecimento
+Desenvolvedor
+tulio.xcrtf@gmail.com
+
+-----------------------------------------------------------------------------------------------
+Financiador: Banco Interamericano de Desenvolvimento
+
+Contrato 4458/OC-BR. 
+P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
+                                                             "Ontologia contendo dados sobre Empresas, Sócios, Eventos e Requisições da REDESIM."@pt ;
+                                                rdfs:label "REDESIM Ontology" ;
+                                                owl:versionInfo "1.0"@pt .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/abbreviation_UF
+:abbreviation_UF rdf:type owl:AnnotationProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:domain :Federative_Unit .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/activity_description
+:activity_description rdf:type owl:AnnotationProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:domain :Economic_Activity .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/commercial_name
+:commercial_name rdf:type owl:AnnotationProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:domain <http://xmlns.com/foaf/spec/Organization> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_time
+:end_time rdf:type owl:AnnotationProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/observation
+:observation rdf:type owl:AnnotationProperty ;
+             rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/reason
+:reason rdf:type owl:AnnotationProperty ;
+        rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/sefaz_cadastral_situation_name
+:sefaz_cadastral_situation_name rdf:type owl:AnnotationProperty ;
+                                rdfs:range xsd:string ;
+                                rdfs:domain :Cadastral_Situation .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/situation_name
+:situation_name rdf:type owl:AnnotationProperty ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/social_name
+:social_name rdf:type owl:AnnotationProperty ;
+             rdfs:range xsd:string ;
+             rdfs:domain <http://xmlns.com/foaf/spec/Organization> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/start_time
+:start_time rdf:type owl:AnnotationProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/status
+:status rdf:type owl:AnnotationProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/update_date
+:update_date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#qualifiedCardinality
+owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:AnnotationProperty ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:AnnotationProperty ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:domain :Address ,
+                                                          :Establishment ,
+                                                          <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#location
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:subPropertyOf <http://xmlns.com/foaf/spec/based_near> .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:AnnotationProperty ;
+                                               rdfs:range xsd:decimal ;
+                                               rdfs:domain :Address ,
+                                                           :Establishment ,
+                                                           <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/spec/based_near
+<http://xmlns.com/foaf/spec/based_near> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/spec/name
+<http://xmlns.com/foaf/spec/name> rdf:type owl:AnnotationProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:domain <http://xmlns.com/foaf/spec/Agent> .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gDay
+xsd:gDay rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gMonth
+xsd:gMonth rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYearMonth
+xsd:gYearMonth rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2006/time#generalDay
+<http://www.w3.org/2006/time#generalDay> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2006/time#generalMonth
+<http://www.w3.org/2006/time#generalMonth> rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2006/time#generalYear
+<http://www.w3.org/2006/time#generalYear> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/icity/iCity-Change_v1/existsAt
+<http://ontology.eil.utoronto.ca/icity/iCity-Change_v1/existsAt> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:label "exist at"@en ,
+                                                                            "existe em"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#agent
+<http://purl.org/NET/c4dm/event.owl#agent> rdf:type owl:ObjectProperty ;
+                                           owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#hasAgent> ;
+                                           rdfs:subPropertyOf :event_properties ;
+                                           owl:inverseOf <http://purl.org/NET/c4dm/event.owl#agent_in> ;
+                                           rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                           rdfs:range <http://xmlns.com/foaf/spec/Agent> ;
+                                           rdfs:label "agent"@en ,
+                                                      "agente"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#agent_in
+<http://purl.org/NET/c4dm/event.owl#agent_in> rdf:type owl:ObjectProperty ;
+                                              owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#isAgentIn> ;
+                                              rdfs:subPropertyOf :event_properties ;
+                                              rdfs:label "agent in"@en ,
+                                                         "agente está em"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#factor
+<http://purl.org/NET/c4dm/event.owl#factor> rdf:type owl:ObjectProperty ;
+                                            owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#hasFactor> ;
+                                            rdfs:subPropertyOf :event_properties ;
+                                            owl:inverseOf <http://purl.org/NET/c4dm/event.owl#factor_of> ;
+                                            rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                            rdfs:label "factor"@en ,
+                                                       "fator"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#factor_of
+<http://purl.org/NET/c4dm/event.owl#factor_of> rdf:type owl:ObjectProperty ;
+                                               owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#isFactorOf> ;
+                                               rdfs:subPropertyOf :event_properties ;
+                                               rdfs:label "factor of"@en ,
+                                                          "fator de"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#hasAgent
+<http://purl.org/NET/c4dm/event.owl#hasAgent> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf :event_properties ;
+                                              rdfs:label "has Agent"@en ,
+                                                         "tem Agente"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#hasFactor
+<http://purl.org/NET/c4dm/event.owl#hasFactor> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :event_properties ;
+                                               rdfs:label "has Factor"@en ,
+                                                          "tem Fator"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#hasProduct
+<http://purl.org/NET/c4dm/event.owl#hasProduct> rdf:type owl:ObjectProperty ;
+                                                owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#product> ;
+                                                rdfs:subPropertyOf :event_properties ;
+                                                rdfs:label "has Product"@en ,
+                                                           "tem Produto"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#hasSubEvent
+<http://purl.org/NET/c4dm/event.owl#hasSubEvent> rdf:type owl:ObjectProperty ;
+                                                 owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#sub_event> ;
+                                                 rdfs:subPropertyOf :event_properties ;
+                                                 rdfs:label "has subevent"@en ,
+                                                            "tem SubEvento"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#isAgentIn
+<http://purl.org/NET/c4dm/event.owl#isAgentIn> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :event_properties ;
+                                               rdfs:label "is Agent in"@en ,
+                                                          "é Agente em"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#isFactorOf
+<http://purl.org/NET/c4dm/event.owl#isFactorOf> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf :event_properties ;
+                                                rdfs:label "is Factor Of"@en ,
+                                                           "é Fator de"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#place
+<http://purl.org/NET/c4dm/event.owl#place> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf :event_properties ;
+                                           rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                           rdfs:label "local"@pt ,
+                                                      "place"@en .
+
+
+###  http://purl.org/NET/c4dm/event.owl#producedIn
+<http://purl.org/NET/c4dm/event.owl#producedIn> rdf:type owl:ObjectProperty ;
+                                                owl:equivalentProperty <http://purl.org/NET/c4dm/event.owl#produced_in> ;
+                                                rdfs:subPropertyOf :event_properties ;
+                                                rdfs:label "produced in"@en ,
+                                                           "produzido em"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#produced_in
+<http://purl.org/NET/c4dm/event.owl#produced_in> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf :event_properties ;
+                                                 owl:inverseOf <http://purl.org/NET/c4dm/event.owl#product> ;
+                                                 rdfs:label "produced in"@en ,
+                                                            "produzido em"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#product
+<http://purl.org/NET/c4dm/event.owl#product> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf :event_properties ;
+                                             rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                             rdfs:label "product"@en ,
+                                                        "produto"@pt .
+
+
+###  http://purl.org/NET/c4dm/event.owl#sub_event
+<http://purl.org/NET/c4dm/event.owl#sub_event> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :event_properties ;
+                                               rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                               rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+                                               rdfs:label "sub event"@en ,
+                                                          "sub evento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/event_properties
+:event_properties rdf:type owl:ObjectProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_accountant
+:has_accountant rdf:type owl:ObjectProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_action_type
+:has_action_type rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Request ;
+                 rdfs:range :Action_Type .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_address
+:has_address rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Establishment
+                                         <http://xmlns.com/foaf/spec/Agent>
+                                       )
+                         ] ;
+             rdfs:range :Address .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_cadastral_situation
+:has_cadastral_situation rdf:type owl:ObjectProperty ,
+                                  owl:FunctionalProperty ,
+                                  owl:AsymmetricProperty ;
+                         rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                         rdfs:range :Cadastral_Situation .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_city
+:has_city rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Address ;
+          rdfs:range :City .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_company_size
+:has_company_size rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                  rdfs:range <http://www.sefaz.ma.gov.br/REDESIM/ontology//Size_Company> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_contact
+:has_contact rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Establishment
+                                         <http://xmlns.com/foaf/spec/Agent>
+                                       )
+                         ] .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_contribution_type
+:has_contribution_type rdf:type owl:ObjectProperty ,
+                                owl:TransitiveProperty ;
+                       rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+                       rdfs:range :Contribution_Type .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_country
+:has_country rdf:type owl:ObjectProperty ;
+             rdfs:domain :Address ;
+             rdfs:range :Country .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_county
+:has_county rdf:type owl:ObjectProperty ;
+            rdfs:domain :Registry_Office ;
+            rdfs:range :County ;
+            rdfs:comment "Indicar a comarca em que se localiza." ;
+            rdfs:label "has county"@en ,
+                       "tem comarca"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_district
+:has_district rdf:type owl:ObjectProperty ;
+              rdfs:domain :Address ;
+              rdfs:range :District .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_document
+:has_document rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+              rdfs:range <http://xmlns.com/foaf/spec/Document> ;
+              rdfs:label "has document"@en ,
+                         "tem documento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_economic_activity
+:has_economic_activity rdf:type owl:ObjectProperty ;
+                       rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                       rdfs:range :Economic_Activity .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_establishment
+:has_establishment rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :is_establishment_of ;
+                   rdf:type owl:AsymmetricProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :Qualification
+                                               <http://xmlns.com/foaf/spec/Organization>
+                                             )
+                               ] ;
+                   rdfs:range :Establishment .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_establishment_type
+:has_establishment_type rdf:type owl:ObjectProperty ,
+                                 owl:TransitiveProperty ;
+                        rdfs:domain :Establishment ;
+                        rdfs:range :Establishment_Type .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_event
+:has_event rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :event_properties ;
+           rdfs:range <http://purl.org/NET/c4dm/event.owl#Event> ;
+           rdfs:label "has event"@en ,
+                      "tem evento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_father
+:has_father rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Partner ;
+            rdfs:range <http://xmlns.com/foaf/spec/Person> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_federative_unit
+:has_federative_unit rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Address ;
+                     rdfs:range :Federative_Unit .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_file
+:has_file rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Request ;
+          rdfs:range :File .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_headquarters
+:has_headquarters rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :is_head_office_of_subsidiary ;
+                  rdfs:domain :Establishment ;
+                  rdfs:range :Establishment ;
+                  rdfs:label "has headquarters"@en ,
+                             "tem matriz"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_integrated_entity
+:has_integrated_entity rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Request ;
+                       rdfs:range :Integrated_Entity ;
+                       rdfs:label "has integrated entity"@en ,
+                                  "tem entidade integrada"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_legal_nature
+:has_legal_nature rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                  rdfs:range :Legal_Nature .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_legal_representant
+:has_legal_representant rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain :Taxpayer ;
+                        rdfs:range :LegalRepresentant .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_locality
+:has_locality rdf:type owl:ObjectProperty ;
+              rdfs:domain :Address ;
+              rdfs:range :Locality .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_main_economic_activity
+:has_main_economic_activity rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :has_economic_activity ;
+                            rdfs:range :Economic_Activity ;
+                            rdfs:label "has main economic activity"@en ,
+                                       "tem atividade econômica principal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_mother
+:has_mother rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Partner ;
+            rdfs:range <http://xmlns.com/foaf/spec/Person> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_nacionality
+:has_nacionality rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :Taxpayer ;
+                 rdfs:range :Nacionality .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_naturalness_city
+:has_naturalness_city rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                      rdfs:range :City ;
+                      rdfs:label "has naturalness city"@en ,
+                                 "tem cidade natal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_naturalness_uf
+:has_naturalness_uf rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                    rdfs:range :Federative_Unit ;
+                    rdfs:label "has naturalness uf"@en ,
+                               "tem unidade federativa natal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_organization
+:has_organization rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :Partner ;
+                  rdfs:range <http://xmlns.com/foaf/spec/Organization> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_part
+:has_part rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :part_whole_relation ;
+          owl:inverseOf :is_part_of ;
+          rdf:type owl:TransitiveProperty ;
+          rdfs:label "has part"@en ,
+                     "tem parte"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_partner
+:has_partner rdf:type owl:ObjectProperty ;
+             owl:inverseOf :is_partner_of ;
+             rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+             rdfs:range :Partner .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_partnership
+:has_partnership rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                 rdfs:range :Partnership ;
+                 rdfs:label "has partnership"@pt ,
+                            "tem sociedade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_professional
+:has_professional rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ,
+                           owl:IrreflexiveProperty ;
+                  rdfs:domain :Qualification ;
+                  rdfs:range <http://xmlns.com/foaf/spec/Person> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_professional_relation
+:has_professional_relation rdf:type owl:ObjectProperty ,
+                                    owl:SymmetricProperty ;
+                           rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+                           rdfs:range :Qualification .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_professional_relationship_type
+:has_professional_relationship_type rdf:type owl:ObjectProperty ,
+                                             owl:AsymmetricProperty ;
+                                    rdfs:domain :Qualification ;
+                                    rdfs:range :Qualification .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_property_regime
+:has_property_regime rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :Partner ;
+                     rdfs:range :Property_Regime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_protocol
+:has_protocol rdf:type owl:ObjectProperty ;
+              rdfs:domain :Request ;
+              rdfs:range :Protocol .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_register_source
+:has_register_source rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Protocol
+                                                 :Request
+                                               )
+                                 ] ;
+                     rdfs:range <http://xmlns.com/foaf/spec/Organization> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_registry_office
+:has_registry_office rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Registry_Office_Registration ;
+                     rdfs:range :Registry_Office .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_registry_office_register
+:has_registry_office_register rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              rdfs:domain :Partner ;
+                              rdfs:range :Registry_Office_Registration .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_relation
+:has_relation rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain :LegalRepresentant ;
+              rdfs:range :Qualification .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_representant
+:has_representant rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:FunctionalProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain :Taxpayer ;
+                  rdfs:range :LegalRepresentant .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_request
+:has_request rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:TransitiveProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( <http://purl.org/NET/c4dm/event.owl#Event>
+                                         :Action_Type
+                                         :Partner
+                                         <http://xmlns.com/foaf/spec/Agent>
+                                         <http://xmlns.com/foaf/spec/Organization>
+                                       )
+                         ] ;
+             rdfs:range :Request .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_sending_status
+:has_sending_status rdf:type owl:ObjectProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :File
+                                                :Request
+                                              )
+                                ] ;
+                    rdfs:label "has sending status"@en ,
+                               "tem status de envio"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_subsidiary
+:has_subsidiary rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain :Establishment ;
+                rdfs:range :Establishment .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_emancipated
+:is_emancipated rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Partner ;
+                rdfs:range :Emancipated .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_establishment_of
+:is_establishment_of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :Establishment ;
+                     rdfs:range :Qualification .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_head_office_of_subsidiary
+:is_head_office_of_subsidiary rdf:type owl:ObjectProperty ,
+                                       owl:AsymmetricProperty ;
+                              rdfs:domain :Establishment ;
+                              rdfs:range :Establishment .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_part_of
+:is_part_of rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :part_whole_relation ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:label "is part of"@en ,
+                       "é parte de"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_partner
+:is_partner rdf:type owl:ObjectProperty ,
+                     owl:SymmetricProperty ;
+            rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+            rdfs:range :Partner .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_partner_of
+:is_partner_of rdf:type owl:ObjectProperty ,
+                        owl:SymmetricProperty ;
+               rdfs:domain :Partner ;
+               rdfs:range <http://xmlns.com/foaf/spec/Agent> .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/part_whole_relation
+:part_whole_relation rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/partner_qualification
+:partner_qualification rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Partnership ;
+                       rdfs:range :Qualification ;
+                       rdfs:label "partner qualification"@en ,
+                                  "qualificação do sócio"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#broaderTransitive> ;
+                                              owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrower> ;
+                                              rdfs:label "amplo"@pt ,
+                                                         "broader"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
+                                                        owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ;
+                                                        rdf:type owl:TransitiveProperty ;
+                                                        rdfs:label "amplo transitivo"@pt ,
+                                                                   "broader transitive"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ;
+                                               rdfs:label "estreito"@pt ,
+                                                          "narrower"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
+                                                         rdf:type owl:TransitiveProperty ;
+                                                         rdfs:label "estreito transitivo"@pt ,
+                                                                    "narrower transitive"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
+                                              rdf:type owl:SymmetricProperty ;
+                                              rdfs:label "relacionado"@pt ,
+                                                         "related"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#semanticRelation
+<http://www.w3.org/2004/02/skos/core#semanticRelation> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                       rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                       rdfs:label "relação semântica"@pt ,
+                                                                  "semantic relation"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#literal_factor
+<http://purl.org/NET/c4dm/event.owl#literal_factor> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                    rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> .
+
+
+###  http://rs.tdwg.org/ontology/voc/Person#deathdate
+<http://rs.tdwg.org/ontology/voc/Person#deathdate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                   rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                                                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/abbreviation_UF
+:abbreviation_UF rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf rdfs:label ;
+                 rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/accountant_crc
+:accountant_crc rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/action_code
+:action_code rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Action_Type ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/activity_description
+:activity_description rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf rdfs:label ;
+                      rdf:type owl:FunctionalProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/activity_end_date
+:activity_end_date rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Economic_Activity_Realization ;
+                   rdfs:range xsd:date ;
+                   rdfs:comment "Preencher com a data referente ao fim da atividade."@pt ;
+                   rdfs:label "activity end date"@en ,
+                              "data do fim da atividade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/activity_start_date
+:activity_start_date rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain :Economic_Activity_Realization ;
+                     rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/address_complement
+:address_complement rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Address ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/address_number
+:address_number rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Address ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/assignature_date
+:assignature_date rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                  rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cadastral_situation_date
+:cadastral_situation_date rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :Cadastral_Situation ;
+                          rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/category
+:category rdf:type owl:DatatypeProperty ;
+          rdfs:domain :File ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Preencher com o valor do campo da categoria em questão."@pt ;
+          rdfs:label "categoria"@pt ,
+                     "category"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/city_code
+:city_code rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :City ;
+           rdfs:range xsd:integer ,
+                      xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/city_hall_approval
+:city_hall_approval rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Request ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/city_registration
+:city_registration rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :City ;
+                   rdfs:range xsd:integer ;
+                   rdfs:comment "Informar o registro municipal."@pt ;
+                   rdfs:label "city registration"@en ,
+                              "registro municipal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cnae
+:cnae rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Economic_Activity ;
+      rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cnpj
+:cnpj rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :cpf_cnpj ;
+      rdf:type owl:FunctionalProperty ;
+      rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+      rdfs:range xsd:string ;
+      owl:propertyDisjointWith :cpf .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/company_name
+:company_name rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+              rdfs:range xsd:string ;
+              rdfs:label "Preencher com o nome da compania referente."@pt ,
+                         "company name"@en ,
+                         "nome da compania"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/constitution_date
+:constitution_date rdf:type owl:DatatypeProperty ;
+                   rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/contact
+:contact rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/country_code
+:country_code rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Country ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cpf
+:cpf rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf :cpf_cnpj ;
+     rdf:type owl:FunctionalProperty ;
+     rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+     rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cpf_cnpj
+:cpf_cnpj rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+          rdfs:range rdfs:Literal .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/crc_classification
+:crc_classification rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Accountant ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/crc_registration_date
+:crc_registration_date rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Accountant ;
+                       rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_of_file_dismemberment
+:date_of_file_dismemberment rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :File ;
+                            rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_of_file_load
+:date_of_file_load rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :File ;
+                   rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_of_issue
+:date_of_issue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Registry_Office_Registration ;
+               rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/disabled_observation
+:disabled_observation rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf rdfs:label ;
+                      rdfs:domain :Cadastral_Situation ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Informar a observação desabilitada em questão."@pt ;
+                      rdfs:label "disabled observation"@en ,
+                                 "observação desabilitada"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/discharge_reason
+:discharge_reason rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf rdfs:label ;
+                  rdfs:domain :Cadastral_Situation ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicar a razão da descarga em questão."@pt ,
+                               "Indicar o motivo em questão."@pt ;
+                  rdfs:label "discharge reason"@en ,
+                             "motivo"@pt ,
+                             "razão de descarga"@pt ,
+                             "reason"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/document_code
+:document_code rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://xmlns.com/foaf/spec/Document> ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "Preencher com o código do documento correspondente."@pt ;
+               rdfs:label "código do documento"@pt ,
+                          "document code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/document_type
+:document_type rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Registry_Office ;
+               rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/emancipated_reason
+:emancipated_reason rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Emancipated ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Informar o movito da emancipação."@pt ;
+                    rdfs:label "emancipated reason"@en ,
+                               "motivo da emancipação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_date_of_mandate
+:end_date_of_mandate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Partnership ;
+                     rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_date_participation
+:end_date_participation rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Partnership ;
+                        rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/establishment_area
+:establishment_area rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Establishment ;
+                    rdfs:range xsd:double ;
+                    rdfs:comment "Preencher com o valor da área do estabelecimento."@pt ;
+                    rdfs:label "area do estabelecimento"@pt ,
+                               "establishment area"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/establishment_capital
+:establishment_capital rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Establishment ;
+                       rdfs:range xsd:double .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/establishment_type_code
+:establishment_type_code rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Establishment_Type ;
+                         rdfs:range xsd:integer ;
+                         rdfs:comment "Informar código do estabelecimento."@pt ;
+                         rdfs:label "código de estabelecimento"@pt ,
+                                    "establishment type code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/estimated_value
+:estimated_value rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                 rdfs:range xsd:double .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/event_code
+:event_code rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/faxNumber
+:faxNumber rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :contact ;
+           rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+           rdfs:range rdfs:Literal .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/file_generation_date
+:file_generation_date rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :File ;
+                      rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/file_name
+:file_name rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :File ;
+           rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/formatted_cnae
+:formatted_cnae rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Economic_Activity ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Informar CNAE formatado."@pt ;
+                rdfs:label "cnae formatado"@pt ,
+                           "formatted cnae"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/full_capital
+:full_capital rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/full_cnpj
+:full_cnpj rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :cnpj ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Establishment ;
+           rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/generates_ruc
+:generates_ruc rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Request ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_property_type
+:has_property_type rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Establishment ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Preencher com o campo referente ao tipo do imóvel correspondente."@pt ;
+                   rdfs:label "has property type"@en ,
+                              "tem tipo de imóvel"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/hash
+:hash rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :File ;
+      rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/identity_issuing_entity
+:identity_issuing_entity rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/identity_number
+:identity_number rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/inclusion_date
+:inclusion_date rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Taxpayer ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/incra
+:incra rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Establishment ;
+       rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/integrated_entity_code
+:integrated_entity_code rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :Integrated_Entity ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment "Preencher com o valor do código da entidade integrada correspondente."@pt ;
+                        rdfs:label "código da entidade integrada"@pt ,
+                                   "integrated entity code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_foreign
+:is_foreign rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+            rdfs:range xsd:boolean .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/last_filing
+:last_filing rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+             rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/legal_nature_code
+:legal_nature_code rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Legal_Nature ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/license_number
+:license_number rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/liquid_closing_date
+:liquid_closing_date rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                     rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/locality_type
+:locality_type rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :Locality ;
+               rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/manager_position
+:manager_position rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Partner ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Preencher com a posição de gerente exercida pelo sócio."@pt ;
+                  rdfs:label "manager position"@en ,
+                             "posição de gerente"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/marital_status
+:marital_status rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Informar o estado civil do indivíduo."@pt ;
+                rdfs:label "estado civil"@pt ,
+                           "marital status"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/metrage
+:metrage rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Establishment ;
+         rdfs:range xsd:float ;
+         rdfs:comment "Informar a metragem do estabelecimento em questão."@pt ;
+         rdfs:label "metrage"@en ,
+                    "metragem"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/nire
+:nire rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+      rdfs:range xsd:string ;
+      rdfs:comment """Informar o Número de Identificação do Registro de Empresas (NIRE).
+
+Nos casos de inscrição, alteração ou baixa o Número de Identificação do Registro de Empresas - NIRE será de preenchimento obrigatório para as empresas registradas em Junta Comercial. O NIRE a ser informado consta no documento registrado na Junta Comercial.
+
+Nos casos de inscrição de contribuintes localizados em Estados em que houver o Convênio com a Junta Comercial, será possível optar por utilizá-lo, não obrigando o preenchimento do NIRE."""@pt ;
+      rdfs:label "nire"@en ,
+                 "nire"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/nire_matrix
+:nire_matrix rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Establishment ;
+             rdfs:range xsd:string ;
+             rdfs:comment """Informar o Número de Identificação do Registro de Empresas (NIRE) da matriz.
+
+Nos casos de inscrição, alteração ou baixa o Número de Identificação do Registro de Empresas - NIRE será de preenchimento obrigatório para as empresas registradas em Junta Comercial. O NIRE a ser informado consta no documento registrado na Junta Comercial.
+
+Nos casos de inscrição de contribuintes localizados em Estados em que houver o Convênio com a Junta Comercial, será possível optar por utilizá-lo, não obrigando o preenchimento do NIRE."""@pt ;
+             rdfs:label "matriz nire"@pt ,
+                        "nire matrix"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/nirf
+:nirf rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Establishment ;
+      rdfs:range xsd:string ;
+      rdfs:comment """Informar o Número do Imóvel na Secretaria da Receita Federal do Brasil (NIRF).
+
+Os imóveis rurais devem ser inscritos no Cadastro de Imóveis Rurais (Cafir), inclusive os que gozam de imunidade e isenção do ITR.
+
+Os imóveis localizados em área urbana não são registrados no CAFIR e, portanto não dispõem de NIRF. Nesse caso, deve-se informar o número 0000000-0 (se for selecionada a opção Locatário para o atributo Vínculo como o Imóvel, o próprio programa preenche o número do NIRF com 0000000-0)."""@pt ;
+      rdfs:label "nirf"@en ,
+                 "nirf"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/partnership_start_date
+:partnership_start_date rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :Partnership ;
+                        rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/person_identifier
+:person_identifier rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/phone_number
+:phone_number rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/postal_code_zone
+:postal_code_zone rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Address ;
+                  rdfs:range xsd:integer ;
+                  rdfs:comment "Prencher com a zona do cep correspondente."@pt ;
+                  rdfs:label "postal code zone"@en ,
+                             "zona do cep"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/previous_nire
+:previous_nire rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+               rdfs:range xsd:string ;
+               rdfs:comment """Informar o Número de Identificação do Registro de Empresas (NIRE) anterior.
+
+Nos casos de inscrição, alteração ou baixa o Número de Identificação do Registro de Empresas - NIRE será de preenchimento obrigatório para as empresas registradas em Junta Comercial. O NIRE a ser informado consta no documento registrado na Junta Comercial.
+
+Nos casos de inscrição de contribuintes localizados em Estados em que houver o Convênio com a Junta Comercial, será possível optar por utilizá-lo, não obrigando o preenchimento do NIRE."""@pt ;
+               rdfs:label "nire anterior"@pt ,
+                          "previous nire"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/previous_query_protocol
+:previous_query_protocol rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Protocol ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/processing_date
+:processing_date rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :File ;
+                 rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/property_regime
+:property_regime rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Property_Regime ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/property_registration_number
+:property_registration_number rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain :Establishment ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/property_type_code
+:property_type_code rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Property_Regime ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Preencher com o código do tipo da propriedade de acordo com a tabela apropriada."@pt ;
+                    rdfs:label "código de tipo da propriedade"@pt ,
+                               "property type code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/protocol
+:protocol rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :File ;
+          rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/qualification_code
+:qualification_code rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Qualification ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Preencher com o código referente a qualificação em questão."@pt ;
+                    rdfs:label "código de qualificação"@pt ,
+                               "qualification code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/raw_cnae
+:raw_cnae rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Economic_Activity ;
+          rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/real_state_number
+:real_state_number rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Establishment ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Informar o número do imóvel. Esse campo será habilitado para preenchimento dependendo do interesse dos órgãos conveniados (Estados ou Municípios)."@pt ;
+                   rdfs:label "número do imóvel"@pt ,
+                              "real state number"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/reference
+:reference rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Address ;
+           rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/regime_code
+:regime_code rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+             rdfs:range xsd:int .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/regime_description
+:regime_description rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Property_Regime ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/register_entity_protocol
+:register_entity_protocol rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :Protocol ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/registration
+:registration rdf:type owl:DatatypeProperty ;
+              rdfs:domain :File ;
+              rdfs:comment "Informar o número de inscrição do arquivo em questão."@pt ,
+                           "Preencher o campo com o dado correspondente."@pt ;
+              rdfs:label "registration"@en ,
+                         "registro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/registry_number
+:registry_number rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Registry_Office_Registration ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/registry_office_number
+:registry_office_number rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Registry_Office ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment """Nos casos de inscrição, alteração ou baixa esse campo será de preenchimento obrigatório para as empresas registradas em Cartório, OAB ou órgãos governamentais criados por Lei.
+
+Deve ser preenchido com o número do registro do ato que foi acostado ou no Cartório de Registro Civil das Pessoas Jurídica, ou na Sede Regional da Ordem dos Advogados – OAB ou o número da Lei que criou a Pessoa Jurídica, para os casos de natureza jurídica do grupamento 100."""@pt ;
+                        rdfs:label "número de cartório"@pt ,
+                                   "registry office number"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/root_cnpj
+:root_cnpj rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :cnpj ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+           rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/sefaz_cadastral_situation_name
+:sefaz_cadastral_situation_name rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/sefaz_interest
+:sefaz_interest rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Request ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Especificar interesse da SEFAZ em questão."@pt ;
+                rdfs:label "interesse sefaz"@pt ,
+                           "sefaz interest"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/share_capital
+:share_capital rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+               rdfs:range xsd:double ;
+               rdfs:comment "Informar o valor do capital compartilhado da organização em questão."@pt ;
+               rdfs:label "share capital"@en ,
+                          "valor do capital compartilhado"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/signature_date
+:signature_date rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://xmlns.com/foaf/spec/Organization> ;
+                rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/situation_code
+:situation_code rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain :Cadastral_Situation ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/start_date_of_mandate
+:start_date_of_mandate rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :LegalRepresentant ;
+                       rdfs:range xsd:date .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/start_date_participation
+:start_date_participation rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain :Qualification ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/state_registration
+:state_registration rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Establishment
+                                                :Qualification
+                                                :Taxpayer
+                                              )
+                                ] ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Preencher com o registro estatal."@pt ;
+                    rdfs:label "registro estatal"@pt ,
+                               "state registration"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/street_name
+:street_name rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Address ;
+             rdfs:range xsd:string .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/synchronize
+:synchronize rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Request ;
+             rdfs:range xsd:date ;
+             rdfs:comment "Informar dados de sincronização da requisição."@pt ;
+             rdfs:label "data de sincronização"@pt ,
+                        "synchronization date"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/taxpayer_inclusion_date
+:taxpayer_inclusion_date rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Taxpayer ;
+                         rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/taxpayer_type_code
+:taxpayer_type_code rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Taxpayer ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Preencher com o código do tipo de contribuinte."@pt ;
+                    rdfs:label "código de tipo de contribuinte"@pt ,
+                               "taxpayer type code"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/trade_name
+:trade_name rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf rdfs:label ;
+            rdfs:domain :Establishment ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Informar o nome empresarial (máximo de 144 caracteres, incluindo os espaços em branco, sem abreviar palavras que a identifiquem), de acordo com o constante no ato constitutivo/alterador/extintivo."@pt ;
+            rdfs:label "nome comercial"@pt ,
+                       "trade name"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/trauf_registration
+:trauf_registration rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Request ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "Preencher com a inscrição trauf do evento em questão."@pt ;
+                    rdfs:label "inscrição trauf"@pt ,
+                               "trauf registration"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/uf_code
+:uf_code rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Federative_Unit ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/undefined_period
+:undefined_period rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Registry_Office_Registration ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Propriedade que indica período de tempo indeterminado."@pt ;
+                  rdfs:label "período indeterminado"@pt ,
+                             "undefined period"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/used_area
+:used_area rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Establishment ;
+           rdfs:range xsd:float .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/validity_end
+:validity_end rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Complementary_Document ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/value_participation
+:value_participation rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Qualification ;
+                     rdfs:range xsd:double .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :File ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Indicar a versão do arquivo."@pt ;
+         rdfs:label "version"@en ,
+                    "versão"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/year_registry_office
+:year_registry_office rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Registry_Office_Registration ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.w3.org/2006/vcard/ns#bday
+<http://www.w3.org/2006/vcard/ns#bday> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :Partner ,
+                                                   <http://xmlns.com/foaf/spec/Agent> ,
+                                                   <http://xmlns.com/foaf/spec/Person> ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:comment "Birth date of the object. Should only apply to Individual."@en ;
+                                       rdfs:label "bday"@en ,
+                                                  "data de aniversário"@pt .
+
+
+###  http://www.w3.org/2006/vcard/ns#country-name
+<http://www.w3.org/2006/vcard/ns#country-name> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf rdfs:label ;
+                                               rdfs:domain :Country ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "Informar o nome do país em questão."@pt ;
+                                               rdfs:label "country name"@en ,
+                                                          "nome do país"@pt .
+
+
+###  http://www.w3.org/2006/vcard/ns#email
+<http://www.w3.org/2006/vcard/ns#email> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf :contact ;
+                                        rdfs:domain <http://xmlns.com/foaf/spec/Agent> ;
+                                        rdfs:range xsd:anyURI .
+
+
+###  http://www.w3.org/2006/vcard/ns#postal-code
+<http://www.w3.org/2006/vcard/ns#postal-code> rdf:type owl:DatatypeProperty ,
+                                                       owl:FunctionalProperty ;
+                                              rdfs:domain :Locality ;
+                                              rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/spec/family_name
+<http://xmlns.com/foaf/spec/family_name> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                                         rdfs:range rdfs:Literal .
+
+
+###  http://xmlns.com/foaf/spec/firstName
+<http://xmlns.com/foaf/spec/firstName> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                                       rdfs:range rdfs:Literal .
+
+
+###  http://xmlns.com/foaf/spec/gender
+<http://xmlns.com/foaf/spec/gender> rdf:type owl:DatatypeProperty ;
+                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                    rdf:type owl:FunctionalProperty ;
+                                    rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                                    rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/spec/givenName
+<http://xmlns.com/foaf/spec/givenName> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                                       rdfs:range xsd:string .
+
+
+###  http://xmlns.com/foaf/spec/lastName
+<http://xmlns.com/foaf/spec/lastName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdfs:domain <http://xmlns.com/foaf/spec/Person> ;
+                                      rdfs:range rdfs:Literal .
+
+
+###  http://xmlns.com/foaf/spec/name
+<http://xmlns.com/foaf/spec/name> rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf rdfs:label .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#Event
+<http://purl.org/NET/c4dm/event.owl#Event> rdf:type owl:Class ;
+                                           rdfs:comment "Ocorrência de determinada situação relativa às informações de empresas na REDESIM."@pt ;
+                                           rdfs:label "Event"@en ,
+                                                      "Evento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Accountant
+:Accountant rdf:type owl:Class ;
+            rdfs:subClassOf :Role ;
+            rdfs:comment "É o profissional da ciência contábil ou contabilidade responsável por lidar com toda a área financeira, econômica e patrimonial de uma pessoa jurídica ou pessoa física."@pt ;
+            rdfs:label "Accountant"@en ,
+                       "Contador"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Action_Type
+:Action_Type rdf:type owl:Class ;
+             rdfs:comment """Obrigatório para as empresas registradas em Cartório, OAB ou órgãos governamentais criados por Lei.
+
+Número do registro do ato que foi acostado ou no Cartório de Registro Civil das Pessoas Jurídica, ou na Sede Regional da Ordem dos Advogados – OAB ou o número da Lei que criou a Pessoa Jurídica, para os casos de natureza jurídica do grupamento 100."""@pt ;
+             rdfs:label "Action Type"@en ,
+                        "Tipo de Ato"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :address_number ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :address_number ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         rdfs:comment """Esta classe agrupa informações sobre o endereço declarado de uma Organização. Este endereço é composto por um número e complemento, relacionados as demais instâncias de Localização, tais como, Logradouro, Bairro, Municipio, UF e País.
+
+Cada endereço deve ser único. Deste modo, caso duas empresas apotem para uma mesma instância de enderço, então este deve gerar uma inconsistência."""@pt ;
+         rdfs:label "Address"@en ,
+                    "Endereço"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CANCELADA
+:CANCELADA rdf:type owl:Class ;
+           rdfs:subClassOf :Cadastral_Situation ;
+           rdfs:label "Cancelada"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CANCELADA_ART.60_LEI_8934-94
+:CANCELADA_ART.60_LEI_8934-94 rdf:type owl:Class ;
+                              rdfs:subClassOf :Cadastral_Situation ;
+                              rdfs:label "Cancelada ART. 60"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CANCELADA_MEI
+:CANCELADA_MEI rdf:type owl:Class ;
+               rdfs:subClassOf :Cadastral_Situation ;
+               rdfs:label "Cancelada MEI"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CNAE_Class
+:CNAE_Class rdf:type owl:Class ;
+            rdfs:subClassOf :Economic_Activity ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :CNAE_Group
+                            ] ;
+            rdfs:comment "Classe da atividade econômica determinado pela Tabela VI - Classificação Nacional de Atividades Econômicas - CNAE - FISCAL"@pt ;
+            rdfs:label "CNAE Class"@en ,
+                       "Classe CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CNAE_Division
+:CNAE_Division rdf:type owl:Class ;
+               rdfs:subClassOf :Economic_Activity ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :CNAE_Section
+                               ] ;
+               rdfs:comment "Divisão da atividade econômica determinado pela Tabela VI - Classificação Nacional de Atividades Econômicas - CNAE - FISCAL"@pt ;
+               rdfs:label "CNAE Division"@en ,
+                          "Divisão CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CNAE_Group
+:CNAE_Group rdf:type owl:Class ;
+            rdfs:subClassOf :Economic_Activity ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :CNAE_Division
+                            ] ;
+            rdfs:comment "Grupo da atividade econômica determinado pela Tabela VI - Classificação Nacional de Atividades Econômicas - CNAE - FISCAL"@pt ;
+            rdfs:label "CNAE Group"@en ,
+                       "Grupo CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CNAE_Section
+:CNAE_Section rdf:type owl:Class ;
+              rdfs:subClassOf :Economic_Activity ;
+              rdfs:comment "Seção da atividade econômica determinado pela Tabela VI - Classificação Nacional de Atividades Econômicas - CNAE - FISCAL"@pt ;
+              rdfs:label "CNAE Section"@en ,
+                         "Seção CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CNAE_Subclass
+:CNAE_Subclass rdf:type owl:Class ;
+               rdfs:subClassOf :Economic_Activity ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#broader> ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :CNAE_Class
+                               ] ;
+               rdfs:comment "Subclasse da atividade econômica determinado pela Tabela VI - Classificação Nacional de Atividades Econômicas - CNAE - FISCAL"@pt ;
+               rdfs:label "CNAE Subclass"@en ,
+                          "Subclasse CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CONVERTIDA_SOC._CIVIL-SIMPLES
+:CONVERTIDA_SOC._CIVIL-SIMPLES rdf:type owl:Class ;
+                               rdfs:subClassOf :Cadastral_Situation ;
+                               rdfs:label "Convertida Sociedade Civil Simples"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Cadastral_Situation
+:Cadastral_Situation rdf:type owl:Class ;
+                     rdfs:comment """Situação cadastral é a informação que espelha no CNPJ a condição cadastral da inscrição da entidade. As situações cadastrais, perante o CNPJ, enquadram-se em:
+
+• REGISTRO_ATIVO; 
+• CANCELADA_ART.60_LEI_8934/94;
+• EXTINTA;
+• CONVERTIDA_SOC._CIVIL-SIMPLES;
+• TRANSFERIDA_PARA_OUTRA_UF;
+• FALIDA;
+• CANCELADA;
+• REGISTRO_ATIVO_PROVISORIO;
+• CANCELADA-MEI;"""@pt ;
+                     rdfs:label "Cadastral Situation"@en ,
+                                "Situação Cadastral"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Location ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :is_part_of ;
+                        owl:someValuesFrom :Federative_Unit
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :city_code ;
+                        owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty rdfs:label ;
+                        owl:someValuesFrom xsd:string
+                      ] ;
+      rdfs:comment "Nome da Cidade de acordo com a Localização.."@pt ;
+      rdfs:label "Cidade"@pt ,
+                 "City"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Complementary_Document
+:Complementary_Document rdf:type owl:Class ;
+                        rdfs:subClassOf <http://xmlns.com/foaf/spec/Document> ;
+                        rdfs:label "Complementary Document"@en ,
+                                   "Documento Complementar"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Contribuinte_ICMS
+:Contribuinte_ICMS rdf:type owl:Class ;
+                   rdfs:subClassOf :Taxpayer ;
+                   rdfs:comment "Subclasse de Contribuinte – Tipo Específico do tipo Contribuinte ICMS"@pt ;
+                   rdfs:label "Contribuinte ICMS"@pt ,
+                              "ICMS Taxpayer"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Contribution_Type
+:Contribution_Type rdf:type owl:Class ;
+                   rdfs:comment "Tipo de Contribuinte – pode ser ou não contribuinte, caso seja será do tipo ICMS."@pt ;
+                   rdfs:label "Tax Contribution Type"@en ,
+                              "Tipo de Contribuinte"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Location ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :country_code ;
+                           owl:someValuesFrom xsd:string
+                         ] ;
+         rdfs:comment "Nome do País de acordo com a Localização.."@pt ;
+         rdfs:label "Country"@en ,
+                    "País"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/County
+:County rdf:type owl:Class ;
+        rdfs:subClassOf :Location ;
+        rdfs:comment "Comarca Distrital de uma determinada Localização."@pt ;
+        rdfs:label "Comarca"@pt ,
+                   "County"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/District
+:District rdf:type owl:Class ;
+          rdfs:subClassOf :Location ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :has_part ;
+                            owl:someValuesFrom :Locality
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :is_part_of ;
+                            owl:someValuesFrom :City
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty rdfs:label ;
+                            owl:someValuesFrom xsd:string
+                          ] ;
+          rdfs:comment "Bairro / Distrito de uma determinada Localização identificado em quase todos os casos pelo CEP."@pt ;
+          rdfs:label "District"@en ,
+                     "Distrito"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/EXTINTA
+:EXTINTA rdf:type owl:Class ;
+         rdfs:subClassOf :Cadastral_Situation ;
+         rdfs:label "Extinta"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Economic_Activity
+:Economic_Activity rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :activity_description ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :cnae ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ;
+                   rdfs:comment """Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.
+Esta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."""@pt ;
+                   rdfs:label "Atividade Econômica"@pt ,
+                              "Economic Activity"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Economic_Activity_Realization
+:Economic_Activity_Realization rdf:type owl:Class ;
+                               rdfs:comment "Período de Realização de uma Atividade Econômica desempenhada por uma Empresa."@pt ;
+                               rdfs:label "Economic Activity Realization"@en ,
+                                          "Realização da Atividade Econômica"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Emancipated
+:Emancipated rdf:type owl:Class ;
+             rdfs:subClassOf :Role ;
+             rdfs:comment "Papel exercido como emancipado."@pt ;
+             rdfs:label "Emancipado"@pt ,
+                        "Emancipated"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Establishment
+:Establishment rdf:type owl:Class ;
+               rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_address ;
+                                                        owl:someValuesFrom :Address
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_address ;
+                                                        owl:allValuesFrom :Address
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+               rdfs:comment """Art. 3º  Todas as entidades domiciliadas no Brasil, inclusive as pessoas jurídicas equiparadas pela legislação do Imposto sobre a Renda, estão obrigadas a se inscrever no CNPJ e a cada um de seus estabelecimentos localizados no Brasil ou no exterior, antes do início de suas atividades.
+
+§ 1º  Os estados, o Distrito Federal e os municípios devem ter uma inscrição no CNPJ, na condição de estabelecimento matriz, que os identifique como pessoa jurídica de direito público, sem prejuízo das inscrições de seus órgãos públicos, conforme disposto no inciso I do caput do art. 4º.
+§ 2º  Para fins inscrição do CNPJ, estabelecimento é o local privado ou público, edificado ou não, móvel ou imóvel, próprio ou de terceiro, onde a entidade exerce suas atividades em caráter temporário ou permanente ou onde se encontram armazenadas mercadorias, incluindo as unidades auxiliares constantes do Anexo VII desta Instrução Normativa.
+§ 3º  Considera-se estabelecimento, para fins do disposto no § 2º, a plataforma de produção e armazenamento de petróleo e gás natural, ainda que esteja em construção.
+§ 4º  No caso previsto no § 3º, o endereço a ser informado no CNPJ deve ser o do estabelecimento da entidade proprietária ou arrendatária da plataforma, em terra firme, cuja localização seja a mais próxima."""@pt ;
+               rdfs:label "Estabelecimento"@pt ,
+                          "Establishment"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Establishment_Type
+:Establishment_Type rdf:type owl:Class ;
+                    rdfs:comment "Tipo de Estabelecimento – podendo ser dos tipos Sede / Matriz ou Filial."@pt ;
+                    rdfs:label "Establishment Type"@en ,
+                               "Tipo de Estabelecimento"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/FALIDA
+:FALIDA rdf:type owl:Class ;
+        rdfs:subClassOf :Cadastral_Situation ;
+        rdfs:label "Falida"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Federative_Unit
+:Federative_Unit rdf:type owl:Class ;
+                 rdfs:subClassOf :Location ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :is_part_of ;
+                                   owl:someValuesFrom :Country
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :abbreviation_UF ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty rdfs:label ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ;
+                 rdfs:comment "Unidade Federativa de uma Localidade."@pt ;
+                 rdfs:label "Federative Unit"@en ,
+                            "Unidade Federativa"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/File
+:File rdf:type owl:Class ;
+      rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                               owl:onProperty :has_protocol ;
+                                               owl:someValuesFrom :Protocol
+                                             ]
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :has_protocol ;
+                                               owl:allValuesFrom :Protocol
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
+      rdfs:comment "Representação dos arquivos de documentos referenciados e utilizados."@pt ;
+      rdfs:label "Arquivo"@pt ,
+                 "File"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Integrated_Entity
+:Integrated_Entity rdf:type owl:Class ;
+                   rdfs:comment "Reúne informações necessárias sobre uma entidade integrada dentro do contexto apropriado."@pt ;
+                   rdfs:label "Entidade Integrada"@pt ,
+                              "Integrated Entity"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/LegalRepresentant
+:LegalRepresentant rdf:type owl:Class ;
+                   rdfs:subClassOf <http://xmlns.com/foaf/spec/Person> ;
+                   rdfs:comment "Responsável Legalmente pelos atos e atividades realizadas por uma Empresa"@pt ;
+                   rdfs:label "Legal Representant"@en ,
+                              "Representante Legal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Legal_Nature
+:Legal_Nature rdf:type owl:Class ;
+              rdfs:comment """A natureza jurídica de uma empresa é o  regime jurídico em que ela se enquadra,  isto é a relação da pessoa jurídica pública ou  privada com o exame que será feito pela FISCALIZAÇÃO no respectivo EMPREENDIMENTO, somado  ao  que consta dos dados da empresa nos cadastros da ADMINISTRAÇÃO PUBLICA. No momento de formalizar a empresa, informar a sua natureza jurídica tornou-se uma questão indispensável, já que cada natureza jurídica exige diferentes formas de aplicação das normas para as empresas.
+
+Em consonância com o código civil (Lei nº 10.406/02) existem várias espécies de natureza jurídica e entre elas estão os tipos jurídicos atribuídos à administração pública, entidades empresariais, entidades sem fins lucrativos e às pessoas físicas."""@pt ;
+              rdfs:label "Legal Nature"@en ,
+                         "Natureza Legal"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Locality
+:Locality rdf:type owl:Class ;
+          rdfs:subClassOf :Location ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :is_part_of ;
+                            owl:someValuesFrom :District
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :locality_type ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty rdfs:label ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2006/vcard/ns#postal-code> ;
+                            owl:someValuesFrom xsd:string
+                          ] ;
+          rdfs:comment "Um logradouro pode ser uma rua, avenida, quadra, etc."@pt ;
+          rdfs:label "Locality"@en ,
+                     "Logradouro"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty rdfs:label ;
+                            owl:someValuesFrom xsd:string
+                          ] ;
+          rdfs:comment "Classe que representa o conceito de uma localização geográfica."@pt ;
+          rdfs:label "Localização"@pt ,
+                     "Location"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Nacionality
+:Nacionality rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_country ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Country
+                             ] ;
+             rdfs:comment "País no qual uma pessoa faz parte juridicamente, ou seja país no qual é cidadão."@pt ;
+             rdfs:label "Nacionalidade"@pt ,
+                        "Nacionality"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Non-Taxpayer
+:Non-Taxpayer rdf:type owl:Class ;
+              rdfs:subClassOf :Contribution_Type ;
+              rdfs:comment "Tipo de indivíduo Não Contribuinte – Que não exerce papel de contribuinte."@pt ;
+              rdfs:label "Non Taxpayer"@en ,
+                         "Não Contribuinte"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Partner
+:Partner rdf:type owl:Class ;
+         rdfs:subClassOf :Role ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_father ;
+                                                  owl:someValuesFrom <http://xmlns.com/foaf/spec/Person>
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_father ;
+                                                  owl:allValuesFrom <http://xmlns.com/foaf/spec/Person>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_mother ;
+                                                  owl:someValuesFrom <http://xmlns.com/foaf/spec/Person>
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_mother ;
+                                                  owl:allValuesFrom <http://xmlns.com/foaf/spec/Person>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_registry_office_register ;
+                                                  owl:someValuesFrom :Registry_Office_Registration
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_registry_office_register ;
+                                                  owl:allValuesFrom :Registry_Office_Registration
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :is_emancipated ;
+                                                  owl:someValuesFrom :Emancipated
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :is_emancipated ;
+                                                  owl:allValuesFrom :Emancipated
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+         rdfs:comment "Papel exercido como sócio."@pt ;
+         rdfs:label "Partner"@en ,
+                    "Sócio"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Partnership
+:Partnership rdf:type owl:Class ;
+             rdfs:comment """Situação cadastral é a informação que espelha no CNPJ a condição cadastral da inscrição da entidade. As situações cadastrais, perante o CNPJ, enquadram-se em:
+
+• REGISTRO_ATIVO; 
+• CANCELADA_ART.60_LEI_8934/94;
+• EXTINTA;
+• CONVERTIDA_SOC._CIVIL-SIMPLES;
+• TRANSFERIDA_PARA_OUTRA_UF;
+• FALIDA;
+• CANCELADA;
+• REGISTRO_ATIVO_PROVISORIO;
+• CANCELADA-MEI;
+
+
+A sociedade é legalmente regida pelos artigos 986 a 990 do Código Civil brasileiro (Lei nº 10.406, de 10 de janeiro de 2002.)."""@pt ;
+             rdfs:label "Partnership"@en ,
+                        "Sociedade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Property_Regime
+:Property_Regime rdf:type owl:Class ;
+                 rdfs:comment "Regime de bens existente."@pt ;
+                 rdfs:label "Property Regime"@en ,
+                            "Regime de Bens"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Property_Type
+:Property_Type rdf:type owl:Class ;
+               rdfs:comment "Tipo do imóvel onde realiza sua produção."@pt ;
+               rdfs:label "Property Type"@en ,
+                          "Tipo de Propriedade"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Protocol
+:Protocol rdf:type owl:Class ;
+          rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :has_register_source ;
+                                                   owl:someValuesFrom <http://xmlns.com/foaf/spec/Organization>
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :has_register_source ;
+                                                   owl:allValuesFrom <http://xmlns.com/foaf/spec/Organization>
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+          rdfs:comment "Número do protocolo de consulta da REDESIM."@pt ;
+          rdfs:label "Protocol"@en ,
+                     "Protocolo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Qualification
+:Qualification rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ,
+                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_professional ;
+                                                        owl:someValuesFrom <http://xmlns.com/foaf/spec/Person>
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_professional ;
+                                                        owl:allValuesFrom <http://xmlns.com/foaf/spec/Person>
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_professional ;
+                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass <http://xmlns.com/foaf/spec/Person>
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ,
+                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_professional_relationship_type ;
+                                                        owl:someValuesFrom :Qualification
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :has_professional_relationship_type ;
+                                                        owl:allValuesFrom :Qualification
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+               rdfs:comment """Tipo de Qualificação / Relação entre um Sócio e um determinado Cargo exercido. Pode adotar as seguintes Qualificações:
+
+Acionista
+Acionista Controlador
+Acionista Diretor
+Acionista Presidente
+Administrador 
+Administradora de consórcio de Empresas ou Grupo de Empresas
+Comissário
+Conselheiro de Administração
+Curador 
+Diretor 
+Interventor 
+Inventariante 
+Liquidante 
+Mãe 
+Pai 
+Presidente 
+Procurador 
+Secretário
+Síndico (Condomínio) 
+Sociedade Consorciada 
+Sociedade Filiada 
+Sócio
+Sócio Capitalista 
+Sócio Comanditado 
+Sócio Comanditário 
+Sócio de Indústria 
+Sócio Residente ou Domiciliado no Exterior
+Sócio-Gerente 
+Sócio ou Acionista Incapaz ou Relativamente Incapaz (exceto menor) 
+Sócio ou Acionista Menor (Assistido/Representado) 
+Sócio Ostensivo 
+Tabelião 
+Tesoureiro
+Titular de Empresa Individual Imobiliária 
+Tutor 
+Gerente-Delegado
+Sócio Pessoa Jurídica Domiciliado no Exterior 
+Sócio Pessoa Física Residente ou Domiciliado no Exterior 
+Diplomata 
+Cônsul 
+Representante de Organização Internacional 
+Oficial de Registro 
+Responsável 
+Sócio Participante
+Sócio Investidor
+Ministro de Estado das Relações Exteriores 
+Sócio Pessoa Física Residente no Brasil 
+Sócio Pessoa Jurídica Domiciliado no Brasil 
+Sócio-Administrador 
+Empresário 
+Candidato a Cargo Político Eletivo 
+Sócio com Capital 
+Sócio sem Capital 
+Fundador 
+Sócio Comanditado Residente no Exterior
+Sócio Comanditário Pessoa Física Residente no Exterior
+Sócio Comanditário Pessoa Jurídica Domiciliado no Exterior
+Sócio Comanditário Incapaz
+Produtor Rural
+Cônsul Honorário
+Responsável Indigena
+Representante das Instituições Extraterritoriais
+Cotas em Tesouraria
+Administrador Judicial
+Titular Pessoa Física Residente ou Domiciliado no Brasil
+Titular Pessoa Física Residente ou Domiciliado no Exterior
+Titular Pessoa Física Incapaz ou Relativamente Incapaz (exceto menor)
+Titular Pessoa Física Menor (Assistido/Representado)
+Beneficiário Final
+Administrador Residente ou Domiciliado no Exterior
+Conselheiro de Administração Residente ou Domiciliado no Exterior
+Diretor Residente ou Domiciliado no Exterior
+Presidente Residente ou Domiciliado no Exterior
+Sócio-Administrador Residente ou Domiciliado no Exterior
+Fundador Residente ou Domiciliado no Exterior
+Protetor
+Vice-Presidente
+Titular Pessoa Jurídica Domiciliada no Brasil
+Titular Pessoa Jurídica Domiciliada no Exterior"""@pt ,
+                            "Tipo de relação existente."@pt ;
+               rdfs:label "Qualification"@en ,
+                          "Qualificação"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/REGISTRO_ATIVO
+:REGISTRO_ATIVO rdf:type owl:Class ;
+                rdfs:subClassOf :Cadastral_Situation ;
+                rdfs:label "Registro Ativo"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/REGISTRO_ATIVO_PROVISORIO
+:REGISTRO_ATIVO_PROVISORIO rdf:type owl:Class ;
+                           rdfs:subClassOf :Cadastral_Situation ;
+                           rdfs:label "Registro Ativo Provisório"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Registry_Office
+:Registry_Office rdf:type owl:Class ;
+                 rdfs:subClassOf <http://xmlns.com/foaf/spec/Organization> ;
+                 rdfs:comment "Ofício do Registro Civil das Pessoas Jurídicas."@pt ;
+                 rdfs:label "Cartório"@pt ,
+                            "Registry Office"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Registry_Office_Registration
+:Registry_Office_Registration rdf:type owl:Class ;
+                              rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :has_registry_office ;
+                                                                       owl:someValuesFrom :Registry_Office
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :has_registry_office ;
+                                                                       owl:allValuesFrom :Registry_Office
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ;
+                              rdfs:comment "Registro de uma Empresa em Cartório."@pt ;
+                              rdfs:label "Registro em Cartório"@pt ,
+                                         "Registry Office Registration"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Request
+:Request rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_organization ;
+                                                  owl:someValuesFrom <http://xmlns.com/foaf/spec/Organization>
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_organization ;
+                                                  owl:allValuesFrom <http://xmlns.com/foaf/spec/Organization>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_protocol ;
+                                                  owl:someValuesFrom :Protocol
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_protocol ;
+                                                  owl:allValuesFrom :Protocol
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ,
+                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_request ;
+                                                  owl:someValuesFrom :Action_Type
+                                                ]
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :has_request ;
+                                                  owl:allValuesFrom :Action_Type
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+         rdfs:comment "Conceito referente ao evento de requisição."@pt ;
+         rdfs:label "Request"@en ,
+                    "Requisição"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Role
+:Role rdf:type owl:Class ;
+      rdfs:comment "Determina o papel desempenhado da pessoa, sendo ele contador, emancipado ou sócio."@pt ;
+      rdfs:label "Papel Desempanhado"@pt ,
+                 "Role"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Sending_Status
+:Sending_Status rdf:type owl:Class ;
+                rdfs:comment """Estado do Envio da Requisição, pode possuir os seguintes valores:
+
+NÃO PRECISA ENVIAR;
+PENDENTE DE ENVIO;
+ENVIADO COM SUCESSO;
+ENVIADO COM ERRO"""@pt ;
+                rdfs:label "Estado do Envio"@pt ,
+                           "Sending Status"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/TRANSFERIDA_PARA_OUTRA_UF
+:TRANSFERIDA_PARA_OUTRA_UF rdf:type owl:Class ;
+                           rdfs:subClassOf :Cadastral_Situation ;
+                           rdfs:label "Transferida Outra UF"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/Taxpayer
+:Taxpayer rdf:type owl:Class ;
+          rdfs:subClassOf :Contribution_Type ,
+                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :has_representant ;
+                                                   owl:allValuesFrom :LegalRepresentant
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :has_representant ;
+                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass :LegalRepresentant
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+          rdfs:label "Contribuinte"@pt ,
+                     "Taxpayer"@en .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology//Size_Company
+<http://www.sefaz.ma.gov.br/REDESIM/ontology//Size_Company> rdf:type owl:Class ;
+                                                            rdfs:comment """A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;
+
+Selecionar o enquadramento de porte da empresa (ME, EPP, Demais) de acordo com a expectativa de Receita Bruta Anual. O porte informado deve estar compatível com a Receita Bruta auferida no anocalendário anterior."""@pt ;
+                                                            rdfs:label "Company Size"@en ,
+                                                                       "Porte da Empresa"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              rdfs:comment """A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.
+
+The notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems."""@en ;
+                                              rdfs:label "Conceito"@pt ,
+                                                         "Concept"@en .
+
+
+###  http://xmlns.com/foaf/spec/Agent
+<http://xmlns.com/foaf/spec/Agent> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_accountant ;
+                                                                            owl:someValuesFrom :Address
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_accountant ;
+                                                                            owl:allValuesFrom :Address
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_address ;
+                                                                            owl:someValuesFrom :Address
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_address ;
+                                                                            owl:allValuesFrom :Address
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_cadastral_situation ;
+                                                                            owl:someValuesFrom :Cadastral_Situation
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_cadastral_situation ;
+                                                                            owl:allValuesFrom :Cadastral_Situation
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_contribution_type ;
+                                                                            owl:someValuesFrom :Contribution_Type
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_contribution_type ;
+                                                                            owl:allValuesFrom :Contribution_Type
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_professional_relation ;
+                                                                            owl:someValuesFrom :Qualification
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_professional_relation ;
+                                                                            owl:allValuesFrom :Qualification
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_representant ;
+                                                                            owl:someValuesFrom :LegalRepresentant
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_representant ;
+                                                                            owl:allValuesFrom :LegalRepresentant
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :has_representant ;
+                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                            owl:onClass :LegalRepresentant
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ,
+                                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :is_partner ;
+                                                                            owl:someValuesFrom :Partner
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty :is_partner ;
+                                                                            owl:allValuesFrom :Partner
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                                   rdfs:comment "A classe Agente é a classe dos agentes; coisas que fazem coisas. Uma subclasse bem conhecida é Person, que representa pessoas. Outros tipos de agentes incluem Organização e Grupo."@pt ,
+                                                """The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
+
+The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots."""@en ;
+                                   rdfs:label "Agent"@en ,
+                                              "Agente"@pt .
+
+
+###  http://xmlns.com/foaf/spec/Document
+<http://xmlns.com/foaf/spec/Document> rdf:type owl:Class ;
+                                      rdfs:comment """The Document class represents those things which are, broadly conceived, 'documents'.
+
+The Image class is a sub-class of Document, since all images are documents."""@en ;
+                                      rdfs:label "Document"@en ,
+                                                 "Documento"@pt .
+
+
+###  http://xmlns.com/foaf/spec/Organization
+<http://xmlns.com/foaf/spec/Organization> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://xmlns.com/foaf/spec/Agent> ,
+                                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_company_size ;
+                                                                                   owl:someValuesFrom <http://www.sefaz.ma.gov.br/REDESIM/ontology//Size_Company>
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_company_size ;
+                                                                                   owl:allValuesFrom <http://www.sefaz.ma.gov.br/REDESIM/ontology//Size_Company>
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ,
+                                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_establishment ;
+                                                                                   owl:someValuesFrom :Establishment
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_establishment ;
+                                                                                   owl:allValuesFrom :Establishment
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_establishment ;
+                                                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                   owl:onClass :Establishment
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ,
+                                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_legal_nature ;
+                                                                                   owl:someValuesFrom :Legal_Nature
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_legal_nature ;
+                                                                                   owl:allValuesFrom :Legal_Nature
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ,
+                                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_partner ;
+                                                                                   owl:someValuesFrom :Partner
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :has_partner ;
+                                                                                   owl:allValuesFrom :Partner
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :has_economic_activity ;
+                                                            owl:allValuesFrom :Economic_Activity
+                                                          ] ;
+                                          rdfs:comment "A classe Organização representa uma espécie de Agente correspondente a instituições sociais como empresas, sociedades etc."@pt ,
+                                                       "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc."@en ;
+                                          rdfs:label "Organization"@en ,
+                                                     "Organização"@pt .
+
+
+###  http://xmlns.com/foaf/spec/Person
+<http://xmlns.com/foaf/spec/Person> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://xmlns.com/foaf/spec/Agent> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://xmlns.com/foaf/spec/name> ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] ;
+                                    rdfs:comment "A classe Pessoa  representa pessoas. Algo é uma pessoa se for uma pessoa. Não criticamos se eles estão vivos, mortos, reais ou imaginários. A classe Pessoa é uma subclasse da classe Agente, uma vez que todas as pessoas são consideradas 'agentes' no FOAF."@pt ,
+                                                 "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The Person class is a sub-class of the Agent class, since all people are considered 'agents' in FOAF."@en ;
+                                    rdfs:label "Person"@en ,
+                                               "Pessoa"@pt .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ontology.eil.utoronto.ca/icity/iCity-Time_v1#Time_Concepts
+<http://ontology.eil.utoronto.ca/icity/iCity-Time_v1#Time_Concepts> rdf:type owl:NamedIndividual ;
+                                                                    rdfs:label "Conceitos Temporais"@pt ,
+                                                                               "Time Concepts"@en .
+
+
+###  http://ontology.eil.utoronto.ca/icontact.owl/AddressDataProperty
+<http://ontology.eil.utoronto.ca/icontact.owl/AddressDataProperty> rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/icontact.owl/hasContactDataProperty
+<http://ontology.eil.utoronto.ca/icontact.owl/hasContactDataProperty> rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/icontact.owl/hasEmail
+<http://ontology.eil.utoronto.ca/icontact.owl/hasEmail> rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/icontact.owl/hasPersonalEmail
+<http://ontology.eil.utoronto.ca/icontact.owl/hasPersonalEmail> rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/icontact.owl/hasWebSite
+<http://ontology.eil.utoronto.ca/icontact.owl/hasWebSite> rdf:type owl:NamedIndividual .
+
+
+###  http://ontology.eil.utoronto.ca/icontact.owl/hasWorkEmail
+<http://ontology.eil.utoronto.ca/icontact.owl/hasWorkEmail> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/NET/c4dm/event.owl#hasLiteralFactor
+<http://purl.org/NET/c4dm/event.owl#hasLiteralFactor> rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/NET/c4dm/event.owl#literal_factor
+<http://purl.org/NET/c4dm/event.owl#literal_factor> rdf:type owl:NamedIndividual .
+
+
+###  http://rs.tdwg.org/ontology/voc/Person#deathdate
+<http://rs.tdwg.org/ontology/voc/Person#deathdate> rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/ATO_ALTERACAO
+:ATO_ALTERACAO rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/ATO_BAIXA
+:ATO_BAIXA rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/ATO_INSCRICAO
+:ATO_INSCRICAO rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/CNAE_Version
+:CNAE_Version rdf:type owl:NamedIndividual ;
+              rdfs:label "CNAE Version"@en ,
+                         "Versão do CNAE"@pt .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/abbreviation_UF
+:abbreviation_UF rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/accountant_crc
+:accountant_crc rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/acronyms
+:acronyms rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/action_code
+:action_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/activity_description
+:activity_description rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/activity_start_date
+:activity_start_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/address_complement
+:address_complement rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/address_number
+:address_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/address_properties
+:address_properties rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/assignature_date
+:assignature_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/beginning_deed
+:beginning_deed rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cadastral_situation_date
+:cadastral_situation_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/city_code
+:city_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/city_hall_approval
+:city_hall_approval rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cnae
+:cnae rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cnpj
+:cnpj rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/code
+:code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/commercial_name
+:commercial_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/constitution_date
+:constitution_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/consumer_unit_code
+:consumer_unit_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/contact
+:contact rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/country_code
+:country_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cpf
+:cpf rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/cpf_cnpj
+:cpf_cnpj rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/crc_classification
+:crc_classification rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/crc_registration_date
+:crc_registration_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_of_file_dismemberment
+:date_of_file_dismemberment rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_of_file_load
+:date_of_file_load rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_of_issue
+:date_of_issue rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/date_properties
+:date_properties rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/ddd
+:ddd rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/dddFax
+:dddFax rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/ddd_phone_number
+:ddd_phone_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/district
+:district rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/document_type
+:document_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/emancipated_motive
+:emancipated_motive rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_date_of_mandate
+:end_date_of_mandate rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_date_participation
+:end_date_participation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_deed
+:end_deed rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/end_legal_obligations_date
+:end_legal_obligations_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/establishment_capital
+:establishment_capital rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/establishment_code
+:establishment_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/establishment_name
+:establishment_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/estimated_value
+:estimated_value rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/event_code
+:event_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/event_properties
+:event_properties rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/faxNumber
+:faxNumber rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/file_generation_date
+:file_generation_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/file_name
+:file_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/fiscal_unit_code
+:fiscal_unit_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/formated_cnae
+:formated_cnae rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/full_capital
+:full_capital rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/full_cnpj
+:full_cnpj rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/generates_ruc
+:generates_ruc rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/hasLocation
+:hasLocation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_accountant
+:has_accountant rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_action_type
+:has_action_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_address
+:has_address rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_cadastral_situation
+:has_cadastral_situation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_cadastral_situation_type
+:has_cadastral_situation_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_city
+:has_city rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_city_birth
+:has_city_birth rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_company_size
+:has_company_size rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_contact
+:has_contact rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_contact_number
+:has_contact_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_contribution_type
+:has_contribution_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_country
+:has_country rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_crc_type
+:has_crc_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_district
+:has_district rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_economic_activity
+:has_economic_activity rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_economic_sector
+:has_economic_sector rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_establishment
+:has_establishment rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_establishment_type
+:has_establishment_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_father
+:has_father rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_federative_unit
+:has_federative_unit rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_file
+:has_file rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_fiscal_unit
+:has_fiscal_unit rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_head_office
+:has_head_office rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_legal_nature
+:has_legal_nature rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_legal_representant
+:has_legal_representant rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_locality
+:has_locality rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_mother
+:has_mother rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_nacionality
+:has_nacionality rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_organization
+:has_organization rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_partner
+:has_partner rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_professional
+:has_professional rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_professional_relation
+:has_professional_relation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_professional_relationship_type
+:has_professional_relationship_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_property_regime
+:has_property_regime rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_protocol
+:has_protocol rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_register_source
+:has_register_source rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_registry_office
+:has_registry_office rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_registry_office_register
+:has_registry_office_register rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_relation
+:has_relation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_representant
+:has_representant rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_request
+:has_request rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_send_status
+:has_send_status rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_subsidiary
+:has_subsidiary rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_uf_birth
+:has_uf_birth rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/has_version
+:has_version rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/hash
+:hash rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/identity_issuing_entity
+:identity_issuing_entity rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/identity_number
+:identity_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/inclusion_date
+:inclusion_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/incra
+:incra rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/indefinite_period
+:indefinite_period rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/interest_sefaz
+:interest_sefaz rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_emancipated
+:is_emancipated rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_establishment_of
+:is_establishment_of rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_foreign
+:is_foreign rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_head_office_of_subsidiary
+:is_head_office_of_subsidiary rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_partner
+:is_partner rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/is_partner_of
+:is_partner_of rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/last_filing
+:last_filing rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/legal_nature_code
+:legal_nature_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/license_number
+:license_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/liquid_closing_date
+:liquid_closing_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/locality_type
+:locality_type rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/merchant_regime_code
+:merchant_regime_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/metreage
+:metreage rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/municipal_registration
+:municipal_registration rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/next_version
+:next_version rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/observation
+:observation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/part_whole_relation
+:part_whole_relation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/partnership_start_date
+:partnership_start_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/percentage_participation
+:percentage_participation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/person_identifier
+:person_identifier rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/phone_number
+:phone_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/previous_query_protocol
+:previous_query_protocol rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/processing_date
+:processing_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/professional_code
+:professional_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/property_regime
+:property_regime rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/property_registration_number
+:property_registration_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/protocol
+:protocol rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/reason
+:reason rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/reference
+:reference rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/regime_code
+:regime_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/regime_description
+:regime_description rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/regime_name
+:regime_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/register_entity_protocol
+:register_entity_protocol rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/registry_number
+:registry_number rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/root_cnpj
+:root_cnpj rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/sefaz_cadastral_situation_name
+:sefaz_cadastral_situation_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/share_capital_value
+:share_capital_value rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/situation_code
+:situation_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/situation_name
+:situation_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/social_name
+:social_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/start_date_of_mandate
+:start_date_of_mandate rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/start_date_participation
+:start_date_participation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/start_legal_obligations_date
+:start_legal_obligations_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/street_name
+:street_name rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/taxpayer_inclusion_date
+:taxpayer_inclusion_date rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/time_properties
+:time_properties rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/uf_code
+:uf_code rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/used_area
+:used_area rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/validity_end
+:validity_end rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/validity_start
+:validity_start rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/value_participation
+:value_participation rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/REDESIM/ontology/year_registry_office
+:year_registry_office rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/vcard/ns#email
+<http://www.w3.org/2006/vcard/ns#email> rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2006/vcard/ns#postal-code
+<http://www.w3.org/2006/vcard/ns#postal-code> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/birthday
+<http://xmlns.com/foaf/spec/birthday> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/family_name
+<http://xmlns.com/foaf/spec/family_name> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/firstName
+<http://xmlns.com/foaf/spec/firstName> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/gender
+<http://xmlns.com/foaf/spec/gender> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/givenName
+<http://xmlns.com/foaf/spec/givenName> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/lastName
+<http://xmlns.com/foaf/spec/lastName> rdf:type owl:NamedIndividual .
+
+
+###  http://xmlns.com/foaf/spec/name
+<http://xmlns.com/foaf/spec/name> rdf:type owl:NamedIndividual .
+
+
+[ :cadastral_situation_date "2016-01-01T00:00:00"
+] .
+
+_:genid184 :end_time "2020-01-01T00:00:00" ;
+            :start_time "2009-01-14T00:00:00" ;
+            rdfs:comment "ATIVO" .
+
+[ :start_time "2020-01-01T00:00:00"
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/NET/c4dm/event.owl#literal_factor> rdfs:comment "Preencher com o fator literal do evento."@pt ;
+                                                     rdfs:label "fator literal"@pt ,
+                                                                "literal factor"@en .
+
+
+<http://rs.tdwg.org/ontology/voc/Person#deathdate> rdfs:comment "Informar a data de óbito do indivíduo."@pt ;
+                                                   rdfs:label "data de óbito"@pt ,
+                                                              "deathdate"@en .
+
+
+:abbreviation_UF rdfs:comment """Abreviação da unidade federativa em questão.
+
+A UF será recuperada automaticamente, caso o CEP informado esteja codificado a nível de logradouro pela ECT.
+
+Caso o CEP informado não esteja codificado a nível de logradouro pela ECT, será liberado o preenchimento, que deverá ser informado de acordo com o endereço constante do ato constitutivo.
+
+Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no exterior – evento 107, informar o logradouro, complemento, bairro no exterior e, quando for o caso transliterado."""@pt ;
+                 rdfs:label "abbreviation uf"@en ,
+                            "abreviação da unidade federativa"@pt .
+
+
+:accountant_crc rdfs:comment "Preencher com o número de registro do Contabilista Responsável pela Organização Contábil no Conselho Regional de Contabilidade."@pt ;
+                rdfs:label "accountant crc"@en ,
+                           "crc do contador"@pt ,
+                           "numero contador crc"@pt .
+
+
+:action_code rdfs:comment "Preencher com o código de evento constante da tabela referente a ele."@pt ;
+             rdfs:label "action code"@en ,
+                        "código da ação"@pt .
+
+
+:activity_description rdfs:comment "Refere-se às maneiras pelas quais as atividades mercantis e/ou serviços serão exercidos, mediante contraprestação financeira, podendo ser caracterizar por tipos."@pt ;
+                      rdfs:label "activity description"@en ,
+                                 "descrição da atrividade"@pt .
+
+
+:activity_start_date rdfs:comment "Preencher com a data referente ao início da atividade."@pt ;
+                     rdfs:label "activity start date"@en ,
+                                "data do início da atividade"@pt .
+
+
+:address_complement rdfs:comment "Indicar o tipo de complemento, informando os dados adicionais, se necessário."@pt ;
+                    rdfs:label "address complement"@en ,
+                               "complemento do endereço"@pt .
+
+
+:address_number rdfs:comment "Indicar o número do endereço."@pt ;
+                rdfs:label "address number"@en ,
+                           "número do endereço"@pt .
+
+
+:assignature_date rdfs:comment "Preencher com a data referente a atribuição."@pt ;
+                  rdfs:label "assignature date"@en ,
+                             "data de atribuição"@pt .
+
+
+:cadastral_situation_date rdfs:comment "Informar a data referente a situação cadastral."@pt ;
+                          rdfs:label "cadastral situation date"@en ,
+                                     "data da situação cadastral"@pt .
+
+
+:city_code rdfs:comment "Informar o código de identificador da cidade."@pt ;
+           rdfs:label "city code"@en ,
+                      "código da cidade"@pt .
+
+
+:city_hall_approval rdfs:comment "Campo referente a aprovação do pedido pela prefeitura."@pt ;
+                    rdfs:label "aprovação da prefeitura"@pt ,
+                               "city hall approval"@en .
+
+
+:cnpj rdfs:comment "Propriedades referentes ao CNPJ."@pt ;
+      rdfs:label "EIN"@en ,
+                 "cnpj"@pt .
+
+
+:constitution_date rdfs:comment "Informar a data referente à constituição."@pt ;
+                   rdfs:label "constitution date"@en ,
+                              "data de constituição"@pt .
+
+
+:contact rdfs:comment "Propriedades referentes a informações de contato."@pt ;
+         rdfs:label "contact"@en ,
+                    "contato"@pt .
+
+
+:country_code rdfs:comment "Informar o código de representação do país."@pt ;
+              rdfs:label "country code"@en ,
+                         "código do país"@pt .
+
+
+:cpf rdfs:comment "Informar o cadastro de pessoa física (CPF)."@pt ;
+     rdfs:label "SSN"@en ,
+                "cpf"@pt .
+
+
+:cpf_cnpj rdfs:comment "Propriedades referentes ao CPF e CPNJ de identificação."@pt ;
+          rdfs:label "cpf cnpj"@pt .
+
+
+:crc_classification rdfs:comment "Escolher na lista “Profissional”, “Escritório Sociedade” ou “Escritório Individual”."@pt ;
+                    rdfs:label "classificação do crc"@pt ,
+                               "crc classificaition"@en .
+
+
+:crc_registration_date rdfs:comment "Informar data referente ao registro CRC."@pt ;
+                       rdfs:label "data de registro do crc"@pt ,
+                                  "date of registration crc"@en .
+
+
+:date_of_file_dismemberment rdfs:comment "Informar data referente ao desmembramento do arquivo."@pt ;
+                            rdfs:label "data de desmembramento do arquivo"@pt ,
+                                       "date of file dismemberment"@en .
+
+
+:date_of_file_load rdfs:comment "Informar data referente ao carregamento do arquivo."@pt ;
+                   rdfs:label "data de carregamento do arquivo"@pt ,
+                              "data of file load"@en .
+
+
+:date_of_issue rdfs:comment "Informar data referente à emissão."@pt ;
+               rdfs:label "data de emissão"@pt ,
+                          "date of issue"@en .
+
+
+:document_type rdfs:comment "Informar tipo do documento."@pt ;
+               rdfs:label "document type"@en ,
+                          "tipo de documento"@pt .
+
+
+:end_date_of_mandate rdfs:comment "Informar a data referente ao final do mandato."@pt ;
+                     rdfs:label "data do final do mandato"@pt ,
+                                "end date of mandate"@en .
+
+
+:end_date_participation rdfs:comment "Informar a data referente ao fim da participação."@pt ;
+                        rdfs:label "data do fim da participação"@pt ,
+                                   "end date participation"@en .
+
+
+:establishment_capital rdfs:comment "Informar o valor do Capital em moeda corrente de acordo com o constante no ato constitutivo ou alterador."@pt ;
+                       rdfs:label "capital de estabelecimento"@pt ,
+                                  "establishment capital"@en .
+
+
+:estimated_value rdfs:comment "Informar o valor estimado referente à organização."@pt ;
+                 rdfs:label "estimated value"@en ,
+                            "valor estimado"@pt .
+
+
+:event_code rdfs:comment "Preencher com o código de evento constante da Tabela I."@pt ;
+            rdfs:label "código do evento"@pt ,
+                       "event code"@en .
+
+
+:faxNumber rdfs:comment "Informar o número de fax do contato."@pt ;
+           rdfs:label "fax number"@en ,
+                      "número do fax"@pt .
+
+
+:file_generation_date rdfs:comment "Informar data referente à geração do arquivo."@pt ;
+                      rdfs:label "data de geração do arquivo"@pt ,
+                                 "file generation date"@en .
+
+
+:file_name rdfs:comment "Informar nome do arquivo em questão."@pt ;
+           rdfs:label "file name"@en ,
+                      "nome do arquivo"@pt .
+
+
+:full_capital rdfs:comment "Informar o valor do Capital completo em moeda corrente de acordo com o constante no ato constitutivo ou alterador."@pt ;
+              rdfs:label "capital completo"@pt ,
+                         "full capital"@en .
+
+
+:full_cnpj rdfs:comment "Informar o cadastro nacional de pessoa jurídica (CNPJ) completo."@pt ;
+           rdfs:label "cnpj completo"@pt ,
+                      "complete EIN"@en .
+
+
+:generates_ruc rdfs:comment "Informar o RUC gerado para a requisição em questão."@pt ;
+               rdfs:label "generates ruc"@en ,
+                          "ruc gerado"@pt .
+
+
+:has_accountant rdfs:label "has accountant"@en ,
+                           "tem contador"@pt .
+
+
+:has_action_type rdfs:label "has action type"@en ,
+                            "tem tipo de ato"@pt .
+
+
+:has_address rdfs:label "has address"@en ,
+                        "tem endereço"@pt .
+
+
+:has_cadastral_situation rdfs:label "has cadastral situation"@en ,
+                                    "tem situação cadastral"@pt .
+
+
+:has_city rdfs:label "has city"@en ,
+                     "tem cidade"@pt .
+
+
+:has_company_size rdfs:label "has company size"@en ,
+                             "tem porte de empresa"@pt .
+
+
+:has_contact rdfs:label "has contact"@en .
+
+
+:has_contribution_type rdfs:label "has contribution type"@en ,
+                                  "tem tipo de contribuição"@pt .
+
+
+:has_country rdfs:label "has country"@en ,
+                        "tem país"@pt .
+
+
+:has_district rdfs:label "has district"@en ,
+                         "tem distrito"@pt .
+
+
+:has_economic_activity rdfs:label "has economic activity"@en ,
+                                  "tem atividade econômica"@pt .
+
+
+:has_establishment rdfs:label "has establishment"@en ,
+                              "tem estabelecimento"@pt .
+
+
+:has_establishment_type rdfs:label "has establishment type"@en ,
+                                   "tem tipo de estabelecimento"@pt .
+
+
+:has_father rdfs:label "has father"@en ,
+                       "tem pai"@pt .
+
+
+:has_federative_unit rdfs:label "has federative unit"@en ,
+                                "tem unidade federativa"@pt .
+
+
+:has_file rdfs:label "has file"@en ,
+                     "tem arquivo"@pt .
+
+
+:has_legal_nature rdfs:label "has legal nature"@en ,
+                             "tem natureza legal"@pt .
+
+
+:has_legal_representant rdfs:label "has legal representant"@en ,
+                                   "tem representante legal"@pt .
+
+
+:has_locality rdfs:label "has locality"@en ,
+                         "tem localidade"@pt .
+
+
+:has_mother rdfs:label "has mother"@en ,
+                       "tem mãe"@pt .
+
+
+:has_nacionality rdfs:label "has nacionality"@en ,
+                            "tem nacionalidade"@pt .
+
+
+:has_organization rdfs:label "has organization"@en ,
+                             "tem organização"@pt .
+
+
+:has_partner rdfs:label "has partner"@en ,
+                        "tem sócio"@pt .
+
+
+:has_professional rdfs:label "has professional"@en ,
+                             "tem profissional"@pt .
+
+
+:has_professional_relation rdfs:label "has professional relation"@en ,
+                                      "tem relação profissional"@pt .
+
+
+:has_professional_relationship_type rdfs:label "has professional relationship type"@en ,
+                                               "tem tipo de relação profissional"@pt .
+
+
+:has_property_regime rdfs:label "has property regime"@en ,
+                                "tem regime proprietário"@pt .
+
+
+:has_protocol rdfs:label "has protocol"@en ,
+                         "tem protocolo"@pt .
+
+
+:has_register_source rdfs:label "has register source"@en ,
+                                "tem fonte de registro"@pt .
+
+
+:has_registry_office rdfs:label "has registry office"@en ,
+                                "tem cartório"@pt .
+
+
+:has_registry_office_register rdfs:label "has registry office register"@en ,
+                                         "tem registro de cartório"@pt .
+
+
+:has_relation rdfs:label "has relation"@en ,
+                         "tem relação"@pt .
+
+
+:has_representant rdfs:label "has representant"@en ,
+                             "tem representante"@pt .
+
+
+:has_request rdfs:label "has request"@en ,
+                        "tem requisição"@pt .
+
+
+:has_subsidiary rdfs:label "has subsidiary"@en ,
+                           "tem filial"@pt .
+
+
+:hash rdfs:comment "Informar hash atribuído ao arquivo em questão."@pt ;
+      rdfs:label "hash"@en ,
+                 "hash"@pt .
+
+
+:identity_number rdfs:comment "Informar número de identificação em questão."@pt ;
+                 rdfs:label "identity number"@en ,
+                            "número de identificação"@pt .
+
+
+:inclusion_date rdfs:comment "Informar data referente à inclusão."@pt ;
+                rdfs:label "data de inclusão"@pt ,
+                           "inclusion date"@en .
+
+
+:incra rdfs:comment "Informar o número de inscrição no INCRA. Esse campo será habilitado para preenchimento dependendo do interesse dos órgãos conveniados (Estados ou Municípios)."@pt ;
+       rdfs:label "incra"@en ,
+                  "incra"@pt .
+
+
+:is_emancipated rdfs:label "is emancipated"@en ,
+                           "é emancipado"@pt .
+
+
+:is_establishment_of rdfs:label "is establishment of"@en ,
+                                "é estabelecimento de"@pt .
+
+
+:is_foreign rdfs:comment "Especificar se determinado agente é estrangeiro ou não."@pt ;
+            rdfs:label "is foreign"@en ,
+                       "é estrangeiro"@pt .
+
+
+:is_head_office_of_subsidiary rdfs:label "is head office of subsidiary"@en ,
+                                         "é matriz da filial"@pt .
+
+
+:is_partner rdfs:label "is partner"@en ,
+                       "é sócio"@pt .
+
+
+:is_partner_of rdfs:label "is partner of"@en ,
+                          "é sócio de"@pt .
+
+
+:last_filing rdfs:comment "Preencher com as informações referentes ao último arquivamento em questão."@pt ;
+             rdfs:label "last filing"@en ,
+                        "último arquivamento"@pt .
+
+
+:legal_nature_code rdfs:comment "Indicar a natureza legal, de acordo com a Tabela apropriada."@pt ;
+                   rdfs:label "código da natureza legal"@pt ,
+                              "legal nature code"@en .
+
+
+:license_number rdfs:comment "Preencher com o número da licença em questão."@pt ;
+                rdfs:label "license number"@en ,
+                           "número da licença"@pt .
+
+
+:liquid_closing_date rdfs:comment "Informar a data referente ao fechamento líquido."@pt ;
+                     rdfs:label "data de fechamento líquido"@pt ,
+                                "liquid closing date"@en .
+
+
+:locality_type rdfs:comment "Indicar o tipo de localidade do endereço."@pt ;
+               rdfs:label "locality type"@en ,
+                          "tipo de localidade"@pt .
+
+
+:part_whole_relation rdfs:label "part whole relation"@en ,
+                                "relação parte-inteiro"@pt .
+
+
+:partnership_start_date rdfs:comment "Informar a data referente ao início da sociedade."@pt ;
+                        rdfs:label "data do início da parceria"@pt ,
+                                   "partnership start date"@en .
+
+
+:person_identifier rdfs:comment "Informar o identificador pessoal requisitado."@pt ;
+                   rdfs:label "identificador pessoal"@pt ,
+                              "person identifier"@en .
+
+
+:phone_number rdfs:comment "Informar o DDD e o telefone para contato."@pt ;
+              rdfs:label "número do telefone"@pt ,
+                         "phone number"@en .
+
+
+:previous_query_protocol rdfs:comment "Informar o protocolo de consulta anterior."@pt ;
+                         rdfs:label "previous query protocol"@en ,
+                                    "proocolo de consulta anterior"@pt .
+
+
+:processing_date rdfs:comment "Informar a data referente ao processamento do arquivo em questão."@pt ;
+                 rdfs:label "data do processo"@pt ,
+                            "processing date"@en .
+
+
+:property_regime rdfs:comment "Informar a propriedade do regime."@pt ;
+                 rdfs:label "property regime"@en ,
+                            "propriedade do regime"@pt .
+
+
+:property_registration_number rdfs:comment "Preencher com o número de registro de propriedade para o estabelecimento."@pt ;
+                              rdfs:label "número de registro da propriedade"@pt ,
+                                         "property registration number"@en .
+
+
+:protocol rdfs:comment "Preencher com o tipo de protocolo para o arquivo em questão."@pt ;
+          rdfs:label "protocol"@en ,
+                     "protocolo"@pt .
+
+
+:reference rdfs:comment "Informar pontos de referência de conhecimento popular."@pt ;
+           rdfs:label "reference"@en ,
+                      "referência do endereço"@pt .
+
+
+:regime_code rdfs:comment "Preencher com o código do regime em questão."@pt ;
+             rdfs:label "código do regime"@pt ,
+                        "regime code"@en .
+
+
+:regime_description rdfs:comment "Descrição do regime proprietário em questão."@pt ;
+                    rdfs:label "descrição do regime"@pt ,
+                               "regime description"@en .
+
+
+:register_entity_protocol rdfs:comment "Protocolo da entidade registrada em questão."@pt ;
+                          rdfs:label "protocolo da entidade registrada"@pt ,
+                                     "register entity protocol"@en .
+
+
+:registry_number rdfs:comment "Número do registro em cartório."@pt ;
+                 rdfs:label "número de registro"@pt ,
+                            "register number"@pt .
+
+
+:root_cnpj rdfs:comment "Preencher com os 8 primeiros dígitos do cadastro nacional de pessoa jurídica (CNPJ) que identificam a empresa em questão."@pt ;
+           rdfs:label "raiz do cnpj"@pt ,
+                      "root EIN"@en .
+
+
+:sefaz_cadastral_situation_name rdfs:comment "Informar o nome da situação cadastral referente à SEFAZ."@pt ;
+                                rdfs:label "nome na situação cadastral"@pt ,
+                                           "sefaz cadastral situation name"@en .
+
+
+:situation_code rdfs:comment "Preencher com o código identificador da situação."@pt ;
+                rdfs:label "código da situação"@pt ,
+                           "situation code"@en .
+
+
+:start_date_of_mandate rdfs:comment "Informar data referente ao início do mandato."@pt ;
+                       rdfs:label "data inicial do mandato"@pt ,
+                                  "start date of mandate"@en .
+
+
+:start_date_participation rdfs:comment "Informar a data referente ao início da participação."@pt ;
+                          rdfs:label "data de início da participação"@pt ,
+                                     "start date participation"@en .
+
+
+:street_name rdfs:comment "Informar o nome da rua do endereço."@pt ;
+             rdfs:label "nome da rua"@pt ,
+                        "street name"@en .
+
+
+:taxpayer_inclusion_date rdfs:comment "Informar a data referente à inclusão do contribuinte."@pt ;
+                         rdfs:label "data de inclução de contribuinte"@pt ,
+                                    "taxpayer inclusion date"@en .
+
+
+:uf_code rdfs:comment "Informar código da unidade deferativa em questão."@pt ;
+         rdfs:label "código UF"@pt ,
+                    "código estado"@pt ,
+                    "uf code"@en .
+
+
+:used_area rdfs:comment "Informar a área usada pelo estabelecimento."@pt ;
+           rdfs:label "area usada"@pt ,
+                      "used area"@en .
+
+
+:validity_end rdfs:comment "Informar a data referente ao fim da validade."@pt ;
+              rdfs:label "fim da validade"@pt ,
+                         "validity end"@en .
+
+
+:value_participation rdfs:comment "Informar a porcentagem de participação."@pt ,
+                                  "Preencher com o valor da participação em questão."@pt ;
+                     rdfs:label "percentage participation"@en ,
+                                "porcentagem da participação"@pt ,
+                                "valor da participação"@pt ,
+                                "value participation"@en .
+
+
+:year_registry_office rdfs:comment "Ano de cartório em questão."@pt ;
+                      rdfs:label "ano de cartório"@pt ,
+                                 "year registry office"@en .
+
+
+rdfs:label rdfs:comment "rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource's name."@en ;
+           rdfs:label "label"@en ,
+                      "rótulo"@pt .
+
+
+<http://www.w3.org/2006/vcard/ns#email> rdfs:comment "Informar o endereço de email de contato."@pt ;
+                                        rdfs:label "email"@en ,
+                                                   "email"@pt .
+
+
+<http://www.w3.org/2006/vcard/ns#postal-code> rdfs:comment "Informar o CEP do endereço, atualizado de acordo com a página da Empresa de Correios e Telégrafos – ECT na internet (http://www.correios.com.br/)."@pt ;
+                                              rdfs:label "cep"@pt ,
+                                                         "postal code"@en .
+
+
+<http://xmlns.com/foaf/spec/family_name> rdfs:comment "Informar nome da família do indivíduo."@pt ;
+                                         rdfs:label "family name"@en ,
+                                                    "nome da família"@pt .
+
+
+<http://xmlns.com/foaf/spec/firstName> rdfs:comment "Informar primeiro nome do indivíduo."@pt ;
+                                       rdfs:label "first name"@en ,
+                                                  "primeiro nome"@pt .
+
+
+<http://xmlns.com/foaf/spec/gender> rdfs:comment "Informar o gênero do indivíduo em questão."@pt ;
+                                    rdfs:label "gender"@en ,
+                                               "gênero"@pt .
+
+
+<http://xmlns.com/foaf/spec/givenName> rdfs:comment "Informar o nome fornecido em questão."@pt ;
+                                       rdfs:label "given name"@en ,
+                                                  "nome fornecido"@pt .
+
+
+<http://xmlns.com/foaf/spec/lastName> rdfs:comment "Informar o sobrenome do indivíduo."@pt ;
+                                      rdfs:label "last name"@en ,
+                                                 "último nome"@pt .
+
+
+<http://xmlns.com/foaf/spec/name> rdfs:comment """The name of something is a simple textual string.
+
+XML language tagging may be used to indicate the language of the name."""@en ;
+                                  rdfs:label "name"@en ,
+                                             "nome"@pt .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CNAE_Class
+                :CNAE_Division
+                :CNAE_Group
+                :CNAE_Section
+                :CNAE_Subclass
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :City
+                :Country
+                :District
+                :Federative_Unit
+                :Locality
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

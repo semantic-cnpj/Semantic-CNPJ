@@ -1,0 +1,15 @@
+map:EstablishmentRFBSameASCadastro a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+			SELECT * FROM "UFC_SEM"."SAMEAS_RFB_CAD_ESTABELECIMENTO"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Estabelecimento/{RFB_ID}";
+		### rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Cadastro_SEFAZ-MA/Estabelecimento/{CAD_ID}" ];
+    ].

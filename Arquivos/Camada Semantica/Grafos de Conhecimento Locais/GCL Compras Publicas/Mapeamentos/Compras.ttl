@@ -1,0 +1,379 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcad: <http://www.sefaz.ma.gov.br/ontology/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix : <http://www.sefaz.ma.gov.br/ontology/> .
+@base <http://www.sefaz.ma.gov.br/ontology/> .
+   
+# Mapeamento de Entes_Publicos@Organizacao
+<#TriplesMapEntes_Publicos> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_ENTES_PUBLICOS" """ ];
+    rr:subjectMap [
+        rr:template "http://xmlns.com/foaf/0.1/Organization/{CNPJ}";
+        rr:class foaf:Organization, sefazma:Ente_Publico;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:razao_social;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj;
+        rr:objectMap [ rr:column "CNPJ"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_srf;
+        rr:objectMap [ rr:column "CODIGO_SRF"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:esfera;
+        rr:objectMap [ rr:column "ESFERA"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:natureza_juridica;
+        rr:objectMap [ rr:column "NATUREZA_JURIDICA"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_natureza_legal;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Natureza_Legal/{COD_NATUREZA}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_municipio;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Municipio/{MUNICIPIO}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_unidade_federativa;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF}"; ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nivel;
+        rr:objectMap [ rr:column "NIVEL"; rr:datatype xsd:string ];
+    ].
+
+# Mapeamento Fornecedor
+<#TriplesMapFornecedor> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_FORNECEDOR" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Fornecedor/{CNPJ_CPF}";
+        rr:class sefazma:Fornecedor;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label,foaf:name,sefazma:nome;
+        rr:objectMap [ rr:column "NOME"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:cnpj_cpf;
+        rr:objectMap [ rr:column "CNPJ_CPF"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nome_fantasia;
+        rr:objectMap [ rr:column "NOME_FANTASIA"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_estadual;
+        rr:objectMap [ rr:column "IE"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:inscricao_municipal;
+        rr:objectMap [ rr:column "IM"; rr:datatype xsd:string ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_regime_tributario;
+        rr:objectMap [ rr:column "CRT"; rr:datatype xsd:string ];
+    ].
+
+<#TriplesMapFornecedorTemAtividade> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_FORNECEDOR" WHERE CNAE IS NOT NULL """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Fornecedor/{CNPJ_CPF}";
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_atividade_economica;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Atividade_Economica/{CNAE}"; ];
+    ].
+
+# Mapeamento Compras Publicas
+<#TriplesMapCompras> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_COMPRA_PUBLICA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Compra_Publica/{ID_COMPRA_PUBLICA}";
+        rr:class sefazma:Compra_Publica;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "ID_COMPRA_PUBLICA"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_pedido;
+        rr:objectMap [ rr:column "NUMERO_PEDIDO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:contrato;
+        rr:objectMap [ rr:column "CONTRATO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:nota_empenho;
+        rr:objectMap [ rr:column "NOTA_EMPENHO"; rr:datatype xsd:string ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_ente_publico;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Ente_Publico/{CNPJ_ENTE_PUBLICO}"; ];
+    ];
+    
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_fornecedor;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Fornecedor/{CPF_CNPJ_FORNECEDOR}"; ];
+    ].
+
+
+# Mapeamento Compras Publicas
+<#TriplesMapComprasTemItem> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """
+SELECT ID_COMPRA_PUBLICA, ID_ITEM FROM 
+"UFC_SEM"."COMPRAS_ITEM_MAT"
+     """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Compra_Publica/{ID_COMPRA_PUBLICA}";
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_item;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Item/{ID_ITEM}"; ];
+    ].
+
+
+
+# Mapeamento de Item
+<#TriplesMapItem> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT *
+FROM 
+"UFC_SEM"."COMPRAS_ITEM"
+ """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Item/{NUMERO_ITEM}";
+        rr:class sefazma:Item_Compra;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "DESCRICAO"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_item;
+        rr:objectMap [ rr:column "NUMERO_ITEM"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_compra_publica;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Compra_Publica/{ID_COMPRA}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_produto;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Produto/{ID_COMPRA}"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:informacoes_adicionais;
+        rr:objectMap [ rr:column "INFORMACOES_ADICIONAIS"; ]
+    ].
+
+# Mapeamento de Produto
+#<#TriplesMapProduto> a rr:TriplesMap;
+#    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_PRODUTO_MAT" """ ];
+#    rr:subjectMap [
+#        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Produto/{ID_PRODUTO}";
+#        rr:class sefazma:Produto;
+#    ];
+
+#    rr:predicateObjectMap [
+#        rr:predicate rdfs:label;
+#        rr:objectMap [ rr:column "DESCRICAO"; rr:datatype xsd:string ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:codigo_produto;
+#        rr:objectMap [ rr:column "CODIGO_PRODUTO"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:descricao;
+#        rr:objectMap [ rr:column "DESCRICAO"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:codigo_ean_barras;
+#        rr:objectMap [ rr:column "CODIGO_EAN_BARRAS"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:quantidade_tributavel;
+#        rr:objectMap [ rr:column "QUANTIDADE_TRIBUTAVEL"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:cfop;
+#        rr:objectMap [ rr:column "CFOP"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:cest;
+#        rr:objectMap [ rr:column "CEST"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:valor_unitario_tributacao;
+#        rr:objectMap [ rr:column "VALOR_UNITARIO_TRIBUTACAO"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:valor_unitario;
+#        rr:objectMap [ rr:column "VALOR_UNITARIO"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:quantidade_comercial;
+#        rr:objectMap [ rr:column "QUANTIDADE_COMERCIAL"; ]
+#    ];
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:unidade_comercial;
+#        rr:objectMap [ rr:column "UNIDADE_COMERCIAL"; ]
+#    ];
+#    
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:codigo_ncm;
+#        rr:objectMap [ rr:column "CODIGO_NCM"; ]
+#    ];
+#
+#    rr:predicateObjectMap [
+#        rr:predicate sefazma:cean_trib;
+#        rr:objectMap [ rr:column "CEAN_TRIB"; ]
+#    ].
+
+#Mapeamento Arma@Weapon
+<#TriplesArma> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_ARMA" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Arma/{ID_ARMA}";
+        rr:class sefazma:Arma, sefazma:Produto;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "DESCRICAO_COMPLETA"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_arma;
+        rr:objectMap [ rr:column "ID_ARMA"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tipo_arma;
+        rr:objectMap [ rr:column "TIPO_ARMA"; ]
+    ];
+     rr:predicateObjectMap [
+        rr:predicate sefazma:numero_serie;
+        rr:objectMap [ rr:column "NUMERO_SERIE"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_cano;
+        rr:objectMap [ rr:column "NUMERO_CANO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_completa;
+        rr:objectMap [ rr:column "DESCRICAO_COMPLETA"; ]
+    ].
+
+#Mapeamento Combustivel
+<#TriplesCombustivel> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_COMBUSTIVEL" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Combustivel/{ID_COMBUSTIVEL}";
+        rr:class sefazma:Combustivel, sefazma:Produto;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label;
+        rr:objectMap [ rr:column "DESCRICAO_ANP"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_combustivel;
+        rr:objectMap [ rr:column "ID_COMBUSTIVEL"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_produto_anp;
+        rr:objectMap [ rr:column "CODIGO_PRODUTO_ANP"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_autorizacao;
+        rr:objectMap [ rr:column "CODIGO_AUTORIZACAO"; ]
+    ];
+     rr:predicateObjectMap [
+        rr:predicate sefazma:quantidade_combustivel_faturada;
+        rr:objectMap [ rr:column "QUANTIDADE_COMBUSTIVEL_FATURADA"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:tem_uf_consumo;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/DOMINIO/Unidade_Federativa/{UF_CONSUMO}" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:descricao_anp;
+        rr:objectMap [ rr:column "DESCRICAO_ANP"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:percentual_glp;
+        rr:objectMap [ rr:column "PERCENTUAL_GLP"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:percentual_gas_natural;
+        rr:objectMap [ rr:column "PERCENTUAL_GAS_NATURAL"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:percentual_gas_importado;
+        rr:objectMap [ rr:column "PERCENTUAL_GAS_IMPORTADO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:valor_partida;
+        rr:objectMap [ rr:column "VALOR_PARTIDA"; ]
+    ].
+
+#Mapeamento Medicamento
+<#TriplesMedicamento> a rr:TriplesMap;
+    rr:logicalTable [ rr:sqlQuery """SELECT * FROM "UFC_SEM"."COMPRAS_MEDICAMENTO" """ ];
+    rr:subjectMap [
+        rr:template "http://www.sefaz.ma.gov.br/resource/Compras_Publicas/Medicamento/{ID_MEDICAMENTO}";
+        rr:class sefazma:Medicamento, sefazma:Produto;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label, sefazma:descricao;
+        rr:objectMap [ rr:column "DESCRICAO"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_medicamento;
+        rr:objectMap [ rr:column "ID_MEDICAMENTO"; rr:datatype xsd:string ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:numero_lote;
+        rr:objectMap [ rr:column "NUMERO_LOTE"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:quantidade;
+        rr:objectMap [ rr:column "QUANTIDADE"; ]
+    ];
+     rr:predicateObjectMap [
+        rr:predicate sefazma:data_fabricacao;
+        rr:objectMap [ rr:column "DATA_FABRICACAO"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:data_validade;
+        rr:objectMap [ rr:column "DATA_VALIDADE"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:preco_maximo_consumidor;
+        rr:objectMap [ rr:column "PRECO_MAXIMO_CONSUMIDOR"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:codigo_produto_anvisa;
+        rr:objectMap [ rr:column "CODIGO_PRODUTO_ANVISA"; ]
+    ];
+    rr:predicateObjectMap [
+        rr:predicate sefazma:motivo_isencao_anvisa;
+        rr:objectMap [ rr:column "MOTIVO_ISENCAO_ANVISA"; ]
+    ].
