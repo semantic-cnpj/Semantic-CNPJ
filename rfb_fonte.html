@@ -28,6 +28,110 @@
 <link rel="dns-prefetch" href="https://barra.brasil.gov.br/">
 <link rel="dns-prefetch" href="https://cdn.materialdesignicons.com/">
 <link rel="dns-prefetch" href="https://s.w.org/">
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+html,
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100%;
+  width: 100%; 
+  background: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+ 
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+} 
+.card {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.card-content {
+  padding:15px;
+  text-align:left;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+</style>
+
         <style type="text/css">
 img.wp-smiley,
 img.emoji {
@@ -83,10 +187,7 @@ img.emoji {
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
 <script type="text/javascript" src="js/idg-file-download-public.js"></script>
-<script type="text/javascript" src="js/rtbs.js"></script>
-<meta name="generator" content="WordPress 5.4">
-<meta name="msapplication-TileImage" content="https://rnds.saude.gov.br/wp-content/uploads/2019/11/cropped-RNDS-FAVICON-270x270.png">
-        <style type="text/css" id="wp-custom-css">
+       <style type="text/css" id="wp-custom-css">
             #wpadminbar
 {
     display: none;
@@ -207,10 +308,10 @@ img.emoji {
                                                 <div class="elementor-text-editor elementor-clearfix">
                                                     <p>A RFB é fonte de dados primária responsável por fornecer a informação fidedigna de CPFs e CNPJs. Se uma pessoa não possui CPF válido e ativo na RFB, para fins de concessão de inscrição, a participação como representante desta pessoa em empresas não será considerada válida junto aos Estados. Se uma Empresa não tem CNPJ então é uma empresa de fato, mas não de Direito, de forma que estará fazendo exercício ilegal das suas atividades. Sendo o segundo ente a dar parecer no REDESIM, para a abertura de empresas.
                                                         <br/><br/>
-                                                        <b><a target="_" href = "https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj">Fonte</a></b> <br/>
+                                                       <!-- <b><a target="_" href = "https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/cadastros/consultas/dados-publicos-cnpj">Fonte</a></b> <br/>-->
                                                         <b>Formato:</b> fixed-width formatted files / Tratado em CSV ou Relacional <br/>
                                                         <b>Taxa de atualização:</b> A atualização é mensal. <br/>
-                                                        <b>Características especiais:</b> Os dados são disponibilizados em uma estrutura própria e em grande volume. <br/>
+                                                        <b>Características especiais:</b> Os dados são disponibilizados em grande volume. <br/>
                                                     </p>
                                                 </div>
                                             </div>
@@ -220,9 +321,71 @@ img.emoji {
                             </div>
                         </div>
                     </section>
+                                
+                            <br/><br/>
+            
+                            <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-row">
+                                        <div class="elementor-element elementor-element-40cfbda  elementor-widget-heading" style="margin: auto; width: 50%;">
+                                                    <center><h3 class="elementor-heading-title elementor-size-default">Fonte de Dados da RFB</h3>        
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
+                    
+                    <section class="wrapper">
+                        <div class="container-fostrap">
+                            <div class="content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4"></div>
+                                        
+                                        <div class="col-xs-12 col-sm-4">
+                                            <div class="card">
+                                                <a class="img-card" href="https://semantic-sefaz.github.io/semantic-sefaz/rfb_relacional.html">
+                                                <img src="images/fonte.png" style="width: 50%;" />
+                                              </a>
+                                                <div class="card-content">
+                                                    <h4 class="card-title">
+                                                        <a target="_" href="https://semantic-sefaz.github.io/semantic-sefaz/rfb_relacional.html"> Fonte de Dados
+                                                      </a>
+                                                    </h4>
+                                                    <p class="">
+                                                        Informações sobre a Fonte de Dados da RFB
+                                                    </p>
+                                                </div>
 
-
+                                                <div class="card-read-more">
+                                                    <a target="_blank" href="https://viewer.diagrams.net/?page-id=Zhmr70E7Mxgs1-aFP05Y&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=Zhmr70E7Mxgs1-aFP05Y#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD" class="btn-link btn-block">
+                                                        Dicionário / Layout dos Dados
+                                                    </a>
+                                                </div>
+                                                <div class="card-read-more">
+                                                    <a target="_blank" href="https://viewer.diagrams.net/?page-id=Zhmr70E7Mxgs1-aFP05Y&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=Zhmr70E7Mxgs1-aFP05Y#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD" class="btn-link btn-block">
+                                                        Diagrama
+                                                    </a>
+                                                </div>
+                                                <div class="card-read-more">
+                                                    <a target="_blank" href="https://viewer.diagrams.net/?page-id=Zhmr70E7Mxgs1-aFP05Y&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=Zhmr70E7Mxgs1-aFP05Y#G1X6O0BhTiZYN8Geg0BKzGHOi1AzMbFmjD" class="btn-link btn-block">
+                                                        Scripts SQL
+                                                    </a>
+                                                </div>
+                                                <div class="card-read-more">
+                                                    <a target="_blank" href="https://semantic-sefaz.github.io/semantic-sefaz/rfb_relacional.html" class="btn-link btn-block">
+                                                        Proveniência / Origem
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
 
        <!-- <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
@@ -275,17 +438,7 @@ img.emoji {
             </div>
             </div>
             </center>
-            <center>
-                <a target="_" href="https://sistemas1.sefaz.ma.gov.br/portalsefaz/jsp/principal/principal.jsf" target="_">
-                    <img style="height: 80px" src = "images/logo_ma.png"/>
-                </a>
-                <a target="_" href="http://www.ufc.br" target="_">
-                    <img style="height: 80px" src = "images/logo_ufc.png"/>
-                </a>
-                <a target="_" href="https://fastef.ufc.br/" target="_">
-                    <img style="height: 80px" src = "images/astef.png"/>
-                </a>
-            </center>
+        
             <div class="row footer-brasil">
                 <div class="col-lg-12">
                     <a class="logo-acesso-footer" target="_blank" href="http://www.acessoainformacao.gov.br/" alt="Acesso à informação" title="Acesso à informação"></a>

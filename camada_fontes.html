@@ -202,14 +202,6 @@
                                             Em segundo lugar, destaca-se o fato que consultas SQL podem ser executadas sobre as tabelas de extração com o intuito de analisar a qualidade de dados. Por exemplo, pode identificar estabelecimentos associados a empresas inexistentes. Nas tabelas de extração, não há restrições de integridade ligadas. No Portal semântico, na aba Camada das Fontes de Dados, pode-se acessar a descrição, artefatos (Dicionários, Diagramas), origem e proveniência fontes de dados trabalhadas através do link\footnote{https://semantic-cnpj.github.io/Semantic-CNPJ/camada\_fontes}.  
 
 </br></br>
-<ul class="list-group">
-    <h5>
-    <li>• Oferecer flexibilidade para adicionar novas fontes de dados e descoberta de conhecimento; </li>
-    <li>• Diminuição do “gap” semântico entre o modelo relacional e modelo semântico;</li>
-    <li>• O mapeamento das visões relacionais para a Ontologia de domínio tem a semântica dos mapeamentos diretos, o que facilita a criação e manutenção desses mapeamentos;</li>
-    <li>• As Visões Relacionais são criadas usando a linguagem SQL, que é a tecnologia usada nos banco de dados da SEFAZ. Portanto, os desenvolvedores da SEFAZ já dominam bem essa tecnologia.</li>
-    </h5>
-</ul>
 
 </br>
 As Visões Relacionais Normalizadas podem ser criadas usando o enfoque virtual ou materializado.
@@ -233,7 +225,29 @@ Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo 
 
             </br></br>
 
-
+            <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a42d2f0" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                        <div style="margin: 0 10% 0 10%" data-id="2462e4c" data-element_type="column">
+                            <div class="elementor-column-wrap  elementor-element-populated">
+                                <div class="elementor-element elementor-element-d7736ec elementor-widget elementor-widget-text-editor" data-id="d7736ec" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-text-editor elementor-clearfix">
+                                            <p>
+                                                <ul>
+                                                    <li><a href="ceis_fonte.html">• Fonte de dados publicada</a></li>  
+                                                    <li><a target='_' href="https://viewer.diagrams.net/?page-id=wlnwz1ghpxmbt1haj502&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=wlnwz1ghpxmbt1haj502#G1pkcs33lhSO0y07KthFhtFl9go4MJZY9Z">• Diagrama do Esquema Relacional</a></li>
+                                                    <li><a target='_' href="https://drive.google.com/file/d/1VHT8F08g5PfmGz8GB40CJKZKTvpaPkTf/view?usp=sharing">• Script de povoamento do Esquema Relacional</a></li>        
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </section>
                 <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a42d2f0" data-element_type="section">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -245,22 +259,24 @@ Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo 
                                                
                                                 <h4>
 
+                                                    Foram selecionadas 5 fontes de dados de maior interesse ao negócio da SEFAZ-MA. A Figura abaixo expõe essas fontes 
+                                                    e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA.  
+                                                    </br></br>
+                                                    
+                                                    <center><img class="img-fluid" src = "images/fontes_de_dados.png"/></center>
+
 Uma das dificuldades em se consultar múltiplas fontes de dados é a complexidade e heterogeneidade dos esquemas de dados, o que dificulta a formulação de consultas.                                                    
                                                     
 </br></br>
 <center><img class="img-fluid" src = "images/esquema_complexo.jpg"/></center>
 </br></br>
-Nessa conjuntura, a Camada Relacional possibilita um esquema normalizado próximo da compreensão de mundo real envolvendo os dados.
+Exemplo tabelas de Extração
 </br></br> 
 A Figura abaixo apresenta um exemplo da derivação da Camada Relacional a partir da Abstração Conceitual de mundo.
 </br></br>
 <center><img class="img-fluid" src = "images/camada_relacional_2.png"/></center>
                                                 </br></br>
-Foram selecionadas 12 fontes de dados de maior interesse ao negócio da SEFAZ-MA. A Figura abaixo expõe essas fontes 
-e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA.  
-</br></br>
 
-<center><img class="img-fluid" src = "images/fontes_de_dados.jpg"/></center>
 
 
 </br></br></br>
@@ -310,7 +326,7 @@ e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA
                                           <center>
                                           <div class="card-body" align = "center">
                                             <a  class="card-link"></a>
-                                            <a href="https://semantic-sefaz.github.io/semantic-sefaz/rfb_relacional.html" class="btn btn-primary">Acessar</a>
+                                            <a href="rfb_fonte.html" class="btn btn-primary">Acessar</a>
                                           </div>
                                           
                                     </div>
@@ -326,7 +342,7 @@ e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA
                                           <center>
                                           <div class="card-body" align = "center">
                                             <a  class="card-link"></a>
-                                            <a href="https://semantic-sefaz.github.io/semantic-sefaz/correios_relacional.html" class="btn btn-primary">Acessar</a>
+                                            <a href="correios_fonte.html" class="btn btn-primary">Acessar</a>
                                           </div>
                                           
                                     </div>
@@ -342,7 +358,7 @@ e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA
                                           <center>
                                           <div class="card-body" align = "center">
                                             <a  class="card-link"></a>
-                                            <a href="https://semantic-sefaz.github.io/semantic-sefaz/ibge_cnae_relacional.html" class="btn btn-primary">Acessar</a>
+                                            <a href="ibge_cnae_fonte.html" class="btn btn-primary">Acessar</a>
                                           </div>
                                           
                                     </div>
@@ -358,7 +374,7 @@ e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA
                                           <center>
                                           <div class="card-body" align = "center">
                                             <a  class="card-link"></a>
-                                            <a href="https://semantic-sefaz.github.io/semantic-sefaz/ibge_location_relacional.html" class="btn btn-primary">Acessar</a>
+                                            <a href="ibge_location_fonte.html" class="btn btn-primary">Acessar</a>
                                           </div>
                                           
                                     </div>
@@ -395,7 +411,7 @@ e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA
                                         <center>
                                           <div class="card-body" align = "center">
                                             <a  class="card-link"></a>
-                                            <a href="https://semantic-sefaz.github.io/semantic-sefaz/tcu_relacional.html" class="btn btn-primary">Acessar</a>
+                                            <a href="tcu_fonte.html" class="btn btn-primary">Acessar</a>
                                           </div>
                                           
                                     </div>
@@ -411,7 +427,7 @@ e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA
                                         <center>
                                           <div class="card-body" align = "center">
                                             <a  class="card-link"></a>
-                                            <a href="https://semantic-sefaz.github.io/semantic-sefaz/ceis_relacional.html" class="btn btn-primary">Acessar</a>
+                                            <a href="ceis_fonte.html" class="btn btn-primary">Acessar</a>
                                           </div>
                                           
                                     </div>                                    
