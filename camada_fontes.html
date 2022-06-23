@@ -193,27 +193,17 @@
                                             <div class="elementor-text-editor elementor-clearfix" >
                                                
                                                 <h4>
-                                                    Na camada das fontes de dados estão armazenados os dados extraídos das fontes de dados externas. Em muitos casos, os dados de fontes externas semiestruturadas estão armazenados em vários arquivos. Para ilustrar esse fato, o site da Receita Federal do Brasil \footnote{https://tinyurl.com/5d7r6hxa} disponibiliza periodicamente os dados de empresas e respectivos estabelecimentos em vários arquivos, no formato \textit{CSV}. %}, compactados como \textit{.zip}. 
+                                                    Na camada das fontes de dados estão armazenados os dados extraídos das fontes de dados externas. Em muitos casos, os dados de fontes externas semiestruturadas estão armazenados em vários arquivos. Para ilustrar esse fato, o site da Receita Federal do Brasil disponibiliza periodicamente os dados de empresas e respectivos estabelecimentos em vários arquivos, no formato <b>CSV</b>, compactados como .zip. 
                                                     Para cada arquivo de uma fonte externa é criada, na camada das fontes de dados,  uma tabela de extração com estrutura similar a essa do arquivo.                                                 
                                                 </br></br>
-                                                Uma aplicação foi desenvolvida para detectar se houve atualização nos sites das fontes externas. No caso de haver uma atualização dos arquivos de dados das fontes externas, o processo de ingestão desses dados é disparado. Esses arquivos, primeiro são extraídos  no seu formato nativo, e, em seguida,  são  transformados e armazenados nas tabelas de extração. 
-                                                Uma vantagem do uso da tabelas de extração, é que a complexidade computacional, para gerar um banco de dados relacional normalizado a partir de vários arquivos csv ou xls, é alta e de difícil manutenção no caso de mudanças na estrutura dos arquivos. Como ilustração, o esquema das tabelas de extração da fonte de dados da RFB pode ser visualizado no link\footnote{https://tinyurl.com/muxnvewv}. A aplicação desenvolvida para monitoramento pode ser encontrada no Semantic-CNPJ através do link\footnote{https://tinyurl.com/4cdru5z8}.
+                                                Uma aplicação (<a href="https://github.com/semantic-cnpj/Semantic-CNPJ/blob/main/Arquivos/Camada%20Relacional/RFB/Script%20Python/decodificador_v2.zip">Link</a>) foi desenvolvida para detectar se houve atualização nos sites das fontes externas. No caso de haver uma atualização dos arquivos de dados das fontes externas, o processo de ingestão desses dados é disparado. Esses arquivos, primeiro são extraídos  no seu formato nativo, e, em seguida,  são  transformados e armazenados nas tabelas de extração. 
+                                                Uma vantagem do uso da tabelas de extração, é que a complexidade computacional, para gerar um banco de dados relacional normalizado a partir de vários arquivos csv ou xls, é alta e de difícil manutenção no caso de mudanças na estrutura dos arquivos.
+                                                
                                             </br></br>
-                                            Em segundo lugar, destaca-se o fato que consultas SQL podem ser executadas sobre as tabelas de extração com o intuito de analisar a qualidade de dados. Por exemplo, pode identificar estabelecimentos associados a empresas inexistentes. Nas tabelas de extração, não há restrições de integridade ligadas. No Portal semântico, na aba Camada das Fontes de Dados, pode-se acessar a descrição, artefatos (Dicionários, Diagramas), origem e proveniência fontes de dados trabalhadas através do link\footnote{https://semantic-cnpj.github.io/Semantic-CNPJ/camada\_fontes}.  
 
-</br></br>
+                                            Em segundo lugar, destaca-se o fato que consultas SQL podem ser executadas sobre as tabelas de extração com o intuito de analisar a qualidade de dados. Por exemplo, pode identificar estabelecimentos associados a empresas inexistentes. Nas tabelas de extração, não há restrições de integridade ligadas.</br></br>
 
-</br>
-As Visões Relacionais Normalizadas podem ser criadas usando o enfoque virtual ou materializado.
-</br></br>
-No caso do enfoque materializado, os dados são extraídos, transformados e armazenados em uma tabela da camada Relacional. 
-</br></br>
-Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo que as consultas realizadas nas tabelas virtuais são  reescritas em consultas sobre as tabelas das fontes de dados originais.
-
-</h4>
-
-
-
+                                            Como ilustração, o esquema das tabelas de extração da fonte de dados da RFB pode ser visualizado abaixo. 
                                             </div>
                                         </div>
                                     </div>
@@ -225,6 +215,24 @@ Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo 
 
             </br></br>
 
+            <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                        <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <div style="margin-left: 100px">
+                                    <h2 class="elementor-heading-title elementor-size-default">Exemplo Tabelas de Extração</h2>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a42d2f0" data-element_type="section">
                 <div class="elementor-container elementor-column-gap-default">
                     <div class="elementor-row">
@@ -232,14 +240,16 @@ Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo 
                             <div class="elementor-column-wrap  elementor-element-populated">
                                 <div class="elementor-element elementor-element-d7736ec elementor-widget elementor-widget-text-editor" data-id="d7736ec" data-element_type="widget" data-widget_type="text-editor.default">
                                     <div class="elementor-widget-container">
-                                        <div class="elementor-text-editor elementor-clearfix">
-                                            <p>
-                                                <ul>
-                                                    <li><a href="ceis_fonte.html">• Fonte de dados publicada</a></li>  
-                                                    <li><a target='_' href="https://viewer.diagrams.net/?page-id=wlnwz1ghpxmbt1haj502&target=self&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=wlnwz1ghpxmbt1haj502#G1pkcs33lhSO0y07KthFhtFl9go4MJZY9Z">• Diagrama do Esquema Relacional</a></li>
-                                                    <li><a target='_' href="https://drive.google.com/file/d/1VHT8F08g5PfmGz8GB40CJKZKTvpaPkTf/view?usp=sharing">• Script de povoamento do Esquema Relacional</a></li>        
-                                                </ul>
-                                            </p>
+                                        <div class="elementor-text-editor elementor-clearfix" >
+                                           
+                                            <h4>
+                                               </br></br> 
+                                          <!--  A Figura abaixo apresenta como exemplo as Tabelas de Extração da RFB utilizadas como esquema base.-->
+                                            </br></br>
+                                            <center><img class="img-fluid" src = "images/tabelas_extracao_rfb.png"/></center>
+                  
+                                    </br></br>   
+                                    
                                         </div>
                                     </div>
                                 </div>
@@ -248,6 +258,25 @@ Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo 
                     </div>
                 </div>
             </section>
+    
+            <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                        <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <div style="margin-left: 100px">
+                                    <h2 class="elementor-heading-title elementor-size-default">Fontes de Dados</h2>        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+
                 <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a42d2f0" data-element_type="section">
                     <div class="elementor-container elementor-column-gap-default">
                         <div class="elementor-row">
@@ -259,50 +288,12 @@ Já no enfoque virtual, os dados ficam armazenados nas tabelas originais, sendo 
                                                
                                                 <h4>
 
-                                                    Foram selecionadas 5 fontes de dados de maior interesse ao negócio da SEFAZ-MA. A Figura abaixo expõe essas fontes 
-                                                    e conseguinte sua classificação quanto ao acesso interno ou externo a SEFAZ-MA.  
+                                                    Foram selecionadas 5 fontes de dados relacionadas ao domínio de Pessoas Jurídicas (Empresas). A Figura abaixo expõe a classificação dessas fontes 
+                                                    contendo a descrição, artefatos (Dicionários, Diagramas), origem e proveniência.  
                                                     </br></br>
                                                     
                                                     <center><img class="img-fluid" src = "images/fontes_de_dados.png"/></center>
-
-Uma das dificuldades em se consultar múltiplas fontes de dados é a complexidade e heterogeneidade dos esquemas de dados, o que dificulta a formulação de consultas.                                                    
-                                                    
-</br></br>
-<center><img class="img-fluid" src = "images/esquema_complexo.jpg"/></center>
-</br></br>
-Exemplo tabelas de Extração
-</br></br> 
-A Figura abaixo apresenta um exemplo da derivação da Camada Relacional a partir da Abstração Conceitual de mundo.
-</br></br>
-<center><img class="img-fluid" src = "images/camada_relacional_2.png"/></center>
-                                                </br></br>
-
-
-
 </br></br></br>
-
-</br>
-
-</br></br>
-
-
-</br></br>
-<section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
-    <div class="elementor-container elementor-column-gap-default">
-        <div class="elementor-row">
-            <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                    <div style="margin-left: 100px">
-                        <h2 class="elementor-heading-title elementor-size-default">Fontes Abertas</h2>        
-                    </div>
-                </div>
-            </div>
-            <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
-            </div>
-        </div>
-    </div>
-</section>
-
 
 <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"  data-id="a42d2f0" data-element_type="section">
     <div class="elementor-container elementor-column-gap-default" align = "center">
