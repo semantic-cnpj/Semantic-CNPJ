@@ -1,47 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-BR" data-xadprotection="true">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
-  .video-js {
-    width: 300px;
-    height: 150px;
-}
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
 
-.vjs-fluid {
-    padding-top: 56.25%
-}
-</style>
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
 
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
 
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
-<link rel="profile" href="https://gmpg.org/xfn/11">
-
-<title>Portal Semantic-CNPJ</title>
+    <title>Portal Semantic-CNPJ</title>
 <link rel="dns-prefetch" href="https://barra.brasil.gov.br/">
 <link rel="dns-prefetch" href="https://cdn.materialdesignicons.com/">
 <link rel="dns-prefetch" href="https://s.w.org/">
-<style type="text/css">
-    img.wp-smiley,
-    img.emoji {
-        display: inline !important;
-        border: none !important;
-        box-shadow: none !important;
-        height: 1em !important;
-        width: 1em !important;
-        margin: 0 .07em !important;
-        vertical-align: -0.1em !important;
-        background: none !important;
-        padding: 0 !important;
-    }
+        <style type="text/css">
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
 </style>
+
+<style type="text/css">
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+    
+    html,
+    body {
+      -moz-box-sizing: border-box;
+           box-sizing: border-box;
+      height: 100%;
+      width: 100%; 
+      background: #FFF;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+     
+    .wrapper {
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .container-fostrap {
+      display: table-cell;
+      padding: 1em;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .fostrap-logo {
+      width: 100px;
+      margin-bottom:15px
+    }
+    h1.heading {
+      color: #fff;
+      font-size: 1.15em;
+      font-weight: 900;
+      margin: 0 0 0.5em;
+      color: #505050;
+    }
+    @media (min-width: 450px) {
+      h1.heading {
+        font-size: 3.55em;
+      }
+    }
+    @media (min-width: 760px) {
+      h1.heading {
+        font-size: 3.05em;
+      }
+    }
+    @media (min-width: 900px) {
+      h1.heading {
+        font-size: 3.25em;
+        margin: 0 0 0.3em;
+      }
+    } 
+    .card {
+      display: block; 
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+        transition: box-shadow .25s; 
+    }
+    .card:hover {
+      box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    .img-card {
+      width: 100%;
+      height:200px;
+      border-top-left-radius:2px;
+      border-top-right-radius:2px;
+      display:block;
+        overflow: hidden;
+    }
+    .img-card img{
+      width: 100%;
+      height: 200px;
+      object-fit:cover; 
+      transition: all .25s ease;
+    } 
+    .card-content {
+      padding:15px;
+      text-align:left;
+    }
+    .card-title {
+      margin-top:0px;
+      font-weight: 700;
+      font-size: 1.65em;
+    }
+    .card-title a {
+      color: #000;
+      text-decoration: none !important;
+    }
+    .card-read-more {
+      border-top: 1px solid #D4D4D4;
+    }
+    .card-read-more a {
+      text-decoration: none !important;
+      padding:10px;
+      font-weight:600;
+      text-transform: uppercase
+    }
+    </style>
+
 
 <!-- Menu styles end (In order to load faster)-->
 <link rel="stylesheet" type="text/css" media="all" href="css/menu_portal.css">
 <style>
     *{ margin: 0; padding: 0; }
-    body { font-size: 16px; font-family: 'Exo 2', sans-serif; color: #555;  }
+    body { font-size: 16px; font-family: 'Exo 2', sans-serif; color: #555; }
     .header { text-align: center; }
     .header a { padding: 30px 0 0; display: block; font-size: 48px; text-decoration: none; color: #555; }
     .header p { margin: 10px 0 40px 0; font-size: 18px; }
@@ -52,7 +157,7 @@
 </style>
 <!-- Menu styles end (In order to load faster)-->
 
-<link rel="stylesheet" id="wp-block-library-css" href="./css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wp-block-library-css" href="./css/style.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="contact-form-7-css" href="./css/styles.css" type="text/css" media="all">
 <link rel="stylesheet" id="gov-schedules-styles-css" href="./css/gov-schedules.css" type="text/css" media="all">
 <link rel="stylesheet" id="idg-download-css" href="./css/idg-download-public.css" type="text/css" media="all">
@@ -70,6 +175,7 @@
 <link rel='stylesheet' href='css/custom.css'>
 <link href="./css/animate.min.css" rel="stylesheet"> 
 <link href="./css/lightbox.css" rel="stylesheet"> 
+<link href="./css/navbar.css" rel="stylesheet"> 
 <link rel="stylesheet" id="elementor-post-335-css" href="./css/post-335.css" type="text/css" media="all">
 <link rel="stylesheet" id="rtbs-css" href="./css/rtbs_style.css" type="text/css" media="all">
 <link rel="stylesheet" id="google-fonts-1-css" href="./css/fonts.css" type="text/css" media="all">
@@ -78,12 +184,12 @@
 <script type="text/javascript" src="js/idg-file-download-public.js"></script>
 <script type="text/javascript" src="js/rtbs.js"></script>
 <meta name="generator" content="WordPress 5.4">
-<style type="text/css" id="wp-custom-css">
-    #wpadminbar
-    {
-        display: none;
-    }       </style>
-
+        <style type="text/css" id="wp-custom-css">
+            #wpadminbar
+{
+    display: none;
+}       </style>
+       
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -104,6 +210,8 @@
 
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="plugins/rs-plugin/css/settings.css">
+
+
 
 
 
@@ -148,7 +256,8 @@
         <div data-elementor-type="wp-page" data-elementor-id="335" class="elementor elementor-335" data-elementor-settings="[]">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                          
+                         
+                    
                     <br/><br/><br/><br/>
 
                     <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
@@ -157,7 +266,7 @@
                                 <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <div style="margin-left: 100px">
-                                            <h2 class="elementor-heading-title elementor-size-default">Visões de Ligação Semânticas</h2>        
+                                            <h2 class="elementor-heading-title elementor-size-default">Visões de Ligação</h2>        
                                         </div>
                                     </div>
                                 </div>
@@ -166,18 +275,306 @@
                             </div>
                         </div>
                     </section>
-                    <br/><br/>
+
+                    <section class="elementor-element elementor-element-a42d2f0 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a42d2f0" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div style="margin: 0 10% 0 10%" data-id="2462e4c" data-element_type="column">
+                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                        <div class="elementor-element elementor-element-d7736ec elementor-widget elementor-widget-text-editor" data-id="d7736ec" data-element_type="widget" data-widget_type="text-editor.default">
+                                            <div class="elementor-widget-container">
+                                                <div class="elementor-text-editor elementor-clearfix">
+                                                    <p>
+
+                                                        Uma visão de Ligação Semântica específica relacionamentos <b>owl:sameAs</b> entre instâncias em diferentes <b>GC_L's</b>. É importante a criação dessas ligações devido ao problema de resolução de identidade, quando instâncias com diferentes URIs representam o mesmo objeto no mundo real.
+                                                        Formalmente, uma visão de ligação semântica owl:sameAs é uma n-tupla <b>Li</b> = (<b>Gs,Gt,C,T,μ</b>), onde:	
+                                                        
+                                                        <ul>
+                                                            <li><b>Gs</b> e <b>Gt</b> são Grafos de Conhecimentos (GCs) locais;</li>
+                                                            
+                                                            <li><b>C</b> é uma classe comum no vocabulário de <b>Gs</b> e <b>Gt</b>;</li>
+                                                        
+                                                            <li><b>T</b> é um conjunto de propriedades comuns no vocabulário de <b>Gs</b> e <b>Gt</b>;</li>
+                                                        
+                                                            <li><b>μ</b> é uma <b>2n</b>-relação chamada de predicado de correspondência de instâncias.</li>
+                                                        
+                                                        </ul>
+                                                        Para definição dos links entre os <b>GCL</b> foram utilizadas regras de junção em mapeamentos para estabelecer relações <b>owl:sameAs</b> entre recursos com uma mesma identidade nas fontes de cada <b>GCL</b>. 
+                                                        
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </section>
+
+                    <br  id="link1" /><br/><br/>
                     <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
                                 <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
                                         <div style="margin-left: 100px">
-                                            <h3 class="elementor-heading-title elementor-size-default">Visões de Ligação Semânticas da RFB</h3>        
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Atividade Econômica</h2>        
                                         </div>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/link_rfb_rfb_person.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <br  id="link5" /><br/><br/>
+                    <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div style="margin-left: 100px">
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Bairro</h2>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/pt_br/Linkage DB RFB-Correios - Bairro.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <br  id="link2" /><br/><br/>
+                    <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div style="margin-left: 100px">
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Cidade</h2>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/pt_br/Linkage DB RFB-Correios_Cidade.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <br  id="link6" /><br/><br/>
+                    <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div style="margin-left: 100px">
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Logradouro</h2>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/pt_br/Linkage DB RFB-Correios - Logradouro.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <br  id="link3" /><br/><br/>
+                    <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div style="margin-left: 100px">
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Empresa - Fornecedor Inabilitado</h2>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/pt_br/Linkage RFB_TCU_Inabilitado.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <br  id="link4" /><br/><br/>
+                    <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div style="margin-left: 100px">
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Empresa - Fornecedor Inidôneo</h2>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/pt_br/Linkage RFB-TCU_Inidoneo.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                    <br  id="link7" /><br/><br/>
+                    <section class="elementor-element elementor-element-59af390 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59af390" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-40cfbda elementor-widget elementor-widget-heading" data-id="40cfbda" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <div style="margin-left: 100px">
+                                            <h3 class="elementor-heading-title elementor-size-default" >Link: Unidade Federativa</h2>        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-302e565 elementor-column elementor-col-16 elementor-top-column" data-id="302e565" data-element_type="column">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="elementor-element elementor-element-d640095 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d640095" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-element elementor-element-cef6a3c elementor-column elementor-col-25 elementor-top-column" data-id="cef6a3c" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
+                                </div>
+                                <figure  style = "margin: auto; margin-bottom: 20px;">
+                                    <img width="830" height="650" src="images/links/pt_br/Linkage DB RFB-Correios_UF.png" style = "width:700px;"  alt=""/>
+                              <!--       <center>
+                                       <figcaption><a target="_" href="https://drive.google.com/drive/folders/1KRpqMtYQ1W5J-SrzMQ6YIqecODftDsJs">Arquivo do Link: Person - Person</a></figcaption>
+                                    </center>-->
+                                </figure>
+                                <div class="elementor-element elementor-element-39b07aa elementor-column elementor-col-25 elementor-top-column" data-id="39b07aa" data-element_type="column">
+                                    <div class="elementor-column-wrap">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,290 +586,297 @@
             <div class="row">
                 <div class="col-lg-12">
                                 <center>
-                                    <h3 class="social-title text-uppercase">Agradecimentos</h3>
-                                </div>
-                            </div>
-                        </center>
-                        <div class="row footer-brasil">
-                            <div class="col-lg-12">
-                                <a class="logo-acesso-footer" target="_blank" href="http://www.acessoainformacao.gov.br/" alt="Acesso à informação" title="Acesso à informação"></a>
-                                <a class="logo-governo-federal" target="_blank" href="http://www.brasil.gov.br/" alt="Governo Federal" title="Governo Federal"></a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-        
-                <div id="overlay"></div>
-                <script type="text/javascript" src="js/jquery.js"></script>
-                <script type="text/javascript" src="js/bootstrap.min.js"></script>
-                <script type="text/javascript" src="js/lightbox.min.js"></script>
-                <script type="text/javascript" src="js/wow.min.js"></script>
-                <script type="text/javascript" src="js/main.js"></script>   
-                <script type="text/javascript">
-                    /* <![CDATA[ */
-                    /* ]]> */
-                </script>
-                <script type="text/javascript" src="js/scripts.js"></script>
-                <script type="text/javascript" src="js/core.min.js"></script>
-                <script type="text/javascript" src="js/datepicker.min.js"></script>
-                <script type="text/javascript">
-                    jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","Maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","Maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
-                </script>
-                <script type="text/javascript">
-                    /* ]]> */
-                </script>
-                <script type="text/javascript" src="js/gs-scripts.js"></script>
-                <script type="text/javascript" src="js/bundle.min.js"></script>
-                <script type="text/javascript" src="js/barra_2.0.js"></script>
-                <script type="text/javascript" src="js/slick.min.js"></script>
-                <script type="text/javascript" src="js/wp-embed.min.js"></script>
-                <script type="text/javascript" src="js/frontend-modules.min.js"></script>
-                <script type="text/javascript" src="js/position.min.js"></script>
-                <script type="text/javascript" src="js/dialog.min.js"></script>
-                <script type="text/javascript" src="js/waypoints.min.js"></script>
-                <script type="text/javascript" src="js/swiper.min.js"></script>
-                <script type="text/javascript" src="js/share-link.min.js"></script>
-                <script type="text/javascript" src="js/frontend.min.js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
-        
-                <script src="js/jquery-2.1.4.min.js"></script>
-                <script src="js/mfn.menu.js"></script>
-                <script src="js/jquery.plugins.js"></script>
-                <script src="js/jquery.jplayer.min.js"></script>
-                <script src="js/animations/animations.js"></script>
-                <script src="js/email.js"></script>
-                <script src="js/scripts.js"></script>
-        
-                <script src="plugins/rs-pluginjs/jquery.themepunch.tools.min.js"></script>
-                <script src="plugins/rs-pluginjs/jquery.themepunch.revolution.min.js"></script>
-        
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.video.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.slideanims.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.actions.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.layeranimation.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.kenburn.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.navigation.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.migration.min.js"></script>
-                <script src="plugins/rs-pluginjs/extensions/revolution.extension.parallax.min.js"></script>
-        
-                <script>
-                    var tpj = jQuery;
-                    tpj.noConflict();
-                    var revapi34;
-                    tpj(document).ready(function() {
-                        if (tpj("#rev_slider_34_2").revolution == undefined) {
-                            revslider_showDoubleJqueryError("#rev_slider_34_2");
-                        } else {
-                            revapi34 = tpj("#rev_slider_34_2").show().revolution({
-                                sliderType: "standard",
-        
-                                sliderLayout: "auto",
-                                dottedOverlay: "none",
-                                delay: 7000,
-                                navigation: {
-                                    keyboardNavigation: "off",
-                                    keyboard_direction: "horizontal",
-                                    mouseScrollNavigation: "off",
-                                    onHoverStop: "on",
-                                    touch: {
-                                        touchenabled: "on",
-                                        swipe_threshold: 0.7,
-                                        swipe_min_touches: 1,
-                                        swipe_direction: "horizontal",
-                                        drag_block_vertical: false
-                                    },
-                                    arrows: {
-                                        style: "uranus",
-                                        enable: true,
-                                        hide_onmobile: false,
-                                        hide_onleave: false,
-                                        tmp: '',
-                                        left: {
-                                            h_align: "right",
-                                            v_align: "bottom",
-                                            h_offset: 90,
-                                            v_offset: 40
-                                        },
-                                        right: {
-                                            h_align: "right",
-                                            v_align: "bottom",
-                                            h_offset: 40,
-                                            v_offset: 40
-                                        }
-                                    },
-                                    thumbnails: {
-                                        style: "hesperiden",
-                                        enable: true,
-                                        width: 200,
-                                        height: 80,
-                                        min_width: 100,
-                                        wrapper_padding: 5,
-                                        wrapper_color: "transparent",
-                                        wrapper_opacity: "1",
-                                        tmp: '<span class="tp-thumb-image"></span><span class="tp-thumb-title">Slide</span>',
-                                        visibleAmount: 3,
-                                        hide_onmobile: true,
-                                        hide_under: 0,
-                                        hide_onleave: false,
-                                        direction: "horizontal",
-                                        span: false,
-                                        position: "inner",
-                                        space: 5,
-                                        h_align: "left",
-                                        v_align: "bottom",
-                                        h_offset: 40,
-                                        v_offset: 40
-                                    }
-                                },
-                                gridwidth: 1180,
-                                gridheight: 750,
-                                lazyType: "none",
-                                shadow: 0,
-                                spinner: "spinner3",
-                                stopLoop: "off",
-                                stopAfterLoops: -1,
-                                stopAtSlide: -1,
-                                shuffle: "off",
-                                autoHeight: "off",
-                                disableProgressBar: "on",
-                                hideThumbsOnMobile: "on",
-                                hideSliderAtLimit: 0,
-                                hideCaptionAtLimit: 0,
-                                hideAllCaptionAtLilmit: 0,
-                                startWithSlide: 0,
-                                debugMode: false,
-                                fallbacks: {
-                                    simplifyAll: "on",
-                                    nextSlideOnWindowFocus: "off",
-                                    disableFocusListener: "off",
-                                }
-                            });
-                        }
-                    });
-                </script>
-        
-                <script>
-                    jQuery(window).load(function() {
-                        var retina = window.devicePixelRatio > 1 ? true : false;
-                        if (retina) {
-                            var retinaEl = jQuery("#logo img");
-                            var retinaLogoW = retinaEl.width();
-                            var retinaLogoH = retinaEl.height();
-                            retinaEl.attr("src", "images/logo-retina.png").width(retinaLogoW).height(retinaLogoH)
-                        }
-                    });
-                </script>
-        
-        
-            </body></html>
-        
-        
-            <!-- JS -->
-            <script src="js/jquery-2.1.4.min.js"></script>
-        
-            <script src="js/mfn.menu.js"></script>
-            <script src="js/jquery.plugins.js"></script>
-            <script src="js/jquery.jplayer.min.js"></script>
-            <script src="js/animations/animations.js"></script>
-            <script src="js/translate3d.js"></script>
-            <script src="js/scripts.js"></script>
-        
-            <script src="plugins/rs-pluginjs/jquery.themepunch.tools.min.js"></script>
-            <script src="plugins/rs-pluginjs/jquery.themepunch.revolution.min.js"></script>
-        
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.video.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.slideanims.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.actions.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.layeranimation.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.kenburn.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.navigation.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.migration.min.js"></script>
-            <script src="plugins/rs-pluginjs/extensions/revolution.extension.parallax.min.js"></script>
-        
-        
-            <script>
-                var tpj = jQuery;
-                var revapi2;
-                tpj(document).ready(function() {
-                    if (tpj("#rev_slider_2_1").revolution == undefined) {
-                        revslider_showDoubleJqueryError("#rev_slider_2_1");
-                    } else {
-                        revapi2 = tpj("#rev_slider_2_1").show().revolution({
-                            sliderType: "hero",
-                            sliderLayout: "fullscreen",
-                            dottedOverlay: "none",
-                            delay: 9000,
-                            navigation: {},
-                            responsiveLevels: [1270, 1024, 778, 480],
-                            gridwidth: [1270, 1024, 778, 480],
-                            gridheight: [868, 768, 960, 720],
-                            lazyType: "smart",
-                            parallax: {
-                                type: "mouse",
-                                origo: "slidercenter",
-                                speed: 2000,
-                                levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                    <h3 class="social-title text-uppercase">Agradecimentos</h3>
+            </div>
+            </div>
+            </center>
+           
+            <div class="row footer-brasil">
+                <div class="col-lg-12">
+                    <a class="logo-acesso-footer" target="_blank" href="http://www.acessoainformacao.gov.br/" alt="Acesso à informação" title="Acesso à informação"></a>
+                    <a class="logo-governo-federal" target="_blank" href="http://www.brasil.gov.br/" alt="Governo Federal" title="Governo Federal"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="overlay"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>   
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/rnds.saude.gov.br\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/core.min.js"></script>
+<script type="text/javascript" src="js/datepicker.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["janeiro","fevereiro","mar\u00e7o","abril","Maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"monthNamesShort":["jan","fev","mar","abr","Maio","jun","jul","ago","set","out","nov","dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["domingo","segunda-feira","ter\u00e7a-feira","quarta-feira","quinta-feira","sexta-feira","s\u00e1bado"],"dayNamesShort":["dom","seg","ter","qua","qui","sex","s\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var oscar_minc_vars = {"ajaxurl":"https:\/\/rnds.saude.gov.br\/wp-admin\/admin-ajax.php","upload_file_nonce":"38d75b05d3"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/gs-scripts.js"></script>
+<script type="text/javascript" src="js/bundle.min.js"></script>
+<script type="text/javascript" src="js/barra_2.0.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/wp-embed.min.js"></script>
+<script type="text/javascript" src="js/frontend-modules.min.js"></script>
+<script type="text/javascript" src="js/position.min.js"></script>
+<script type="text/javascript" src="js/dialog.min.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/share-link.min.js"></script>
+<script type="text/javascript" src="js/frontend.min.js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="plugins/rs-pluginjs/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-pluginjs/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.video.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.parallax.min.js"></script>
+
+    <script>
+        var tpj = jQuery;
+        tpj.noConflict();
+        var revapi34;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_34_2").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_34_2");
+            } else {
+                revapi34 = tpj("#rev_slider_34_2").show().revolution({
+                    sliderType: "standard",
+
+                    sliderLayout: "auto",
+                    dottedOverlay: "none",
+                    delay: 7000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        onHoverStop: "on",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 0.7,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "uranus",
+                            enable: true,
+                            hide_onmobile: false,
+                            hide_onleave: false,
+                            tmp: '',
+                            left: {
+                                h_align: "right",
+                                v_align: "bottom",
+                                h_offset: 90,
+                                v_offset: 40
                             },
-                            shadow: 0,
-                            spinner: "off",
-                            autoHeight: "off",
-                            fullScreenAlignForce: "off",
-                            fullScreenOffsetContainer: "",
-                            fullScreenOffset: "81px",
-                            disableProgressBar: "on",
-                            hideThumbsOnMobile: "on",
-                            hideSliderAtLimit: 0,
-                            hideCaptionAtLimit: 0,
-                            hideAllCaptionAtLilmit: 0,
-                            debugMode: false,
-                            fallbacks: {
-                                simplifyAll: "off",
-                                disableFocusListener: false,
+                            right: {
+                                h_align: "right",
+                                v_align: "bottom",
+                                h_offset: 40,
+                                v_offset: 40
                             }
-                        });
+                        },
+                        thumbnails: {
+                            style: "hesperiden",
+                            enable: true,
+                            width: 200,
+                            height: 80,
+                            min_width: 100,
+                            wrapper_padding: 5,
+                            wrapper_color: "transparent",
+                            wrapper_opacity: "1",
+                            tmp: '<span class="tp-thumb-image"></span><span class="tp-thumb-title">Slide</span>',
+                            visibleAmount: 3,
+                            hide_onmobile: true,
+                            hide_under: 0,
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            span: false,
+                            position: "inner",
+                            space: 5,
+                            h_align: "left",
+                            v_align: "bottom",
+                            h_offset: 40,
+                            v_offset: 40
+                        }
+                    },
+                    gridwidth: 1180,
+                    gridheight: 750,
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner3",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "on",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "on",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: "off",
                     }
                 });
-            </script>
-        
-            <script>
-                jQuery(window).load(function() {
-                    var retina = window.devicePixelRatio > 1 ? true : false;
-                    if (retina) {
-                        var retinaEl = jQuery("#logo img.logo-main");
-                        var retinaLogoW = retinaEl.width();
-                        var retinaLogoH = retinaEl.height();
-                        retinaEl.attr("src", "images/retina-theme.png").width(retinaLogoW).height(retinaLogoH);
-                        var stickyEl = jQuery("#logo img.logo-sticky");
-                        var stickyLogoW = stickyEl.width();
-                        var stickyLogoH = stickyEl.height();
-                        stickyEl.attr("src", "images/retina-theme.png").width(stickyLogoW).height(stickyLogoH);
-                        var mobileEl = jQuery("#logo img.logo-mobile");
-                        var mobileLogoW = mobileEl.width();
-                        var mobileLogoH = mobileEl.height();
-                        mobileEl.attr("src", "images/retina-theme.png").width(mobileLogoW).height(mobileLogoH);
-                        var mobileStickyEl = jQuery("#logo img.logo-mobile-sticky");
-                        var mobileStickyLogoW = mobileStickyEl.width();
-                        var mobileStickyLogoH = mobileStickyEl.height();
-                        mobileStickyEl.attr("src", "images/retina-theme.png").width(mobileStickyLogoW).height(mobileStickyLogoH);
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "images/logo-retina.png").width(retinaLogoW).height(retinaLogoH)
+            }
+        });
+    </script>
+
+
+</body></html>
+
+
+    <!-- JS -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/translate3d.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="plugins/rs-pluginjs/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-pluginjs/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.video.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/rs-pluginjs/extensions/revolution.extension.parallax.min.js"></script>
+
+
+    <script>
+        var tpj = jQuery;
+        var revapi2;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_2_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_2_1");
+            } else {
+                revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                    sliderType: "hero",
+                    sliderLayout: "fullscreen",
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    navigation: {},
+                    responsiveLevels: [1270, 1024, 778, 480],
+                    gridwidth: [1270, 1024, 778, 480],
+                    gridheight: [868, 768, 960, 720],
+                    lazyType: "smart",
+                    parallax: {
+                        type: "mouse",
+                        origo: "slidercenter",
+                        speed: 2000,
+                        levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+                    },
+                    shadow: 0,
+                    spinner: "off",
+                    autoHeight: "off",
+                    fullScreenAlignForce: "off",
+                    fullScreenOffsetContainer: "",
+                    fullScreenOffset: "81px",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "on",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        disableFocusListener: false,
                     }
                 });
-            </script>
-        
-            <!-- required -->
-            <script type='text/javascript' src='js/jquery-2.1.4.min.js'></script>
-            <script type="text/javascript" src="js/menu_portal.min.js"></script>
-            <script type="text/javascript">
-                jQuery('.stellarnav').stellarNav({
-                        theme: 'dark',
-                        breakpoint: 960,
-                        position: 'right',
-                        phoneBtn: '+559832174500',
-                        locationBtn: 'https://goo.gl/maps/a7zxJXFYKdL2GBz19'
-                    });
-            </script>
-            <!-- required -->
-        
-            <script src="js/jquery-migrate.min.js"></script>
-        
-        </body>
-        
-        </html>
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(window).load(function() {
+            var retina = window.devicePixelRatio > 1 ? true : false;
+            if (retina) {
+                var retinaEl = jQuery("#logo img.logo-main");
+                var retinaLogoW = retinaEl.width();
+                var retinaLogoH = retinaEl.height();
+                retinaEl.attr("src", "images/retina-theme.png").width(retinaLogoW).height(retinaLogoH);
+                var stickyEl = jQuery("#logo img.logo-sticky");
+                var stickyLogoW = stickyEl.width();
+                var stickyLogoH = stickyEl.height();
+                stickyEl.attr("src", "images/retina-theme.png").width(stickyLogoW).height(stickyLogoH);
+                var mobileEl = jQuery("#logo img.logo-mobile");
+                var mobileLogoW = mobileEl.width();
+                var mobileLogoH = mobileEl.height();
+                mobileEl.attr("src", "images/retina-theme.png").width(mobileLogoW).height(mobileLogoH);
+                var mobileStickyEl = jQuery("#logo img.logo-mobile-sticky");
+                var mobileStickyLogoW = mobileStickyEl.width();
+                var mobileStickyLogoH = mobileStickyEl.height();
+                mobileStickyEl.attr("src", "images/retina-theme.png").width(mobileStickyLogoW).height(mobileStickyLogoH);
+            }
+        });
+    </script>
+
+    <!-- required -->
+    <script type='text/javascript' src='js/jquery-2.1.4.min.js'></script>
+    <script type="text/javascript" src="js/menu_portal.min.js"></script>
+    <script type="text/javascript">
+        jQuery('.stellarnav').stellarNav({
+                theme: 'dark',
+                breakpoint: 960,
+                position: 'right',
+                phoneBtn: '+559832174500',
+                locationBtn: 'https://goo.gl/maps/a7zxJXFYKdL2GBz19'
+            });
+    </script>
+    <!-- required -->
+
+    <script src="js/jquery-migrate.min.js"></script>
+
+
+
+
+</body>
+
+</html>
