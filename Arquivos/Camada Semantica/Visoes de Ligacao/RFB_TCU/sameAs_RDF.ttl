@@ -1,0 +1,16 @@
+#Mapeamento RFB_CAD_EMPRESA
+map:EmpresaRFBSameASCadastro a rr:TriplesMap;
+	rr:logicalTable [
+		rr:sqlQuery """
+            SELECT * FROM "UFC_SEM"."SAMEAS_RFB_CAD_EMPRESA"
+		""";
+	];
+	rr:subjectMap [
+		rr:template "http://www.sefaz.ma.gov.br/resource/RFB/Empresa/{RFB_ID}";
+		### rr:graph <http://www.sefaz.ma.gov.br/ontology/Graph/RFB> ; 
+	];
+
+    rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [ rr:template "http://www.sefaz.ma.gov.br/resource/Cadastro_SEFAZ-MA/Empresa/{CAD_ID}" ]; 
+    ].

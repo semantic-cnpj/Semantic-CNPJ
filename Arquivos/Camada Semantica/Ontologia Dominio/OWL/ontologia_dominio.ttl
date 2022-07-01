@@ -57,7 +57,7 @@ Financiador: Banco Interamericano de Desenvolvimento
 
 Contrato 4458/OC-BR. 
 P1.3 Planejamento e Gestão da Tecnologia da Informação implantados. Definição e Implantação dos Sistemas de Busca Semântica e Recomendação à Legislação Tributária, com o Uso das Tecnologias da Web Semântica."""@pt ,
-                                                     "Ontologia de Domínio de Cadastro de Contribuintes, Empresas, Sócios e Conceitos Relacionados ao Domínio Fiscal"@pt ;
+                                                     "Ontologia de Domínio de Empresas, Sócios e Conceitos Relacionados a Pessoa Jurídica"@pt ;
                                         owl:versionInfo "1.0"@pt .
 
 #################################################################
@@ -135,7 +135,7 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 foaf:name rdf:type owl:AnnotationProperty ;
           rdfs:range rdfs:Literal ,
                      xsd:string ;
-          rdfs:domain _:genid-nodeid-genid-c80417c04ea34bbd801ba8f960215e7c-0BDA3DB170179249E91C7C56131799CD ,
+          rdfs:domain _:genid-nodeid-genid-9df7d42ac4c34feeb9c694abf86d2dae-949F1EAA412A4FE0E57A2A8E7CC1BD78 ,
                       :Representante_Legal ,
                       owl:Thing ,
                       foaf:Agent .
@@ -153,12 +153,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole
-<http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole> rdf:type owl:ObjectProperty ;
-                                                                      rdfs:isDefinedBy <http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl> ;
-                                                                      rdfs:label "tem papel"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/atividade_performada
 :atividade_performada rdf:type owl:ObjectProperty ;
                       rdfs:domain :Realizacao_Atividade_Economica ;
@@ -169,37 +163,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.sefaz.ma.gov.br/ontology/de_endereco
 :de_endereco rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Status_Similaridade ;
              rdfs:range :Endereco ;
              rdfs:label "de endereço" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/descricao
-:descricao rdf:type owl:ObjectProperty ;
-           rdfs:domain :Documento_Suplementar ,
-                       :Produto ,
-                       :Tipo_Contribuicao .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/e_contador
-:e_contador rdf:type owl:ObjectProperty ;
-            rdfs:domain :Contador ;
-            rdfs:range foaf:Organization ;
-            rdfs:label "é contador" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/e_contribuinte_geral
-:e_contribuinte_geral rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Estabelecimento ;
-                      rdfs:range :Contribuinte_Geral ;
-                      rdfs:label "é contribuinte geral"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/e_emancipado
-:e_emancipado rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain foaf:Person ;
-              rdfs:range :Emancipado .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/e_estabelecimento_de
@@ -236,26 +201,9 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range foaf:Organization .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/excluido_por
-:excluido_por rdf:type owl:ObjectProperty ,
-                       owl:FunctionalProperty ;
-              rdfs:domain :Registro_Desabilitado ;
-              rdfs:range :Usuario ;
-              rdfs:label "excluído por"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/foi_desabilitado
-:foi_desabilitado rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Estabelecimento ;
-                  rdfs:range :Evento_Desabilitado ;
-                  rdfs:label "foi desabilitado"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/incluido_por
 :incluido_por rdf:type owl:ObjectProperty ,
                        owl:FunctionalProperty ;
-              rdfs:domain :Registro_Desabilitado ;
-              rdfs:range :Usuario ;
               rdfs:label "incluido por"@pt .
 
 
@@ -284,14 +232,6 @@ xsd:date rdf:type rdfs:Datatype .
                          :Fornecedor_Inidoneo ;
              rdfs:range :Acordao ;
              rdfs:label "tem acordão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_arquivo
-:tem_arquivo rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Documento_Suplementar ,
-                         :Solicitacao ;
-             rdfs:range :Arquivo .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_atividade_economica
@@ -356,76 +296,10 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "tem cidade de naturalidade"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_classe_consumo
-:tem_classe_consumo rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Unidade_Consumo_Eletrica ;
-                    rdfs:comment "Estabelece a relação entre um Documento Fiscal de Energia e uma Classe de Consumo." ;
-                    rdfs:label "tem classe consumo"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_compra_publica
-:tem_compra_publica rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Item ;
-                    rdfs:range :Compra_Publica ;
-                    rdfs:label "tem compra pública"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_consistencia_correios
-:tem_consistencia_correios rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf owl:topObjectProperty ;
-                           rdfs:domain :Endereco ;
-                           rdfs:range :Status_Consistencia ;
-                           rdfs:label "tem consistência com os correios"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_consumidor
-:tem_consumidor rdf:type owl:ObjectProperty ;
-                rdfs:domain :Documento_Fiscal ,
-                            :Unidade_Consumo ;
-                rdfs:range :Consumidor ;
-                rdfs:label "tem consumidor"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_deposito
-:tem_deposito rdf:type owl:ObjectProperty ;
-              rdfs:domain foaf:Organization ;
-              rdfs:range :Estabelecimento ;
-              rdfs:label "tem_deposito"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_destinatario
-:tem_destinatario rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Documento_Fiscal ;
-                  rdfs:range :Consumidor ;
-                  rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Consumidor de Energia ou de Serviços de Comunicação e Telecomunicação."@pt ;
-                  rdfs:label "tem destinatário"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_documento
-:tem_documento rdf:type owl:ObjectProperty ;
-               rdfs:domain foaf:Person ;
-               rdfs:range foaf:Document ;
-               rdfs:label "tem documento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_documento_fiscal
-:tem_documento_fiscal rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Item ;
-                      rdfs:range :Documento_Fiscal ;
-                      rdfs:label "tem documento fiscal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_documento_suplementar
-:tem_documento_suplementar rdf:type owl:ObjectProperty ;
-                           rdfs:range :Documento_Suplementar ;
-                           rdfs:label "tem documento suplementar"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_empresa
 :tem_empresa rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
-             rdfs:domain :Socio ,
-                         :Solicitacao ;
+             rdfs:domain :Socio ;
              rdfs:range foaf:Organization .
 
 
@@ -435,25 +309,8 @@ xsd:date rdf:type rdfs:Datatype .
               rdf:type owl:FunctionalProperty ,
                        owl:AsymmetricProperty ,
                        owl:TransitiveProperty ;
-              rdfs:domain :Consumidor ,
-                          :Estabelecimento ,
-                          :Provedor ,
-                          :Unidade_Consumo ;
+              rdfs:domain :Estabelecimento ;
               rdfs:range :Endereco .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_ente_publico
-:tem_ente_publico rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Compra_Publica ;
-                  rdfs:range :Ente_Publico ;
-                  rdfs:label "tem ente público"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_entidade_integrada
-:tem_entidade_integrada rdf:type owl:ObjectProperty ;
-                        rdfs:domain :Solicitacao ;
-                        rdfs:range :Entidade_Integrada ;
-                        rdfs:label "tem entidade integrada"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_estabelecimento
@@ -470,22 +327,6 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range :Estabelecimento .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_fonte_cadastro
-:tem_fonte_cadastro rdf:type owl:ObjectProperty ,
-                             owl:FunctionalProperty ;
-                    rdfs:domain :Contribuinte ,
-                                :Protocolo ,
-                                :Solicitacao ;
-                    rdfs:range :Usuario .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_fornecedor
-:tem_fornecedor rdf:type owl:ObjectProperty ;
-                rdfs:domain :Compra_Publica ;
-                rdfs:range :Fornecedor ;
-                rdfs:label "tem fornecedor"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_fornecedor_restrito
 :tem_fornecedor_restrito rdf:type owl:ObjectProperty ;
                          rdfs:domain :Processo ;
@@ -493,49 +334,10 @@ xsd:date rdf:type rdfs:Datatype .
                          rdfs:label "tem fornecedor restrito"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_imposto
-:tem_imposto rdf:type owl:ObjectProperty ,
-                      owl:TransitiveProperty ;
-             rdfs:domain :Obrigacao_Legal ;
-             rdfs:range :Imposto ;
-             rdfs:label "tem imposto"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_inadimplencia
-:tem_inadimplencia rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Inadimplente ;
-                   rdfs:range :Inadimplencia ;
-                   rdfs:label "tem inadimplencia"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_infracao
-:tem_infracao rdf:type owl:ObjectProperty ;
-              rdfs:domain :Inadimplencia ;
-              rdfs:range :Infracao ;
-              rdfs:label "tem infração"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_item
-:tem_item rdf:type owl:ObjectProperty ;
-          rdfs:domain :Compra_Publica ,
-                      :Documento_Fiscal ;
-          rdfs:range :Item ;
-          rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Item."@pt ;
-          rdfs:label "tem item"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_logradouro
 :tem_logradouro rdf:type owl:ObjectProperty ;
                 rdfs:domain :Endereco ;
                 rdfs:range :Logradouro .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_mae
-:tem_mae rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf owl:topObjectProperty ;
-         rdfs:domain :Socio ,
-                     foaf:Person ;
-         rdfs:range foaf:Person .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_matriz
@@ -548,8 +350,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.sefaz.ma.gov.br/ontology/tem_nacionalidade
 :tem_nacionalidade rdf:type owl:ObjectProperty ,
                             owl:FunctionalProperty ;
-                   rdfs:domain :Contribuinte ,
-                               foaf:Person ;
+                   rdfs:domain foaf:Person ;
                    rdfs:range :Nacionalidade .
 
 
@@ -558,21 +359,6 @@ xsd:date rdf:type rdfs:Datatype .
                              owl:FunctionalProperty ;
                     rdfs:domain foaf:Organization ;
                     rdfs:range :Natureza_Legal .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_obrigacao
-:tem_obrigacao rdf:type owl:ObjectProperty ;
-               rdfs:domain :Inadimplencia ;
-               rdfs:range :Obrigacao ;
-               rdfs:label "tem obrigação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_obrigacao_legal
-:tem_obrigacao_legal rdf:type owl:ObjectProperty ,
-                              owl:TransitiveProperty ;
-                     rdfs:domain :Estabelecimento ;
-                     rdfs:range :Obrigacao_Legal ;
-                     rdfs:label "tem obrigação legal"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_opcao_pelo_simples
@@ -595,14 +381,6 @@ xsd:date rdf:type rdfs:Datatype .
                        rdfs:label "tem órgão sancionador"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_pai
-:tem_pai rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf owl:topObjectProperty ;
-         rdfs:domain :Socio ,
-                     foaf:Person ;
-         rdfs:range foaf:Person .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_pais
 :tem_pais rdf:type owl:ObjectProperty ;
           rdfs:domain :Endereco ;
@@ -613,14 +391,6 @@ xsd:date rdf:type rdfs:Datatype .
 :tem_parte rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :relacao_parte_todo ;
            rdf:type owl:TransitiveProperty .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_periodicidade
-:tem_periodicidade rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain :Imposto ;
-                   rdfs:range :Periodicidade ;
-                   rdfs:label "tem periodicidade"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_porte
@@ -637,13 +407,6 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:label "tem processo"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_produto
-:tem_produto rdf:type owl:ObjectProperty ;
-             rdfs:domain :Item ;
-             rdfs:range :Produto ;
-             rdfs:label "tem produto"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_profissional
 :tem_profissional rdf:type owl:ObjectProperty ,
                            owl:SymmetricProperty ,
@@ -651,22 +414,6 @@ xsd:date rdf:type rdfs:Datatype .
                            owl:IrreflexiveProperty ;
                   rdfs:domain :Sociedade ;
                   rdfs:range foaf:Person .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_protocolo
-:tem_protocolo rdf:type owl:ObjectProperty ;
-               rdfs:domain :Documento_Suplementar ,
-                           :Solicitacao ;
-               rdfs:range :Protocolo .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_provedor
-:tem_provedor rdf:type owl:ObjectProperty ;
-              rdfs:domain :Documento_Fiscal ,
-                          :Unidade_Consumo ;
-              rdfs:range :Provedor ;
-              rdfs:comment "Estabelece a relação entre um Documento Fiscal e um Emitente(Provedor)."@pt ;
-              rdfs:label "tem provedor"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_qualificacao
@@ -698,20 +445,10 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:label "tem qualificação sócio"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_razao_desabilitado
-:tem_razao_desabilitado rdf:type owl:ObjectProperty ,
-                                 owl:AsymmetricProperty ;
-                        rdfs:domain :Evento_Desabilitado ,
-                                    :Situacao_Fiscal ;
-                        rdfs:range :Razao_Situacao_Cadastral ;
-                        rdfs:label "tem razão desabilitado"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_razao_situacao
 :tem_razao_situacao rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty ;
-                    rdfs:domain :Evento_Desabilitado ,
-                                :Situacao_Cadastral ;
+                    rdfs:domain :Situacao_Cadastral ;
                     rdfs:range :Razao_Situacao_Cadastral .
 
 
@@ -720,29 +457,6 @@ xsd:date rdf:type rdfs:Datatype .
                                     rdfs:domain :Estabelecimento ;
                                     rdfs:range :Realizacao_Atividade_Economica ;
                                     rdfs:label "tem realização de atividade econômica"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_regime_pagamento
-:tem_regime_pagamento rdf:type owl:ObjectProperty ,
-                               owl:AsymmetricProperty ;
-                      rdfs:domain foaf:Organization ;
-                      rdfs:range :Tipo_Regime_Tributario ;
-                      rdfs:label "tem regime de pagamento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_regime_tributario
-:tem_regime_tributario rdf:type owl:ObjectProperty ,
-                                owl:AsymmetricProperty ;
-                       rdfs:domain foaf:Organization ;
-                       rdfs:range :Contribuinte_Geral ;
-                       rdfs:label "tem regime tributário"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_registro_desabilitado
-:tem_registro_desabilitado rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Evento_Desabilitado ;
-                           rdfs:range :Registro_Desabilitado ;
-                           rdfs:label "tem registro desabilitado"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_representante
@@ -770,14 +484,6 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:label "tem sanção"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_similaridade
-:tem_similaridade rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  rdfs:domain :Endereco ;
-                  rdfs:range :Status_Similaridade ;
-                  rdfs:label "tem similaridade"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_situacao_cadastral
 :tem_situacao_cadastral rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ,
@@ -790,29 +496,6 @@ xsd:date rdf:type rdfs:Datatype .
 :tem_situacao_especial rdf:type owl:ObjectProperty ;
                        rdfs:domain foaf:Organization ;
                        rdfs:range :Situacao_Especial .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_situacao_fiscal
-:tem_situacao_fiscal rdf:type owl:ObjectProperty ,
-                              owl:AsymmetricProperty ;
-                     rdfs:domain :Estabelecimento ;
-                     rdfs:range :Situacao_Fiscal ;
-                     rdfs:label "tem situação fiscal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_situacao_funcional
-:tem_situacao_funcional rdf:type owl:ObjectProperty ,
-                                 owl:AsymmetricProperty ;
-                        rdfs:domain :Socio ;
-                        rdfs:label "tem situação funcional"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_situacao_obrigacao
-:tem_situacao_obrigacao rdf:type owl:ObjectProperty ,
-                                 owl:FunctionalProperty ;
-                        rdfs:domain :Obrigacao_Legal ;
-                        rdfs:range :Situacao_Cadastral ;
-                        rdfs:label "tem situação obrigação"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_sociedade
@@ -829,62 +512,12 @@ xsd:date rdf:type rdfs:Datatype .
                       foaf:Agent .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_solicitacao
-:tem_solicitacao rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf owl:topObjectProperty ;
-                 rdf:type owl:TransitiveProperty ;
-                 rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ,
-                             :Socio ,
-                             :Tipo_Ato ,
-                             foaf:Agent ,
-                             foaf:Organization ;
-                 rdfs:range :Solicitacao .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_status_envio
-:tem_status_envio rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Arquivo ,
-                              :Solicitacao ;
-                  rdfs:range :Status_Envio ;
-                  rdfs:label "tem status envio"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_tipo_ato
-:tem_tipo_ato rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain :Solicitacao ;
-              rdfs:range :Tipo_Ato .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_tipo_contribuicao
-:tem_tipo_contribuicao rdf:type owl:ObjectProperty ,
-                                owl:TransitiveProperty ;
-                       rdfs:domain :Estabelecimento ,
-                                   foaf:Agent ;
-                       rdfs:range :Tipo_Contribuicao .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_tipo_estabelecimento
 :tem_tipo_estabelecimento rdf:type owl:ObjectProperty ,
                                    owl:AsymmetricProperty ,
                                    owl:TransitiveProperty ;
                           rdfs:domain :Estabelecimento ;
                           rdfs:range :Tipo_Estabelecimento .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_tipo_regime_tributario
-:tem_tipo_regime_tributario rdf:type owl:ObjectProperty ;
-                            rdfs:domain :Contribuinte_Geral ,
-                                        :Estabelecimento ;
-                            rdfs:range :Tipo_Regime_Tributario ;
-                            rdfs:label "tem tipo de regime tributário"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_uf_consumo
-:tem_uf_consumo rdf:type owl:ObjectProperty ;
-                rdfs:domain :Combustivel ;
-                rdfs:range :Unidade_Federativa ;
-                rdfs:label "tem uf de consumo"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tem_uf_naturalidade
@@ -894,44 +527,13 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "tem uf de naturalidade"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tem_unidade_consumo
-:tem_unidade_consumo rdf:type owl:ObjectProperty ,
-                              owl:SymmetricProperty ;
-                     rdfs:domain :Documento_Fiscal ,
-                                 :Estabelecimento ;
-                     rdfs:range :Unidade_Consumo ;
-                     rdfs:comment "Estabelece a relação entre um Documento Fiscal e uma Unidade de Consumo." ;
-                     rdfs:label "tem unidade consumo"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/tem_unidade_federativa
 :tem_unidade_federativa rdf:type owl:ObjectProperty ;
                         rdfs:domain :Cidade ,
                                     :Endereco ,
-                                    :Ente_Publico ,
                                     :Fornecedor_Restrito ,
                                     :Orgao_Sancionador ;
                         rdfs:range :Unidade_Federativa .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_unidade_fiscal
-:tem_unidade_fiscal rdf:type owl:ObjectProperty ,
-                             owl:FunctionalProperty ;
-                    rdfs:domain :Estabelecimento ,
-                                :Sociedade ;
-                    rdfs:range :Unidade_Fiscal .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tem_usuario
-:tem_usuario rdf:type owl:ObjectProperty ,
-                      owl:AsymmetricProperty ;
-             rdfs:domain :Contribuinte ,
-                         :Estabelecimento ,
-                         :Obrigacao_Legal ,
-                         :Sociedade ,
-                         foaf:Organization ;
-             rdfs:range :Usuario ;
-             rdfs:label "tem usuário"@pt .
 
 
 ###  http://www.w3.org/2002/07/owl#sameAs
@@ -1018,12 +620,6 @@ foaf:member rdf:type owl:ObjectProperty ;
                                                    rdfs:range xsd:dateTime .
 
 
-###  http://sefaz.ma.gov.br/ontology/codigo_situacao_fiscal
-<http://sefaz.ma.gov.br/ontology/codigo_situacao_fiscal> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:domain :Situacao_Fiscal ;
-                                                         rdfs:label "código de situação fiscal"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/abrangencia
 :abrangencia rdf:type owl:DatatypeProperty ;
              rdfs:domain :Sancao ;
@@ -1038,33 +634,6 @@ foaf:member rdf:type owl:ObjectProperty ;
                rdfs:domain :Unidade_Federativa .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/aliquota
-:aliquota rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Item ;
-          rdfs:comment "Alíquota do ICMS aplicado ao Item"@pt ;
-          rdfs:label "aliquota"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/ano_apuracao
-:ano_apuracao rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Documento_Fiscal ;
-              rdfs:comment "Ano de apuração do Documento Fiscal"@pt ;
-              rdfs:label "ano de apuração do documento fiscal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/ano_registro
-:ano_registro rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:range xsd:integer .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/aprovacao_prefeitura
-:aprovacao_prefeitura rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty ;
-                      rdfs:domain :Solicitacao ;
-                      rdfs:range xsd:string .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/area
 :area rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
@@ -1077,36 +646,11 @@ foaf:member rdf:type owl:ObjectProperty ;
         rdfs:domain :Bairro .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/base_calculo_icms
-:base_calculo_icms rdf:type owl:DatatypeProperty ;
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :Documento_Fiscal
-                                               :Item
-                                             )
-                               ] ;
-                   rdfs:comment "Base de Cálculo do ICMS"@pt ;
-                   rdfs:label "base de cálculo do ICMS"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/caixa_postal
 :caixa_postal rdf:type owl:DatatypeProperty ;
               rdfs:domain :Endereco ;
               rdfs:range xsd:string ;
               rdfs:label "caixa postal do endereço"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/categoria
-:categoria rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Arquivo ;
-           rdfs:range xsd:string ;
-           rdfs:comment "Preencher com o valor do campo da categoria em questão."@pt ;
-           rdfs:label "categoria"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/cean_trib
-:cean_trib rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Produto ;
-           rdfs:label "cean tributário"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/cep
@@ -1121,18 +665,6 @@ foaf:member rdf:type owl:ObjectProperty ;
                   rdfs:label "cep caixa postal"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/cest
-:cest rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Produto ;
-      rdfs:label "cest"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/cfop
-:cfop rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Produto ;
-      rdfs:label "cfop"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/cidade
 :cidade rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
@@ -1141,117 +673,6 @@ foaf:member rdf:type owl:ObjectProperty ;
         rdfs:range xsd:string ;
         rdfs:label "cidade" ,
                    "cidade"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/classe_consumo
-:classe_consumo rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Unidade_Consumo_Eletrica ;
-                rdfs:comment "Classes de consumo são divisões utilizadas para classificar os consumidores de energia elétrica. São três: Industrial, Comercial e Residencial. A cada classe aplicam-se regras diferentes para aferição de qualidade de serviço e reajustes anuais de tarifas"@pt ;
-                rdfs:label "classe consumo" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/classificacao
-:classificacao rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Item ;
-               rdfs:comment """Classificação de um Item (Serviço ou Fornecimento) , baseando-se em códigos identificadores a partir da definição do CONV115, sendo:
-
-     101  'Assinatura de serviços de telefonia'
-     102  'Assinatura de serviços de comunicação de dados'
-     103  'Assinatura de serviços de TV por Assinatura'
-     104  'Assinatura de serviços de provimento à internet'
-     105  'Assinatura de outros serviços de multimídia'
-     199  'Assinatura de outros serviços'
-     201  'Habilitação de serviços de telefonia'
-     202  'Habilitação de serviços de comunicação de dados'
-     203  'Habilitação de TV por Assinatura'
-     204  'Habilitação de serviços de provimento à internet'
-     205  'Habilitação de outros serviços multimídia'
-     299  'Habilitação de outros serviços'
-     301  'Serviço Medido - chamadas locais'
-     302  'Serviço Medido - chamadas interurbanas no Estado'
-     303  'Serviço Medido - chamadas interurbanas para fora do Estado'
-     304  'Serviço Medido - chamadas internacionais'
-     305  'Serviço Medido - Números Especiais (0300/0500/0600/0800/etc.)'
-     306  'Serviço Medido - comunicação de dados'
-     307  'Serviço Medido - chamadas originadas em Roaming'
-     308  'Serviço Medido - chamadas recebidas em Roaming'
-     309  'Serviço Medido - adicional de chamada'
-     310  'Serviço Medido - provimento de acesso à Internet'
-     311  'Serviço Medido - pay-per-view (programação TV)'
-     312  'Serviço Medido - Mensagem SMS'
-     313  'Serviço Medido - Mensagem MMS'
-     314  'Serviço Medido - outros mensagens'
-     315  'Serviço Medido - serviço multimídia'
-     399  'Serviço Medido - outros serviços'
-     401  'Cartão Telefônico - Telefonia Fixa'
-     402  'Cartão Telefônico - Telefonia Móvel'
-     403  'Cartão de Provimento de acesso à internet'
-     404  'Ficha Telefônica'
-     405  'Recarga de Créditos - Telefonia Fixa'
-     406  'Recarga de Créditos - Telefonia Móvel'
-     407  'Recarga de Créditos - Provimento de acesso à Internet'
-     499  'Outras cobranças realizadas de assinantes de plano serviço pré-pago'
-     501  'Serviço Adicional (substituição de número, troca de aparelho, emissão de 2ª via de conta, conta detalhada, etc.)'
-     502  'Serviço Facilidades (identificador de chamadas, caixa postal, transferência temporária, não-perturbe, etc.)'
-     599  'Outros Serviços'
-     601  'Energia Elétrica - Consumo'
-     602  'Energia Elétrica - Demanda'
-     603  'Energia Elétrica - Serviços (Vistoria de unidade consumidora, Aferição de Medidor, Ligação, Religação, Troca de medidor, etc.)'
-     604  'Energia Elétrica - Encargos Emergenciais'
-     605  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Cativo'
-     606  'Tarifa de Uso dos Sistemas de Distribuição de Energia Elétrica - TUSD - Consumidor Livre'
-     607  'Encargos de Conexão'
-     608  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Cativo'
-     609  'Tarifa de Uso dos Sistemas de Transmissão de Energia Elétrica - TUST - Consumidor Livre'
-     610  'Subvenção econômica para consumidores da subclasse “baixa renda”'
-     699  'Energia Elétrica - Outros'
-     701  'de Aparelho Telefônico'
-     702  'de Aparelho Identificador de chamadas'
-     703  'de Modem'
-     704  'de Rack'
-     705  'de Sala/Recinto'
-     706  'de Roteador'
-     707  'de Servidor'
-     708  'de Multiplexador'
-     709  'de Decodificador/Conversor'
-     799  'Outras disponibilizações'
-     802  'Cobrança de Seguros'
-     803  'Cobrança de Financiamento de Aparelho/Serviços'
-     804  'Cobrança de Juros de Mora'
-     805  'Cobrança de Multa de Mora'
-     806  'Cobrança de Conta de meses anteriores'
-     807  'Cobrança de Taxa Iluminação Pública'
-     808  'Retenção de ICMS-ST'
-     899  'Outras Cobranças'
-     902  'Dedução referente ajuste de conta'
-     903  'Redutor - Energia Elétrica - Nº 306/2003 (PIS/COFINS/IRPJ/CSLL)'
-     904  'Dedução relativa à multa pela interrupção de fornecimento'
-     905  'Dedução relativa à distribuição de dividendos Eletrobrás'
-     906  'Dedução relativa à subvenção econômica para consumidores da subclasse “baixa renda”'
-     907  'Dedução relativa à parcela do valor da operação correspondente ao valor da energia elétrica adquirida de terceiros, quando aplicáveis os termos do Convênio ICMS 77/11.'
-     999  'Outras deduções'
-     1002  'Serviço não medido de serviços de comunicação de dados'
-     1003  'Serviço não medido de serviços de TV por Assinatura'
-     1004  'Serviço não medido de serviços de provimento à internet'
-     1005  'Serviço não medido de outros serviços de multimídia'
-     1099  'Serviço não medido de outros serviços'
-     1101  'Interconexão: Detraf, SMS, MMS'
-     1102  'Detrat, Transmissão'
-     1103  'Roaming'
-     1104  'Exploração Industrial de Linha Dedicada - EILD'
-     1105  'Lançamento de ICMS proporcional às saídas isentas, não tributadas ou com redução de base de cálculo (§ 1º, Cláusula terceira, Convênio ICMS17/2013)'
-     1106  'Lançamento de ICMS proporcional às cessões de meio destinadas a
-consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
-     1107  'Lançamento de ICMS complementar, na condição de responsável tributário (§ 2º, Cláusula terceira, Convênio 17/2013)'
-     1199  'Outras Cessões de Meios de Rede'"""@pt ;
-               rdfs:label "classificação" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/classificacao_crc
-:classificacao_crc rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain :Contador ;
-                   rdfs:range xsd:string .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/cnae
@@ -1284,10 +705,8 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                          :identificador_pessoa ,
                          owl:topDataProperty ;
       rdf:type owl:FunctionalProperty ;
-      rdfs:domain :Consumidor ,
-                  :Estabelecimento ,
+      rdfs:domain :Estabelecimento ,
                   :Fornecedor_Restrito ,
-                  :Provedor ,
                   :Representante_Legal ,
                   :Representante_Legal_Juridico ,
                   :Sancionado ,
@@ -1307,10 +726,7 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
 ###  http://www.sefaz.ma.gov.br/ontology/cnpj_cpf
 :cnpj_cpf rdf:type owl:DatatypeProperty ;
           owl:equivalentProperty :cpf_cnpj ;
-          rdfs:domain :Contribuinte_ICMS ,
-                      :Contribuinte_IPVA ,
-                      :Fornecedor_Restrito ,
-                      :Nao_Contribuinte ,
+          rdfs:domain :Fornecedor_Restrito ,
                       :Socio ,
                       foaf:Agent ;
           rdfs:label "cnpj cpf"@pt .
@@ -1329,32 +745,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
         rdfs:subPropertyOf :identificador .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/codigo_arma
-:codigo_arma rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Arma ;
-             rdfs:label "código da arma"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_ato
-:codigo_ato rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:domain :Tipo_Ato ;
-            rdfs:range xsd:integer .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_autenticacao
-:codigo_autenticacao rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :codigo ;
-                     rdfs:domain :Documento_Fiscal ;
-                     rdfs:label "código de autenticação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_autorizacao
-:codigo_autorizacao rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Combustivel ;
-                    rdfs:label "código de autorização"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_cidade
 :codigo_cidade rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :codigo ,
@@ -1364,89 +754,11 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                rdfs:domain :Cidade .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/codigo_combustivel
-:codigo_combustivel rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Combustivel ;
-                    rdfs:label "código do combustível"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_documento
-:codigo_documento rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Documento_Fiscal ,
-                              foaf:Document ;
-                  rdfs:range xsd:integer ;
-                  rdfs:comment "Preencher com o código do documento correspondente."@pt ;
-                  rdfs:label "código do documento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_ean_barras
-:codigo_ean_barras rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Produto ;
-                   rdfs:label "código ean em barras"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_entidade_integrada
-:codigo_entidade_integrada rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :Entidade_Integrada ;
-                           rdfs:range xsd:integer ;
-                           rdfs:comment "Preencher com o valor do código da entidade integrada correspondente."@pt ;
-                           rdfs:label "código da entidade integrada"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_evento
-:codigo_evento rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
-               rdfs:range xsd:integer .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_ibge
 :codigo_ibge rdf:type owl:DatatypeProperty ;
              rdfs:domain :Cidade ,
                          :Unidade_Federativa ;
              rdfs:label "código ibge"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_identificacao
-:codigo_identificacao rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf :codigo ;
-                      rdfs:domain [ rdf:type owl:Class ;
-                                    owl:unionOf ( :Consumidor
-                                                  :Provedor
-                                                )
-                                  ] ;
-                      rdfs:comment "Código de Identificação de um determinado Conceito."@pt ,
-                                   "codigo de identificação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_identificacao_provedor
-:codigo_identificacao_provedor rdf:type owl:DatatypeProperty ;
-                               rdfs:domain :Provedor ;
-                               rdfs:label "código de identificação do provedor"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_imposto
-:codigo_imposto rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Imposto ;
-                rdfs:label "código do imposto"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_infracao
-:codigo_infracao rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Infracao ;
-                 rdfs:label "código da infração"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_item
-:codigo_item rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Item ;
-             rdfs:label "código do item"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_medicamento
-:codigo_medicamento rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Medicamento ;
-                    rdfs:label "código do medicamento"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_natureza_legal
@@ -1457,12 +769,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                        rdfs:domain :Natureza_Legal .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/codigo_ncm
-:codigo_ncm rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Produto ;
-            rdfs:label "código do ncm"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_pais
 :codigo_pais rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :codigo ,
@@ -1470,21 +776,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
              rdf:type owl:FunctionalProperty ;
              rdfs:domain :Pais ;
              rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_pais_RFB
-:codigo_pais_RFB rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf :codigo_pais ;
-                 rdf:type owl:FunctionalProperty ;
-                 rdfs:domain :Pais ;
-                 rdfs:range xsd:string ;
-                 rdfs:label "código do país RFB"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_periodicidade
-:codigo_periodicidade rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :Imposto ;
-                      rdfs:label "código periodicidade"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_porte
@@ -1501,24 +792,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                       rdf:type owl:FunctionalProperty ;
                       rdfs:domain :Porte ;
                       rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_produto
-:codigo_produto rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Produto ;
-                rdfs:label "código do produto"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_produto_anp
-:codigo_produto_anp rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Combustivel ;
-                    rdfs:label "código do produto anp"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_produto_anvisa
-:codigo_produto_anvisa rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Medicamento ;
-                       rdfs:label "código do produto anvisa"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_qualificacao
@@ -1546,17 +819,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                                  rdfs:range xsd:string .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/codigo_regime
-:codigo_regime rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain [ rdf:type owl:Class ;
-                             owl:unionOf ( :Tipo_Regime_Tributario
-                                           foaf:Organization
-                                         )
-                           ] ;
-               rdfs:range xsd:int .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_regime_mercantil
 :codigo_regime_mercantil rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf owl:topDataProperty ;
@@ -1566,8 +828,7 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
 
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_regime_tributario
 :codigo_regime_tributario rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :Fornecedor ,
-                                      :Tipo_Regime_Tributario ;
+                          rdfs:domain :Fornecedor ;
                           rdfs:label "código de regime tributário"@pt .
 
 
@@ -1576,44 +837,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                            rdfs:subPropertyOf owl:topDataProperty ;
                            rdf:type owl:FunctionalProperty ;
                            rdfs:domain :Situacao_Cadastral .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_srf
-:codigo_srf rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Ente_Publico ;
-            rdfs:label "código srf"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_status_envio
-:codigo_status_envio rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Status_Envio ;
-                     rdfs:label "código de status envio"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_suframa
-:codigo_suframa rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Documento_Suplementar ;
-                rdfs:label "código suframa"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_ato
-:codigo_tipo_ato rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Tipo_Ato ;
-                 rdfs:label "código tipo do ato"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_contribuicao
-:codigo_tipo_contribuicao rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :Tipo_Contribuicao ;
-                          rdfs:label "código tipo de contribuição"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_contribuinte
-:codigo_tipo_contribuinte rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :Contribuinte ;
-                          rdfs:range xsd:integer ;
-                          rdfs:comment "Preencher com o código do tipo de contribuinte."@pt ;
-                          rdfs:label "código tipo de contribuinte"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_estabelecimento
@@ -1625,31 +848,12 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                              rdfs:label "código tipo de estabelecimento"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_propriedade
-:codigo_tipo_propriedade rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Tipo_Propriedade ;
-                         rdfs:range xsd:integer ;
-                         rdfs:comment "Preencher com o código do tipo da propriedade de acordo com a tabela apropriada."@pt ;
-                         rdfs:label "código tipo de propriedade"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/codigo_tipo_regime
-:codigo_tipo_regime rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Tipo_Regime_Tributario ;
-                    rdfs:label "código tipo de regime tributário"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/codigo_zona_postal
 :codigo_zona_postal rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Endereco ;
                     rdfs:range xsd:integer ;
                     rdfs:comment "Prencher com a zona do cep correspondente."@pt ;
                     rdfs:label "código da zona postal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/comarca
-:comarca rdf:type owl:DatatypeProperty ;
-         rdfs:label "comarca"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/complemento
@@ -1667,21 +871,13 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
          rdfs:domain :Estabelecimento .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/contrato
-:contrato rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Compra_Publica ;
-          rdfs:label "contrato" .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/cpf
 :cpf rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf :cnpj_cpf ,
                         :cpf_cnpj ,
                         :identificador_pessoa ;
      rdf:type owl:FunctionalProperty ;
-     rdfs:domain :Consumidor ,
-                 :Contador ,
-                 :Fornecedor_PF ,
+     rdfs:domain :Fornecedor_PF ,
                  :Fornecedor_Restrito ,
                  :Representante_Legal ,
                  :Representante_Legal_Fisico ,
@@ -1697,36 +893,10 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
           rdfs:range rdfs:Literal .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/crc_contador
-:crc_contador rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdf:type owl:FunctionalProperty ;
-              rdfs:domain [ rdf:type owl:Class ;
-                            owl:unionOf ( :Contador
-                                          foaf:Person
-                                        )
-                          ] ;
-              rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/crc_data_registro
-:crc_data_registro rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain :Contador ;
-                   rdfs:range xsd:date .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_acordao
 :data_acordao rdf:type owl:DatatypeProperty ;
               rdfs:domain :Processo ;
               rdfs:label "data de acordão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_arquivo
-:data_arquivo rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Arquivo ;
-              rdfs:range xsd:date .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_assinatura
@@ -1741,12 +911,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:domain foaf:Organization ;
                   rdfs:range xsd:date .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_autenticacao
-:data_autenticacao rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Solicitacao ;
-                   rdfs:label "data de autenticação"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_baixa
@@ -1767,20 +931,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                         rdfs:range xsd:string .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_desmembramento
-:data_desmembramento rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain :Arquivo ;
-                     rdfs:range xsd:date .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_emissao
-:data_emissao rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Documento_Fiscal ;
-              rdfs:range xsd:date .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_entidade_registrada
 :data_entidade_registrada rdf:type owl:DatatypeProperty ;
                           rdfs:domain :Protocolo ;
@@ -1794,12 +944,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                            rdfs:domain :Sociedade ;
                            rdfs:range xsd:date ,
                                       xsd:dateTime .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_exclusao
-:data_exclusao rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Inadimplencia ;
-               rdfs:label "data de exclusão"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_exclusao_SIMPLES
@@ -1818,12 +962,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                        owl:propertyDisjointWith :data_opcao_SIMPLES .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_fabricacao
-:data_fabricacao rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Medicamento ;
-                 rdfs:label "data de fabricação"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_fechamento_fiscal
 :data_fechamento_fiscal rdf:type owl:DatatypeProperty ;
                         rdfs:domain foaf:Organization ;
@@ -1837,60 +975,17 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                          rdfs:range xsd:dateTime .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_fim_desabilitado
-:data_fim_desabilitado rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Registro_Desabilitado ;
-                       rdfs:label "data fim de desabilitado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_fim_obrigacao_legal
-:data_fim_obrigacao_legal rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain :Obrigacao_Legal ;
-                          rdfs:range xsd:dateTime ;
-                          rdfs:label "data fim da obrigação legal"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_final
 :data_final rdf:type owl:DatatypeProperty ;
             rdfs:domain :Acordao ,
-                        :Inadimplencia ,
                         :Sancao ;
             rdfs:label "data final" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_geracao_arquivo
-:data_geracao_arquivo rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty ;
-                      rdfs:domain :Arquivo ;
-                      rdfs:range xsd:date .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_inclusao
-:data_inclusao rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain :Contribuinte ,
-                           :Inadimplencia ;
-               rdfs:range xsd:dateTime .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_inclusao_contribuinte
-:data_inclusao_contribuinte rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf owl:topDataProperty ;
-                            rdfs:domain :Contribuinte ;
-                            rdfs:range xsd:dateTime .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_incorporacao
 :data_incorporacao rdf:type owl:DatatypeProperty ;
                    rdfs:domain foaf:Organization ;
                    rdfs:label "data incorporação" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_inicial
-:data_inicial rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Inadimplencia ;
-              rdfs:label "data inicial"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_inicio
@@ -1907,23 +1002,10 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                        rdfs:range xsd:date .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_inicio_desabilitado
-:data_inicio_desabilitado rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :Registro_Desabilitado ;
-                          rdfs:label "data início como desabilitado"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_inicio_mandato
 :data_inicio_mandato rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Representante_Legal ;
                      rdfs:range xsd:date .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_inicio_obrigacao_legal
-:data_inicio_obrigacao_legal rdf:type owl:DatatypeProperty ;
-                             rdfs:domain :Obrigacao_Legal ;
-                             rdfs:range xsd:dateTime ;
-                             rdfs:label "data início da obrigação legal"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_inicio_situacao_especial
@@ -1959,20 +1041,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
              rdfs:label "data de origem" .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_primaria
-:data_primaria rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Unidade_Consumo ;
-               rdfs:comment "Data primeira emissão de documento fiscal"@pt ;
-               rdfs:label "data primária"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_processamento
-:data_processamento rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdfs:domain :Arquivo ;
-                    rdfs:range xsd:date .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_publicacao
 :data_publicacao rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
@@ -1981,25 +1049,10 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                  rdfs:label "data de publicação"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_recepcao
-:data_recepcao rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Arquivo ;
-               rdfs:label "data de recepção"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_saida_participacao
 :data_saida_participacao rdf:type owl:DatatypeProperty ;
                          rdfs:domain :Sociedade ;
                          rdfs:range xsd:date .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_sincronizacao
-:data_sincronizacao rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdfs:domain :Solicitacao ;
-                    rdfs:range xsd:date ;
-                    rdfs:comment "Informar dados de sincronização da requisição."@pt ;
-                    rdfs:label "data de sincronização"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/data_situacao_cadastral
@@ -2017,41 +1070,10 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                         rdfs:range xsd:date .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/data_situacao_fiscal
-:data_situacao_fiscal rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :Situacao_Fiscal ;
-                      rdfs:label "data da situação fiscal" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_solicitacao
-:data_solicitacao rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Solicitacao ;
-                  rdfs:label "data de solicitação"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/data_transito_julgado
 :data_transito_julgado rdf:type owl:DatatypeProperty ;
                        rdfs:domain :Processo ;
                        rdfs:label "data de trânsito julgado" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_ultima
-:data_ultima rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Unidade_Consumo ;
-             rdfs:comment "Data última emissão de documento fiscal"@pt ;
-             rdfs:label "data última"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_validade
-:data_validade rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Documento_Suplementar ;
-               rdfs:label "data de validade"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/data_vencimento
-:data_vencimento rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Obrigacao ;
-                 rdfs:label "data de vencimento"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/ddd
@@ -2066,12 +1088,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
         rdfs:domain :Estabelecimento .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/deferimento
-:deferimento rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Solicitacao ;
-             rdfs:label "deferimento"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/deliberacao
 :deliberacao rdf:type owl:DatatypeProperty ;
              rdfs:domain :Processo ;
@@ -2083,12 +1099,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
            rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/descricao_anp
-:descricao_anp rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Combustivel ;
-               rdfs:label "descrição anp"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/descricao_atividade_economica
 :descricao_atividade_economica rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
@@ -2097,25 +1107,7 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
 
 ###  http://www.sefaz.ma.gov.br/ontology/descricao_classificacao
 :descricao_classificacao rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Item ;
                          rdfs:label "descrição classificação" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/descricao_completa
-:descricao_completa rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :Arma ;
-                    rdfs:label "descrição completa"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/descricao_evento
-:descricao_evento rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <http://purl.org/NET/c4dm/event.owl#Event> ;
-                  rdfs:label "descrição do evento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/descricao_forma_atuacao
-:descricao_forma_atuacao rdf:type owl:DatatypeProperty ;
-                         rdfs:label "descrição da forma da atuação"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/descricao_fundamentacao
@@ -2124,18 +1116,10 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                          rdfs:label "descrição da fundamentação"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/descricao_regime
-:descricao_regime rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf owl:topDataProperty ;
-                  rdfs:domain :Tipo_Regime_Tributario ;
-                  rdfs:range xsd:string .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/descricao_situacao
 :descricao_situacao rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Situacao_Cadastral ,
-                                :Situacao_Especial ,
-                                :Situacao_Fiscal .
+                                :Situacao_Especial .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/descricao_situacao_especial
@@ -2153,8 +1137,7 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
 ###  http://www.sefaz.ma.gov.br/ontology/documento_orgao_emissor
 :documento_orgao_emissor rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf owl:topDataProperty ;
-                         rdfs:domain foaf:Document ,
-                                     foaf:Person ;
+                         rdfs:domain foaf:Person ;
                          rdfs:range xsd:string .
 
 
@@ -2170,21 +1153,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                rdf:type owl:FunctionalProperty ;
                rdfs:domain foaf:Agent ;
                rdfs:range xsd:boolean .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/envolve_sefaz
-:envolve_sefaz rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain :Solicitacao ;
-               rdfs:range xsd:string ;
-               rdfs:comment "Especificar interesse da SEFAZ em questão."@pt ;
-               rdfs:label "envolve a sefaz"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/esfera
-:esfera rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Ente_Publico ;
-        rdfs:label "esfera"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/estado
@@ -2204,12 +1172,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
               rdfs:label "estado civil"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/fase
-:fase rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Unidade_Consumo_Eletrica ;
-      rdfs:label "fase"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/fax
 :fax rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf :contato ,
@@ -2221,31 +1183,11 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
      owl:propertyDisjointWith :telefone .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/fim_escritura
-:fim_escritura rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:dateTime .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/fim_participacao
 :fim_participacao rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdfs:domain :Sociedade ;
                   rdfs:range xsd:dateTime .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/fim_validade
-:fim_validade rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdf:type owl:FunctionalProperty ;
-              rdfs:domain :Documento_Suplementar ;
-              rdfs:range xsd:dateTime .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/fonte
-:fonte rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Contribuinte_ICMS ,
-                   :Contribuinte_IPVA ;
-       rdfs:label "fonte" .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/fundamentacao
@@ -2260,13 +1202,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                      rdfs:label "fundamentação legal"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/gera_ruc
-:gera_ruc rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdfs:domain :Solicitacao ;
-          rdfs:range xsd:integer .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/gerente
 :gerente rdf:type owl:DatatypeProperty ;
          rdfs:domain :Socio ;
@@ -2275,46 +1210,10 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
          rdfs:label "gerente"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/grau_consistencia
-:grau_consistencia rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain :Caso_Consistencia ;
-                   rdfs:range xsd:float ;
-                   rdfs:label "grau de consistência" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/grau_similaridade
-:grau_similaridade rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain :Status_Similaridade ;
-                   rdfs:range xsd:float ;
-                   rdfs:label "grau de similaridade" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/grupo
-:grupo rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Item ;
-       rdfs:label "grupo" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/grupo_tensao
-:grupo_tensao rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Unidade_Consumo_Eletrica ;
-              rdfs:label "grupo de trensão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/hash
-:hash rdf:type owl:DatatypeProperty ;
-      rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain :Arquivo ;
-      rdfs:range xsd:string .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/identidade
 :identidade rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
-            rdfs:domain foaf:Document ,
-                        foaf:Person ;
+            rdfs:domain foaf:Person ;
             rdfs:range xsd:string .
 
 
@@ -2326,30 +1225,8 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
 ###  http://www.sefaz.ma.gov.br/ontology/identificador_pessoa
 :identificador_pessoa rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
-                      rdfs:domain :Unidade_Consumo ,
-                                  foaf:Agent ;
+                      rdfs:domain foaf:Agent ;
                       rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/identificador_unidade_consumo
-:identificador_unidade_consumo rdf:type owl:DatatypeProperty ;
-                               rdfs:domain :Unidade_Consumo ;
-                               rdfs:comment "identificador da unidade consumo"@pt ;
-                               rdfs:label "identificador da unidade de consumo"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/incra
-:incra rdf:type owl:DatatypeProperty ;
-       rdfs:subPropertyOf owl:topDataProperty ;
-       rdfs:domain :Estabelecimento ;
-       rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/informacoes_adicionais
-:informacoes_adicionais rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :Item ,
-                                    :Produto ;
-                        rdfs:label "informações adicionais"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/inicio_atividade_economica
@@ -2364,69 +1241,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain :Sociedade ;
                      rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/inscricao
-:inscricao rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Arquivo ;
-           rdfs:comment "Informar o número de inscrição do arquivo em questão."@pt ,
-                        "Preencher o campo com o dado correspondente."@pt ;
-           rdfs:label "inscrição"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/inscricao_estadual
-:inscricao_estadual rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdfs:domain :Consumidor ,
-                                :Contribuinte ,
-                                :Contribuinte_ICMS ,
-                                :Contribuinte_IPVA ,
-                                :Estabelecimento ,
-                                :Fornecedor ,
-                                :Nao_Contribuinte ,
-                                :Provedor ,
-                                :Qualificacao ,
-                                :Socio ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "Inscrição Estadual de um Consumidor ou Provedor no âmbito do Estado do Maranhão." ,
-                                 "Preencher com o registro estatal."@pt ;
-                    rdfs:label "inscrição estadual"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/inscricao_estadual_numerica
-:inscricao_estadual_numerica rdf:type owl:DatatypeProperty ;
-                             rdfs:domain [ rdf:type owl:Class ;
-                                           owl:unionOf ( :Consumidor
-                                                         :Provedor
-                                                       )
-                                         ] ;
-                             rdfs:comment "Inscrição Estadual Numérica de um Consumidor ou Provedor no âmbito do Estado do Maranhão." ;
-                             rdfs:label "inscrição estadual numérica"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/inscricao_imobiliaria
-:inscricao_imobiliaria rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Estabelecimento ;
-                       rdfs:label "inscrição imobiliária"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/inscricao_municipal
-:inscricao_municipal rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain :Estabelecimento ,
-                                 :Fornecedor ;
-                     rdfs:range xsd:integer ;
-                     rdfs:comment "Informar o registro municipal."@pt ;
-                     rdfs:label "inscrição municipal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/inscricao_trauf
-:inscricao_trauf rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:domain :Solicitacao ;
-                 rdfs:range xsd:integer ;
-                 rdfs:comment "Preencher com a inscrição trauf do evento em questão."@pt ;
-                 rdfs:label "inscrição trauf"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/latitude
@@ -2455,13 +1269,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
               rdfs:label "código de email"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/mes_apuracao
-:mes_apuracao rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Documento_Fiscal ;
-              rdfs:comment "Mês de Apuração de Documento Fiscal"@pt ;
-              rdfs:label "mês apuração"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/metragem
 :metragem rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
@@ -2469,126 +1276,6 @@ consumo próprio (§ 1º Cláusula terceira, Convênio ICMS 17/2013)'
           rdfs:range xsd:float ;
           rdfs:comment "Informar a metragem do estabelecimento em questão."@pt ;
           rdfs:label "metragem"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/modelo
-:modelo rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Documento_Fiscal ,
-                    :Documento_Suplementar ,
-                    :Unidade_Consumo_Eletrica ;
-        rdfs:label "modelo"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/motivo_emancipado
-:motivo_emancipado rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:domain :Emancipado ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "Informar o movito da emancipação."@pt ;
-                   rdfs:label "motivo emancipado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/motivo_exclusao
-:motivo_exclusao rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Inadimplencia ;
-                 rdfs:label "motivo de exclusão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/motivo_isencao_anvisa
-:motivo_isencao_anvisa rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Medicamento ;
-                       rdfs:label "motivo de isenção anvisa"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/natureza_juridica
-:natureza_juridica rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Ente_Publico ;
-                   rdfs:label "natureza jurídica"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nire
-:nire rdf:type owl:DatatypeProperty ;
-      rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain foaf:Organization ;
-      rdfs:range xsd:string ;
-      rdfs:comment """Informar o Número de Identificação do Registro de Empresas (NIRE).
-
-Nos casos de inscrição, alteração ou baixa o Número de Identificação do Registro de Empresas - NIRE será de preenchimento obrigatório para as empresas registradas em Junta Comercial. O NIRE a ser informado consta no documento registrado na Junta Comercial.
-
-Nos casos de inscrição de contribuintes localizados em Estados em que houver o Convênio com a Junta Comercial, será possível optar por utilizá-lo, não obrigando o preenchimento do NIRE."""@pt ;
-      rdfs:label "nire"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nire_anterior
-:nire_anterior rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:domain foaf:Organization ;
-               rdfs:range xsd:string ;
-               rdfs:comment """Informar o Número de Identificação do Registro de Empresas (NIRE) anterior.
-
-Nos casos de inscrição, alteração ou baixa o Número de Identificação do Registro de Empresas - NIRE será de preenchimento obrigatório para as empresas registradas em Junta Comercial. O NIRE a ser informado consta no documento registrado na Junta Comercial.
-
-Nos casos de inscrição de contribuintes localizados em Estados em que houver o Convênio com a Junta Comercial, será possível optar por utilizá-lo, não obrigando o preenchimento do NIRE."""@pt ;
-               rdfs:label "nire anterior" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nire_matrix
-:nire_matrix rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf owl:topDataProperty ;
-             rdfs:domain :Estabelecimento ;
-             rdfs:range xsd:string ;
-             rdfs:comment """Informar o Número de Identificação do Registro de Empresas (NIRE) da matriz.
-
-Nos casos de inscrição, alteração ou baixa o Número de Identificação do Registro de Empresas - NIRE será de preenchimento obrigatório para as empresas registradas em Junta Comercial. O NIRE a ser informado consta no documento registrado na Junta Comercial.
-
-Nos casos de inscrição de contribuintes localizados em Estados em que houver o Convênio com a Junta Comercial, será possível optar por utilizá-lo, não obrigando o preenchimento do NIRE."""@pt ;
-             rdfs:label "nire matriz"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nirf
-:nirf rdf:type owl:DatatypeProperty ;
-      rdfs:subPropertyOf owl:topDataProperty ;
-      rdfs:domain :Estabelecimento ;
-      rdfs:range xsd:string ;
-      rdfs:comment """Informar o Número do Imóvel na Secretaria da Receita Federal do Brasil (NIRF).
-
-Os imóveis rurais devem ser inscritos no Cadastro de Imóveis Rurais (Cafir), inclusive os que gozam de imunidade e isenção do ITR.
-
-Os imóveis localizados em área urbana não são registrados no CAFIR e, portanto não dispõem de NIRF. Nesse caso, deve-se informar o número 0000000-0 (se for selecionada a opção Locatário para o atributo Vínculo como o Imóvel, o próprio programa preenche o número do NIRF com 0000000-0)."""@pt ;
-      rdfs:label "nirf"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nivel
-:nivel rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Ente_Publico ;
-       rdfs:label "nivel"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nivel_cumprimento
-:nivel_cumprimento rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Estabelecimento ;
-                   rdfs:comment "Level of compliance with tax obligations, with the objective of providing the Government with resources for the achievement of public policies. In this sense, the achievement of better levels of compliance must be oriented to the analysis and observation of the known failures of compliance: omission and delay."@en ,
-                                "Nível de cumprimento das obrigações tributárias, com o objetivo de prover ao Governo recursos para a consecução das políticas públicas. Nesse sentido, a obtenção de melhores níveis de cumprimento precisa estar orientada à análise e à observação das conhecidas falhas de cumprimento: omissão e morosidade."@pt ;
-                   rdfs:label "nivel cumprimento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nome_arquivo
-:nome_arquivo rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Arquivo ;
-              rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nome_contribuinte_IPVA
-:nome_contribuinte_IPVA rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :Contribuinte_IPVA ;
-                        rdfs:label "nome de contribuinte IPVA" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nome_contribuinte_icms
-:nome_contribuinte_icms rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :Contribuinte_ICMS ;
-                        rdfs:label "nome contribuinte ICMS" .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/nome_fantasia
@@ -2600,40 +1287,10 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
                owl:propertyDisjointWith :razao_social .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/nome_nao_contribuinte
-:nome_nao_contribuinte rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Nao_Contribuinte ;
-                       rdfs:label "nome de não contribuinte" .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/nome_pais
 :nome_pais rdf:type owl:DatatypeProperty ;
            rdfs:domain :Pais ;
            rdfs:label "nome do país"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nome_regime
-:nome_regime rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Tipo_Regime_Tributario ;
-             rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nome_unidade_fiscal
-:nome_unidade_fiscal rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :Unidade_Fiscal ;
-                     rdfs:label "nome da unidade fiscal" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nome_usuario
-:nome_usuario rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Usuario ;
-              rdfs:label "nome do usuário" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/nota_empenho
-:nota_empenho rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Compra_Publica ;
-              rdfs:label "nota de empenho" .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/numero
@@ -2643,12 +1300,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
         rdfs:range xsd:string ;
         rdfs:label "número" ,
                    "número"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_cano
-:numero_cano rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Arma ;
-             rdfs:label "número do cano"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/numero_contato
@@ -2662,18 +1313,8 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
 
 ###  http://www.sefaz.ma.gov.br/ontology/numero_documento
 :numero_documento rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Documento_Fiscal ,
-                              :Documento_Suplementar ,
-                              :Fornecedor_Restrito ,
-                              :Inadimplente ;
+                  rdfs:domain :Fornecedor_Restrito ;
                   rdfs:label "número do documento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_documento_fiscal
-:numero_documento_fiscal rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Documento_Fiscal ;
-                         rdfs:comment "Número seqüencial atribuído pelo sistema eletrônico de processamento de dados ao documento fiscal;"@pt ;
-                         rdfs:label "número do documento fiscal"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/numero_endereco
@@ -2694,65 +1335,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
             owl:propertyDisjointWith :numero_telefone .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/numero_imovel
-:numero_imovel rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Estabelecimento ;
-               rdfs:range xsd:string ;
-               rdfs:comment "Informar o número do imóvel. Esse campo será habilitado para preenchimento dependendo do interesse dos órgãos conveniados (Estados ou Municípios)."@pt ;
-               rdfs:label "número do imóvel"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_item
-:numero_item rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Fornecedor ,
-                         :Item ;
-             rdfs:label "número do item"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_licenca
-:numero_licenca rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain :Estabelecimento ;
-                rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_lote
-:numero_lote rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Medicamento ;
-             rdfs:label "número do lote"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_meses
-:numero_meses rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Inadimplencia ;
-              rdfs:label "número de meses"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_ordem
-:numero_ordem rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Item ;
-              rdfs:label "número ordem"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_pedido
-:numero_pedido rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Compra_Publica ;
-               rdfs:label "número de pedido" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_registro_bens
-:numero_registro_bens rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty ;
-                      rdfs:domain :Estabelecimento ;
-                      rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/numero_serie
-:numero_serie rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Arma ;
-              rdfs:label "número de série"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/numero_telefone
 :numero_telefone rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :numero_contato ;
@@ -2763,16 +1345,8 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
                  rdfs:range xsd:string .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/objeto_obrigacao
-:objeto_obrigacao rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Obrigacao ;
-                  rdfs:label "objeto da obrigação"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/observacao
 :observacao rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Documento_Suplementar ,
-                        :Inadimplencia ;
             rdfs:label "observação"@pt .
 
 
@@ -2789,7 +1363,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
 
 ###  http://www.sefaz.ma.gov.br/ontology/orgao_emissor
 :orgao_emissor rdf:type owl:DatatypeProperty ;
-               rdfs:domain foaf:Document ;
                rdfs:label "número do órgão"@pt .
 
 
@@ -2799,74 +1372,9 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
                    rdfs:label "origem da informação" .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/outros_valores
-:outros_valores rdf:type owl:DatatypeProperty ;
-                rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( :Documento_Fiscal
-                                            :Item
-                                          )
-                            ] ;
-                rdfs:comment "Outros valores de Impostos atribuídos a um Item."@pt ;
-                rdfs:label "outros valores"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/percentual_gas_importado
-:percentual_gas_importado rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :Combustivel ;
-                          rdfs:label "percentual de gás importado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/percentual_gas_natural
-:percentual_gas_natural rdf:type owl:DatatypeProperty ;
-                        rdfs:domain :Combustivel ;
-                        rdfs:label "percentual de gás natural"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/percentual_glp
-:percentual_glp rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Combustivel ;
-                rdfs:label "percentual de glp"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/percentual_participacao
-:percentual_participacao rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Sociedade ,
-                                     :Socio ;
-                         rdfs:range xsd:double .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/periodo_indefinido
-:periodo_indefinido rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "Propriedade que indica período de tempo indeterminado."@pt ;
-                    rdfs:label "período indefinido"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/prazo_indeterminado
-:prazo_indeterminado rdf:type owl:DatatypeProperty ;
-                     rdfs:domain foaf:Person ;
-                     rdfs:label "prazo indeterminado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/preco_maximo_consumidor
-:preco_maximo_consumidor rdf:type owl:DatatypeProperty ;
-                         rdfs:domain :Medicamento ;
-                         rdfs:label "preço máximo do consumidor"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/protocolo
-:protocolo rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:domain :Arquivo ;
-           rdfs:range xsd:string .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/protocolo_dbe
 :protocolo_dbe rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Arquivo ,
-                           :Protocolo ,
-                           :Solicitacao ;
+               rdfs:domain :Protocolo ;
                rdfs:label "protocolo dbe"@pt .
 
 
@@ -2874,30 +1382,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
 :publicacao rdf:type owl:DatatypeProperty ;
             rdfs:domain :Sancao ;
             rdfs:label "publicação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/quantidade
-:quantidade rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Medicamento ;
-            rdfs:label "quantidade"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/quantidade_combustivel_faturada
-:quantidade_combustivel_faturada rdf:type owl:DatatypeProperty ;
-                                 rdfs:domain :Combustivel ;
-                                 rdfs:label "quantidade de combustível faturada"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/quantidade_comercial
-:quantidade_comercial rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :Produto ;
-                      rdfs:label "quantidade comercial"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/quantidade_tributavel
-:quantidade_tributavel rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Produto ;
-                       rdfs:label "quantidade tributável"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/razao
@@ -2929,21 +1413,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
             rdfs:range xsd:string .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/regime_bens
-:regime_bens rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Estabelecimento ,
-                         foaf:Person ;
-             rdfs:range xsd:string ;
-             rdfs:comment "Preencher com o campo referente ao tipo do imóvel correspondente."@pt ;
-             rdfs:label "regime de bens"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/serie
-:serie rdf:type owl:DatatypeProperty ;
-       rdfs:domain :Documento_Fiscal ;
-       rdfs:label "série" .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/sexo
 :sexo rdf:type owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
@@ -2956,34 +1425,16 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
         rdfs:range xsd:string .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/situacao
-:situacao rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Documento_Fiscal ;
-          rdfs:label "situação" .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/situacao_cadastral
 :situacao_cadastral rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Situacao_Cadastral ;
                     rdfs:label "situação cadastral" .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/situacao_fiscal
-:situacao_fiscal rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Situacao_Fiscal ;
-                 rdfs:label "situação fiscal" .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/status_baixa
 :status_baixa rdf:type owl:DatatypeProperty ;
               rdfs:domain :Situacao_Cadastral ;
               rdfs:label "status de baixa"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tegime_bens
-:tegime_bens rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf owl:topDataProperty ;
-             rdfs:range xsd:string .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/telefone
@@ -3013,13 +1464,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
                        foaf:Person .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/telefone_consumidor
-:telefone_consumidor rdf:type owl:DatatypeProperty ;
-                     rdfs:domain foaf:Person ;
-                     rdfs:comment "Número de Telefone do Consumidor"@pt ;
-                     rdfs:label "telefone"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/termino_atividade_economica
 :termino_atividade_economica rdf:type owl:DatatypeProperty ;
                              rdfs:domain :Realizacao_Atividade_Economica ;
@@ -3032,39 +1476,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
 :tipo rdf:type owl:DatatypeProperty ;
       rdfs:domain :Sancao ;
       rdfs:label "tipo"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tipo_arma
-:tipo_arma rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Arma ;
-           rdfs:label "tipo de arma"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tipo_assinante
-:tipo_assinante rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Unidade_Consumo_Comunicacao ,
-                            :Unidade_Consumo_Telecomunicacao ;
-                rdfs:comment """Tipo de Assinante de Serviços de Comunicação e Telecomunicação:
-
-1 =  'Comercial-Industrial'
-2 = 'Poder_Público'
-3 = 'Residencial-Pessoa_Física'
-4 = 'Público'
-5 = 'Semi_Público'"""@pt ;
-                rdfs:label "tipo assinante" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tipo_documento
-:tipo_documento rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf owl:topDataProperty ;
-                rdfs:domain foaf:Document ;
-                rdfs:range xsd:string .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/tipo_infracao
-:tipo_infracao rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Infracao ;
-               rdfs:label "tipo de infração"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/tipo_localidade
@@ -3094,57 +1505,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
               rdfs:label "tipo da unidade"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/tipo_utilizacao
-:tipo_utilizacao rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Unidade_Consumo_Comunicacao ,
-                             :Unidade_Consumo_Telecomunicacao ;
-                 rdfs:comment """Tipo de Utilização de Serviços de Comunicação ou Telecomunicação:
-
-1 = 'Telefonia'
-2 = 'Comunicacao_Dados'
-3 = 'TV_Assinatura'
-4 = 'Provimento_Acesso_Internet'
-5 = 'Multimidia'
-6 = 'Outros'"""@pt ;
-                 rdfs:label "tipo utilização" .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/unidade_comercial
-:unidade_comercial rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Produto ;
-                   rdfs:label "unidade comercial"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/unidade_inclusao
-:unidade_inclusao rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Inadimplencia ;
-                  rdfs:label "unidade de inclusão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/unidade_medida
-:unidade_medida rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Item ;
-                rdfs:label "unidade de medida"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/usuario_exclusao
-:usuario_exclusao rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Inadimplencia ;
-                  rdfs:label "usuário da exclusão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/usuario_inclusao
-:usuario_inclusao rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Inadimplencia ;
-                  rdfs:label "usuário da inclusão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_acrescimo
-:valor_acrescimo rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Item ;
-                 rdfs:label "valor de acréscimo"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/valor_capital_social
 :valor_capital_social rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
@@ -3155,45 +1515,11 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
                                  xsd:integer .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/valor_desconto
-:valor_desconto rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Item ;
-                rdfs:label "valor de desconto"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/valor_estimado
 :valor_estimado rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
                 rdfs:domain foaf:Organization ;
                 rdfs:range xsd:double .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_icms
-:valor_icms rdf:type owl:DatatypeProperty ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( :Documento_Fiscal
-                                        :Item
-                                      )
-                        ] ;
-            rdfs:comment "Valor do Imposto  sobre Circulação de Mercadorias e Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comunicação (ICMS) atribuído a um Item."@pt ;
-            rdfs:label "valor icms"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_obrigacao
-:valor_obrigacao rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Obrigacao ;
-                 rdfs:label "valor da obrigação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_operacoes_isentas
-:valor_operacoes_isentas rdf:type owl:DatatypeProperty ;
-                         rdfs:domain [ rdf:type owl:Class ;
-                                       owl:unionOf ( :Documento_Fiscal
-                                                     :Item
-                                                   )
-                                     ] ;
-                         rdfs:comment "Valor atribuído a Operações Isentas de um Item."@pt ;
-                         rdfs:label "valor de operações isentas"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/valor_participacao
@@ -3202,44 +1528,6 @@ Os imóveis localizados em área urbana não são registrados no CAFIR e, portan
                     rdfs:domain :Qualificacao ,
                                 :Sociedade ;
                     rdfs:range xsd:double .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_partida
-:valor_partida rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Combustivel ;
-               rdfs:label "valor de partida"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_total
-:valor_total rdf:type owl:DatatypeProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Documento_Fiscal
-                                         :Item
-                                       )
-                         ] ;
-             rdfs:comment "Valor total de um Item."@pt ;
-             rdfs:label "valor total"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_unitario
-:valor_unitario rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Produto ;
-                rdfs:label "valor unitário"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/valor_unitario_tributacao
-:valor_unitario_tributacao rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :Produto ;
-                           rdfs:label "valor unitário de tributação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/versao
-:versao rdf:type owl:DatatypeProperty ;
-        rdfs:subPropertyOf owl:topDataProperty ;
-        rdfs:domain :Arquivo ;
-        rdfs:range xsd:string ;
-        rdfs:comment "Indicar a versão do arquivo."@pt ;
-        rdfs:label "versão do arquivo"@pt .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
@@ -3389,38 +1677,10 @@ foaf:name rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://purl.org/NET/c4dm/event.owl#Event
-<http://purl.org/NET/c4dm/event.owl#Event> rdf:type owl:Class ;
-                                           rdfs:comment "Conceito de evento."@pt ;
-                                           rdfs:label "Evento" .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Acordao
 :Acordao rdf:type owl:Class ;
          rdfs:comment "Decisão final proferida sobre um processo por tribunal superior, que funciona como paradigma para solucionar casos análogos"@pt ;
          rdfs:label "Acórdão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Arma
-:Arma rdf:type owl:Class ;
-      rdfs:label "Arma"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Arquivo
-:Arquivo rdf:type owl:Class ;
-         rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                  owl:onProperty :tem_protocolo ;
-                                                  owl:someValuesFrom :Protocolo
-                                                ]
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty :tem_protocolo ;
-                                                  owl:allValuesFrom :Protocolo
-                                                ]
-                                              ) ;
-                           rdf:type owl:Class
-                         ] ;
-         rdfs:comment "Representação dos arquivos de documentos referenciados e utilizados."@pt ;
-         rdfs:label "Arquivo"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Ativa
@@ -3546,24 +1806,6 @@ foaf:name rdf:type owl:DatatypeProperty ;
            rdfs:label "Cancelada"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Caso_Consistencia
-:Caso_Consistencia rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty rdfs:label ;
-                                     owl:someValuesFrom xsd:string
-                                   ] ;
-                   rdfs:label "Caso da consistência"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Caso_Similaridade
-:Caso_Similaridade rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty rdfs:label ;
-                                     owl:someValuesFrom xsd:string
-                                   ] ;
-                   rdfs:label "Caso da similaridade"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Cidade
 :Cidade rdf:type owl:Class ;
         rdfs:subClassOf :Localizacao ,
@@ -3585,164 +1827,9 @@ foaf:name rdf:type owl:DatatypeProperty ;
                         ] .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Combustivel
-:Combustivel rdf:type owl:Class ;
-             rdfs:label "Combustível"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Compra_Publica
-:Compra_Publica rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty owl:sameAs ;
-                                  owl:allValuesFrom :Compra_Publica
-                                ] ;
-                rdfs:label "Compra Pública"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Consumidor
-:Consumidor rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( :Papel
-                                                   [ rdf:type owl:Class ;
-                                                     owl:unionOf ( foaf:Organization
-                                                                   foaf:Person
-                                                                 )
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
-                            ] ;
-            rdfs:comment "Conceito referente a Consumidores de Energia e Serviços de Comunicação e Telecomunicação"@pt ;
-            rdfs:label "Consumidor"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Contador
-:Contador rdf:type owl:Class ;
-          rdfs:subClassOf :Papel ,
-                          :Qualificacao ,
-                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :tem_qualificacao ;
-                                                   owl:allValuesFrom :Qualificacao
-                                                 ]
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty :tem_qualificacao ;
-                                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                                 ]
-                                               ) ;
-                            rdf:type owl:Class
-                          ] ;
-          rdfs:comment "Accountant is the professional of accounting science or accounting responsible for dealing with the entire financial, economic and patrimonial area of a legal entity or individual."@en ,
-                       "Indicar o contador responsável pela solicitação.."@pt ,
-                       "É o profissional da ciência contábil ou contabilidade responsável por lidar com toda a área financeira, econômica e patrimonial de uma pessoa jurídica ou pessoa física."@pt ;
-          rdfs:label "Contador"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Contribuinte
-:Contribuinte rdf:type owl:Class ;
-              rdfs:subClassOf :Tipo_Contribuicao ,
-                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :tem_representante_legal ;
-                                                       owl:allValuesFrom :Representante_Legal
-                                                     ]
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :tem_representante_legal ;
-                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass :Representante_Legal
-                                                     ]
-                                                   ) ;
-                                rdf:type owl:Class
-                              ] ;
-              owl:disjointWith :Nao_Contribuinte ;
-              rdfs:comment """Contribuinte é o sujeito passivo de uma obrigação tributária. Em outros termos, é aquele que se sujeita, por previsão legal, ao pagamento de tributos ao fisco.
-
-No Brasil, os contribuintes são registrados no Cadastro de Pessoas Físicas (CPF), se pessoas naturais, ou no Cadastro Nacional de Pessoas Jurídicas (CNPJ), se forem sociedades ou firmas individuais."""@pt ,
-                           """Taxpayer is the taxable person of a tax obligation. In other words, it is the one that is subject, by legal provision, to the payment of taxes to the tax authorities.
-
-In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF), if they are natural persons, or with the National Registry of Legal Entities (CNPJ), if they are individual companies or firms."""@en ;
-              rdfs:label "Contribuinte"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Contribuinte_Geral
-:Contribuinte_Geral rdf:type owl:Class ;
-                    rdfs:subClassOf :Contribuinte ;
-                    rdfs:label "Contribuinte Geral"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Contribuinte_ICMS
-:Contribuinte_ICMS rdf:type owl:Class ;
-                   rdfs:subClassOf :Contribuinte ;
-                   rdfs:comment "Subclasse de Contribuinte – Tipo Específico do tipo Contribuinte ICMS"@pt ,
-                                "Tipo de contribuinte desejado como contribuinte ICMS."@pt ;
-                   rdfs:label "Contribuinte ICMS"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Contribuinte_IPVA
-:Contribuinte_IPVA rdf:type owl:Class ;
-                   rdfs:subClassOf :Contribuinte ;
-                   rdfs:comment "Subclasse de Contribuinte – Tipo Específico do tipo Contribuinte IPVA"@pt ;
-                   rdfs:label "Contribuinte IPVA"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Contribuinte_Normal
-:Contribuinte_Normal rdf:type owl:Class ;
-                     rdfs:subClassOf :Contribuinte_Geral ;
-                     rdfs:label "Contribuinte Normal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Documento_Fiscal
-:Documento_Fiscal rdf:type owl:Class ;
-                  rdfs:comment "Documento fiscal é um documento que comprova as operações de venda de bens ou prestação de serviços entre empresas, órgãos públicos, ou até mesmo pessoas físicas. Além da circulação de mercadorias e serviços, esse documento é obrigatório para comprovar o recolhimento de impostos e tributos sobre faturamento."@pt ;
-                  rdfs:label "Documento Fiscal"@pt ;
-                  rdfs:seeAlso "https://arquivei.com.br/blog/documentos-fiscais-tudo-o-que-voce-precisa-saber/"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Documento_Suplementar
-:Documento_Suplementar rdf:type owl:Class ;
-                       rdfs:subClassOf foaf:Document ;
-                       rdfs:label "Documento Suplementar"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Emancipado
-:Emancipado rdf:type owl:Class ;
-            rdfs:subClassOf :Papel ;
-            rdfs:comment "Papel exercido como emancipado."@pt ;
-            rdfs:label "Emancipado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Empresa_Cadastro
-:Empresa_Cadastro rdf:type owl:Class ;
-                  rdfs:subClassOf foaf:Organization ;
-                  rdfs:label "Empresa | Organização | Pessoa Jurídica SEFAZ"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Empresa_Holding
-:Empresa_Holding rdf:type owl:Class ;
-                 rdfs:subClassOf :Socio ,
-                                 foaf:Organization ;
-                 rdfs:label "Empresa Holding"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Empresa_REDESIM
-:Empresa_REDESIM rdf:type owl:Class ;
-                 rdfs:subClassOf foaf:Organization ;
-                 rdfs:label "Empresa | Organização | Pessoa Jurídica REDESIM"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Empresa_RFB
-:Empresa_RFB rdf:type owl:Class ;
-             rdfs:subClassOf foaf:Organization ;
-             rdfs:label "Empresa | Organização | Pessoa Jurídica RFB"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Endereco
 :Endereco rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :tem_consistencia_correios ;
-                            owl:someValuesFrom :Status_Consistencia
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :tem_similaridade ;
-                            owl:someValuesFrom :Status_Similaridade
-                          ] ,
-                          [ rdf:type owl:Restriction ;
                             owl:onProperty owl:sameAs ;
                             owl:allValuesFrom :Endereco
                           ] ,
@@ -3781,70 +1868,6 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
                           ] .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/EnderecoC115COMUNICACAO
-:EnderecoC115COMUNICACAO rdf:type owl:Class ;
-                         rdfs:subClassOf :Endereco ;
-                         rdfs:label "Endereço C115 Comunicação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/EnderecoC115ENERGIA
-:EnderecoC115ENERGIA rdf:type owl:Class ;
-                     rdfs:subClassOf :Endereco ;
-                     rdfs:label "Endereço C115 Energia"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/EnderecoC115TELECOMUNICACAO
-:EnderecoC115TELECOMUNICACAO rdf:type owl:Class ;
-                             rdfs:subClassOf :Endereco ;
-                             rdfs:label "Endereço C115 Telecomunicação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Endereco_C115
-:Endereco_C115 rdf:type owl:Class ;
-               rdfs:subClassOf :Endereco ;
-               rdfs:label "Endereço C115"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Endereco_Cadastro
-:Endereco_Cadastro rdf:type owl:Class ;
-                   rdfs:subClassOf :Endereco ;
-                   rdfs:label "Endereço Cadastro da SEFAZ"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Endereco_NFE
-:Endereco_NFE rdf:type owl:Class ;
-              rdfs:subClassOf :Endereco ;
-              rdfs:label "Endereço NFE"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Endereco_REDESIM
-:Endereco_REDESIM rdf:type owl:Class ;
-                  rdfs:subClassOf :Endereco ;
-                  rdfs:label "Endereço REDESIM"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Endereco_RFB
-:Endereco_RFB rdf:type owl:Class ;
-              rdfs:subClassOf :Endereco ;
-              rdfs:label "Endereço RFB"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Ente_Publico
-:Ente_Publico rdf:type owl:Class ;
-              rdfs:subClassOf foaf:Organization ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty owl:sameAs ;
-                                owl:allValuesFrom :Ente_Publico
-                              ] ;
-              rdfs:label "Ente Público"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Entidade_Integrada
-:Entidade_Integrada rdf:type owl:Class ;
-                    rdfs:comment "Reúne informações necessárias sobre uma entidade integrada dentro do contexto apropriado."@pt ;
-                    rdfs:label "Entidade Integrada"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Estabelecimento
 :Estabelecimento rdf:type owl:Class ;
                  rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -3854,29 +1877,6 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :tem_endereco ;
                                                           owl:allValuesFrom :Endereco
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :tem_obrigacao_legal ;
-                                                          owl:allValuesFrom :Obrigacao_Legal
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :tem_obrigacao_legal ;
-                                                          owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ,
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :tem_unidade_fiscal ;
-                                                          owl:allValuesFrom :Unidade_Fiscal
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :tem_unidade_fiscal ;
-                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onClass :Situacao_Fiscal
                                                         ]
                                                       ) ;
                                    rdf:type owl:Class
@@ -3923,64 +1923,9 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
                                  ] .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Estabelecimento_Cadastro
-:Estabelecimento_Cadastro rdf:type owl:Class ;
-                          rdfs:subClassOf :Estabelecimento ;
-                          rdfs:label "Estabelecimento SEFAZ"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Estabelecimento_REDESIM
-:Estabelecimento_REDESIM rdf:type owl:Class ;
-                         rdfs:subClassOf :Estabelecimento ;
-                         rdfs:label "Estabelecimento REDESIM"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Estabelecimento_RFB
-:Estabelecimento_RFB rdf:type owl:Class ;
-                     rdfs:subClassOf :Estabelecimento ;
-                     rdfs:label "Estabelecimento RFB"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Evento_Desabilitado
-:Evento_Desabilitado rdf:type owl:Class ;
-                     rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ,
-                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                              owl:onProperty :excluido_por ;
-                                                              owl:allValuesFrom :Usuario
-                                                            ]
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty :excluido_por ;
-                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                              owl:onClass :Usuario
-                                                            ]
-                                                          ) ;
-                                       rdf:type owl:Class
-                                     ] ,
-                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                              owl:onProperty :incluido_por ;
-                                                              owl:allValuesFrom :Usuario
-                                                            ]
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty :incluido_por ;
-                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                              owl:onClass :Usuario
-                                                            ]
-                                                          ) ;
-                                       rdf:type owl:Class
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty :tem_razao_desabilitado ;
-                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                       owl:onClass :Razao_Situacao_Cadastral
-                                     ] ;
-                     rdfs:comment "Representa a ocorrência de Desabilitação / Baixa de Estabelecimentos e suas respectivas informações de início e fim."@pt ;
-                     rdfs:label "Evento Desabilitado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Extra_Cadastro
-:Extra_Cadastro rdf:type owl:Class ;
-                rdfs:subClassOf :Contribuinte_Geral ;
-                rdfs:label "Contribuinte Extra Cadastro"@pt .
+###  http://www.sefaz.ma.gov.br/ontology/Excluso_SIMPLES
+:Excluso_SIMPLES rdf:type owl:Class ;
+                 rdfs:subClassOf :Opcao_SIMPLES .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Fornecedor
@@ -4027,43 +1972,9 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
                      rdfs:label "Fornecedor Restrito"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Imposto
-:Imposto rdf:type owl:Class ;
-         rdfs:comment "Tributo cobrado a um Estabelecimento através do cumprimento de uma Obrigação Legal."@pt ;
-         rdfs:label "Imposto"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Inadimplencia
-:Inadimplencia rdf:type owl:Class ;
-               rdfs:label "Inadimplência"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Inadimplente
-:Inadimplente rdf:type owl:Class ;
-              rdfs:subClassOf :Fornecedor_Restrito ;
-              rdfs:label "Inadimplente"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Inapta
 :Inapta rdf:type owl:Class ;
         rdfs:subClassOf :Situacao_Cadastral .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Infracao
-:Infracao rdf:type owl:Class ;
-          rdfs:label "Infração"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Isento
-:Isento rdf:type owl:Class ;
-        rdfs:subClassOf :Contribuinte_Geral ;
-        rdfs:label "Contribuinte  Isento"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Item
-:Item rdf:type owl:Class ;
-      rdfs:comment "Item de um Documento Fiscal - Conceito que Generaliza Fornecimento ou Serviço."@pt ;
-      rdfs:label "Item"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Localizacao
@@ -4103,11 +2014,6 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
                             ] .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Medicamento
-:Medicamento rdf:type owl:Class ;
-             rdfs:label "Medicamento"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Nacionalidade
 :Nacionalidade rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -4119,12 +2025,9 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
                rdfs:label "Nacionalidade"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Nao_Contribuinte
-:Nao_Contribuinte rdf:type owl:Class ;
-                  rdfs:subClassOf :Tipo_Contribuicao ;
-                  rdfs:comment "Tipo Não Contribuinte – Que não exerce papel de contribuinte."@pt ,
-                               "Tipo de contribuinte desejado como não contribuinte."@pt ;
-                  rdfs:label "Não Contribuinte"@pt .
+###  http://www.sefaz.ma.gov.br/ontology/Nao_Optante_SIMPLES
+:Nao_Optante_SIMPLES rdf:type owl:Class ;
+                     rdfs:subClassOf :Opcao_SIMPLES .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Natureza_Legal
@@ -4144,24 +2047,13 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
       rdfs:subClassOf :Situacao_Cadastral .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Obrigacao
-:Obrigacao rdf:type owl:Class ;
-           rdfs:label "Obrigação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Obrigacao_Legal
-:Obrigacao_Legal rdf:type owl:Class ;
-                 rdfs:subClassOf owl:Thing ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :tem_imposto ;
-                                   owl:allValuesFrom :Imposto
-                                 ] ;
-                 rdfs:comment "Conjunto de questões fiscais, trabalhistas, contábeis e de registro que são impostas a uma empresa. Obrigações legais também compreendem a manutenção de alvarás, certidões, peças contábeis, alterações contratuais, independentemente da modificação que ocorre na empresa."@pt ;
-                 rdfs:label "Obrigação Legal"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES
 :Opcao_SIMPLES rdf:type owl:Class .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Optante_SIMPLES
+:Optante_SIMPLES rdf:type owl:Class ;
+                 rdfs:subClassOf :Opcao_SIMPLES .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Orgao_Sancionador
@@ -4194,30 +2086,6 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
        rdfs:label "Papel"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Periodicidade
-:Periodicidade rdf:type owl:Class ;
-               rdfs:comment "Periodicidade no qual um Imposto é aplicado, sendo Mensal ou Anual."@pt ;
-               rdfs:label "Periodicidade"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Pessoa_Cadastro
-:Pessoa_Cadastro rdf:type owl:Class ;
-                 rdfs:subClassOf foaf:Person ;
-                 rdfs:label "Pessoa Física Cadastro SEFAZ"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Pessoa_REDESIM
-:Pessoa_REDESIM rdf:type owl:Class ;
-                rdfs:subClassOf foaf:Person ;
-                rdfs:label "Pessoa Física REDESIM"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Pessoa_RFB
-:Pessoa_RFB rdf:type owl:Class ;
-            rdfs:subClassOf foaf:Person ;
-            rdfs:label "Pessoa Física RFB"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Porte
 :Porte rdf:type owl:Class ;
        owl:equivalentClass [ rdf:type owl:Class ;
@@ -4235,54 +2103,12 @@ In Brazil, taxpayers are registered with the Individual Taxpayer Registry (CPF),
           rdfs:label "Processo"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Processo_Baixa
-:Processo_Baixa rdf:type owl:Class ;
-                rdfs:subClassOf :Situacao_Cadastral ;
-                rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: EM PROCESSO DE BAIXA"@pt ;
-                rdfs:label "Processo de Baixa"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Processo_Suspensao
-:Processo_Suspensao rdf:type owl:Class ;
-                    rdfs:subClassOf :Situacao_Cadastral ;
-                    rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: EM PROCESSO DE SUSPENSÃO"@pt ;
-                    rdfs:label "Processo de Suspensão"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Produto
-:Produto rdf:type owl:Class ;
-         rdfs:comment "Produto é um Material ou Serviço adquiridos ou contratados registrados em um Documento Fiscal."@pt ;
-         rdfs:label "Produto"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Protocolo
 :Protocolo rdf:type owl:Class ;
-           rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :tem_fonte_cadastro ;
-                                                    owl:someValuesFrom foaf:Organization
-                                                  ]
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :tem_fonte_cadastro ;
-                                                    owl:allValuesFrom foaf:Organization
-                                                  ]
-                                                ) ;
-                             rdf:type owl:Class
-                           ] ;
            rdfs:comment """Número do protocolo da licença da CETESB. Preencher o campo somente quando, segundo a legislação em vigor, a atividade a ser realizada pela empresa deva ser previamente autorizada pela CETESB.
 
 O número do protocolo deve ser informado, mesmo que a licença já tenha sido concedida."""@pt ;
            rdfs:label "Protocolo"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Provedor
-:Provedor rdf:type owl:Class ;
-          rdfs:subClassOf [ owl:intersectionOf ( :Papel
-                                                 foaf:Organization
-                                               ) ;
-                            rdf:type owl:Class
-                          ] ;
-          rdfs:comment "Órgão que fornece e provê Energia e Serviços de Comunicação e Telecomunicação;"@pt ;
-          rdfs:label "Provedor"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Qualificacao
@@ -4343,12 +2169,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
                                 rdfs:label "Realização de Atividade Econômica"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Registro_Desabilitado
-:Registro_Desabilitado rdf:type owl:Class ;
-                       rdfs:comment "Registro de Ocorrência de Desabilitação de uma Determinada Empresa. Armazena uma cópia das informações da Empresa bem como a data e hora de desabilitação."@pt ;
-                       rdfs:label "Registro Desabilitado"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Representante_Legal
 :Representante_Legal rdf:type owl:Class ;
                      rdfs:subClassOf :Papel ,
@@ -4374,12 +2194,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
                               rdfs:label "Representante Legal Jurídico"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/SIMEI
-:SIMEI rdf:type owl:Class ;
-       rdfs:subClassOf :Contribuinte_Geral ;
-       rdfs:label "Contribuinte  Contribuinte SIMEI"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Sancao
 :Sancao rdf:type owl:Class ;
         rdfs:label "Sanção"@pt .
@@ -4389,12 +2203,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
 :Sancionado rdf:type owl:Class ;
             rdfs:subClassOf :Fornecedor_Restrito ;
             rdfs:label "Sancionado"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Simples_Nacional
-:Simples_Nacional rdf:type owl:Class ;
-                  rdfs:subClassOf :Contribuinte_Geral ;
-                  rdfs:label "Contribuinte do Simples Nacional"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Situacao_Cadastral
@@ -4413,24 +2221,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
                                     ] .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Situacao_Cadastral_Cadastro
-:Situacao_Cadastral_Cadastro rdf:type owl:Class ;
-                             rdfs:subClassOf :Situacao_Cadastral ;
-                             rdfs:label "Situação Cadastral Cadastro da SEFAZ"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Situacao_Cadastral_REDESIM
-:Situacao_Cadastral_REDESIM rdf:type owl:Class ;
-                            rdfs:subClassOf :Situacao_Cadastral ;
-                            rdfs:label "Situação Cadastral REDESIM"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Situacao_Cadastral_RFB
-:Situacao_Cadastral_RFB rdf:type owl:Class ;
-                        rdfs:subClassOf :Situacao_Cadastral ;
-                        rdfs:label "Situação Cadastral RFB"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Situacao_Especial
 :Situacao_Especial rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -4445,17 +2235,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
                                      owl:onProperty :descricao_situacao_especial ;
                                      owl:someValuesFrom xsd:string
                                    ] .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Situacao_Fiscal
-:Situacao_Fiscal rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty :tem_razao_desabilitado ;
-                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                   owl:onClass :Razao_Situacao_Cadastral
-                                 ] ;
-                 rdfs:comment "Situação Fiscal de uma determinada Empresa, podendo estar Habilitado ou  Desabilitado."@pt ;
-                 rdfs:label "Situação Fiscal"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Sociedade
@@ -4498,12 +2277,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
                            ] .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Sociedade_Cadastro
-:Sociedade_Cadastro rdf:type owl:Class ;
-                    rdfs:subClassOf :Sociedade ;
-                    rdfs:label "Sociedade Cadastro SEFAZ"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Sociedade_PF
 :Sociedade_PF rdf:type owl:Class ;
               rdfs:subClassOf :Sociedade ,
@@ -4524,12 +2297,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
               rdfs:label "Sociedade com Pessoa Jurídica"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Sociedade_REDESIM
-:Sociedade_REDESIM rdf:type owl:Class ;
-                   rdfs:subClassOf :Sociedade ;
-                   rdfs:label "Sociedade REDESIM"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Sociedade_RFB
 :Sociedade_RFB rdf:type owl:Class ;
                rdfs:subClassOf :Sociedade ;
@@ -4540,39 +2307,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
 :Socio rdf:type owl:Class ;
        rdfs:subClassOf :Papel ,
                        owl:Thing ,
-                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                owl:onProperty :e_emancipado ;
-                                                owl:someValuesFrom :Emancipado
-                                              ]
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :e_emancipado ;
-                                                owl:allValuesFrom :Emancipado
-                                              ]
-                                            ) ;
-                         rdf:type owl:Class
-                       ] ,
-                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                owl:onProperty :tem_mae ;
-                                                owl:someValuesFrom foaf:Person
-                                              ]
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :tem_mae ;
-                                                owl:allValuesFrom foaf:Person
-                                              ]
-                                            ) ;
-                         rdf:type owl:Class
-                       ] ,
-                       [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                owl:onProperty :tem_pai ;
-                                                owl:someValuesFrom foaf:Person
-                                              ]
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :tem_pai ;
-                                                owl:allValuesFrom foaf:Person
-                                              ]
-                                            ) ;
-                         rdf:type owl:Class
-                       ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty owl:sameAs ;
                          owl:allValuesFrom :Socio
@@ -4582,100 +2316,10 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
        rdfs:label "Sócio"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Socio_Cadastro
-:Socio_Cadastro rdf:type owl:Class ;
-                rdfs:subClassOf :Socio ;
-                rdfs:label "Sócio Cadastro SEFAZ"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Socio_REDESIM
-:Socio_REDESIM rdf:type owl:Class ;
-               rdfs:subClassOf :Socio ;
-               rdfs:label "Sócio REDESIM"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Socio_RFB
 :Socio_RFB rdf:type owl:Class ;
            rdfs:subClassOf :Socio ;
            rdfs:label "Sócio RFB"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Solicitacao
-:Solicitacao rdf:type owl:Class ;
-             rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ,
-                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :tem_empresa ;
-                                                      owl:someValuesFrom foaf:Organization
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :tem_empresa ;
-                                                      owl:allValuesFrom foaf:Organization
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ,
-                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :tem_protocolo ;
-                                                      owl:someValuesFrom :Protocolo
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :tem_protocolo ;
-                                                      owl:allValuesFrom :Protocolo
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ,
-                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :tem_solicitacao ;
-                                                      owl:someValuesFrom :Tipo_Ato
-                                                    ]
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :tem_solicitacao ;
-                                                      owl:allValuesFrom :Tipo_Ato
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
-                             ] ;
-             rdfs:comment "Conceito referente ao evento de requisição."@pt ;
-             rdfs:label "Solicitação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Status_Consistencia
-:Status_Consistencia rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty :descricao ;
-                                       owl:someValuesFrom :Caso_Consistencia
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty rdfs:label ;
-                                       owl:someValuesFrom xsd:string
-                                     ] ;
-                     rdfs:label "Status da consistência"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Status_Envio
-:Status_Envio rdf:type owl:Class ;
-              rdfs:comment "Indicar informações sobre a condições e estados de envio."@pt ;
-              rdfs:label "Status de Envio"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Status_Similaridade
-:Status_Similaridade rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty :descricao ;
-                                       owl:someValuesFrom :Caso_Similaridade
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty rdfs:label ;
-                                       owl:someValuesFrom xsd:string
-                                     ] ;
-                     rdfs:label "Status de similaridade"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Substituto_Tributario
-:Substituto_Tributario rdf:type owl:Class ;
-                       rdfs:subClassOf :Contribuinte_Geral ;
-                       rdfs:label "Contribuinte Substituto Tributário"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Suspensa
@@ -4690,21 +2334,6 @@ O número do protocolo deve ser informado, mesmo que a licença já tenha sido c
                  rdfs:label "Suspensa de Ofício"@pt .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Tipo_Ato
-:Tipo_Ato rdf:type owl:Class ;
-          rdfs:comment """Nos casos de inscrição, alteração ou baixa esse campo será de preenchimento obrigatório para as empresas registradas em Cartório, OAB ou órgãos governamentais criados por Lei.
-
-Deve ser preenchido com o número do registro do ato que foi acostado ou no Cartório de Registro Civil das Pessoas Jurídica, ou na Sede Regional da Ordem dos Advogados – OAB ou o número da Lei que criou a Pessoa Jurídica, para os casos de natureza jurídica do grupamento 100."""@pt ;
-          rdfs:label "Tipo Ato"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Tipo_Contribuicao
-:Tipo_Contribuicao rdf:type owl:Class ;
-                   rdfs:comment "Informar o Tipo de Contribuinte desejado pelo solicitante. Será utilizado para definir o Regime de Apuração de Pagamento em que será enquadrado."@pt ,
-                                "Tipo de Contribuinte – pode ser ou não contribuinte, caso seja será do tipo ICMS ou IPVA."@pt ;
-                   rdfs:label "Tipo de Contribuição"@pt .
-
-
 ###  http://www.sefaz.ma.gov.br/ontology/Tipo_Estabelecimento
 :Tipo_Estabelecimento rdf:type owl:Class ;
                       owl:equivalentClass [ rdf:type owl:Class ;
@@ -4712,70 +2341,6 @@ Deve ser preenchido com o número do registro do ato que foi acostado ou no Cart
                                                         <http://www.sefaz.ma.gov.br/RFB/resource/Establishment_Type/MATRIZ>
                                                       )
                                           ] .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Tipo_Propriedade
-:Tipo_Propriedade rdf:type owl:Class .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Tipo_Regime_Tributario
-:Tipo_Regime_Tributario rdf:type owl:Class ;
-                        rdfs:comment """Tipo do Regime Tributário da Empresa podendo ser:
-
- EXTRA CADASTRO;
- NORMAL;
- PEM;
- SUBST. TRIBUTARIA;
- ISENTO;
- SIMPLES NACIONAL;
- SIMEI;
- NÃO CONTRIBUINTE."""@pt ;
-                        rdfs:label "Tipo de Regime Tributário"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Unidade_Consumo
-:Unidade_Consumo rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty owl:sameAs ;
-                                   owl:allValuesFrom :Unidade_Consumo
-                                 ] ;
-                 rdfs:comment """Quando Elétrica, é composta por instalações, equipamentos elétricos, condutores e acessórios, incluída a subestação, quando do fornecimento em tensão primária, caracterizado pelo recebimento de energia elétrica em apenas um ponto de entrega, com medição individualizada, correspondente a um único consumidor e localizado em uma mesma propriedade ou em propriedades contíguas.
-
-Quando Comunicação ou Telecomunicação é o Endereço relativo ao serviço prestado por uma empresa, tal como telefonia e / ou internet."""@pt ;
-                 rdfs:label "Unidade Consumo"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Unidade_Consumo_Comunicacao
-:Unidade_Consumo_Comunicacao rdf:type owl:Class ;
-                             rdfs:subClassOf :Unidade_Consumo ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty owl:sameAs ;
-                                               owl:allValuesFrom :Unidade_Consumo_Comunicacao
-                                             ] ;
-                             rdfs:comment "Endereço onde é provido o serviço de Comunicação de um consumidor."@pt ;
-                             rdfs:label "Unidade Consumo Comunicação"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Unidade_Consumo_Eletrica
-:Unidade_Consumo_Eletrica rdf:type owl:Class ;
-                          rdfs:subClassOf :Unidade_Consumo ,
-                                          [ rdf:type owl:Restriction ;
-                                            owl:onProperty owl:sameAs ;
-                                            owl:allValuesFrom :Unidade_Consumo_Eletrica
-                                          ] ;
-                          rdfs:comment "Endereço onde é provido o fornecimento de Energia de um consumidor."@pt ;
-                          rdfs:label "Unidade Consumo Elétrica"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Unidade_Consumo_Telecomunicacao
-:Unidade_Consumo_Telecomunicacao rdf:type owl:Class ;
-                                 rdfs:subClassOf :Unidade_Consumo ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty owl:sameAs ;
-                                                   owl:allValuesFrom :Unidade_Consumo_Telecomunicacao
-                                                 ] ;
-                                 rdfs:comment "Endereço onde é provido o serviço de telecomunicação de um consumidor."@pt ;
-                                 rdfs:label "Unidade Consumo Telecomunicação"@pt .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Unidade_Federativa
@@ -4801,33 +2366,6 @@ Quando Comunicação ou Telecomunicação é o Endereço relativo ao serviço pr
                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#prefLabel> ;
                                       owl:someValuesFrom xsd:string
                                     ] .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Unidade_Fiscal
-:Unidade_Fiscal rdf:type owl:Class ;
-                rdfs:comment "Representa uma Unidade Regional responsável por realizar a fiscalização de Contribuintes em uma determinada região."@pt ;
-                rdfs:label "Unidade Fiscal"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Usuario
-:Usuario rdf:type owl:Class ;
-         rdfs:comment "Responsável por inserção, alteração ou remoção de dados no Cadastro."@pt ;
-         rdfs:label "Usuário"@pt .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Excluso_SIMPLES
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Excluso_SIMPLES> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf :Opcao_SIMPLES .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Nao_Optante_SIMPLES
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Nao_Optante_SIMPLES> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf :Opcao_SIMPLES .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Optante_SIMPLES
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Optante_SIMPLES> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf :Opcao_SIMPLES .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
@@ -4889,33 +2427,10 @@ foaf:Agent rdf:type owl:Class ;
                                                 ) ;
                              rdf:type owl:Class
                            ] ,
-                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :tem_tipo_contribuicao ;
-                                                    owl:someValuesFrom :Tipo_Contribuicao
-                                                  ]
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :tem_tipo_contribuicao ;
-                                                    owl:allValuesFrom :Tipo_Contribuicao
-                                                  ]
-                                                ) ;
-                             rdf:type owl:Class
-                           ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty vcard:email ;
                              owl:allValuesFrom xsd:anyURI
                            ] .
-
-
-###  http://xmlns.com/foaf/0.1/Document
-foaf:Document rdf:type owl:Class ;
-              owl:disjointWith foaf:Organization ;
-              rdfs:comment "A document." ,
-                           "Classe Genérica para representar Documentos."@pt ,
-                           """The Document class represents those things which are, broadly conceived, 'documents'.
-
-The Image class is a sub-class of Document, since all images are documents."""@en ;
-              rdfs:isDefinedBy foaf: ;
-              rdfs:label "Documento"@pt .
 
 
 ###  http://xmlns.com/foaf/0.1/Group
@@ -5246,6 +2761,10 @@ called subsidiaries, branches or agencies. Headquarters establishment is the one
 :Estabelecimento rdf:type owl:NamedIndividual .
 
 
+###  http://www.sefaz.ma.gov.br/ontology/Excluso_SIMPLES
+:Excluso_SIMPLES rdf:type owl:NamedIndividual .
+
+
 ###  http://www.sefaz.ma.gov.br/ontology/Executivo
 :Executivo rdf:type owl:NamedIndividual .
 
@@ -5290,6 +2809,10 @@ called subsidiaries, branches or agencies. Headquarters establishment is the one
 :MenorPreco rdf:type owl:NamedIndividual .
 
 
+###  http://www.sefaz.ma.gov.br/ontology/Nao_Optante_SIMPLES
+:Nao_Optante_SIMPLES rdf:type owl:NamedIndividual .
+
+
 ###  http://www.sefaz.ma.gov.br/ontology/Natureza_Legal
 :Natureza_Legal rdf:type owl:NamedIndividual .
 
@@ -5300,6 +2823,10 @@ called subsidiaries, branches or agencies. Headquarters establishment is the one
 
 ###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES
 :Opcao_SIMPLES rdf:type owl:NamedIndividual .
+
+
+###  http://www.sefaz.ma.gov.br/ontology/Optante_SIMPLES
+:Optante_SIMPLES rdf:type owl:NamedIndividual .
 
 
 ###  http://www.sefaz.ma.gov.br/ontology/Pais
@@ -5954,18 +3481,6 @@ called subsidiaries, branches or agencies. Headquarters establishment is the one
 :valor_participacao rdf:type owl:NamedIndividual .
 
 
-###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Excluso_SIMPLES
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Excluso_SIMPLES> rdf:type owl:NamedIndividual .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Nao_Optante_SIMPLES
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Nao_Optante_SIMPLES> rdf:type owl:NamedIndividual .
-
-
-###  http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Optante_SIMPLES
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Optante_SIMPLES> rdf:type owl:NamedIndividual .
-
-
 ###  http://www.w3.org/2000/01/rdf-schema#label
 rdfs:label rdf:type owl:NamedIndividual .
 
@@ -6036,16 +3551,16 @@ foaf:name rdf:type owl:NamedIndividual .
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
@@ -6096,11 +3611,11 @@ Art. 35. A inscrição no CNPJ é enquadrada na situação cadastral ativa quand
 
 
 :Atividade_Economica rdfs:label "Atividade Econômica"@pt ;
-                     rdfs:comment """Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.
-Esta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."""@pt ,
-                                  """Selecionar o tipo de unidade do estabelecimento, se o estabelecimento desenvolver atividade de produção de bens e serviços para terceiros, assinalar “Unidade Produtiva”, se o estabelecimento exercer atividade de apoio administrativo ou técnico, no âmbito da própria empresa, selecionar “Unidade Auxiliar” e indicar uma das atividades de apoio, se sede, escritório administrativo, depósito fechado, almoxarifado, oficina de reparação, garagem, unidades de abastecimento de combustíveis, ponto de exposição, centro de exposição ou centro de processamento de dados.
+                     rdfs:comment """Selecionar o tipo de unidade do estabelecimento, se o estabelecimento desenvolver atividade de produção de bens e serviços para terceiros, assinalar “Unidade Produtiva”, se o estabelecimento exercer atividade de apoio administrativo ou técnico, no âmbito da própria empresa, selecionar “Unidade Auxiliar” e indicar uma das atividades de apoio, se sede, escritório administrativo, depósito fechado, almoxarifado, oficina de reparação, garagem, unidades de abastecimento de combustíveis, ponto de exposição, centro de exposição ou centro de processamento de dados.
 
-Se selecionada “Unidade Auxiliar”, deverá atribuir o Código de Atividade Econômica - CNAE do estabelecimento ao qual serve. Se a unidade auxiliar atender a mais de um estabelecimento da empresa, deverá ser atribuído o código de atividade econômica - CNAE da unidade de produção com valor adicionado de maior peso relativo, aceitando-se, a título de simplificação, o código da atividade principal da empresa como um todo."""@pt .
+Se selecionada “Unidade Auxiliar”, deverá atribuir o Código de Atividade Econômica - CNAE do estabelecimento ao qual serve. Se a unidade auxiliar atender a mais de um estabelecimento da empresa, deverá ser atribuído o código de atividade econômica - CNAE da unidade de produção com valor adicionado de maior peso relativo, aceitando-se, a título de simplificação, o código da atividade principal da empresa como um todo."""@pt ,
+                                  """Atividade econômica realizada pela empresa. Uma empresa possui uma atividade primária e pode possuir (opcionalmente) N atividades secundárias.
+Esta atividade é representada pelo código Classificação Nacional de Atividades Econômicas (CNAE)."""@pt .
 
 
 :Bairro rdfs:comment "Bairro / Distrito de uma determinada Localização identificado em quase todos os casos pelo CEP."@pt ;
@@ -6115,11 +3630,11 @@ Observação: Esse campo será habilitado para preenchimento dependendo do inter
 
 
 :Baixada rdfs:seeAlso <http://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-1470-2014.htm> ;
-         rdfs:comment """CAPÍTULO V
+         rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: BAIXA"@pt ,
+                      """CAPÍTULO V
 DA SITUAÇÃO CADASTRAL BAIXADA
 
-Art. 46. A inscrição no CNPJ é enquadrada na situação cadastral baixada quando a entidade ou o estabelecimento filial, conforme o caso, tiver sua solicitação de baixa deferida, na forma prevista no art. 25, ou tiver sua inscrição baixada de ofício, conforme o art. 27."""@pt ,
-                      "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: BAIXA"@pt ;
+Art. 46. A inscrição no CNPJ é enquadrada na situação cadastral baixada quando a entidade ou o estabelecimento filial, conforme o caso, tiver sua solicitação de baixa deferida, na forma prevista no art. 25, ou tiver sua inscrição baixada de ofício, conforme o art. 27."""@pt ;
          rdfs:label "Baixada"@pt .
 
 
@@ -6157,6 +3672,9 @@ Informar o nome empresarial da pessoa jurídica ou entidade (máximo de 144 cara
                  rdfs:label "Estabelecimento"@pt ;
                  rdfs:comment "Unidade Física de uma determinada Empresa, podendo ser do tipo Filial ou Matriz situada em uma Localização. Estabelecimentos são identificados através de um CNPJ e por sua inscrição estadual."@pt ;
                  rdfs:seeAlso <http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=97729&visao=original> .
+
+
+:Excluso_SIMPLES rdfs:label "Excluso / Removido do SIMPLES"@pt .
 
 
 :Inapta rdfs:label "Inapta"@pt ;
@@ -6289,6 +3807,9 @@ Art. 45. O encaminhamento, para fins de inscrição e execução, de créditos t
                          "Escolher a localização onde seu estabelecimento está situado."@pt .
 
 
+:Nao_Optante_SIMPLES rdfs:label "Não optante pelo SIMPLES"@pt .
+
+
 :Natureza_Legal rdfs:comment """The legal nature of a company is the legal regime in which it fits, that is, the relationship of the public or private legal person with the examination that will be done by the ENGINEER in the respective ENTERPRISE, added to what appears in the company data in the ADMINISTRATION records. PUBLISH. When formalizing the company, informing its legal nature has become an indispensable issue, since each legal nature requires different ways of applying the rules for companies.
 
 In line with the civil code (Law No. 10,406 / 02), there are several types of legal nature and among them are the legal types attributed to the public administration, business entities, non-profit entities and individuals."""@en ;
@@ -6314,11 +3835,32 @@ Art. 47. A inscrição no CNPJ é enquadrada na situação cadastral nula quando
                rdfs:label "Opção pelo regime SIMPLES"@pt .
 
 
+:Optante_SIMPLES rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf> ;
+                 rdfs:comment """Esta classe compreende os dados do evento da opção pelo regime Simples Nacional por uma empresa.
+
+O Simples Nacional é o nome abreviado do “Regime Especial Unificado de
+Arrecadação de Tributos e Contribuições devidos pelas Microempresas e
+Empresas de Pequeno Porte”.
+Trata-se de um regime tributário diferenciado, simplificado e favorecido previsto
+pela Lei Complementar nº 123, de 2006, aplicável às Microempresas e às
+Empresas de Pequeno Porte, a partir de 01/07/2007."""@pt ,
+                              """This class comprises the event data of the option for the Simple National regime for a company.
+
+Simples Nacional is the abbreviated name of the “Special Unified Regime of
+Collection of Taxes and Contributions due by Microenterprises and
+Small Companies ”.
+It is a differentiated, simplified and favored tax regime foreseen
+by Complementary Law No. 123, 2006, applicable to Microenterprises and
+Small Companies, as of 01/07/2007."""@en ;
+                 rdfs:label "Optante pelo SIMPLES"@pt .
+
+
 :Pais rdfs:label "País"@pt ;
       rdfs:comment "Indicar o nome do país de acordo com o ato constitutivo/alterador.."@pt .
 
 
-:Porte rdfs:comment """A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;
+:Porte rdfs:seeAlso <https://www38.receita.fazenda.gov.br/cadsincnac/jsp/coleta/ajuda/topicos/Porte_da_Empresa.htm> ;
+       rdfs:comment """A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;
 
 Selecionar o enquadramento de porte da empresa (ME, EPP, Demais) de acordo com a expectativa de Receita Bruta Anual.
 
@@ -6331,7 +3873,6 @@ O evento 222 somente poderá ser praticado por estabelecimento matriz;
 Somente as naturezas jurídicas 206-2, 207-0, 208-9, 213-5, 223-2, 224-0, 225-9, 226-7, 230-5 e 231-3 exigem o enquadramento de Porte da Empresa. Para estas naturezas jurídicas, o porte pode ser “ME” ou “EPP”. Para o restante das naturezas jurídicas, o porte deve ser “Demais”.
 
 Para análise e deferimento do evento 222, será exigido que o contribuinte apresente a “Declaração de Enquadramento / Reenquadramento ou Desenquadramento”, registrada pelo Órgão de Registro. Caso a referida declaração não seja recente, também deverá ser exigida a Certidão Simplificada do Órgão de Registro, com o objetivo de comprovar o enquadramento atual da empresa naquele órgão."""@pt ;
-       rdfs:seeAlso <https://www38.receita.fazenda.gov.br/cadsincnac/jsp/coleta/ajuda/topicos/Porte_da_Empresa.htm> ;
        rdfs:label "Porte da Empresa | Porte Empresarial | Porte"@pt ;
        rdfs:comment "Tamanho da Empresa, adotando-se a classificação de MEI para Empresas com capital inferior ou igual a R$81.000; ME para Empresas com capital entre R$360.00 e R$4.800.000; EMP para Empresas com capital superior a R$4.800.000 e até R$300.000.000; e EGP para Empresas com capital superior a R$300.000.000."@pt ,
                     """A nova denominação do evento 222 é “Enquadramento / Reenquadramento / Desenquadramento de ME/EPP”;
@@ -6413,8 +3954,8 @@ CÔNSUL
 DIPLOMATA
 CANDIDATO A CARGO POLÍTICO ELETIVO
 EMPRESARIO"""@pt ,
-                           "Esta classe agrupa informações sobre a qualificação de um sócio ou representante de uma empresa."@pt ,
                            "Tipo de relação existente."@pt ,
+                           "Esta classe agrupa informações sobre a qualificação de um sócio ou representante de uma empresa."@pt ,
                            "Qualificação do Responsável pelo Documento Fiscal."@pt ;
               rdfs:label "Qualificação do Sócio ou Representante"@pt ;
               rdfs:comment "This class groups information about the qualification of a partner or representative of a company."@en .
@@ -6426,35 +3967,31 @@ EMPRESARIO"""@pt ,
                           rdfs:label "Razão | Motivo de Situação Cadastral"@pt .
 
 
-:Situacao_Cadastral rdfs:comment """Situação cadastral é a informação que espelha no CNPJ a condição cadastral da inscrição da entidade. As situações cadastrais, perante o CNPJ, enquadram-se em:
-
-• Ativo;
-• Baixa;
-• Baixa de Ofício;
-• Cancelado;
-• Em Processo de Suspensão;
-• Processo de Baixa;
-• Suspenso;
-• Suspenso de Ofício;"""@pt ,
-                                 """Cadastral status is the information that reflects in the CNPJ the registration condition of the entity's registration. The registration situations, before the CNPJ, fall into:
+:Situacao_Cadastral rdfs:comment """Cadastral status is the information that reflects in the CNPJ the registration condition of the entity's registration. The registration situations, before the CNPJ, fall into:
 
 • Active;
 • Downloaded;
 • Suspended;
 • Canceled;
 • Suspended from Office;
-• Discharge process;
-• Suspension process;
-• Low of Office;"""@en ;
+• Low of Office;"""@en ,
+                                 """Situação cadastral é a informação que espelha no CNPJ a condição cadastral da inscrição da entidade. As situações cadastrais, perante o CNPJ, enquadram-se em:
+
+• Ativo;
+• Baixa;
+• Baixa de Ofício;
+• Cancelado;
+• Suspenso;
+• Suspenso de Ofício;"""@pt ;
                     rdfs:label "Situação Cadastral"@pt ;
                     rdfs:comment "A situação cadastral de CNPJ é o registro da empresa junto à Receita Federal. A partir da análise, é possível saber qual é o status do negócio, se há processos judiciais ou dívidas tributárias."@pt ;
                     rdfs:seeAlso <http://receita.economia.gov.br/orientacao/tributaria/cadastros/cadastro-nacional-de-pessoas-juridicas-cnpj/DominiosMotivoSituaoCadastral.csv> ;
                     rdfs:comment "Deve ser preenchido com a situação cadastral referente."@pt .
 
 
-:Situacao_Especial rdfs:seeAlso <http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=39909> ;
-                   rdfs:label "Situação especial"@pt ;
-                   rdfs:seeAlso <https://www.contadores.cnt.br/noticias/artigos/2016/06/27/descomplicando-a-escrituracao-contabil-fiscal-ecf.html> ;
+:Situacao_Especial rdfs:label "Situação especial"@pt ;
+                   rdfs:seeAlso <http://normas.receita.fazenda.gov.br/sijut2consulta/anexoOutros.action?idArquivoBinario=39909> ,
+                                <https://www.contadores.cnt.br/noticias/artigos/2016/06/27/descomplicando-a-escrituracao-contabil-fiscal-ecf.html> ;
                    rdfs:comment "São os casos de: Extinção; Fusão; Incorporação/Incorporada; IncorporaçãoIncorporadora; Cisão total; Cisão parcial; Desenquadramento de Imune/Isenta; Inclusão no Simples nacional."@pt .
 
 
@@ -6509,14 +4046,10 @@ VII - incompatibilidade entre o Número de Inscrição no Registro de Empresa (N
           rdfs:comment "Subclasse de Situação Cadastral - Representa o Status de Situação Cadastral: SUSPENSO"@pt .
 
 
-:Tipo_Estabelecimento rdfs:label "Tipo do Estabelecimento"@pt ;
-                      rdfs:comment "Selecionar o tipo de estabelecimento associado ao mesmo."@pt ,
-                                   "Tipo de Estabelecimento – podendo ser dos tipos Matriz ou Único, Filial, Depósito, Outros e Principal."@pt ,
+:Tipo_Estabelecimento rdfs:comment "Selecionar o tipo de estabelecimento associado ao mesmo."@pt ;
+                      rdfs:label "Tipo do Estabelecimento"@pt ;
+                      rdfs:comment "Tipo de Estabelecimento – podendo ser dos tipos Matriz ou Único, Filial, Depósito, Outros e Principal."@pt ,
                                    "Indica se um um estabelecimento é uma matriz ou uma filial"@pt .
-
-
-:Tipo_Propriedade rdfs:comment "Selecionar qual o tipo do imóvel onde realiza sua produção."@pt ;
-                  rdfs:label "Tipo de Propriedade"@pt .
 
 
 :Unidade_Federativa rdfs:label "Unidade Federativa | Estado"@pt ;
@@ -6531,24 +4064,12 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 :abreviacao_UF rdfs:label "abreviação da unidade federativa"@pt .
 
 
-:ano_registro rdfs:label "ano de registro"@pt ;
-              rdfs:comment "Ano de cartório em questão."@pt .
-
-
-:aprovacao_prefeitura rdfs:label "aprovação da prefeitura"@pt ;
-                      rdfs:comment "Campo referente a aprovação do pedido pela prefeitura."@pt .
-
-
-:area rdfs:comment "Informar a área usada pelo estabelecimento."@pt ,
-                   "Preencher com o valor da área do estabelecimento."@pt ;
-      rdfs:label "area"@pt .
+:area rdfs:comment "Informar a área usada pelo estabelecimento."@pt ;
+      rdfs:label "area"@pt ;
+      rdfs:comment "Preencher com o valor da área do estabelecimento."@pt .
 
 
 :bairro rdfs:label "bairro"@pt .
-
-
-:classificacao_crc rdfs:label "classificação crc"@pt ;
-                   rdfs:comment "Escolher na lista “Profissional”, “Escritório Sociedade” ou “Escritório Individual”."@pt .
 
 
 :cnae rdfs:label "CNAE"@pt ,
@@ -6580,18 +4101,10 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
                    "code"@en .
 
 
-:codigo_ato rdfs:comment "Preencher com o código de evento constante da tabela referente a ele."@pt ;
-            rdfs:label "código do ato"@pt .
-
-
 :codigo_cidade rdfs:comment "Informar o código de identificador da cidade."@pt ,
                             "Código Identificador d Cidades / Municípios."@pt ;
                rdfs:label "código da cidade"@pt ,
                           "código do município"@pt .
-
-
-:codigo_evento rdfs:label "código do evento"@pt ;
-               rdfs:comment "Preencher com o código de evento constante da Tabela I."@pt .
 
 
 :codigo_natureza_legal rdfs:comment "Indicar a natureza legal, de acordo com a Tabela apropriada."@pt ;
@@ -6618,10 +4131,6 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 :codigo_razao_situacao_cadastral rdfs:label "código de razão da situação cadastral"@pt .
 
 
-:codigo_regime rdfs:comment "Preencher com o código do regime em questão."@pt ;
-               rdfs:label "código do regime"@pt .
-
-
 :codigo_situacao_cadastral rdfs:label "código da situação cadastral" .
 
 
@@ -6644,18 +4153,6 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
           rdfs:comment "Propriedades referentes ao CPF e CPNJ de identificação."@pt .
 
 
-:crc_contador rdfs:label "crc do contador"@pt ;
-              rdfs:comment "Preencher com o número de registro do Contabilista Responsável pela Organização Contábil no Conselho Regional de Contabilidade."@pt .
-
-
-:crc_data_registro rdfs:comment "Informar data referente ao registro CRC."@pt ;
-                   rdfs:label "crc data de registro" .
-
-
-:data_arquivo rdfs:comment "Informar data referente ao carregamento do arquivo."@pt ;
-              rdfs:label "data do arquivo"@pt .
-
-
 :data_assinatura rdfs:comment "Preencher com a data referente a atribuição."@pt ;
                  rdfs:label "data de assinatura"@pt .
 
@@ -6670,15 +4167,6 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 
 :data_consulta_anterior rdfs:comment "Informar o protocolo de consulta anterior."@pt ;
                         rdfs:label "data da consulta anterior" .
-
-
-:data_desmembramento rdfs:label "data de desmembramento"@pt ;
-                     rdfs:comment "Informar data referente ao desmembramento do arquivo."@pt .
-
-
-:data_emissao rdfs:comment "Informar data referente à emissão."@pt ,
-                           "Data de Emissão de Documento Fiscal"@pt ;
-              rdfs:label "data de emissão"@pt .
 
 
 :data_entidade_registrada rdfs:label "data entidade registrada" ;
@@ -6697,17 +4185,6 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 
 :data_fechamento_liquido rdfs:comment "data de fechamento líquido"@pt ,
                                       "Informar a data referente ao fechamento líquido."@pt .
-
-
-:data_geracao_arquivo rdfs:comment "Informar data referente à geração do arquivo."@pt ;
-                      rdfs:label "data de geração do arquivo"@pt .
-
-
-:data_inclusao rdfs:comment "Informar data referente à inclusão."@pt .
-
-
-:data_inclusao_contribuinte rdfs:comment "Informar a data referente à inclusão do contribuinte."@pt ;
-                            rdfs:label "data inclusão do contribuinte"@pt .
 
 
 :data_inicio rdfs:label "data de início" .
@@ -6730,10 +4207,6 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 :data_opcao_SIMPLES rdfs:label "data de opção pelo regime SIMPLES"@pt .
 
 
-:data_processamento rdfs:comment "Informar a data referente ao processamento do arquivo em questão."@pt ;
-                    rdfs:label "data de processamento"@pt .
-
-
 :data_saida_participacao rdfs:label "data de saída"@pt ;
                          rdfs:comment "Informar a data referente ao final do mandato."@pt .
 
@@ -6752,15 +4225,7 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 :dddFax rdfs:label "ddd do fax"@pt .
 
 
-:descricao rdfs:label "descrição"@pt ;
-           rdfs:comment "Descrição de um determinado Conceito"@pt .
-
-
 :descricao_atividade_economica rdfs:label "descrição da atividade econômica"@pt .
-
-
-:descricao_regime rdfs:comment "Descrição do regime proprietário em questão."@pt ;
-                  rdfs:label "descrição do regime"@pt .
 
 
 :descricao_situacao rdfs:label "descrição da situação"@pt .
@@ -6772,7 +4237,8 @@ Observação: Nos casos de inscrição de pessoas jurídicas domiciliadas no ext
 :documento_orgao_emissor rdfs:label "orgão emissor do documento"@pt .
 
 
-:e_MEI rdfs:comment """The individual microentrepreneur (MEI), who is the individual entrepreneur who meets the following requirements, cumulatively:
+:e_MEI rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoMEI.pdf> ;
+       rdfs:comment """The individual microentrepreneur (MEI), who is the individual entrepreneur who meets the following requirements, cumulatively:
 • opting for Simples Nacional and fulfilling its requirements;
 
 • professionally carry out organized economic activity for the production
@@ -6818,9 +4284,8 @@ MEI cannot even opt for Simei (art. 18-A, § 1, of Complementary Law nº
 (art. 100, § 7, of Resolution CGSN nº 140, of 2018).
 
 4. The annual limit of R $ 81,000.00 is one, adding up market revenues
-internal and external. The MEI has no extended export limit."""@en ;
-       rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoMEI.pdf> ;
-       rdfs:comment """O microempreendedor individual (MEI), que é o empresário individual que atende aos seguintes requisitos, cumulativamente:
+internal and external. The MEI has no extended export limit."""@en ,
+                    """O microempreendedor individual (MEI), que é o empresário individual que atende aos seguintes requisitos, cumulativamente:
 • ser optante pelo Simples Nacional e cumprir seus requisitos;
 
 • exercer profissionalmente atividade econômica organizada para a produção
@@ -6871,9 +4336,6 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
                   "empresa é um Microempreendedor Individual (MEI)?"@pt .
 
 
-:e_emancipado rdfs:label "é emancipado"@pt .
-
-
 :e_estabelecimento_de rdfs:label "é estabelecimento de"@pt .
 
 
@@ -6897,23 +4359,8 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
      rdfs:label "fax"@pt .
 
 
-:fim_escritura rdfs:label "fim da escritura"@pt .
-
-
 :fim_participacao rdfs:label "fim de participação"@pt ;
                   rdfs:comment "Informar a data referente ao fim da participação."@pt .
-
-
-:fim_validade rdfs:comment "Informar a data referente ao fim da validade."@pt ;
-              rdfs:label "fim da validade"@pt .
-
-
-:gera_ruc rdfs:label "gera ruc"@pt ;
-          rdfs:comment "Informar o RUC gerado para a requisição em questão."@pt .
-
-
-:hash rdfs:label "hash"@pt ;
-      rdfs:comment "Informar hash atribuído ao arquivo em questão."@pt .
 
 
 :identidade rdfs:comment "Informar número de identificação em questão."@pt ;
@@ -6924,10 +4371,6 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
                       rdfs:comment "Informar o identificador pessoal requisitado."@pt .
 
 
-:incra rdfs:comment "Informar o número de inscrição no INCRA. Esse campo será habilitado para preenchimento dependendo do interesse dos órgãos conveniados (Estados ou Municípios)."@pt ;
-       rdfs:label "incra"@pt .
-
-
 :inicio_atividade_economica rdfs:label "início da atividade econômica"@pt ;
                             rdfs:comment "Preencher com a data referente ao início da atividade."@pt .
 
@@ -6936,19 +4379,12 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
                      rdfs:label "início de participação"@pt .
 
 
-:logradouro rdfs:label "logradouro"@pt ;
-            rdfs:comment "Informar o nome da rua do endereço."@pt ;
-            rdfs:label "logradouro" .
-
-
-:nome_arquivo rdfs:comment "Informar nome do arquivo em questão."@pt ;
-              rdfs:label "nome arquivo"@pt .
+:logradouro rdfs:label "logradouro"@pt ,
+                       "logradouro" ;
+            rdfs:comment "Informar o nome da rua do endereço."@pt .
 
 
 :nome_fantasia rdfs:label "nome fantasia" .
-
-
-:nome_regime rdfs:label "nome do regime"@pt .
 
 
 :numero_contato rdfs:label "número de contato"@pt ,
@@ -6962,26 +4398,11 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 :numero_fax rdfs:label "número de fax"@pt .
 
 
-:numero_licenca rdfs:label "número da licenca"@pt ;
-                rdfs:comment "Preencher com o número da licença em questão."@pt .
-
-
-:numero_registro_bens rdfs:comment "Preencher com o número de registro de propriedade para o estabelecimento."@pt ;
-                      rdfs:label "número de registro dos bens"@pt .
-
-
 :numero_telefone rdfs:label "número de telefone"@pt ,
                             "phone number"@en .
 
 
 :observacao_desabilitado rdfs:label "observação desabilitado"@pt .
-
-
-:percentual_participacao rdfs:label "percentual de participação"@pt .
-
-
-:protocolo rdfs:comment "Preencher com o tipo de protocolo para o arquivo em questão."@pt ;
-           rdfs:label "protocolo"@pt .
 
 
 :qualificacao_representante rdfs:label "qualificação do responsável"@pt .
@@ -7003,10 +4424,6 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 :siglas rdfs:label "siglas"@pt .
 
 
-:tegime_bens rdfs:label "regime de bens"@pt ;
-             rdfs:comment "Informar a propriedade do regime."@pt .
-
-
 :telefone rdfs:label "telefone"@pt ;
           rdfs:comment "Informar o DDD e o telefone para contato."@pt .
 
@@ -7015,9 +4432,6 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 
 
 :telefone2 rdfs:label "telefone2"@pt .
-
-
-:tem_arquivo rdfs:label "tem arquivo"@pt .
 
 
 :tem_atividade_economica rdfs:label "tem atividade econômica"@pt .
@@ -7046,13 +4460,7 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 :tem_filial rdfs:label "tem filial"@pt .
 
 
-:tem_fonte_cadastro rdfs:label "tem fonte cadastro"@pt .
-
-
 :tem_logradouro rdfs:label "tem logradouro"@pt .
-
-
-:tem_mae rdfs:label "tem mãe"@pt .
 
 
 :tem_matriz rdfs:label "tem matriz"@pt .
@@ -7067,9 +4475,6 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 :tem_opcao_pelo_simples rdfs:label "tem opção pelo SIMPLES"@pt .
 
 
-:tem_pai rdfs:label "tem pai"@pt .
-
-
 :tem_pais rdfs:label "tem pais"@pt .
 
 
@@ -7081,9 +4486,6 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 
 
 :tem_profissional rdfs:label "tem profissional"@pt .
-
-
-:tem_protocolo rdfs:label "tem protocolo"@pt .
 
 
 :tem_qualificacao rdfs:comment "Estabelece a relação entre um Responsável por emissão de Documento Fiscal e uma Qualificação"@pt ;
@@ -7114,26 +4516,10 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
 :tem_socio rdfs:label "tem sócio"@pt .
 
 
-:tem_solicitacao rdfs:label "tem solicitação"@pt .
-
-
-:tem_tipo_ato rdfs:label "tem tipo ato"@pt .
-
-
-:tem_tipo_contribuicao rdfs:label "tem tipo de contribuição"@pt .
-
-
 :tem_tipo_estabelecimento rdfs:label "estabelecimento tem o tipo"@pt .
 
 
 :tem_unidade_federativa rdfs:label "tem estado | tem unidade federativa"@pt .
-
-
-:tem_unidade_fiscal rdfs:label "tem unidade fiscal"@pt .
-
-
-:tipo_documento rdfs:comment "Informar tipo do documento."@pt ;
-                rdfs:label "tipo do documento"@pt .
 
 
 :tipo_localidade rdfs:label "tipo do logradouro"@pt ;
@@ -7153,35 +4539,9 @@ interno e externo. O MEI não tem limite estendido para exportação."""@pt ;
                 rdfs:label "valor estimado"@pt .
 
 
-:valor_participacao rdfs:label "valor de participação"@pt ;
-                    rdfs:comment "Informar a porcentagem de participação."@pt ,
-                                 "Preencher com o valor da participação em questão."@pt .
-
-
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Excluso_SIMPLES> rdfs:label "Excluso / Removido do SIMPLES"@pt .
-
-
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Nao_Optante_SIMPLES> rdfs:label "Não optante pelo SIMPLES"@pt .
-
-
-<http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Optante_SIMPLES> rdfs:comment """Esta classe compreende os dados do evento da opção pelo regime Simples Nacional por uma empresa.
-
-O Simples Nacional é o nome abreviado do “Regime Especial Unificado de
-Arrecadação de Tributos e Contribuições devidos pelas Microempresas e
-Empresas de Pequeno Porte”.
-Trata-se de um regime tributário diferenciado, simplificado e favorecido previsto
-pela Lei Complementar nº 123, de 2006, aplicável às Microempresas e às
-Empresas de Pequeno Porte, a partir de 01/07/2007."""@pt ,
-                                                                                 """This class comprises the event data of the option for the Simple National regime for a company.
-
-Simples Nacional is the abbreviated name of the “Special Unified Regime of
-Collection of Taxes and Contributions due by Microenterprises and
-Small Companies ”.
-It is a differentiated, simplified and favored tax regime foreseen
-by Complementary Law No. 123, 2006, applicable to Microenterprises and
-Small Companies, as of 01/07/2007."""@en ;
-                                                                    rdfs:label "Optante pelo SIMPLES"@pt ;
-                                                                    rdfs:seeAlso <http://www8.receita.fazenda.gov.br/SimplesNacional/Arquivos/manual/PerguntaoSN.pdf> .
+:valor_participacao rdfs:comment "Informar a porcentagem de participação."@pt ;
+                    rdfs:label "valor de participação"@pt ;
+                    rdfs:comment "Preencher com o valor da participação em questão."@pt .
 
 
 vcard:country-name rdfs:label "nome do país"@pt ;
@@ -7192,8 +4552,8 @@ vcard:email rdfs:label "e-mail" ;
             rdfs:comment "Informar o endereço de email de contato."@pt .
 
 
-vcard:postal-code rdfs:label "CEP"@pt ,
-                             "cep" ;
+vcard:postal-code rdfs:label "cep" ,
+                             "CEP"@pt ;
                   rdfs:comment "Informar o CEP do endereço, atualizado de acordo com a página da Empresa de Correios e Telégrafos – ECT na internet (http://www.correios.com.br/)."@pt .
 
 
@@ -7201,10 +4561,10 @@ foaf:Agent rdfs:comment """Esta classe representa o conceito de agente, sendo es
 
 Caso esta pessoa seja estrangeira, isto é representado pelo indicador is_foreigner."""@pt ;
            rdfs:label "Agente"@pt ;
-           rdfs:comment """The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
+           rdfs:comment "An agent (eg. person, group, software or physical artifact)." ,
+                        """The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group.
 
 The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots."""@en ,
-                        "An agent (eg. person, group, software or physical artifact)." ,
                         "Conceito Genérico para representar Organizações e Pessoas."@pt .
 
 
@@ -7218,8 +4578,8 @@ foaf:Organization rdfs:comment "A classe Organização representa uma espécie d
                                "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc."@en ,
                                "In the legal conception, commercial law, business activity, or company, it is an economic activity exercised professionally by the entrepreneur through the articulation of the productive factors for the production or circulation of goods or services. The legal concept of company cannot be confused with that of a subject of law, that of a legal person, nor with the place where that economic activity is developed."@en ;
                   rdfs:seeAlso <https://pt.wikipedia.org/wiki/Empresa> ;
-                  rdfs:label "Empresa | Organização | Pessoa Jurídica"@pt ;
                   rdfs:comment "An organization." ;
+                  rdfs:label "Empresa | Organização | Pessoa Jurídica"@pt ;
                   rdfs:isDefinedBy foaf: .
 
 
@@ -7307,37 +4667,9 @@ XML language tagging may be used to indicate the language of the name."""@en .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Caso_Consistencia
-                :Caso_Similaridade
-                :Endereco
-                :Estabelecimento
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Caso_Consistencia
-                :Caso_Similaridade
-                :Endereco
-                :Estabelecimento
-                :Status_Consistencia
-                :Status_Similaridade
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Unidade_Consumo_Comunicacao
-                :Unidade_Consumo_Eletrica
-                :Unidade_Consumo_Telecomunicacao
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Excluso_SIMPLES>
-                <http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Nao_Optante_SIMPLES>
-                <http://www.sefaz.ma.gov.br/ontology/Opcao_SIMPLES/Optante_SIMPLES>
+  owl:members ( :Excluso_SIMPLES
+                :Nao_Optante_SIMPLES
+                :Optante_SIMPLES
               )
 ] .
 
